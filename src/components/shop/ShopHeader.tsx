@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Star, ChevronDown, Search, Phone, User, ShoppingCart } from 'lucide-react';
+import { ChevronDown, Search, Phone, User, ShoppingCart } from 'lucide-react';
 
 export default function ShopHeader() {
   return (
