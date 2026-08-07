@@ -32,7 +32,7 @@ export default function CategoryProductCard({ inStock, isUsed, image, category, 
       
       <div className="cat-product-actions">
         <button className="btn btn-navy flex-1" style={{ fontSize: '0.8rem', padding: '0.5rem' }}>ADD TO CART</button>
-        <a href={waLink} target="_blank" rel="noopener noreferrer" className="btn btn-lime" style={{ padding: '0.5rem 0.8rem', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}>
+        <a href={waLink} target="_blank" rel="noopener noreferrer" style={{ background: '#25D366', padding: '0.5rem 0.8rem', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none', borderRadius: '8px' }}>
           <span style={{ fontSize: '1.2rem', lineHeight: 1 }}>💬</span>
         </a>
       </div>

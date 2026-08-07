@@ -36,7 +36,7 @@ export default function FeaturedProduct() {
 
           <div className="shop-featured-actions" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <button style={{ padding: '1rem 2rem', background: 'var(--navy)', color: 'var(--white)', border: 'none', borderRadius: '6px', fontWeight: '900', cursor: 'pointer', flex: '1', minWidth: '200px', fontSize: '1.1rem', letterSpacing: '1px' }}>ADD TO CART</button>
-            <button style={{ padding: '1rem 2rem', background: 'transparent', color: 'var(--navy)', border: '2px solid var(--navy)', borderRadius: '6px', fontWeight: '900', cursor: 'pointer', flex: '1', minWidth: '200px', fontSize: '1.1rem', letterSpacing: '1px' }}>WHATSAPP US</button>
+            <button style={{ padding: '1rem 2rem', background: '#25D366', color: 'white', border: 'none', borderRadius: '6px', fontWeight: '900', cursor: 'pointer', flex: '1', minWidth: '200px', fontSize: '1.1rem', letterSpacing: '1px' }}>WHATSAPP US</button>
           </div>
         </div>
       </div>

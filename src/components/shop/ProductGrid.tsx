@@ -53,7 +53,7 @@ export default function ProductGrid({ title, subtitle, tabs, products }: Product
               
               <div className="shop-product-actions" style={{ display: 'flex', gap: '0.5rem', marginTop: '1rem' }}>
                 <button style={{ flex: 1, background: 'var(--navy)', color: 'var(--white)', border: 'none', padding: '0.75rem', borderRadius: '4px', fontWeight: 'bold', fontSize: '0.9rem', cursor: 'pointer' }}>ADD TO CART</button>
-                <button style={{ background: 'var(--gray-light)', color: 'var(--navy)', border: 'none', padding: '0.75rem', borderRadius: '4px', fontWeight: 'bold', fontSize: '1.2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>💬</button>
+                <button style={{ background: '#25D366', color: 'white', border: 'none', padding: '0.75rem', borderRadius: '4px', fontWeight: 'bold', fontSize: '1.2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>💬</button>
               </div>
             </div>
           ))}
