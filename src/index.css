@@ -1986,10 +1986,10 @@ h4 {
 .shop-featured-inner {
   display: flex;
   align-items: stretch;
-  background: var(--navy-dark);
+  background: var(--white);
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
 
 @media (max-width: 900px) {
@@ -2000,7 +2000,7 @@ h4 {
 
 .shop-featured-img-box {
   flex: 1;
-  background: var(--white);
+  background: transparent;
   position: relative;
   padding: 2rem;
   display: flex;
