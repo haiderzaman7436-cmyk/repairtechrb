@@ -14,7 +14,7 @@ export default function FeaturedProduct() {
           </div>
         </div>
 
-        <div className="shop-featured-content" style={{ padding: '2rem 0' }}>
+        <div className="shop-featured-content">
           <div className="shop-featured-tag" style={{ background: 'var(--navy)', color: 'var(--white)', padding: '0.3rem 0.8rem', display: 'inline-block', fontWeight: '900', fontSize: '0.85rem', marginBottom: '1.5rem', borderRadius: '4px', letterSpacing: '1px' }}>LIMITED OFFER</div>
           <h2 className="shop-featured-title" style={{ color: 'var(--navy)', fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', lineHeight: '1.2', marginBottom: '1.5rem', fontWeight: '900' }}>Dell Latitude 5420 11th Gen Core i5 - 1145G7 512GB SSD 16GB RAM Win 11 Pro Laptop (Used On Special)</h2>
           <p className="shop-featured-desc" style={{ color: 'var(--gray-dark)', fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '2rem' }}>
