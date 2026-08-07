@@ -1,10 +1,10 @@
 export default function Footer() {
   return (
     <>
-      <section style={{ background: 'var(--navy)', padding: '5rem 2rem' }}>
+      <section style={{ background: 'var(--gray-light)', padding: '5rem 2rem' }}>
         <div className="container section-center">
           <div className="section-overline">Our workspace</div>
-          <h2 style={{ color: '#fff', fontSize: 'clamp(1.8rem,3.5vw,2.6rem)', marginBottom: '2rem' }}>Professional workshop in Rosebank</h2>
+          <h2 style={{ color: 'var(--navy)', fontSize: 'clamp(1.8rem,3.5vw,2.6rem)', marginBottom: '2rem' }}>Professional workshop in Rosebank</h2>
           <div className="workspace-grid">
             <div className="workspace-img">
               <img src="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=1200&q=80" alt="Repair Tech shop front at The Median building" loading="lazy" width="1530" height="1172" />
@@ -18,11 +18,11 @@ export default function Footer() {
         </div>
       </section>
 
-      <footer className="footer">
+      <footer className="footer" style={{ background: 'var(--navy)', color: 'var(--white)' }}>
         <div className="footer-grid">
           <div className="footer-brand">
-            <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.6rem', color: 'var(--white)', marginBottom: '0.75rem' }}>
-              Repair <span style={{ color: 'var(--lime)' }}>Tech</span>
+            <h3 style={{ fontFamily: 'var(--font-sans)', fontSize: '1.6rem', color: 'var(--white)', marginBottom: '0.75rem' }}>
+              Repair <span style={{ color: 'var(--white)', fontWeight: 900 }}>Tech</span>
             </h3>
             <p>Rosebank's most trusted computer repair shop since 2008. Expert service, thousands of devices repaired, 4.7★ on Google.</p>
             <p style={{ fontStyle: 'italic', fontSize: '0.82rem', marginTop: '0.5rem', color: 'rgba(255,255,255,0.35)' }}>Replacement parts & refurbished devices: 6-month warranty. Repair jobs: 3-month warranty.</p>
@@ -57,8 +57,8 @@ export default function Footer() {
           <div><h4>Legal</h4><a href="/repair-policy/">Repair Policy</a><a href="/returns/">Return Policy</a><a href="/privacy/">Privacy Policy</a><a href="/payments/">Payment Policy</a><a href="/shipping/">Shipping Policy</a><a href="/warranty/">Warranty Policy</a></div>
           <div>
             <h4>Contact</h4>
-            <a href="tel:+27110575709">Telephone: +27 11 057 5709</a>
-            <a href="https://wa.me/27844644666">WhatsApp: +27 84 464 4666</a>
+            <a href="tel:+27685011885">Telephone: +27 68 501 1885</a>
+            <a href="https://wa.me/27685011885">WhatsApp: +27 68 501 1885</a>
             <a href="mailto:info@asetos.co.za">Email: info@asetos.co.za</a>
             <span style={{ fontSize: '0.85rem', display: 'block', marginTop: '0.5rem' }}>The Median building<br />50 Bath Avenue<br />Rosebank, Johannesburg, South Africa</span>
           </div>

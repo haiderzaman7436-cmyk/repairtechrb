@@ -11,7 +11,7 @@ interface CategoryProductCardProps {
 
 export default function CategoryProductCard({ inStock, isUsed, image, category, title, price }: CategoryProductCardProps) {
   const waMessage = encodeURIComponent(`Hi, I'm interested in the ${title} priced at ${price}.`);
-  const waLink = `https://wa.me/27844644666?text=${waMessage}`;
+  const waLink = `https://wa.me/27685011885?text=${waMessage}`;
 
   return (
     <div className="cat-product-card">

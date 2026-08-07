@@ -30,15 +30,15 @@ export default function Shop() {
       <ShopHero />
       
       <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', margin: '2rem auto 4rem' }}>
-        <div className="shop-promo-card" style={{ background: 'linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%)', color: 'white', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}>
-          <h3 style={{ color: 'white' }}>Laptop Replacement Screens</h3>
-          <p style={{ color: 'rgba(255,255,255,0.9)' }}>For HP, Dell, Lenovo, Asus, Acer, Toshiba and Mac.</p>
-          <button className="btn btn-lime" style={{ boxShadow: '0 8px 16px rgba(59, 130, 246, 0.3)' }}>SHOP SCREENS &rarr;</button>
+        <div className="shop-promo-card" style={{ background: 'var(--navy)', color: 'white', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}>
+          <h3 style={{ color: 'white', marginBottom: '0.5rem' }}>Laptop Replacement Screens</h3>
+          <p style={{ color: '#a1a1aa', marginBottom: '1.5rem' }}>For HP, Dell, Lenovo, Asus, Acer, Toshiba and Mac.</p>
+          <button style={{ padding: '0.75rem 1.5rem', background: 'var(--white)', color: 'var(--navy)', border: 'none', borderRadius: '4px', fontWeight: 'bold', cursor: 'pointer' }}>SHOP SCREENS &rarr;</button>
         </div>
-        <div className="shop-promo-card" style={{ background: 'linear-gradient(135deg, #1d4ed8 0%, var(--lime) 100%)', color: 'white', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}>
-          <h3 style={{ color: 'white' }}>Refurbished Laptops</h3>
-          <p style={{ color: 'rgba(255,255,255,0.9)' }}>Quality tested, A-grade computers with a warranty.</p>
-          <button className="btn btn-white" style={{ color: 'var(--navy)', boxShadow: '0 8px 16px rgba(0,0,0,0.1)' }}>SHOP LAPTOPS &rarr;</button>
+        <div className="shop-promo-card" style={{ background: 'var(--gray-light)', color: 'var(--navy)', border: '1px solid #e5e5e5', boxShadow: '0 20px 40px rgba(0,0,0,0.05)' }}>
+          <h3 style={{ color: 'var(--navy)', marginBottom: '0.5rem' }}>Refurbished Laptops</h3>
+          <p style={{ color: 'var(--gray-dark)', marginBottom: '1.5rem' }}>Quality tested, A-grade computers with a warranty.</p>
+          <button style={{ padding: '0.75rem 1.5rem', background: 'var(--navy)', color: 'var(--white)', border: 'none', borderRadius: '4px', fontWeight: 'bold', cursor: 'pointer' }}>SHOP LAPTOPS &rarr;</button>
         </div>
       </div>
 
