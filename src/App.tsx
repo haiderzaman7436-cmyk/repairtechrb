@@ -15,6 +15,8 @@ function App() {
           <Route path="/shop" element={<Shop />} />
           <Route path="/shop/" element={<Shop />} />
           <Route path="/shop/laptop-parts/memory" element={<ShopCategory />} />
+          <Route path="/laptopparts/memory" element={<Navigate to="/shop/laptop-parts/memory" replace />} />
+          <Route path="/shop/laptopparts/memory" element={<Navigate to="/shop/laptop-parts/memory" replace />} />
         </Route>
       </Routes>
       

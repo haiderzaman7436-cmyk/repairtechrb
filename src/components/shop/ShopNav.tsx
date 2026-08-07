@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Truck, Star, MessageCircle, ShieldCheck } from 'lucide-react';
 
 export default function ShopNav() {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
   const links = [
     { label: 'LAPTOP PARTS', to: '/shop', dropdown: ['Memory', 'Screens', 'Chargers', 'Batteries', 'Keyboards', 'Storage'] },
     { label: 'MACBOOK PARTS', to: '/shop', dropdown: ['Screens', 'Batteries', 'Chargers', 'Keyboards', 'Mac RAM/SSD'] },
@@ -15,23 +18,38 @@ export default function ShopNav() {
     { label: 'CHECKOUT', to: '/checkout' }
   ];
 
+  const handleLinkClick = () => {
+    setHoveredIndex(null);
+  };
+
   return (
     <>
       <nav className="shop-nav">
         <div className="container shop-nav-inner">
           {links.map((link, idx) => (
-            <div key={idx} className={`shop-nav-item ${link.dropdown ? 'has-dropdown' : ''}`}>
-              <Link to={link.to} className="shop-nav-link" style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+            <div 
+              key={idx} 
+              className={`shop-nav-item ${link.dropdown ? 'has-dropdown' : ''}`}
+              onMouseEnter={() => setHoveredIndex(idx)}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
+              <Link 
+                onClick={handleLinkClick} 
+                to={link.to} 
+                className="shop-nav-link" 
+                style={{ display: 'flex', alignItems: 'center', gap: '4px' }}
+              >
                 {link.label} {link.dropdown && <ChevronDown size={14} className="dropdown-arrow" />}
               </Link>
               {link.dropdown && (
-                <div className="shop-dropdown-menu">
+                <div className={`shop-dropdown-menu ${hoveredIndex === idx ? 'is-open' : ''}`}>
                   <div className="shop-dropdown-border"></div>
                   {link.dropdown.map((sub, subIdx) => (
                     <Link 
                       key={subIdx} 
                       to={sub === 'Memory' ? '/shop/laptop-parts/memory' : '/shop'} 
                       className="shop-dropdown-item"
+                      onClick={handleLinkClick}
                     >
                       {sub}
                     </Link>
