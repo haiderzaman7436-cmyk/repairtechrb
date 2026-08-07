@@ -1691,13 +1691,18 @@ h4 {
 .shop-nav {
   background: var(--navy-dark);
   padding: 1rem 0;
+  position: relative;
 }
 
 .shop-nav-inner {
   display: flex;
   gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .shop-nav-inner::-webkit-scrollbar {
@@ -2294,9 +2299,7 @@ h4 {
   gap: 0;
 }
 
-.shop-nav-item {
-  position: relative;
-}
+/* Removed position relative to fix dropdown clipping */
 
 .shop-nav-link {
   display: block;
@@ -2324,17 +2327,21 @@ h4 {
   position: absolute;
   top: 100%;
   left: 0;
+  width: 100%;
   background: var(--white);
-  min-width: 220px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
   transition: all 0.2s;
   z-index: 100;
   display: flex;
-  flex-direction: column;
-  text-align: left;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  flex-wrap: wrap;
 }
 
 .shop-dropdown-menu.is-open {
@@ -2344,20 +2351,18 @@ h4 {
 }
 
 .shop-dropdown-border {
-  height: 3px;
-  background: var(--lime);
-  width: 100%;
+  display: none;
 }
 
 .shop-dropdown-item {
-  padding: 0.8rem 1.5rem;
+  padding: 0.5rem 1rem;
   color: var(--navy);
   text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 500;
-  border-bottom: 1px solid #f4f5f6;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-bottom: none;
   transition: all 0.2s;
-  display: block;
+  text-transform: uppercase;
 }
 
 .shop-dropdown-item:last-child {
@@ -2367,6 +2372,7 @@ h4 {
 .shop-dropdown-item:hover {
   color: var(--lime);
   background: #f4f5f6;
+  border-radius: 4px;
 }
 
 /* PAGINATION */
