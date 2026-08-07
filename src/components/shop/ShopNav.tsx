@@ -18,7 +18,12 @@ export default function ShopNav() {
     { label: 'CHECKOUT', to: '/checkout' }
   ];
 
-  const handleLinkClick = () => {
+  const handleLinkClick = (e: React.MouseEvent, idx: number, hasDropdown: boolean) => {
+    if (hasDropdown && window.innerWidth <= 1024) {
+      e.preventDefault();
+      setHoveredIndex(hoveredIndex === idx ? null : idx);
+      return;
+    }
     setHoveredIndex(null);
   };
 
@@ -34,7 +39,7 @@ export default function ShopNav() {
               onMouseLeave={() => setHoveredIndex(null)}
             >
               <Link 
-                onClick={handleLinkClick} 
+                onClick={(e) => handleLinkClick(e, idx, !!link.dropdown)} 
                 to={link.to} 
                 className="shop-nav-link" 
                 style={{ display: 'flex', alignItems: 'center', gap: '4px' }}
