@@ -13,14 +13,14 @@ export default function ShopHeader() {
               src="/images/logo%20(3).png" 
               alt="Repair Tech Logo" 
               style={{ 
-                height: '75px', 
+                height: '100px', 
                 objectFit: 'contain',
                 mixBlendMode: 'multiply'
               }} 
             />
             <div style={{ display: 'flex', flexDirection: 'column', lineHeight: '1.05' }}>
-              <span style={{ fontSize: '1.8rem', fontWeight: '900', color: 'var(--navy)', letterSpacing: '1px', fontFamily: 'var(--font-sans)' }}>REPAIR</span>
-              <span style={{ fontSize: '1.8rem', fontWeight: '900', color: 'var(--navy)', letterSpacing: '1px', fontFamily: 'var(--font-sans)' }}>TECH</span>
+              <span style={{ fontSize: '2.2rem', fontWeight: '900', color: 'var(--navy)', letterSpacing: '1px', fontFamily: 'var(--font-sans)' }}>REPAIR</span>
+              <span style={{ fontSize: '2.2rem', fontWeight: '900', color: 'var(--navy)', letterSpacing: '1px', fontFamily: 'var(--font-sans)' }}>TECH</span>
             </div>
           </Link>
           

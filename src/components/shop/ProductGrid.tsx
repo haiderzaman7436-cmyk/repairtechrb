@@ -44,16 +44,16 @@ export default function ProductGrid({ title, subtitle, tabs, products }: Product
                 <span className="shop-tag-local">{product.tag}</span>
                 {product.isUsed && <span className="shop-tag-used">USED</span>}
               </div>
-              <div className="shop-product-img-box">
-                <img src={product.image} alt={product.title} loading="lazy" />
+              <div className="shop-product-img-box" style={{ height: '220px', overflow: 'hidden', marginBottom: '1rem', borderRadius: '8px' }}>
+                <img src={product.image} alt={product.title} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div className="shop-product-category">{product.category}</div>
               <h3 className="shop-product-title">{product.title}</h3>
               <div className="shop-product-price">{product.price}</div>
               
-              <div className="shop-product-actions">
-                <button className="btn btn-navy shop-add-cart">ADD TO CART</button>
-                <button className="btn btn-lime shop-wa-btn">💬</button>
+              <div className="shop-product-actions" style={{ display: 'flex', gap: '0.5rem', marginTop: '1rem' }}>
+                <button style={{ flex: 1, background: 'var(--navy)', color: 'var(--white)', border: 'none', padding: '0.75rem', borderRadius: '4px', fontWeight: 'bold', fontSize: '0.9rem', cursor: 'pointer' }}>ADD TO CART</button>
+                <button style={{ background: 'var(--gray-light)', color: 'var(--navy)', border: 'none', padding: '0.75rem', borderRadius: '4px', fontWeight: 'bold', fontSize: '1.2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>💬</button>
               </div>
             </div>
           ))}

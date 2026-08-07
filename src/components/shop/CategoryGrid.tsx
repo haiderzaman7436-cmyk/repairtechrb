@@ -20,8 +20,8 @@ export default function CategoryGrid({ title, subtitle, items }: CategoryGridPro
         <div className="shop-category-grid">
           {items.map((item, idx) => (
             <div className="shop-category-card" key={idx}>
-              <div className="shop-category-img-box">
-                <img src={item.image} alt={item.name} loading="lazy" />
+              <div className="shop-category-img-box" style={{ height: '200px', overflow: 'hidden', borderRadius: '8px' }}>
+                <img src={item.image} alt={item.name} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <h3 className="shop-category-name">{item.name}</h3>
               <p className="shop-category-desc">{item.desc}</p>
