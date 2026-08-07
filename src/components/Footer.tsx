@@ -5,14 +5,14 @@ export default function Footer() {
         <div className="container section-center">
           <div className="section-overline">Our workspace</div>
           <h2 style={{ color: 'var(--navy)', fontSize: 'clamp(1.8rem,3.5vw,2.6rem)', marginBottom: '2rem' }}>Professional workshop in Rosebank</h2>
-          <div className="workspace-grid">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
             <div className="workspace-img">
-              <img src="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=1200&q=80" alt="Repair Tech shop front at The Median building" loading="lazy" width="1530" height="1172" />
-              <div className="label">The Median building, Rosebank, 50 Bath Avenue</div>
+              <img src="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=1200&q=80" alt="Repair Tech shop front at The Median building" loading="lazy" style={{ width: '100%', height: '350px', objectFit: 'cover', borderRadius: '8px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }} />
+              <div className="label" style={{ marginTop: '0.75rem', fontWeight: 'bold', color: 'var(--navy)' }}>The Median building, Rosebank, 50 Bath Avenue</div>
             </div>
             <div className="workspace-img">
-              <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1200&q=80" alt="Repair Tech professional repair workshop" loading="lazy" width="1280" height="853" />
-              <div className="label">Professional Repair Workshop</div>
+              <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1200&q=80" alt="Repair Tech professional repair workshop" loading="lazy" style={{ width: '100%', height: '350px', objectFit: 'cover', borderRadius: '8px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }} />
+              <div className="label" style={{ marginTop: '0.75rem', fontWeight: 'bold', color: 'var(--navy)' }}>Professional Repair Workshop</div>
             </div>
           </div>
         </div>
