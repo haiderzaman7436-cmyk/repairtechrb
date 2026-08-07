@@ -35,8 +35,8 @@ export default function ShopNav() {
             <div 
               key={idx} 
               className={`shop-nav-item ${link.dropdown ? 'has-dropdown' : ''}`}
-              onMouseEnter={() => setHoveredIndex(idx)}
-              onMouseLeave={() => setHoveredIndex(null)}
+              onMouseEnter={() => { if (window.innerWidth > 1024) setHoveredIndex(idx); }}
+              onMouseLeave={() => { if (window.innerWidth > 1024) setHoveredIndex(null); }}
             >
               <Link 
                 onClick={(e) => handleLinkClick(e, idx, !!link.dropdown)} 
