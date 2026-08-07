@@ -54,7 +54,7 @@ export default function ShopNav() {
                       key={subIdx} 
                       to={sub === 'Memory' ? '/shop/laptop-parts/memory' : '/shop'} 
                       className="shop-dropdown-item"
-                      onClick={handleLinkClick}
+                      onClick={() => setHoveredIndex(null)}
                     >
                       {sub}
                     </Link>
