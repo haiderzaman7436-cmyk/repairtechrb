@@ -1723,40 +1723,40 @@ h4 {
 
 .shop-nav-link:hover {
   color: var(--lime);
-}
-
+}/* TRUST BAR */
 .shop-trust-bar {
-  background: var(--white);
-  padding: 1rem 0;
-  border-bottom: 1px solid #eaeaea;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .shop-trust-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.shop-trust-inner::-webkit-scrollbar {
+  display: none;
 }
 
 .trust-item {
   display: flex;
   align-items: center;
   gap: 1rem;
+  color: var(--navy);
+  white-space: nowrap;
 }
-
-.trust-icon {
-  font-size: 1.5rem;
-  color: var(--lime);
-}
-
 .trust-item strong {
   display: block;
-  font-size: 0.8rem;
-  color: var(--navy);
-  margin-bottom: 0.2rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
 }
-
 .trust-item span {
   display: block;
   font-size: 0.75rem;
