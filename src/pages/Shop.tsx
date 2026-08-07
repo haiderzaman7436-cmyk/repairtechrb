@@ -29,7 +29,7 @@ export default function Shop() {
     <div className="shop-page">
       <ShopHero />
       
-      <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', margin: '2rem auto 4rem' }}>
+      <div className="container shop-promo-grid" style={{ margin: '2rem auto 4rem' }}>
         <div className="shop-promo-card" style={{ background: 'var(--navy)', color: 'white', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}>
           <h3 style={{ color: 'white', marginBottom: '0.5rem' }}>Laptop Replacement Screens</h3>
           <p style={{ color: '#a1a1aa', marginBottom: '1.5rem' }}>For HP, Dell, Lenovo, Asus, Acer, Toshiba and Mac.</p>
