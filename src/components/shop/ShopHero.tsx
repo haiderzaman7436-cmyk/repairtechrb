@@ -81,11 +81,11 @@ export default function ShopHero() {
       ))}
       
       <div className="container shop-hero-inner" style={{ position: 'relative', zIndex: 2, display: 'flex', width: '100%' }}>
-        <div className="shop-hero-content" key={currentSlide} style={{ animation: 'fadeIn 0.8s ease-out', maxWidth: '650px', padding: '4rem 0' }}>
-          <div className="shop-hero-tag" style={{ background: 'var(--lime)', color: 'white', fontWeight: 'bold', letterSpacing: '2px', marginBottom: '1rem', display: 'inline-block', padding: '6px 12px', borderRadius: '4px', fontSize: '0.85rem' }}>{slides[currentSlide].tag}</div>
-          <h1 style={{ color: 'var(--white)', fontSize: '3.5rem', marginBottom: '1.5rem', lineHeight: '1.1' }}>{slides[currentSlide].title}</h1>
-          <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: '1.25rem', marginBottom: '2.5rem', lineHeight: '1.6' }}>{slides[currentSlide].desc}</p>
-          <button className="btn btn-lime shop-hero-btn" style={{ padding: '1rem 2rem', fontSize: '1rem', color: 'white' }}>{slides[currentSlide].btnText}</button>
+        <div className="shop-hero-content" key={currentSlide} style={{ animation: 'fadeIn 0.8s ease-out', maxWidth: '650px', padding: 'clamp(2rem, 8vw, 4rem) 0' }}>
+          <div className="shop-hero-tag" style={{ background: 'var(--lime)', color: 'white', fontWeight: 'bold', letterSpacing: '2px', marginBottom: '1rem', display: 'inline-block', padding: '6px 12px', borderRadius: '4px', fontSize: 'clamp(0.7rem, 2vw, 0.85rem)' }}>{slides[currentSlide].tag}</div>
+          <h1 style={{ color: 'var(--white)', fontSize: 'clamp(2rem, 8vw, 3.5rem)', marginBottom: '1.5rem', lineHeight: '1.2' }}>{slides[currentSlide].title}</h1>
+          <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: 'clamp(1rem, 4vw, 1.25rem)', marginBottom: '2.5rem', lineHeight: '1.6' }}>{slides[currentSlide].desc}</p>
+          <button className="btn btn-lime shop-hero-btn" style={{ padding: '1rem 2rem', fontSize: '1rem', color: 'white', border: 'none' }}>{slides[currentSlide].btnText}</button>
         </div>
       </div>
       
