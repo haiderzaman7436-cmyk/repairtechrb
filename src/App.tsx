@@ -3,6 +3,15 @@ import ShopLayout from './layouts/ShopLayout';
 import Shop from './pages/Shop';
 import ShopCategory from './pages/ShopCategory';
 import ShopScreens from './pages/ShopScreens';
+import ShopChargers from './pages/ShopChargers';
+import ShopBatteries from './pages/ShopBatteries';
+import ShopKeyboards from './pages/ShopKeyboards';
+import ShopStorage from './pages/ShopStorage';
+import ShopMacBookScreens from './pages/ShopMacBookScreens';
+import ShopMacBookBatteries from './pages/ShopMacBookBatteries';
+import ShopMacBookChargers from './pages/ShopMacBookChargers';
+import ShopMacBookKeyboards from './pages/ShopMacBookKeyboards';
+import ProductDetail from './pages/ProductDetail';
 
 function App() {
   return (
@@ -14,6 +23,7 @@ function App() {
         {/* Shop Routes */}
         <Route element={<ShopLayout />}>
           <Route path="/shop" element={<Shop />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/shop/" element={<Shop />} />
           <Route path="/shop/laptop-parts/memory" element={<ShopCategory />} />
           <Route path="/laptopparts/memory" element={<Navigate to="/shop/laptop-parts/memory" replace />} />
@@ -21,6 +31,27 @@ function App() {
           <Route path="/shop/laptop-parts/screens" element={<ShopScreens />} />
           <Route path="/laptopparts/screens" element={<Navigate to="/shop/laptop-parts/screens" replace />} />
           <Route path="/shop/laptopparts/screens" element={<Navigate to="/shop/laptop-parts/screens" replace />} />
+          <Route path="/shop/laptop-parts/chargers" element={<ShopChargers />} />
+          <Route path="/laptopparts/chargers" element={<Navigate to="/shop/laptop-parts/chargers" replace />} />
+          <Route path="/shop/laptopparts/chargers" element={<Navigate to="/shop/laptop-parts/chargers" replace />} />
+          <Route path="/shop/laptop-parts/batteries" element={<ShopBatteries />} />
+          <Route path="/laptopparts/batteries" element={<Navigate to="/shop/laptop-parts/batteries" replace />} />
+          <Route path="/shop/laptopparts/batteries" element={<Navigate to="/shop/laptop-parts/batteries" replace />} />
+          <Route path="/shop/laptop-parts/keyboards" element={<ShopKeyboards />} />
+          <Route path="/laptopparts/keyboards" element={<Navigate to="/shop/laptop-parts/keyboards" replace />} />
+          <Route path="/shop/laptopparts/keyboards" element={<Navigate to="/shop/laptop-parts/keyboards" replace />} />
+          <Route path="/shop/laptop-parts/storage" element={<ShopStorage />} />
+          <Route path="/laptopparts/storage" element={<Navigate to="/shop/laptop-parts/storage" replace />} />
+          <Route path="/shop/laptopparts/storage" element={<Navigate to="/shop/laptop-parts/storage" replace />} />
+          <Route path="/shop/macbook-parts/screens" element={<ShopMacBookScreens />} />
+          <Route path="/shop/macbook-parts/screens" element={<ShopMacBookScreens />} />
+          <Route path="/macbookparts/screens" element={<Navigate to="/shop/macbook-parts/screens" replace />} />
+          <Route path="/shop/macbook-parts/batteries" element={<ShopMacBookBatteries />} />
+          <Route path="/macbookparts/batteries" element={<Navigate to="/shop/macbook-parts/batteries" replace />} />
+          <Route path="/shop/macbook-parts/chargers" element={<ShopMacBookChargers />} />
+          <Route path="/macbookparts/chargers" element={<Navigate to="/shop/macbook-parts/chargers" replace />} />
+          <Route path="/shop/macbook-parts/keyboards" element={<ShopMacBookKeyboards />} />
+          <Route path="/macbookparts/keyboards" element={<Navigate to="/shop/macbook-parts/keyboards" replace />} />
         </Route>
       </Routes>
       

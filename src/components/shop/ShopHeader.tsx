@@ -8,19 +8,20 @@ export default function ShopHeader() {
       {/* Main Header */}
       <div className="shop-main-header">
         <div className="container shop-header-inner">
-          <Link to="/shop" className="shop-logo" style={{ display: 'flex', alignItems: 'center', gap: '1rem', textDecoration: 'none' }}>
+          <Link to="/shop" className="shop-logo" style={{ display: 'flex', alignItems: 'center', gap: '1.2rem', textDecoration: 'none' }}>
             <img 
               src="/images/logo%20(3).png" 
               alt="Repair Tech Logo" 
+              className="shop-logo-img"
               style={{ 
-                height: '100px', 
+                height: '130px', 
                 objectFit: 'contain',
                 mixBlendMode: 'multiply'
               }} 
             />
             <div style={{ display: 'flex', flexDirection: 'column', lineHeight: '1.05' }}>
-              <span style={{ fontSize: '2.2rem', fontWeight: '900', color: 'var(--navy)', letterSpacing: '1px', fontFamily: 'var(--font-sans)' }}>REPAIR</span>
-              <span style={{ fontSize: '2.2rem', fontWeight: '900', color: 'var(--navy)', letterSpacing: '1px', fontFamily: 'var(--font-sans)' }}>TECH</span>
+              <span style={{ fontSize: '2.6rem', fontWeight: '900', color: 'var(--navy)', letterSpacing: '1px', fontFamily: 'var(--font-sans)' }}>REPAIR</span>
+              <span style={{ fontSize: '2.6rem', fontWeight: '900', color: 'var(--navy)', letterSpacing: '1px', fontFamily: 'var(--font-sans)' }}>TECH</span>
             </div>
           </Link>
           

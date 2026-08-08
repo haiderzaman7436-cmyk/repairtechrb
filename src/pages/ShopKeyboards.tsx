@@ -4,34 +4,35 @@ import CategoryProductCard from '../components/shop/CategoryProductCard';
 import Pagination from '../components/shop/Pagination';
 
 const initialProducts = [
-  { id: 1, inStock: true, isUsed: true, category: 'LAPTOP SCREENS', title: 'Pre-owned 15.6" WXGA LED Laptop Screen (Glossy)', price: 'R 650.00', priceNum: 650, image: '/images/screen_1.png' },
-  { id: 2, inStock: true, isUsed: false, category: 'LAPTOP SCREENS', title: '10.1" WSVGA LED Laptop Screen (Matte) Replacement', price: 'R 775.00', priceNum: 775, image: '/images/screen_2.png' },
-  { id: 3, inStock: true, isUsed: false, category: 'LAPTOP SCREENS', title: '11.6" WXGA HD LED Laptop Screen', price: 'R 900.00', priceNum: 900, image: '/images/screen_1.png' },
-  { id: 4, inStock: true, isUsed: false, category: 'LAPTOP SCREENS', title: '12.1" WXGA LED Laptop Screen', price: 'R 1,250.00', priceNum: 1250, image: '/images/screen_2.png' },
-  { id: 5, inStock: true, isUsed: false, category: 'LAPTOP SCREENS', title: '13.3" WXGA HD LED Laptop Screen Replacement', price: 'R 1,600.00', priceNum: 1600, image: '/images/screen_1.png' },
-  { id: 6, inStock: true, isUsed: false, category: 'LAPTOP SCREENS', title: '14.0" WXGA HD LED Laptop Screen Matte', price: 'R 1,150.00', priceNum: 1150, image: '/images/screen_2.png' },
-  { id: 7, inStock: true, isUsed: false, category: 'LAPTOP SCREENS', title: '14.1" WXGA LED Laptop Screen', price: 'R 1,150.00', priceNum: 1150, image: '/images/screen_1.png' },
-  { id: 8, inStock: true, isUsed: false, category: 'LAPTOP SCREENS', title: '15.6" WXGA HD LED Laptop Screen', price: 'R 1,250.00', priceNum: 1250, image: '/images/screen_2.png' },
-  { id: 9, inStock: true, isUsed: false, category: 'LAPTOP SCREENS', title: '17.3" WXGA HD LED Laptop Screen', price: 'R 1,500.00', priceNum: 1500, image: '/images/screen_1.png' },
-  { id: 10, inStock: true, isUsed: false, category: 'APPLE MAC SCREENS', title: 'MacBook Pro 13" Screen Replacement', price: 'R 2,500.00', priceNum: 2500, image: '/images/screen_2.png' },
-  { id: 11, inStock: true, isUsed: true, category: 'APPLE MAC SCREENS', title: 'MacBook Air 13" Screen Replacement', price: 'R 2,200.00', priceNum: 2200, image: '/images/screen_1.png' },
-  { id: 12, inStock: true, isUsed: false, category: 'APPLE MAC SCREENS', title: 'MacBook Pro 15" Screen Replacement', price: 'R 3,500.00', priceNum: 3500, image: '/images/screen_2.png' },
-  { id: 13, inStock: true, isUsed: false, category: 'LAPTOP SCREENS', title: '15.6" FHD IPS Laptop Screen', price: 'R 1,800.00', priceNum: 1800, image: '/images/screen_1.png' },
-  { id: 14, inStock: false, isUsed: true, category: 'LAPTOP SCREENS', title: 'Pre-owned 14.0" LCD Screen', price: 'R 650.00', priceNum: 650, image: '/images/screen_2.png' },
-  { id: 15, inStock: true, isUsed: false, category: 'LAPTOP SCREENS', title: '15.6" 30 Pin Slim FHD LED NanoEdge Laptop Screen With Bottom Right...', price: 'R 2,300.00', priceNum: 2300, image: '/images/screen_1.png' },
-  { id: 16, inStock: true, isUsed: false, category: 'LAPTOP SCREENS', title: '15.6" 30 Pin Slim FHD IPS Non-Edge Laptop Screen With Bottom Right...', price: 'R 2,300.00', priceNum: 2300, image: '/images/screen_2.png' },
-  { id: 17, inStock: true, isUsed: false, category: 'LAPTOP SCREENS', title: '17.3" 30 Pin Slim HD+ LED Laptop Screen With Bottom Left Connector...', price: 'R 2,450.00', priceNum: 2450, image: '/images/screen_1.png' },
-  { id: 18, inStock: true, isUsed: false, category: 'LAPTOP SCREENS', title: 'HP Pavilion X360 14M-DW 14-DW 14T-DW LED LCD Touch Screen...', price: 'R 4,600.00', priceNum: 4600, image: '/images/screen_2.png' },
-  { id: 19, inStock: true, isUsed: false, category: 'LAPTOP SCREENS', title: 'Lenovo Ideapad C340-14 C340-14API 14 inches FHD 1080P IPS LCD Panel Touch...', price: 'R 4,600.00', priceNum: 4600, image: '/images/screen_1.png' },
-  { id: 20, inStock: true, isUsed: false, category: 'LAPTOP SCREENS', title: 'HP Pavilion X360 14-EK 14T-EK 14-E5 LCD LED FHD Touch Screen Assembly...', price: 'R 4,600.00', priceNum: 4600, image: '/images/screen_2.png' },
-  { id: 21, inStock: true, isUsed: false, category: 'LAPTOP SCREENS', title: 'HP Envy x360 15-DR LCD Screen Replacement with Touch Digitizer Glas...', price: 'R 4,850.00', priceNum: 4850, image: '/images/screen_1.png' },
-  { id: 22, inStock: true, isUsed: false, category: 'LAPTOP SCREENS', title: 'Lenovo IdeaPad Flex 5-15ITL05 FHD IPS Touch LCD Screen Replacement with...', price: 'R 4,850.00', priceNum: 4850, image: '/images/screen_2.png' },
-  { id: 23, inStock: true, isUsed: false, category: 'LAPTOP SCREENS', title: 'Asus Zenbook Flip 13 UX362/UX362FA/UX362FN IP...', price: 'R 5,200.00', priceNum: 5200, image: '/images/screen_1.png' }
+  { id: 1, inStock: true, isUsed: false, category: 'LAPTOP KEYBOARDS', title: 'Flexible 108 Key Laptop PC Foldable Keyboard Silicone Soft...', price: 'R 400.00', priceNum: 400, image: '/images/keyboard_1.png' },
+  { id: 2, inStock: true, isUsed: false, category: 'LAPTOP KEYBOARDS', title: 'Asus X541 Series Laptop Keyboard Replacement Keyboard...', price: 'R 550.00', priceNum: 550, image: '/images/keyboard_2.png' },
+  { id: 3, inStock: true, isUsed: false, category: 'LAPTOP KEYBOARDS', title: 'HP ProBook 450 G0 G1 455 G1 450 G2 455 G2 Laptop...', price: 'R 650.00', priceNum: 650, image: '/images/keyboard_3.png' },
+  { id: 4, inStock: true, isUsed: false, category: 'LAPTOP KEYBOARDS', title: 'Dell Inspiron 15R 5520 5525 5537 15V M501R M511R...', price: 'R 650.00', priceNum: 650, image: '/images/keyboard_1.png' },
+  { id: 5, inStock: true, isUsed: false, category: 'LAPTOP KEYBOARDS', title: 'HP EliteBook 840 G1 840 G2 850 G1 850 G2 Laptop Keyboard...', price: 'R 650.00', priceNum: 650, image: '/images/keyboard_2.png' },
+  { id: 6, inStock: true, isUsed: false, category: 'LAPTOP KEYBOARDS', title: 'Acer Aspire E1-521 E1-531 E1-571 E1-581 E1...', price: 'R 550.00', priceNum: 550, image: '/images/keyboard_3.png' },
+  { id: 7, inStock: true, isUsed: false, category: 'LAPTOP KEYBOARDS', title: 'Toshiba Satellite C850 C850D C855 C855D C870 C870D C...', price: 'R 650.00', priceNum: 650, image: '/images/keyboard_1.png' },
+  { id: 8, inStock: true, isUsed: false, category: 'LAPTOP KEYBOARDS', title: 'Lenovo Ideapad 320-15ABR 320-15AST 320-15...', price: 'R 650.00', priceNum: 650, image: '/images/keyboard_2.png' },
+  { id: 9, inStock: true, isUsed: false, category: 'LAPTOP KEYBOARDS', title: 'Lenovo Ideapad 110-15ACL 110-15IBR 110-15IGM 11...', price: 'R 650.00', priceNum: 650, image: '/images/keyboard_3.png' },
+  { id: 10, inStock: true, isUsed: false, category: 'LAPTOP KEYBOARDS', title: 'Lenovo Z570 Z575 B570 B570E V570 V570C B590 V...', price: 'R 650.00', priceNum: 650, image: '/images/keyboard_1.png' },
+  { id: 11, inStock: true, isUsed: false, category: 'LAPTOP KEYBOARDS', title: 'Dell Inspiron 15-7000 7557 7559 15-5000 5547 5...', price: 'R 650.00', priceNum: 650, image: '/images/keyboard_2.png' },
+  { id: 12, inStock: true, isUsed: false, category: 'LAPTOP KEYBOARDS', title: 'HP ProBook 450 G3 450 G4 455 G3 470 G3 Laptop K...', price: 'R 750.00', priceNum: 750, image: '/images/keyboard_3.png' },
+  { id: 13, inStock: true, isUsed: false, category: 'LAPTOP KEYBOARDS', title: 'Toshiba Satellite L50-B L50-C L55-B L55-C Laptop...', price: 'R 550.00', priceNum: 550, image: '/images/keyboard_1.png' },
+  { id: 14, inStock: true, isUsed: false, category: 'LAPTOP KEYBOARDS', title: 'Lenovo Ideapad Y500 Y510 Y510p Y590 Laptop...', price: 'R 650.00', priceNum: 650, image: '/images/keyboard_2.png' },
+  { id: 15, inStock: true, isUsed: false, category: 'LAPTOP KEYBOARDS', title: 'HP EliteBook 8460p 8460w 8470p 8470w Laptop...', price: 'R 650.00', priceNum: 650, image: '/images/keyboard_3.png' },
+  { id: 16, inStock: true, isUsed: false, category: 'LAPTOP KEYBOARDS', title: 'Lenovo Thinkpad T440 T440p T440s T450 T450s...', price: 'R 850.00', priceNum: 850, image: '/images/keyboard_1.png' },
+  { id: 17, inStock: true, isUsed: false, category: 'LAPTOP KEYBOARDS', title: 'Lenovo Thinkpad T470 T480 Laptop Keyboard...', price: 'R 950.00', priceNum: 950, image: '/images/keyboard_2.png' },
+  { id: 18, inStock: true, isUsed: false, category: 'LAPTOP KEYBOARDS', title: 'Lenovo Thinkpad T490 T495 L390 L490 Laptop...', price: 'R 950.00', priceNum: 950, image: '/images/keyboard_3.png' },
+  { id: 19, inStock: true, isUsed: false, category: 'LAPTOP KEYBOARDS', title: 'Acer Swift 3 SF314-52 SF314-52G SF314-53 SF31...', price: 'R 950.00', priceNum: 950, image: '/images/keyboard_1.png' },
+  { id: 20, inStock: true, isUsed: false, category: 'LAPTOP KEYBOARDS', title: 'HP Pavilion 15-BS 15-BW 15-CC 15-CD Laptop K...', price: 'R 1,150.00', priceNum: 1150, image: '/images/keyboard_2.png' },
+  { id: 21, inStock: true, isUsed: false, category: 'LAPTOP KEYBOARDS', title: 'HP Envy 15-AE 15-AH 15-AS 15-AQ Laptop K...', price: 'R 1,150.00', priceNum: 1150, image: '/images/keyboard_3.png' },
+  { id: 22, inStock: true, isUsed: false, category: 'LAPTOP KEYBOARDS', title: 'Asus ZenBook UX430 UX430UA UX430UN Lapt...', price: 'R 1,250.00', priceNum: 1250, image: '/images/keyboard_1.png' },
+  { id: 23, inStock: true, isUsed: false, category: 'LAPTOP KEYBOARDS', title: 'Dell Latitude E5450 E5470 E7450 E7470 Laptop K...', price: 'R 1,250.00', priceNum: 1250, image: '/images/keyboard_2.png' },
+  { id: 24, inStock: true, isUsed: false, category: 'LAPTOP KEYBOARDS', title: 'Samsung NP900X3C NP900X3D NP900X3E Lapt...', price: 'R 1,450.00', priceNum: 1450, image: '/images/keyboard_3.png' }
 ];
 
 const ITEMS_PER_PAGE = 12;
 
-export default function ShopScreens() {
+export default function ShopKeyboards() {
   const [filters, setFilters] = useState<FiltersState>({
     availability: [],
     condition: [],
@@ -117,12 +118,12 @@ export default function ShopScreens() {
     <div className="category-page">
       <div className="container">
         <div className="breadcrumb" style={{ margin: '2rem 0 1rem', fontSize: '0.8rem', color: 'var(--gray-dark)' }}>
-          Home &gt; Laptop Screens
+          Home &gt; Laptop Keyboard
         </div>
         
         <div className="category-header">
           <div style={{ display: 'flex', alignItems: 'baseline', gap: '1rem' }}>
-            <h1>Laptop Screens</h1>
+            <h1>Laptop Keyboard</h1>
             <span style={{ color: 'var(--gray-dark)', fontSize: '0.9rem' }}>{filteredProducts.length} products</span>
           </div>
           <div className="sort-box">
@@ -172,11 +173,7 @@ export default function ShopScreens() {
             )}
             
             <div className="seo-text-box" style={{ marginTop: '4rem' }}>
-              <h3 style={{ marginBottom: '1rem', color: 'var(--navy)' }}>Replacement Laptop Screen</h3>
-              <p>We stock an array of replacement laptop screens from a range of major brands. It is essential to choose the exact screen model for your device, as screens are often not interchangeable. Ensure you match the specifications of your old screen to the new one.</p>
-              
-              <h3 style={{ marginTop: '2rem', marginBottom: '1rem', color: 'var(--navy)' }}>Laptop Screen Sizes</h3>
-              <p>Laptop screens come in different sizes, most commonly between 10 to 17.3 inch, but there are other factors to account for as well. Ensure you find the right connector (such as 30-pin, 40-pin) and the correct screen type (such as LCD, LED, IPS, Matte, Glossy) before ordering to ensure full compatibility with your laptop model.</p>
+              <p>Quality replacement laptop keyboards for Acer, Asus, Dell, Lenovo, HP, Toshiba, Apple Mac and more. Keyboard issues commonly include missing keycaps, stuck keys or a lack of response when you press the buttons. Ensure you check your exact model number and layout before ordering.</p>
             </div>
           </div>
         </div>

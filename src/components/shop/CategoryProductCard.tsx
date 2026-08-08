@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 interface CategoryProductCardProps {
+  id?: number | string;
   inStock: boolean;
   isUsed?: boolean;
   image: string;
@@ -9,7 +10,8 @@ interface CategoryProductCardProps {
   price: string;
 }
 
-export default function CategoryProductCard({ inStock, isUsed, image, category, title, price }: CategoryProductCardProps) {
+export default function CategoryProductCard(props: CategoryProductCardProps) {
+  const { id = Math.floor(Math.random() * 10000), inStock, isUsed, image, category, title, price } = props;
   const waMessage = encodeURIComponent(`Hi, I'm interested in the ${title} priced at ${price}.`);
   const waLink = `https://wa.me/27685011885?text=${waMessage}`;
 
@@ -20,12 +22,12 @@ export default function CategoryProductCard({ inStock, isUsed, image, category, 
         {isUsed && <span className="tag-used">USED</span>}
       </div>
       
-      <Link to="#" className="cat-product-img-box">
+      <Link to={`/product/${id}`} state={{ product: props }} className="cat-product-img-box">
         <img src={image} alt={title} loading="lazy" />
       </Link>
       
       <div className="cat-product-category">{category}</div>
-      <Link to="#" style={{ textDecoration: 'none' }}>
+      <Link to={`/product/${id}`} state={{ product: props }} style={{ textDecoration: 'none' }}>
         <h3 className="cat-product-title">{title}</h3>
       </Link>
       <div className="cat-product-price">{price}</div>

@@ -52,7 +52,19 @@ export default function ShopNav() {
                   {link.dropdown.map((sub, subIdx) => (
                     <Link 
                       key={subIdx} 
-                      to={sub === 'Memory' ? '/shop/laptop-parts/memory' : sub === 'Screens' ? '/shop/laptop-parts/screens' : '/shop'} 
+                      to={
+                        link.label === 'MACBOOK PARTS' && sub === 'Screens' ? '/shop/macbook-parts/screens' :
+                        link.label === 'MACBOOK PARTS' && sub === 'Batteries' ? '/shop/macbook-parts/batteries' :
+                        link.label === 'MACBOOK PARTS' && sub === 'Chargers' ? '/shop/macbook-parts/chargers' :
+                        link.label === 'MACBOOK PARTS' && sub === 'Keyboards' ? '/shop/macbook-parts/keyboards' :
+                        link.label === 'LAPTOP PARTS' && sub === 'Screens' ? '/shop/laptop-parts/screens' :
+                        link.label === 'LAPTOP PARTS' && sub === 'Batteries' ? '/shop/laptop-parts/batteries' :
+                        link.label === 'LAPTOP PARTS' && sub === 'Chargers' ? '/shop/laptop-parts/chargers' :
+                        link.label === 'LAPTOP PARTS' && sub === 'Keyboards' ? '/shop/laptop-parts/keyboards' :
+                        sub === 'Memory' ? '/shop/laptop-parts/memory' : 
+                        sub === 'Storage (HDD/SSD)' ? '/shop/laptop-parts/storage' : 
+                        '/shop'
+                      } 
                       className="shop-dropdown-item"
                       onClick={() => setHoveredIndex(null)}
                     >
