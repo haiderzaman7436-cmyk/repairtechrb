@@ -4,25 +4,25 @@ import CategoryProductCard from '../components/shop/CategoryProductCard';
 import Pagination from '../components/shop/Pagination';
 
 const initialProducts = [
-  { id: 1, inStock: true, isUsed: false, category: 'LAPTOP MEMORY', title: 'Pre-owned 512MB DDR2 Laptop Memory RAM', price: 'R 30.00', priceNum: 30, image: '/images/ram_stick_1.png' },
-  { id: 2, inStock: true, isUsed: false, category: 'LAPTOP MEMORY', title: 'Pre-owned 1GB DDR2 Laptop Memory RAM', price: 'R 120.00', priceNum: 120, image: '/images/ram_stick_2.png' },
-  { id: 3, inStock: true, isUsed: false, category: 'LAPTOP MEMORY', title: '1GB DDR3 Laptop Memory RAM', price: 'R 250.00', priceNum: 250, image: '/images/ram_stick_3.png' },
-  { id: 4, inStock: true, isUsed: true, category: 'LAPTOP MEMORY', title: 'Pre-owned SAMSUNG 2GB PC3-10600S Mac Rounded Laptop Memory RAM...', price: 'R 230.00', priceNum: 230, image: '/images/ram_stick_1.png' },
-  { id: 5, inStock: true, isUsed: true, category: 'LAPTOP MEMORY', title: 'SAMSUNG 2GB PC3-10600S Mac Rounded Laptop Memory...', price: 'R 250.00', priceNum: 250, image: '/images/ram_stick_2.png' },
-  { id: 6, inStock: true, isUsed: true, category: 'LAPTOP MEMORY', title: 'SAMSUNG 4GB PC3-12800S Mac Rounded Notebook...', price: 'R 250.00', priceNum: 250, image: '/images/ram_stick_3.png' },
-  { id: 7, inStock: true, isUsed: true, category: 'LAPTOP MEMORY', title: 'Pre-owned 8GB DDR3 1600MHz Mac Rounded Laptop Memory RAM...', price: 'R 790.00', priceNum: 790, image: '/images/ram_stick_1.png' },
-  { id: 8, inStock: true, isUsed: true, category: 'LAPTOP MEMORY', title: '8GB DDR4 2133MHz SO-DIMM Notebook Laptop Memory RAM', price: 'R 1,150.00', priceNum: 1150, image: '/images/ram_stick_2.png' },
-  { id: 9, inStock: true, isUsed: true, category: 'LAPTOP MEMORY', title: '8GB DDR4 2400MHz SO-DIMM Notebook Laptop Memory RAM | NANYA...', price: 'R 1,150.00', priceNum: 1150, image: '/images/ram_stick_3.png' },
-  { id: 10, inStock: true, isUsed: false, category: 'APPLE MAC MEMORY', title: '8GB DDR4 2400MHz SO-DIMM Notebook Laptop Memory RAM Brands...', price: 'R 1,150.00', priceNum: 1150, image: '/images/ram_stick_1.png' },
-  { id: 11, inStock: true, isUsed: true, category: 'LAPTOP MEMORY', title: '8GB DDR4 2666MHz PC4-12800S SO-DIMM 260-Pin Assorted Brands...', price: 'R 1,150.00', priceNum: 1150, image: '/images/ram_stick_2.png' },
-  { id: 12, inStock: true, isUsed: false, category: 'APPLE MAC MEMORY', title: '8GB DDR4 2666MHz SO-DIMM Notebook Laptop Memory Mac Brands...', price: 'R 1,150.00', priceNum: 1150, image: '/images/ram_stick_3.png' },
-  { id: 13, inStock: true, isUsed: false, category: 'LAPTOP MEMORY', title: 'Kingston 16GB KVR32S22D8/16 260-Pin PC4-25600 3200MHz Laptop Memory...', price: 'R 2,200.00', priceNum: 2200, image: '/images/ram_stick_1.png' },
-  { id: 14, inStock: false, isUsed: true, category: 'LAPTOP MEMORY', title: 'Pre-owned 4GB DDR3 Laptop Memory RAM', price: 'R 450.00', priceNum: 450, image: '/images/ram_stick_2.png' }
+  { id: 1, inStock: true, isUsed: true, category: 'LAPTOP SCREENS', title: 'Pre-owned 15.6" WXGA LED Laptop Screen (Glossy)', price: 'R 650.00', priceNum: 650, image: '/images/screen_1.png' },
+  { id: 2, inStock: true, isUsed: false, category: 'LAPTOP SCREENS', title: '10.1" WSVGA LED Laptop Screen (Matte) Replacement', price: 'R 775.00', priceNum: 775, image: '/images/screen_2.png' },
+  { id: 3, inStock: true, isUsed: false, category: 'LAPTOP SCREENS', title: '11.6" WXGA HD LED Laptop Screen', price: 'R 900.00', priceNum: 900, image: '/images/screen_1.png' },
+  { id: 4, inStock: true, isUsed: false, category: 'LAPTOP SCREENS', title: '12.1" WXGA LED Laptop Screen', price: 'R 1,250.00', priceNum: 1250, image: '/images/screen_2.png' },
+  { id: 5, inStock: true, isUsed: false, category: 'LAPTOP SCREENS', title: '13.3" WXGA HD LED Laptop Screen Replacement', price: 'R 1,600.00', priceNum: 1600, image: '/images/screen_1.png' },
+  { id: 6, inStock: true, isUsed: false, category: 'LAPTOP SCREENS', title: '14.0" WXGA HD LED Laptop Screen Matte', price: 'R 1,150.00', priceNum: 1150, image: '/images/screen_2.png' },
+  { id: 7, inStock: true, isUsed: false, category: 'LAPTOP SCREENS', title: '14.1" WXGA LED Laptop Screen', price: 'R 1,150.00', priceNum: 1150, image: '/images/screen_1.png' },
+  { id: 8, inStock: true, isUsed: false, category: 'LAPTOP SCREENS', title: '15.6" WXGA HD LED Laptop Screen', price: 'R 1,250.00', priceNum: 1250, image: '/images/screen_2.png' },
+  { id: 9, inStock: true, isUsed: false, category: 'LAPTOP SCREENS', title: '17.3" WXGA HD LED Laptop Screen', price: 'R 1,500.00', priceNum: 1500, image: '/images/screen_1.png' },
+  { id: 10, inStock: true, isUsed: false, category: 'APPLE MAC SCREENS', title: 'MacBook Pro 13" Screen Replacement', price: 'R 2,500.00', priceNum: 2500, image: '/images/screen_2.png' },
+  { id: 11, inStock: true, isUsed: true, category: 'APPLE MAC SCREENS', title: 'MacBook Air 13" Screen Replacement', price: 'R 2,200.00', priceNum: 2200, image: '/images/screen_1.png' },
+  { id: 12, inStock: true, isUsed: false, category: 'APPLE MAC SCREENS', title: 'MacBook Pro 15" Screen Replacement', price: 'R 3,500.00', priceNum: 3500, image: '/images/screen_2.png' },
+  { id: 13, inStock: true, isUsed: false, category: 'LAPTOP SCREENS', title: '15.6" FHD IPS Laptop Screen', price: 'R 1,800.00', priceNum: 1800, image: '/images/screen_1.png' },
+  { id: 14, inStock: false, isUsed: true, category: 'LAPTOP SCREENS', title: 'Pre-owned 14.0" LCD Screen', price: 'R 650.00', priceNum: 650, image: '/images/screen_2.png' }
 ];
 
 const ITEMS_PER_PAGE = 12;
 
-export default function ShopCategory() {
+export default function ShopScreens() {
   const [filters, setFilters] = useState<FiltersState>({
     availability: [],
     condition: [],
@@ -44,7 +44,7 @@ export default function ShopCategory() {
         : [...current, value];
       return { ...prev, [category]: updated };
     });
-    setCurrentPage(1); // Reset page on filter change
+    setCurrentPage(1);
   };
 
   const handleClearAll = () => {
@@ -65,10 +65,8 @@ export default function ShopCategory() {
     setCurrentPage(1);
   };
 
-  // Filter Logic
   const filteredProducts = useMemo(() => {
     return initialProducts.filter(product => {
-      // Condition Filter (Mapping New/Used to product.isUsed)
       if (filters.condition.length > 0) {
         const isNewAllowed = filters.condition.includes('New');
         const isUsedAllowed = filters.condition.includes('Used');
@@ -76,7 +74,6 @@ export default function ShopCategory() {
         if (!product.isUsed && !isNewAllowed) return false;
       }
       
-      // Availability Filter
       if (filters.availability.length > 0) {
         const inStockAllowed = filters.availability.includes('In Stock');
         const onOrderAllowed = filters.availability.includes('On Order');
@@ -84,29 +81,23 @@ export default function ShopCategory() {
         if (!product.inStock && !onOrderAllowed) return false;
       }
 
-      // Price Range Filter
       if (product.priceNum < appliedPriceRange.min || product.priceNum > appliedPriceRange.max) {
         return false;
       }
 
-      // We skip Location and Grade filtering for the mockup since products don't have those properties
-      
       return true;
     });
   }, [filters, appliedPriceRange]);
 
-  // Sorting Logic
   const sortedProducts = useMemo(() => {
     return [...filteredProducts].sort((a, b) => {
       if (sortBy === 'price-ascending') return a.priceNum - b.priceNum;
       if (sortBy === 'price-descending') return b.priceNum - a.priceNum;
       if (sortBy === 'alphabetical') return a.title.localeCompare(b.title);
-      // 'latest' would be by ID descending in this mockup
       return b.id - a.id; 
     });
   }, [filteredProducts, sortBy]);
 
-  // Pagination Logic
   const totalPages = Math.ceil(sortedProducts.length / ITEMS_PER_PAGE);
   const paginatedProducts = sortedProducts.slice(
     (currentPage - 1) * ITEMS_PER_PAGE, 
@@ -117,12 +108,12 @@ export default function ShopCategory() {
     <div className="category-page">
       <div className="container">
         <div className="breadcrumb" style={{ margin: '2rem 0 1rem', fontSize: '0.8rem', color: 'var(--gray-dark)' }}>
-          Home &gt; Laptop Memory
+          Home &gt; Laptop Screens
         </div>
         
         <div className="category-header">
           <div style={{ display: 'flex', alignItems: 'baseline', gap: '1rem' }}>
-            <h1>Laptop Memory</h1>
+            <h1>Laptop Screens</h1>
             <span style={{ color: 'var(--gray-dark)', fontSize: '0.9rem' }}>{filteredProducts.length} products</span>
           </div>
           <div className="sort-box">
@@ -172,8 +163,11 @@ export default function ShopCategory() {
             )}
             
             <div className="seo-text-box" style={{ marginTop: '4rem' }}>
-              <p>Whether for your computer's lifespan, the easiest and most cost-effective way to get more performance from your laptop is by upgrading your system memory. Memory upgrades help make multitasking easier, running everything smoother, and getting the most out of your hardware.</p>
-              <p>With prices for memory falling there is no better time to stock up and go bigger. You can select from a wide assortment of speeds, capacities whether 2GB DDR2, 4GB DDR3, 16GB DDR4 or 32GB PC RAM in the market currently up with MAC memory, USED AND NEW MEMORY, KINGSTON STANDARD, CRUCIAL AND OTHER BRANDS, we have the right solution for your computers upgrades needs.</p>
+              <h3 style={{ marginBottom: '1rem', color: 'var(--navy)' }}>Replacement Laptop Screen</h3>
+              <p>We stock an array of replacement laptop screens from a range of major brands. It is essential to choose the exact screen model for your device, as screens are often not interchangeable. Ensure you match the specifications of your old screen to the new one.</p>
+              
+              <h3 style={{ marginTop: '2rem', marginBottom: '1rem', color: 'var(--navy)' }}>Laptop Screen Sizes</h3>
+              <p>Laptop screens come in different sizes, most commonly between 10 to 17.3 inch, but there are other factors to account for as well. Ensure you find the right connector (such as 30-pin, 40-pin) and the correct screen type (such as LCD, LED, IPS, Matte, Glossy) before ordering to ensure full compatibility with your laptop model.</p>
             </div>
           </div>
         </div>

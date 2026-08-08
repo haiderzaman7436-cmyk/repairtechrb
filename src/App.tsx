@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import ShopLayout from './layouts/ShopLayout';
 import Shop from './pages/Shop';
 import ShopCategory from './pages/ShopCategory';
+import ShopScreens from './pages/ShopScreens';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
           <Route path="/shop/laptop-parts/memory" element={<ShopCategory />} />
           <Route path="/laptopparts/memory" element={<Navigate to="/shop/laptop-parts/memory" replace />} />
           <Route path="/shop/laptopparts/memory" element={<Navigate to="/shop/laptop-parts/memory" replace />} />
+          <Route path="/shop/laptop-parts/screens" element={<ShopScreens />} />
+          <Route path="/laptopparts/screens" element={<Navigate to="/shop/laptop-parts/screens" replace />} />
+          <Route path="/shop/laptopparts/screens" element={<Navigate to="/shop/laptop-parts/screens" replace />} />
         </Route>
       </Routes>
       

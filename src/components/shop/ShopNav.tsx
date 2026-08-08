@@ -52,7 +52,7 @@ export default function ShopNav() {
                   {link.dropdown.map((sub, subIdx) => (
                     <Link 
                       key={subIdx} 
-                      to={sub === 'Memory' ? '/shop/laptop-parts/memory' : '/shop'} 
+                      to={sub === 'Memory' ? '/shop/laptop-parts/memory' : sub === 'Screens' ? '/shop/laptop-parts/screens' : '/shop'} 
                       className="shop-dropdown-item"
                       onClick={() => setHoveredIndex(null)}
                     >
