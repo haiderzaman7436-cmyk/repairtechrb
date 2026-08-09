@@ -2138,14 +2138,15 @@ h4 {
 
 .countdown-box span {
   display: block;
-  color: var(--white);
+  color: inherit;
   font-size: 1.5rem;
   font-weight: bold;
 }
 
 .countdown-box div {
   font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: inherit;
+  opacity: 0.8;
 }
 
 .shop-featured-actions {
