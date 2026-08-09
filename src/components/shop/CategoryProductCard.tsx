@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 interface CategoryProductCardProps {
   id?: number | string;
@@ -12,27 +12,35 @@ interface CategoryProductCardProps {
 
 export default function CategoryProductCard(props: CategoryProductCardProps) {
   const { id = Math.floor(Math.random() * 10000), inStock, isUsed, image, category, title, price } = props;
+  const navigate = useNavigate();
+
   const waMessage = encodeURIComponent(`Hi, I'm interested in the ${title} priced at ${price}.`);
   const waLink = `https://wa.me/27685011885?text=${waMessage}`;
 
+  const handleCardClick = () => {
+    navigate(`/product/${id}`, { state: { product: props } });
+  };
+
+  const stopPropagation = (e: React.MouseEvent) => {
+    e.stopPropagation();
+  };
+
   return (
-    <div className="cat-product-card">
+    <div className="cat-product-card" onClick={handleCardClick} style={{ cursor: 'pointer' }}>
       <div className="cat-product-tags">
         {inStock && <span className="tag-in-stock">IN STOCK</span>}
         {isUsed && <span className="tag-used">USED</span>}
       </div>
       
-      <Link to={`/product/${id}`} state={{ product: props }} className="cat-product-img-box">
+      <div className="cat-product-img-box">
         <img src={image} alt={title} loading="lazy" />
-      </Link>
+      </div>
       
       <div className="cat-product-category">{category}</div>
-      <Link to={`/product/${id}`} state={{ product: props }} style={{ textDecoration: 'none' }}>
-        <h3 className="cat-product-title">{title}</h3>
-      </Link>
+      <h3 className="cat-product-title">{title}</h3>
       <div className="cat-product-price">{price}</div>
       
-      <div className="cat-product-actions">
+      <div className="cat-product-actions" onClick={stopPropagation}>
         <button className="btn btn-navy flex-1" style={{ fontSize: '0.8rem', padding: '0.5rem', borderRadius: '4px' }}>ADD TO CART</button>
         <a href={waLink} target="_blank" rel="noopener noreferrer" style={{ background: '#25D366', padding: '0.5rem 0.8rem', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none', borderRadius: '4px', color: 'white' }}>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
