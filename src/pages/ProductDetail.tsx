@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react';
-import { useLocation, useParams, useNavigate } from 'react-router-dom';
-import { Check, Info, ShieldCheck, ShoppingCart } from 'lucide-react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { Check, Info, ShieldCheck } from 'lucide-react';
 
 export default function ProductDetail() {
   const location = useLocation();
   const navigate = useNavigate();
-  const { id } = useParams();
   const [activeTab, setActiveTab] = useState('description');
 
   const product = location.state?.product;
