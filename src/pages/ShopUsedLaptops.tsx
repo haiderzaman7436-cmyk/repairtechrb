@@ -1,6 +1,10 @@
-import { useNavigate } from 'react-router-dom';
 
-const products = [
+import { useState, useMemo } from 'react';
+import ShopSidebar, { type FiltersState } from '../components/shop/ShopSidebar';
+import CategoryProductCard from '../components/shop/CategoryProductCard';
+import Pagination from '../components/shop/Pagination';
+
+const initialProducts = [
   {
     "id": 10253490520312,
     "title": "HP EliteBook 820 G3 12.5 Inch Touchscreen Business Laptop \u2013 i5 6300U \u2013 8GB DDR4 \u2013 256GB SATA SSD \u2013 Win10Pro (Used)",
@@ -303,38 +307,148 @@ const products = [
   }
 ];
 
+const ITEMS_PER_PAGE = 12;
+
 export default function ShopUsedLaptops() {
-  const navigate = useNavigate();
+  const [filters, setFilters] = useState<FiltersState>({
+    availability: [],
+    condition: [],
+    location: [],
+    grade: []
+  });
+  
+  const [priceInput, setPriceInput] = useState({ min: '', max: '' });
+  const [appliedPriceRange, setAppliedPriceRange] = useState({ min: 0, max: Infinity });
+  
+  const [sortBy, setSortBy] = useState('price-ascending');
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const handleFilterChange = (category: keyof FiltersState, value: string) => {
+    setFilters(prev => {
+      const current = prev[category];
+      const updated = current.includes(value)
+        ? current.filter(item => item !== value)
+        : [...current, value];
+      return { ...prev, [category]: updated };
+    });
+    setCurrentPage(1);
+  };
+
+  const handleClearAll = () => {
+    setFilters({ availability: [], condition: [], location: [], grade: [] });
+    setPriceInput({ min: '', max: '' });
+    setAppliedPriceRange({ min: 0, max: Infinity });
+    setCurrentPage(1);
+  };
+
+  const handlePriceChange = (type: 'min' | 'max', value: string) => {
+    setPriceInput(prev => ({ ...prev, [type]: value }));
+  };
+
+  const handleApplyPrice = () => {
+    const min = parseFloat(priceInput.min) || 0;
+    const max = parseFloat(priceInput.max) || Infinity;
+    setAppliedPriceRange({ min, max });
+    setCurrentPage(1);
+  };
+
+  const filteredProducts = useMemo(() => {
+    return initialProducts.filter((product: any) => {
+      if (filters.condition.length > 0) {
+        const isNewAllowed = filters.condition.includes('New');
+        const isUsedAllowed = filters.condition.includes('Used');
+        if (product.isUsed && !isUsedAllowed) return false;
+        if (!product.isUsed && !isNewAllowed) return false;
+      }
+      
+      if (filters.availability.length > 0) {
+        const inStockAllowed = filters.availability.includes('In Stock');
+        const onOrderAllowed = filters.availability.includes('On Order');
+        if (product.inStock && !inStockAllowed) return false;
+        if (!product.inStock && !onOrderAllowed) return false;
+      }
+
+      if (product.priceNum < appliedPriceRange.min || product.priceNum > appliedPriceRange.max) {
+        return false;
+      }
+
+      return true;
+    });
+  }, [filters, appliedPriceRange]);
+
+  const sortedProducts = useMemo(() => {
+    return [...filteredProducts].sort((a: any, b: any) => {
+      if (sortBy === 'price-ascending') return a.priceNum - b.priceNum;
+      if (sortBy === 'price-descending') return b.priceNum - a.priceNum;
+      if (sortBy === 'alphabetical') return a.title.localeCompare(b.title);
+      return b.id - a.id; 
+    });
+  }, [filteredProducts, sortBy]);
+
+  const totalPages = Math.ceil(sortedProducts.length / ITEMS_PER_PAGE);
+  const paginatedProducts = sortedProducts.slice(
+    (currentPage - 1) * ITEMS_PER_PAGE, 
+    currentPage * ITEMS_PER_PAGE
+  );
 
   return (
-    <div className="shop-category-page">
+    <div className="category-page">
       <div className="container">
-        <h1 className="category-title">Used Laptops</h1>
-        <div className="products-grid">
-          {products.map(product => (
-            <div key={product.id} className="cat-product-card" onClick={() => navigate(`/product/${product.id}`, { state: { product } })}>
-              {product.isUsed && <span className="cat-product-tag-used">USED</span>}
-              <div className="cat-product-img-box">
-                <div className="premium-badge">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                    <polyline points="9 12 11 14 15 10"/>
-                  </svg>
-                  VERIFIED PART
+        <div className="breadcrumb" style={{ margin: '2rem 0 1rem', fontSize: '0.8rem', color: 'var(--gray-dark)' }}>
+          Home &gt; Used Laptops
+        </div>
+        
+        <div className="category-header">
+          <div style={{ display: 'flex', alignItems: 'baseline', gap: '1rem' }}>
+            <h1>Used Laptops</h1>
+            <span style={{ color: 'var(--gray-dark)', fontSize: '0.9rem' }}>{filteredProducts.length} products</span>
+          </div>
+          <div className="sort-box">
+            <select 
+              className="sort-select" 
+              value={sortBy} 
+              onChange={(e) => setSortBy(e.target.value)}
+            >
+              <option value="price-ascending">Price: Low to High</option>
+              <option value="price-descending">Price: High to Low</option>
+              <option value="alphabetical">Alphabetically, A-Z</option>
+              <option value="latest">Latest</option>
+            </select>
+          </div>
+        </div>
+
+        <div className="category-layout">
+          <ShopSidebar 
+            filters={filters}
+            onFilterChange={handleFilterChange}
+            onClearAll={handleClearAll}
+            priceRange={priceInput}
+            onPriceChange={handlePriceChange}
+            onApplyPrice={handleApplyPrice}
+          />
+          
+          <div className="category-main">
+            {paginatedProducts.length > 0 ? (
+              <>
+                <div className="cat-product-grid">
+                  {paginatedProducts.map((product: any) => (
+                    <CategoryProductCard key={product.id} {...product} />
+                  ))}
                 </div>
-                <img src={product.image} alt={product.title} />
+                <Pagination 
+                  currentPage={currentPage} 
+                  totalPages={totalPages} 
+                  onPageChange={setCurrentPage} 
+                />
+              </>
+            ) : (
+              <div style={{ textAlign: 'center', padding: '4rem 0', color: 'var(--gray-dark)' }}>
+                <h3>No products found</h3>
+                <p>Try adjusting your filters or search criteria.</p>
+                <button className="btn btn-navy" onClick={handleClearAll} style={{ marginTop: '1rem' }}>Clear all filters</button>
               </div>
-              <div className="cat-product-info">
-                <h3 className="cat-product-title">{product.title}</h3>
-                <div className="cat-product-meta">
-                  <span>Type: <strong>{product.category}</strong></span>
-                  <span className="stock-status in-stock">● In Stock</span>
-                </div>
-                <div className="cat-product-price">{product.price}</div>
-                <button className="btn btn-navy" style={{width: '100%', marginTop: '1rem'}}>VIEW DETAILS</button>
-              </div>
-            </div>
-          ))}
+            )}
+          </div>
         </div>
       </div>
     </div>
