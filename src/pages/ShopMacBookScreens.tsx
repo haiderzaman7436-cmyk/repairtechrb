@@ -1,171 +1,241 @@
-import { useState, useMemo } from 'react';
-import ShopSidebar, { type FiltersState } from '../components/shop/ShopSidebar';
-import CategoryProductCard from '../components/shop/CategoryProductCard';
-import Pagination from '../components/shop/Pagination';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const initialProducts = [
-  { id: 1, inStock: true, isUsed: false, category: 'LAPTOP SCREEN', title: 'MacBook Pro Retina 15-inch Replacement Display Screen Assembly...', price: 'R 8,000.00', priceNum: 8000, image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800&auto=format&fit=crop' },
-  { id: 2, inStock: true, isUsed: false, category: 'LAPTOP SCREEN', title: '13" MacBook Air Replacement Display Screen Assembly A1369 A1466...', price: 'R 2,500.00', priceNum: 2500, image: 'https://images.unsplash.com/photo-1537498425277-c283d32ef9db?q=80&w=800&auto=format&fit=crop' },
-  { id: 3, inStock: true, isUsed: false, category: 'LAPTOP SCREEN', title: '13" MacBook Pro Replacement Display Screen Assembly A1502 Retina...', price: 'R 3,500.00', priceNum: 3500, image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800&auto=format&fit=crop' },
-  { id: 4, inStock: true, isUsed: false, category: 'LAPTOP SCREEN', title: 'A1278 13-inch MacBook Pro Unibody Replacement Display Screen Assembly...', price: 'R 1,500.00', priceNum: 1500, image: 'https://images.unsplash.com/photo-1537498425277-c283d32ef9db?q=80&w=800&auto=format&fit=crop' },
-  { id: 5, inStock: true, isUsed: false, category: 'LAPTOP SCREEN', title: 'Macbook Air 13.3-inch A2337 M1 Retina Display Screen Assembly...', price: 'R 4,500.00', priceNum: 4500, image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800&auto=format&fit=crop' },
-  { id: 6, inStock: true, isUsed: false, category: 'LAPTOP SCREEN', title: 'Macbook Pro 13-inch Retina Replacement Display Screen Assembly A1708...', price: 'R 4,500.00', priceNum: 4500, image: 'https://images.unsplash.com/photo-1537498425277-c283d32ef9db?q=80&w=800&auto=format&fit=crop' },
-  { id: 7, inStock: true, isUsed: false, category: 'LAPTOP SCREEN', title: '12" MacBook Retina 12-inch A1534 Replacement Display Screen Assembly...', price: 'R 4,500.00', priceNum: 4500, image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800&auto=format&fit=crop' },
-  { id: 8, inStock: true, isUsed: false, category: 'LAPTOP SCREEN', title: 'A1706 MacBook Pro 13-inch Retina Display Screen Assembly (2016-2017)...', price: 'R 4,500.00', priceNum: 4500, image: 'https://images.unsplash.com/photo-1537498425277-c283d32ef9db?q=80&w=800&auto=format&fit=crop' },
-  { id: 9, inStock: true, isUsed: false, category: 'MACBOOK MAC SCREEN ASSEMBLY', title: 'MacBook Air 13.3-inch M1 Retina Display Screen Assembly (Gold)...', price: 'R 4,500.00', priceNum: 4500, image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800&auto=format&fit=crop' },
-  { id: 10, inStock: true, isUsed: false, category: 'MACBOOK MAC SCREEN ASSEMBLY', title: 'A2159 MacBook Pro 13-inch Retina Display Screen Assembly (2019)...', price: 'R 4,500.00', priceNum: 4500, image: 'https://images.unsplash.com/photo-1537498425277-c283d32ef9db?q=80&w=800&auto=format&fit=crop' },
-  { id: 11, inStock: true, isUsed: false, category: 'LAPTOP SCREEN', title: '13" MacBook Pro Retina Replacement Display Screen Assembly A1989...', price: 'R 5,000.00', priceNum: 5000, image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800&auto=format&fit=crop' },
-  { id: 12, inStock: true, isUsed: false, category: 'LAPTOP SCREEN', title: '15" MacBook Pro Retina Touch Bar Replacement Display Screen Assembly...', price: 'R 7,500.00', priceNum: 7500, image: 'https://images.unsplash.com/photo-1537498425277-c283d32ef9db?q=80&w=800&auto=format&fit=crop' }
+const products = [
+  {
+    "id": 4446057824374,
+    "title": "13\" MacBook Air Replacement Display Screen Assembly | A1466 Year MID 2013 - MID 2017  (used)",
+    "price": "R3999.00",
+    "priceNum": 3999,
+    "image": "/images/macbook-parts-screens/1_MID-2017-EMC2925-A1466-Complete-LCD-Screen-For-Apple-Macbook-Air-13-inch-LCD-Display-Assembly.jpg_q50.jpg?v=4",
+    "category": "MacBook Screens",
+    "isUsed": true,
+    "inStock": true
+  },
+  {
+    "id": 7664437494008,
+    "title": "16 inch MacBook Pro  Space Grey Replacement Display Screen Assembly | A2141 Late 2019  (Used)",
+    "price": "R7999.00",
+    "priceNum": 7999,
+    "image": "/images/macbook-parts-screens/2_16inchMacBookProSpaceGreyReplacementDisplayScreen2.jpg?v=4",
+    "category": "MacBook Screens",
+    "isUsed": true,
+    "inStock": true
+  },
+  {
+    "id": 4446063853686,
+    "title": "13\" MacBook Pro Retina  Replacement Display Screen Assembly | A1425 Year Late 2012 - Early 2013  (used)",
+    "price": "R4999.00",
+    "priceNum": 4999,
+    "image": "/images/macbook-parts-screens/3_A1425macbookproretinascreen.jpg?v=4",
+    "category": "MacBook Screens",
+    "isUsed": true,
+    "inStock": true
+  },
+  {
+    "id": 4445769793654,
+    "title": "13\" MacBook Pro Retina Replacement Display Screen Assembly | A1502 Year Late 2013 - Mid 2014  (used)",
+    "price": "R4999.00",
+    "priceNum": 4999,
+    "image": "/images/macbook-parts-screens/4_A1502-late-2013mid-2014.jpg?v=4",
+    "category": "MacBook Screens",
+    "isUsed": true,
+    "inStock": true
+  },
+  {
+    "id": 9949130162424,
+    "title": "Macbook Air 13.3\" A1369 Screen Assembly (Premium)",
+    "price": "R4982.00",
+    "priceNum": 4982,
+    "image": "/images/macbook-parts-screens/5_AS052182.png?v=4",
+    "category": "MacBook Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 9949129343224,
+    "title": "Macbook Air 13.3\" M2 A2681 Screen Assembly (Premium)",
+    "price": "R5979.00",
+    "priceNum": 5979,
+    "image": "/images/macbook-parts-screens/6_AS117046.png?v=4",
+    "category": "MacBook Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 9949128786168,
+    "title": "Macbook Air 15.3\" M2 A2941 Screen Assembly (Premium)",
+    "price": "R5979.00",
+    "priceNum": 5979,
+    "image": "/images/macbook-parts-screens/7_AS135196_13b07984-a273-4cd0-b449-1218e2f1dc2d.png?v=4",
+    "category": "MacBook Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 9949127475448,
+    "title": "Macbook Air 15.3\" M2 A2941 Screen Assembly (OEM)",
+    "price": "R5979.00",
+    "priceNum": 5979,
+    "image": "/images/macbook-parts-screens/8_AS161771.png?v=4",
+    "category": "MacBook Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 9949124788472,
+    "title": "Macbook Retina Pro 13.3\" A1502 Screen Assembly (OEM)",
+    "price": "R5690.00",
+    "priceNum": 5690,
+    "image": "/images/macbook-parts-screens/9_AS163854.png?v=4",
+    "category": "MacBook Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 7759664546040,
+    "title": "A1502 13 inch MacBook Pro Silver Replacement Display Screen Assembly | Early 2015 Model  (Used)",
+    "price": "R3999.00",
+    "priceNum": 3999,
+    "image": "/images/macbook-parts-screens/10_A150213inchMacBookProSilverReplacementDisplayScreenAssembly.jpg?v=4",
+    "category": "MacBook Screens",
+    "isUsed": true,
+    "inStock": true
+  },
+  {
+    "id": 7759657042168,
+    "title": "A2338 13 inch MacBook Pro Space Grey Replacement Display Screen Assembly | 2020 Model  (Used)",
+    "price": "R6999.00",
+    "priceNum": 6999,
+    "image": "/images/macbook-parts-screens/11_A233813inchMacBookProSpaceGreyReplacementDisplayScreenAssembly.jpg?v=4",
+    "category": "MacBook Screens",
+    "isUsed": true,
+    "inStock": true
+  },
+  {
+    "id": 7759654519032,
+    "title": "A2337 13 inch MacBook Air Space Grey Replacement Display Screen Assembly | 2020 Model  (Used)",
+    "price": "R5999.00",
+    "priceNum": 5999,
+    "image": "/images/macbook-parts-screens/12_13inchMacBookAirSpaceGreyReplacementDisplayScreenAssemblyA2337.webp?v=4",
+    "category": "MacBook Screens",
+    "isUsed": true,
+    "inStock": true
+  },
+  {
+    "id": 7759645802744,
+    "title": "15 inch MacBook Pro  Silver Replacement Display Screen Assembly | A1398 Mid 2012  (Used)",
+    "price": "R2999.00",
+    "priceNum": 2999,
+    "image": "/images/macbook-parts-screens/13_A1502-late-2013mid-2014.png?v=4",
+    "category": "MacBook Screens",
+    "isUsed": true,
+    "inStock": true
+  },
+  {
+    "id": 4504729583734,
+    "title": "15\" MacBook Pro Retina Touch Replacement Display Screen Assembly | A1990 Late 2018 - 2019  (Resolution = 2880*1800)",
+    "price": "R12900.00",
+    "priceNum": 12900,
+    "image": "/images/macbook-parts-screens/14_MacBookPro15inchRetinaTouchFullReplacementDisplayScreenAssemblyA1707Late2016-2017_0425df2f-06f3-49fb-a269-35c73ed5b65d.png?v=4",
+    "category": "MacBook Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 4504726634614,
+    "title": "15\" MacBook Pro Retina Touch Replacement Display Screen Assembly | A1707 Late 2016 - 2017  (used)",
+    "price": "R4999.00",
+    "priceNum": 4999,
+    "image": "/images/macbook-parts-screens/15_MacBookPro15inchRetinaTouchFullReplacementDisplayScreenAssemblyA1707Late2016-2017.png?v=4",
+    "category": "MacBook Screens",
+    "isUsed": true,
+    "inStock": true
+  },
+  {
+    "id": 4504724799606,
+    "title": "15\" MacBook Pro Retina  Replacement Display Screen Assembly | A1398 Mid 2012 - Early 2013  (used)",
+    "price": "R4999.00",
+    "priceNum": 4999,
+    "image": "/images/macbook-parts-screens/16_AppleMacBookPro15inchRetinaReplacementFullDisplayScreenAssemblyA1398Late2013-Mid2014_3bb5cbfc-e821-4bc6-aa9c-536c130711d1.jpg?v=4",
+    "category": "MacBook Screens",
+    "isUsed": true,
+    "inStock": true
+  },
+  {
+    "id": 4504721784950,
+    "title": "15\" MacBook Pro  Retina Replacement Display Screen Assembly | A1398 Late 2013 - Mid 2014  (used)",
+    "price": "R5999.00",
+    "priceNum": 5999,
+    "image": "/images/macbook-parts-screens/17_AppleMacBookPro15inchRetinaReplacementFullDisplayScreenAssemblyA1398Late2013-Mid2014.jpg?v=4",
+    "category": "MacBook Screens",
+    "isUsed": true,
+    "inStock": true
+  },
+  {
+    "id": 4504714150006,
+    "title": "13\" MacBook Pro Retina Touch Bar  Replacement Display Screen Assembly | A1706 Late 2016 - 2017  (used)",
+    "price": "R4999.00",
+    "priceNum": 4999,
+    "image": "/images/macbook-parts-screens/18_MacBookPro13inchRetinaTouchBarA1706Late2016.png?v=4",
+    "category": "MacBook Screens",
+    "isUsed": true,
+    "inStock": true
+  },
+  {
+    "id": 4446065623158,
+    "title": "15\" MacBook Pro Retina  Replacement Display Screen Assembly | A1398 Mid 2015  (used)",
+    "price": "R6999.00",
+    "priceNum": 6999,
+    "image": "/images/macbook-parts-screens/19_Mid-2015-EMC2909-EMC2910-A1398-LCD-Display-Assembly-For-Macbook-Pro-Retina-15-inch-Full-LCD.jpg?v=4",
+    "category": "MacBook Screens",
+    "isUsed": true,
+    "inStock": true
+  },
+  {
+    "id": 4446060904566,
+    "title": "11\" MacBook Air Replacement Display Screen Assembly | A1465 Year Early 2013 - MID 2015  (used)",
+    "price": "R3999.00",
+    "priceNum": 3999,
+    "image": "/images/macbook-parts-screens/20_Early-2015-EMC2924-A1465-Complete-LCD-Display-For-Apple-Macbook-Air-11-inch-LCD-Screen-Display.jpg?v=4",
+    "category": "MacBook Screens",
+    "isUsed": true,
+    "inStock": true
+  }
 ];
 
-const ITEMS_PER_PAGE = 12;
-
 export default function ShopMacBookScreens() {
-  const [filters, setFilters] = useState<FiltersState>({
-    availability: [],
-    condition: [],
-    location: [],
-    grade: []
-  });
-  
-  const [priceInput, setPriceInput] = useState({ min: '', max: '' });
-  const [appliedPriceRange, setAppliedPriceRange] = useState({ min: 0, max: Infinity });
-  
-  const [sortBy, setSortBy] = useState('price-ascending');
-  const [currentPage, setCurrentPage] = useState(1);
-
-  const handleFilterChange = (category: keyof FiltersState, value: string) => {
-    setFilters(prev => {
-      const current = prev[category];
-      const updated = current.includes(value)
-        ? current.filter(item => item !== value)
-        : [...current, value];
-      return { ...prev, [category]: updated };
-    });
-    setCurrentPage(1);
-  };
-
-  const handleClearAll = () => {
-    setFilters({ availability: [], condition: [], location: [], grade: [] });
-    setPriceInput({ min: '', max: '' });
-    setAppliedPriceRange({ min: 0, max: Infinity });
-    setCurrentPage(1);
-  };
-
-  const handlePriceChange = (type: 'min' | 'max', value: string) => {
-    setPriceInput(prev => ({ ...prev, [type]: value }));
-  };
-
-  const handleApplyPrice = () => {
-    const min = parseFloat(priceInput.min) || 0;
-    const max = parseFloat(priceInput.max) || Infinity;
-    setAppliedPriceRange({ min, max });
-    setCurrentPage(1);
-  };
-
-  const filteredProducts = useMemo(() => {
-    return initialProducts.filter(product => {
-      if (filters.condition.length > 0) {
-        const isNewAllowed = filters.condition.includes('New');
-        const isUsedAllowed = filters.condition.includes('Used');
-        if (product.isUsed && !isUsedAllowed) return false;
-        if (!product.isUsed && !isNewAllowed) return false;
-      }
-      
-      if (filters.availability.length > 0) {
-        const inStockAllowed = filters.availability.includes('In Stock');
-        const onOrderAllowed = filters.availability.includes('On Order');
-        if (product.inStock && !inStockAllowed) return false;
-        if (!product.inStock && !onOrderAllowed) return false;
-      }
-
-      if (product.priceNum < appliedPriceRange.min || product.priceNum > appliedPriceRange.max) {
-        return false;
-      }
-
-      return true;
-    });
-  }, [filters, appliedPriceRange]);
-
-  const sortedProducts = useMemo(() => {
-    return [...filteredProducts].sort((a, b) => {
-      if (sortBy === 'price-ascending') return a.priceNum - b.priceNum;
-      if (sortBy === 'price-descending') return b.priceNum - a.priceNum;
-      if (sortBy === 'alphabetical') return a.title.localeCompare(b.title);
-      return b.id - a.id; 
-    });
-  }, [filteredProducts, sortBy]);
-
-  const totalPages = Math.ceil(sortedProducts.length / ITEMS_PER_PAGE);
-  const paginatedProducts = sortedProducts.slice(
-    (currentPage - 1) * ITEMS_PER_PAGE, 
-    currentPage * ITEMS_PER_PAGE
-  );
+  const navigate = useNavigate();
 
   return (
-    <div className="category-page">
+    <div className="shop-category-page">
       <div className="container">
-        <div className="breadcrumb" style={{ margin: '2rem 0 1rem', fontSize: '0.8rem', color: 'var(--gray-dark)' }}>
-          Home &gt; MacBook Screens
-        </div>
-        
-        <div className="category-header">
-          <div style={{ display: 'flex', alignItems: 'baseline', gap: '1rem' }}>
-            <h1>MacBook Screens</h1>
-            <span style={{ color: 'var(--gray-dark)', fontSize: '0.9rem' }}>{filteredProducts.length} products</span>
-          </div>
-          <div className="sort-box">
-            <select 
-              className="sort-select" 
-              value={sortBy} 
-              onChange={(e) => setSortBy(e.target.value)}
-            >
-              <option value="price-ascending">Price: Low to High</option>
-              <option value="price-descending">Price: High to Low</option>
-              <option value="alphabetical">Alphabetically, A-Z</option>
-              <option value="latest">Latest</option>
-            </select>
-          </div>
-        </div>
-
-        <div className="category-layout">
-          <ShopSidebar 
-            filters={filters}
-            onFilterChange={handleFilterChange}
-            onClearAll={handleClearAll}
-            priceRange={priceInput}
-            onPriceChange={handlePriceChange}
-            onApplyPrice={handleApplyPrice}
-          />
-          
-          <div className="category-main">
-            {paginatedProducts.length > 0 ? (
-              <>
-                <div className="cat-product-grid">
-                  {paginatedProducts.map(product => (
-                    <CategoryProductCard key={product.id} {...product} />
-                  ))}
+        <h1 className="category-title">MacBook Screens</h1>
+        <div className="products-grid">
+          {products.map(product => (
+            <div key={product.id} className="cat-product-card" onClick={() => navigate(`/product/${product.id}`, { state: { product } })}>
+              {product.isUsed && <span className="cat-product-tag-used">USED</span>}
+              <div className="cat-product-img-box">
+                <div className="premium-badge">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    <polyline points="9 12 11 14 15 10"/>
+                  </svg>
+                  VERIFIED PART
                 </div>
-                {totalPages > 1 && (
-                  <Pagination 
-                    currentPage={currentPage} 
-                    totalPages={totalPages} 
-                    onPageChange={setCurrentPage} 
-                  />
-                )}
-              </>
-            ) : (
-              <div style={{ textAlign: 'center', padding: '4rem 0', color: 'var(--gray-dark)' }}>
-                <h3>No products found</h3>
-                <p>Try adjusting your filters or search criteria.</p>
-                <button className="btn btn-navy" onClick={handleClearAll} style={{ marginTop: '1rem' }}>Clear all filters</button>
+                <img src={product.image} alt={product.title} />
               </div>
-            )}
-            
-            <div className="seo-text-box" style={{ marginTop: '4rem' }}>
-              <p>Top quality MacBook screen replacements for all Mac computers... whether your display is cracked, dim, or unresponsive, we offer a wide range of screens for various MacBook models. Careful installation is necessary, and our repair team is here to help and test your new MacBook screen thoroughly if you lack the necessary skills.</p>
+              <div className="cat-product-info">
+                <h3 className="cat-product-title">{product.title}</h3>
+                <div className="cat-product-meta">
+                  <span>Type: <strong>{product.category}</strong></span>
+                  <span className="stock-status in-stock">● In Stock</span>
+                </div>
+                <div className="cat-product-price">{product.price}</div>
+                <button className="btn btn-navy" style={{width: '100%', marginTop: '1rem'}}>VIEW DETAILS</button>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
