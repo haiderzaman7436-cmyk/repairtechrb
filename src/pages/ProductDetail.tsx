@@ -1,11 +1,14 @@
 import { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Check, Info, ShieldCheck } from 'lucide-react';
+import { useCart } from '../context/CartContext';
 
 export default function ProductDetail() {
   const location = useLocation();
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('description');
+  const [qty, setQty] = useState(1);
+  const { addToCart } = useCart();
 
   const product = location.state?.product;
 
@@ -55,6 +58,11 @@ export default function ProductDetail() {
   const sku = `UAP-${product.id}-${new Date().getFullYear()}-ASSY`;
   const waMessage = encodeURIComponent(`Hi, I'm interested in the ${product.title} (SKU: ${sku}) priced at ${product.price}.`);
   const waLink = `https://wa.me/27685011885?text=${waMessage}`;
+
+  const handleAddToCart = () => {
+    addToCart(product, qty);
+    navigate('/cart');
+  };
 
   return (
     <div className="product-detail-page">
@@ -112,11 +120,11 @@ export default function ProductDetail() {
 
             <div className="pdp-actions">
               <div className="pdp-qty-group">
-                <button className="pdp-qty-btn">-</button>
-                <input type="text" className="pdp-qty-input" defaultValue="1" readOnly />
-                <button className="pdp-qty-btn">+</button>
+                <button className="pdp-qty-btn" onClick={() => setQty(Math.max(1, qty - 1))}>-</button>
+                <input type="text" className="pdp-qty-input" value={qty} readOnly />
+                <button className="pdp-qty-btn" onClick={() => setQty(qty + 1)}>+</button>
               </div>
-              <button className="btn btn-navy pdp-add-to-cart">
+              <button className="btn btn-navy pdp-add-to-cart" onClick={handleAddToCart}>
                 ADD TO CART
               </button>
             </div>

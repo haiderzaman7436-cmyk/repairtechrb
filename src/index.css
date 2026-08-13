@@ -3356,3 +3356,95 @@ h4 {
   .pdp-gallery { padding: 0.5rem; }
   .product-detail-page { overflow-x: hidden; width: 100vw; max-width: 100%; box-sizing: border-box; }
 }
+
+/* Mobile Hamburger Menu CSS */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+.mobile-menu-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+.mobile-menu-drawer {
+  position: absolute;
+  top: 0; left: -300px;
+  width: 300px; height: 100%;
+  background: var(--white);
+  box-shadow: var(--shadow-lg);
+  transition: left 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+.mobile-menu-drawer.open {
+  left: 0;
+}
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+.mobile-menu-search {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+.mobile-menu-search form {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.mobile-menu-search input {
+  flex: 1;
+  padding: 0.8rem;
+  border: none;
+  outline: none;
+}
+.mobile-menu-search button {
+  padding: 0 1rem;
+  background: var(--lime);
+  color: white;
+  border: none;
+}
+.mobile-menu-links {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+.mobile-menu-links a {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #eee;
+  color: var(--navy);
+  font-weight: 600;
+}
+.cart-badge {
+  position: absolute;
+  top: -8px; right: -8px;
+  background: var(--accent);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 18px; height: 18px;
+  display: flex; align-items: center; justify-content: center;
+}
+@media (max-width: 900px) {
+  .hide-on-mobile { display: none !important; }
+  .mobile-menu-btn { display: flex; }
+  .shop-search { display: none !important; }
+  .shop-header-inner { justify-content: space-between; }
+}

@@ -61,6 +61,8 @@ export default function ShopNav() {
                         link.label === 'LAPTOP PARTS' && sub === 'Batteries' ? '/shop/laptop-parts/batteries' :
                         link.label === 'LAPTOP PARTS' && sub === 'Chargers' ? '/shop/laptop-parts/chargers' :
                         link.label === 'LAPTOP PARTS' && sub === 'Keyboards' ? '/shop/laptop-parts/keyboards' :
+                        link.label === 'USED/REFURBS' && sub === 'Laptops' ? '/shop/used-laptops' :
+                        sub === 'Gaming' ? '/shop/gaming-computers' :
                         sub === 'Memory' ? '/shop/laptop-parts/memory' : 
                         sub === 'Storage (HDD/SSD)' ? '/shop/laptop-parts/storage' : 
                         '/shop'

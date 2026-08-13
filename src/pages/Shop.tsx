@@ -19,10 +19,10 @@ export default function Shop() {
   ];
 
   const refurbishedLaptops = [
-    { tag: 'LOCAL STOCK', isUsed: true, category: 'Refurbished Laptop', title: 'HP ProBook 450 G7 15.6" Touchscreen 10th Gen Core i5...', price: 'R 6,499.00', image: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=600&q=80' },
-    { tag: 'LOCAL STOCK', isUsed: true, category: 'Refurbished Laptop', title: 'Dell Latitude 3410 14" 10th Gen Core i5 10210U 16GB RAM...', price: 'R 5,100.00', image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=600&q=80' },
-    { tag: 'LOCAL STOCK', isUsed: true, category: 'Refurbished Laptop', title: 'Lenovo ThinkPad X390 13.3" 8th Gen Core i5 8365U 16GB RAM...', price: 'R 4,644.00', image: 'https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=600&q=80' },
-    { tag: 'LOCAL STOCK', isUsed: true, category: 'Refurbished Laptop', title: 'Dell Latitude E5470 14" 6th Gen Core i5 6300U 8GB RAM...', price: 'R 3,595.00', image: 'https://images.unsplash.com/photo-1542393545-10f5cde2c810?auto=format&fit=crop&w=600&q=80' }
+    { tag: 'LOCAL STOCK', isUsed: true, category: 'Refurbished Laptop', title: 'HP ProBook 450 G7 15.6" Touchscreen 10th Gen Core i5...', price: 'R 6,499.00', image: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=600&q=80' , priceNum: 6499.0},
+    { tag: 'LOCAL STOCK', isUsed: true, category: 'Refurbished Laptop', title: 'Dell Latitude 3410 14" 10th Gen Core i5 10210U 16GB RAM...', price: 'R 5,100.00', image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=600&q=80' , priceNum: 5100.0},
+    { tag: 'LOCAL STOCK', isUsed: true, category: 'Refurbished Laptop', title: 'Lenovo ThinkPad X390 13.3" 8th Gen Core i5 8365U 16GB RAM...', price: 'R 4,644.00', image: 'https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=600&q=80' , priceNum: 4644.0},
+    { tag: 'LOCAL STOCK', isUsed: true, category: 'Refurbished Laptop', title: 'Dell Latitude E5470 14" 6th Gen Core i5 6300U 8GB RAM...', price: 'R 3,595.00', image: 'https://images.unsplash.com/photo-1542393545-10f5cde2c810?auto=format&fit=crop&w=600&q=80' , priceNum: 3595.0}
   ];
 
   return (
@@ -33,12 +33,12 @@ export default function Shop() {
         <div className="shop-promo-card" style={{ background: 'var(--navy)', color: 'white', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}>
           <h3 style={{ color: 'white', marginBottom: '0.5rem' }}>Laptop Replacement Screens</h3>
           <p style={{ color: '#a1a1aa', marginBottom: '1.5rem' }}>For HP, Dell, Lenovo, Asus, Acer, Toshiba and Mac.</p>
-          <button style={{ padding: '0.75rem 1.5rem', background: 'var(--white)', color: 'var(--navy)', border: 'none', borderRadius: '4px', fontWeight: 'bold', cursor: 'pointer' }}>SHOP SCREENS &rarr;</button>
+          <a href="/shop/laptop-parts/screens" style={{ display: 'inline-block', textDecoration: 'none', padding: '0.75rem 1.5rem', background: 'var(--white)', color: 'var(--navy)', border: 'none', borderRadius: '4px', fontWeight: 'bold', cursor: 'pointer' }}>SHOP SCREENS &rarr;</a>
         </div>
         <div className="shop-promo-card" style={{ background: 'var(--gray-light)', color: 'var(--navy)', border: '1px solid #e5e5e5', boxShadow: '0 20px 40px rgba(0,0,0,0.05)' }}>
           <h3 style={{ color: 'var(--navy)', marginBottom: '0.5rem' }}>Refurbished Laptops</h3>
           <p style={{ color: 'var(--gray-dark)', marginBottom: '1.5rem' }}>Quality tested, A-grade computers with a warranty.</p>
-          <button style={{ padding: '0.75rem 1.5rem', background: 'var(--navy)', color: 'var(--white)', border: 'none', borderRadius: '4px', fontWeight: 'bold', cursor: 'pointer' }}>SHOP LAPTOPS &rarr;</button>
+          <a href="/shop/used-laptops" style={{ display: 'inline-block', textDecoration: 'none', padding: '0.75rem 1.5rem', background: 'var(--navy)', color: 'var(--white)', border: 'none', borderRadius: '4px', fontWeight: 'bold', cursor: 'pointer' }}>SHOP LAPTOPS &rarr;</a>
         </div>
       </div>
 
