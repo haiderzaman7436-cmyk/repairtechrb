@@ -3295,3 +3295,11 @@ h4 {
     grid-template-columns: 1fr;
   }
 }
+@media (max-width: 768px) {
+  .pdp-title { font-size: 1.4rem; }
+  .pdp-price { font-size: 1.8rem; }
+  .pdp-thumbnails { gap: 0.5rem; }
+  .pdp-thumbnail { width: 60px; height: 60px; }
+  .pdp-gallery { padding: 0.5rem; }
+  .product-detail-page { overflow-x: hidden; width: 100vw; max-width: 100%; box-sizing: border-box; }
+}
