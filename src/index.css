@@ -1,27 +1,29 @@
 :root {
-  --navy: #0B1120;
+  --navy: #0f172a;
   --navy-dark: #020617;
-  --lime: #3B82F6;
-  --lime-dark: #1D4ED8;
-  --accent: #8B5CF6;
+  --lime: #0ea5e9;
+  --lime-dark: #0284c7;
+  --accent: #6366f1;
   --white: #ffffff;
-  --gray: #94A3B8;
+  --gray: #94a3b8;
   --gray-dark: #475569;
-  --gray-light: #F8FAFC;
-  --dark: #0F172A;
-  --green: #10B981;
+  --gray-light: #f8fafc;
+  --dark: #020617;
+  --green: #10b981;
   --font-serif: 'Outfit', sans-serif;
   --font-sans: 'Plus Jakarta Sans', sans-serif;
   --max-w: 1200px;
-  --transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  --shadow-sm: 0 2px 4px rgba(0,0,0,0.02), 0 1px 2px rgba(0,0,0,0.01);
-  --shadow-md: 0 10px 20px -5px rgba(0,0,0,0.04), 0 4px 10px -2px rgba(0,0,0,0.02);
-  --shadow-lg: 0 20px 40px -10px rgba(0,0,0,0.08), 0 10px 20px -5px rgba(0,0,0,0.04);
-  --shadow-glow: 0 0 20px rgba(59, 130, 246, 0.5);
+  --transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-sm: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+  --shadow-md: 0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -2px rgba(0,0,0,0.04);
+  --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+  --shadow-glow: 0 0 25px rgba(14, 165, 233, 0.4);
   --radius-md: 12px;
   --radius-lg: 16px;
   --glass-bg: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --glass-dark-bg: rgba(15, 23, 42, 0.7);
+  --glass-dark-border: rgba(255, 255, 255, 0.1);
 }
 
 * {
@@ -103,14 +105,17 @@ h4 {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: var(--white);
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   padding: 0 clamp(1.5rem, 4vw, 4rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 72px;
-  border-bottom: 3px solid var(--lime);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition);
 }
 
 .nav-logo {
@@ -151,13 +156,27 @@ h4 {
 .btn-primary {
   background: linear-gradient(135deg, var(--lime) 0%, var(--accent) 100%);
   color: var(--white);
-  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 15px rgba(14, 165, 233, 0.4);
   flex: 1;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
-
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--lime) 100%);
+  z-index: -1;
+  transition: opacity var(--transition);
+  opacity: 0;
+}
+.btn-primary:hover::before {
+  opacity: 1;
+}
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--shadow-glow);
 }
 
 .btn-whatsapp {
@@ -211,25 +230,35 @@ h4 {
 
 /* HERO */
 .hero {
-  background: var(--navy);
+  background: radial-gradient(circle at 20% 50%, rgba(15, 23, 42, 1) 0%, rgba(2, 6, 23, 1) 100%);
   color: var(--white);
-  padding: 3rem clamp(1.5rem, 4vw, 4rem) 6rem;
+  padding: 4rem clamp(1.5rem, 4vw, 4rem) 6rem;
   position: relative;
   overflow: hidden;
   min-height: 85vh;
   display: flex;
   align-items: center;
 }
-
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, transparent 70%);
+  filter: blur(60px);
+  z-index: 0;
+}
 .hero::after {
   content: '';
   position: absolute;
-  bottom: -2px;
+  bottom: 0;
   left: 0;
   right: 0;
   height: 80px;
-  background: var(--white);
-  clip-path: polygon(0 100%, 100% 100%, 100% 0);
+  background: linear-gradient(to bottom right, transparent 49%, var(--white) 50%);
+  z-index: 2;
 }
 
 .hero-inner {
@@ -443,20 +472,33 @@ h4 {
 }
 
 .service-card {
-  background: var(--gray-light);
-  padding: 2rem;
-  border-radius: 8px;
-  transition: var(--transition);
-  border: 1px solid transparent;
+  background: var(--white);
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius-md);
+  transition: all var(--transition);
+  border: 1px solid rgba(0,0,0,0.03);
   display: flex;
   flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
 }
-
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--lime), var(--accent));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition);
+}
+.service-card:hover::before {
+  transform: scaleX(1);
+}
 .service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  border-color: var(--lime);
-  background: var(--white);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
 }
 
 .service-icon {
@@ -2717,18 +2759,29 @@ h4 {
 
 .cat-product-card {
   background: var(--white);
-  border-radius: 4px;
-  border: 1px solid #eaeaea;
-  padding: 0;
-  position: relative;
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  transition: all var(--transition);
   display: flex;
   flex-direction: column;
-  transition: box-shadow 0.2s ease;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0,0,0,0.03);
+  cursor: pointer;
+  position: relative;
   overflow: hidden;
 }
-
 .cat-product-card:hover {
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+.cat-product-card:hover .cat-product-img-box img {
+  transform: scale(1.08);
+}
+.cat-product-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 
