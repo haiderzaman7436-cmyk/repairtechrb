@@ -4,9 +4,11 @@ import CategoryProductCard from '../components/shop/CategoryProductCard';
 import Pagination from '../components/shop/Pagination';
 
 const initialProducts = [
-  { id: 1, inStock: true, isUsed: true, category: 'SSD', title: '256GB M.2 2280 NVME Solid State Drive | Storage Drive for Laptops &, Desktop...', price: 'R 690.00', priceNum: 690, image: '/images/storage_1.png' },
-  { id: 2, inStock: true, isUsed: true, category: 'INTERNAL SSD', title: 'Dell 0K49V9 DC S3520 800GB SATA III Solid State Drive (SSD) with 2.5-inch...', price: 'R 2,300.00', priceNum: 2300, image: '/images/storage_2.png' },
-  { id: 3, inStock: true, isUsed: false, category: 'INTERNAL SSD', title: 'Dell 960GB 2.5-inch SATA Mix Use 6Gbps 512e SSD with 3.5-inch Caddy...', price: 'R 4,600.00', priceNum: 4600, image: '/images/storage_3.png' }
+  { id: 1, inStock: true, isUsed: false, category: 'LAPTOP STORAGE', title: 'ORICO 2.5′ to 3.5′ HDD|SSD Adapter Black', price: 'R 350.00', priceNum: 350.0, image: '/images/laptop-parts-storage/1_1125SS-BK-250x250.jpg?v=2' },
+  { id: 2, inStock: true, isUsed: true, category: 'LAPTOP STORAGE', title: '500GB 2.5 inch SATA Assorted Brands Laptop HDD Hard Drive -Tested & Wiped (Used / Refurbished)', price: 'R 499.00', priceNum: 499.0, image: '/images/laptop-parts-storage/2_500GB-Laptop-Hard-Drive_6b4cc10a-ac5f-4af6-881e-6eb44dc9435f.jpg?v=2' },
+  { id: 3, inStock: true, isUsed: false, category: 'LAPTOP STORAGE', title: '500GB 2.5 inch SATA Laptop Hard Drive (New)', price: 'R 627.00', priceNum: 627.0, image: '/images/laptop-parts-storage/3_500GB_SATA_5400.jpg?v=2' },
+  { id: 4, inStock: true, isUsed: true, category: 'LAPTOP STORAGE', title: '256GB M.2 2280 NVME Solid State Drive  | Storage Drive for Laptops &, Desktop (Used / Refurbished)', price: 'R 690.00', priceNum: 690.0, image: '/images/laptop-parts-storage/4_256GBM.22280NVMESolidStateDrive.jpg?v=2' },
+  { id: 5, inStock: true, isUsed: false, category: 'LAPTOP STORAGE', title: '1TB 2.5 inch SATA Laptop Hard Drive (New)', price: 'R 1140.00', priceNum: 1140.0, image: '/images/laptop-parts-storage/5_Asetos_new_laptop_HDD.jpg?v=2' }
 ];
 
 const ITEMS_PER_PAGE = 12;

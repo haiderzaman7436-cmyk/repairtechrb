@@ -69,15 +69,22 @@ export default function ProductDetail() {
           {/* Images Section */}
           <div className="pdp-gallery">
             {product.isUsed && <span className="pdp-tag-used">USED</span>}
-            <div className="pdp-main-image-container">
-              <img src={product.image} alt={product.title} className="pdp-main-image" />
+            <div className="pdp-main-image-container" style={{ position: 'relative' }}>
+              <div className="premium-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <polyline points="9 12 11 14 15 10"/>
+                </svg>
+                VERIFIED PART
+              </div>
+              <img src={product.image.split('?')[0] + '?v=2'} alt={product.title} className="pdp-main-image" />
             </div>
             {/* Mock Thumbnails */}
             <div className="pdp-thumbnails">
-              <div className="pdp-thumbnail active"><img src={product.image} alt="Thumb 1" /></div>
-              <div className="pdp-thumbnail"><img src={product.image} alt="Thumb 2" /></div>
-              <div className="pdp-thumbnail"><img src={product.image} alt="Thumb 3" /></div>
-              <div className="pdp-thumbnail"><img src={product.image} alt="Thumb 4" /></div>
+              <div className="pdp-thumbnail active"><img src={product.image.split('?')[0] + '?v=2'} alt="Thumb 1" /></div>
+              <div className="pdp-thumbnail"><img src={product.image.split('?')[0] + '?v=2'} alt="Thumb 2" /></div>
+              <div className="pdp-thumbnail"><img src={product.image.split('?')[0] + '?v=2'} alt="Thumb 3" /></div>
+              <div className="pdp-thumbnail"><img src={product.image.split('?')[0] + '?v=2'} alt="Thumb 4" /></div>
             </div>
           </div>
 

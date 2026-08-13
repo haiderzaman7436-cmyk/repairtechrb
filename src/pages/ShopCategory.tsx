@@ -4,20 +4,20 @@ import CategoryProductCard from '../components/shop/CategoryProductCard';
 import Pagination from '../components/shop/Pagination';
 
 const initialProducts = [
-  { id: 1, inStock: true, isUsed: false, category: 'LAPTOP MEMORY', title: 'Pre-owned 512MB DDR2 Laptop Memory RAM', price: 'R 30.00', priceNum: 30, image: '/images/ram_stick_1.png' },
-  { id: 2, inStock: true, isUsed: false, category: 'LAPTOP MEMORY', title: 'Pre-owned 1GB DDR2 Laptop Memory RAM', price: 'R 120.00', priceNum: 120, image: '/images/ram_stick_2.png' },
-  { id: 3, inStock: true, isUsed: false, category: 'LAPTOP MEMORY', title: '1GB DDR3 Laptop Memory RAM', price: 'R 250.00', priceNum: 250, image: '/images/ram_stick_3.png' },
-  { id: 4, inStock: true, isUsed: true, category: 'LAPTOP MEMORY', title: 'Pre-owned SAMSUNG 2GB PC3-10600S Mac Rounded Laptop Memory RAM...', price: 'R 230.00', priceNum: 230, image: '/images/ram_stick_1.png' },
-  { id: 5, inStock: true, isUsed: true, category: 'LAPTOP MEMORY', title: 'SAMSUNG 2GB PC3-10600S Mac Rounded Laptop Memory...', price: 'R 250.00', priceNum: 250, image: '/images/ram_stick_2.png' },
-  { id: 6, inStock: true, isUsed: true, category: 'LAPTOP MEMORY', title: 'SAMSUNG 4GB PC3-12800S Mac Rounded Notebook...', price: 'R 250.00', priceNum: 250, image: '/images/ram_stick_3.png' },
-  { id: 7, inStock: true, isUsed: true, category: 'LAPTOP MEMORY', title: 'Pre-owned 8GB DDR3 1600MHz Mac Rounded Laptop Memory RAM...', price: 'R 790.00', priceNum: 790, image: '/images/ram_stick_1.png' },
-  { id: 8, inStock: true, isUsed: true, category: 'LAPTOP MEMORY', title: '8GB DDR4 2133MHz SO-DIMM Notebook Laptop Memory RAM', price: 'R 1,150.00', priceNum: 1150, image: '/images/ram_stick_2.png' },
-  { id: 9, inStock: true, isUsed: true, category: 'LAPTOP MEMORY', title: '8GB DDR4 2400MHz SO-DIMM Notebook Laptop Memory RAM | NANYA...', price: 'R 1,150.00', priceNum: 1150, image: '/images/ram_stick_3.png' },
-  { id: 10, inStock: true, isUsed: false, category: 'APPLE MAC MEMORY', title: '8GB DDR4 2400MHz SO-DIMM Notebook Laptop Memory RAM Brands...', price: 'R 1,150.00', priceNum: 1150, image: '/images/ram_stick_1.png' },
-  { id: 11, inStock: true, isUsed: true, category: 'LAPTOP MEMORY', title: '8GB DDR4 2666MHz PC4-12800S SO-DIMM 260-Pin Assorted Brands...', price: 'R 1,150.00', priceNum: 1150, image: '/images/ram_stick_2.png' },
-  { id: 12, inStock: true, isUsed: false, category: 'APPLE MAC MEMORY', title: '8GB DDR4 2666MHz SO-DIMM Notebook Laptop Memory Mac Brands...', price: 'R 1,150.00', priceNum: 1150, image: '/images/ram_stick_3.png' },
-  { id: 13, inStock: true, isUsed: false, category: 'LAPTOP MEMORY', title: 'Kingston 16GB KVR32S22D8/16 260-Pin PC4-25600 3200MHz Laptop Memory...', price: 'R 2,200.00', priceNum: 2200, image: '/images/ram_stick_1.png' },
-  { id: 14, inStock: false, isUsed: true, category: 'LAPTOP MEMORY', title: 'Pre-owned 4GB DDR3 Laptop Memory RAM', price: 'R 450.00', priceNum: 450, image: '/images/ram_stick_2.png' }
+  { id: 1, inStock: true, isUsed: false, category: 'LAPTOP MEMORY', title: 'Pre-owned 512MB DDR2 Laptop Memory RAM', price: 'R 30.00', priceNum: 30, image: '/images/ram_stick_1.png?v=2' },
+  { id: 2, inStock: true, isUsed: false, category: 'LAPTOP MEMORY', title: 'Pre-owned 1GB DDR2 Laptop Memory RAM', price: 'R 120.00', priceNum: 120, image: '/images/ram_stick_2.png?v=2' },
+  { id: 3, inStock: true, isUsed: false, category: 'LAPTOP MEMORY', title: '1GB DDR3 Laptop Memory RAM', price: 'R 250.00', priceNum: 250, image: '/images/ram_stick_3.png?v=2' },
+  { id: 4, inStock: true, isUsed: true, category: 'LAPTOP MEMORY', title: 'Pre-owned SAMSUNG 2GB PC3-10600S Mac Rounded Laptop Memory RAM...', price: 'R 230.00', priceNum: 230, image: '/images/ram_stick_1.png?v=2' },
+  { id: 5, inStock: true, isUsed: true, category: 'LAPTOP MEMORY', title: 'SAMSUNG 2GB PC3-10600S Mac Rounded Laptop Memory...', price: 'R 250.00', priceNum: 250, image: '/images/ram_stick_2.png?v=2' },
+  { id: 6, inStock: true, isUsed: true, category: 'LAPTOP MEMORY', title: 'SAMSUNG 4GB PC3-12800S Mac Rounded Notebook...', price: 'R 250.00', priceNum: 250, image: '/images/ram_stick_3.png?v=2' },
+  { id: 7, inStock: true, isUsed: true, category: 'LAPTOP MEMORY', title: 'Pre-owned 8GB DDR3 1600MHz Mac Rounded Laptop Memory RAM...', price: 'R 790.00', priceNum: 790, image: '/images/ram_stick_1.png?v=2' },
+  { id: 8, inStock: true, isUsed: true, category: 'LAPTOP MEMORY', title: '8GB DDR4 2133MHz SO-DIMM Notebook Laptop Memory RAM', price: 'R 1,150.00', priceNum: 1150, image: '/images/ram_stick_2.png?v=2' },
+  { id: 9, inStock: true, isUsed: true, category: 'LAPTOP MEMORY', title: '8GB DDR4 2400MHz SO-DIMM Notebook Laptop Memory RAM | NANYA...', price: 'R 1,150.00', priceNum: 1150, image: '/images/ram_stick_3.png?v=2' },
+  { id: 10, inStock: true, isUsed: false, category: 'APPLE MAC MEMORY', title: '8GB DDR4 2400MHz SO-DIMM Notebook Laptop Memory RAM Brands...', price: 'R 1,150.00', priceNum: 1150, image: '/images/ram_stick_1.png?v=2' },
+  { id: 11, inStock: true, isUsed: true, category: 'LAPTOP MEMORY', title: '8GB DDR4 2666MHz PC4-12800S SO-DIMM 260-Pin Assorted Brands...', price: 'R 1,150.00', priceNum: 1150, image: '/images/ram_stick_2.png?v=2' },
+  { id: 12, inStock: true, isUsed: false, category: 'APPLE MAC MEMORY', title: '8GB DDR4 2666MHz SO-DIMM Notebook Laptop Memory Mac Brands...', price: 'R 1,150.00', priceNum: 1150, image: '/images/ram_stick_3.png?v=2' },
+  { id: 13, inStock: true, isUsed: false, category: 'LAPTOP MEMORY', title: 'Kingston 16GB KVR32S22D8/16 260-Pin PC4-25600 3200MHz Laptop Memory...', price: 'R 2,200.00', priceNum: 2200, image: '/images/ram_stick_1.png?v=2' },
+  { id: 14, inStock: false, isUsed: true, category: 'LAPTOP MEMORY', title: 'Pre-owned 4GB DDR3 Laptop Memory RAM', price: 'R 450.00', priceNum: 450, image: '/images/ram_stick_2.png?v=2' }
 ];
 
 const ITEMS_PER_PAGE = 12;
