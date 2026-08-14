@@ -49,6 +49,7 @@ export default function AdminDashboard() {
   const [dataLoading, setDataLoading] = useState(true);
   const [expandedOrder, setExpandedOrder] = useState<string | null>(null);
   const [newOrderAlert, setNewOrderAlert] = useState<Order | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     if (!loading && (!user || !user.isAdmin)) {
@@ -143,9 +144,20 @@ export default function AdminDashboard() {
   return (
     <div className="admin-page" style={{ display: 'flex', minHeight: '100vh', background: 'var(--gray-light)', fontFamily: 'var(--font-sans)' }}>
       
+      {/* Mobile Sidebar Overlay */}
+      {isMobileMenuOpen && (
+        <div 
+          className="admin-sidebar-overlay"
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+      )}
+      
       {/* Sidebar */}
-      <div style={{ width: '280px', background: 'var(--white)', color: 'var(--navy)', display: 'flex', flexDirection: 'column', boxShadow: '4px 0 15px rgba(0,0,0,0.05)', zIndex: 10 }}>
-        <div style={{ padding: '2.5rem 1.5rem', borderBottom: '1px solid rgba(0, 11, 41, 0.05)' }}>
+      <div className={`admin-sidebar ${isMobileMenuOpen ? 'open' : ''}`}>
+        <div style={{ padding: '2.5rem 1.5rem', borderBottom: '1px solid rgba(0, 11, 41, 0.05)', position: 'relative' }}>
+          <button className="admin-close-btn" onClick={() => setIsMobileMenuOpen(false)}>
+            <X size={24} color="var(--navy)" />
+          </button>
           <h2 style={{ color: 'var(--navy)', display: 'flex', alignItems: 'center', gap: '12px', fontSize: '1.5rem', fontWeight: '800', letterSpacing: '-0.5px' }}>
             <img src="/images/logo%20(3).png" alt="Repair Tech Logo" style={{ height: '48px', transition: 'transform 0.3s ease' }} onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'} />
             REPAIR TECH
@@ -155,20 +167,20 @@ export default function AdminDashboard() {
         
         <div style={{ padding: '2rem 1rem', display: 'flex', flexDirection: 'column', gap: '0.8rem', flex: 1 }}>
           <button 
-            onClick={() => setActiveTab('dashboard')} 
+            onClick={() => { setActiveTab('dashboard'); setIsMobileMenuOpen(false); }} 
             style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '1.2rem 1.5rem', background: activeTab === 'dashboard' ? 'rgba(0, 11, 41, 0.03)' : 'transparent', border: 'none', borderLeft: activeTab === 'dashboard' ? '4px solid var(--lime)' : '4px solid transparent', color: activeTab === 'dashboard' ? 'var(--navy)' : 'var(--gray-dark)', cursor: 'pointer', borderRadius: '0 8px 8px 0', textAlign: 'left', fontSize: '1.05rem', fontWeight: activeTab === 'dashboard' ? '700' : '600', transition: 'all 0.2s' }}
           >
             <LayoutDashboard size={20} color={activeTab === 'dashboard' ? 'var(--lime)' : 'var(--gray-dark)'} /> Overview
           </button>
           <button 
-            onClick={() => setActiveTab('orders')} 
+            onClick={() => { setActiveTab('orders'); setIsMobileMenuOpen(false); }} 
             style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '1.2rem 1.5rem', background: activeTab === 'orders' ? 'rgba(0, 11, 41, 0.03)' : 'transparent', border: 'none', borderLeft: activeTab === 'orders' ? '4px solid var(--lime)' : '4px solid transparent', color: activeTab === 'orders' ? 'var(--navy)' : 'var(--gray-dark)', cursor: 'pointer', borderRadius: '0 8px 8px 0', textAlign: 'left', fontSize: '1.05rem', fontWeight: activeTab === 'orders' ? '700' : '600', transition: 'all 0.2s' }}
           >
             <ShoppingBag size={20} color={activeTab === 'orders' ? 'var(--lime)' : 'var(--gray-dark)'} /> Orders
             <span style={{ marginLeft: 'auto', background: activeTab === 'orders' ? 'var(--lime)' : 'rgba(0,11,41,0.05)', color: activeTab === 'orders' ? 'var(--navy)' : 'var(--gray-dark)', padding: '2px 8px', borderRadius: '12px', fontSize: '0.8rem', fontWeight: '700' }}>{orders.length}</span>
           </button>
           <button 
-            onClick={() => setActiveTab('customers')} 
+            onClick={() => { setActiveTab('customers'); setIsMobileMenuOpen(false); }} 
             style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '1.2rem 1.5rem', background: activeTab === 'customers' ? 'rgba(0, 11, 41, 0.03)' : 'transparent', border: 'none', borderLeft: activeTab === 'customers' ? '4px solid var(--lime)' : '4px solid transparent', color: activeTab === 'customers' ? 'var(--navy)' : 'var(--gray-dark)', cursor: 'pointer', borderRadius: '0 8px 8px 0', textAlign: 'left', fontSize: '1.05rem', fontWeight: activeTab === 'customers' ? '700' : '600', transition: 'all 0.2s' }}
           >
             <Users size={20} color={activeTab === 'customers' ? 'var(--lime)' : 'var(--gray-dark)'} /> Customers
@@ -225,10 +237,15 @@ export default function AdminDashboard() {
         )}
 
         {/* Header */}
-        <header style={{ background: 'var(--white)', padding: '1.5rem 3rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #e2e8f0', zIndex: 5 }}>
-          <h1 style={{ color: 'var(--navy)', fontSize: '1.8rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
-            {activeTab === 'dashboard' ? 'Overview' : activeTab}
-          </h1>
+        <header className="admin-header" style={{ background: 'var(--white)', padding: '1.5rem 3rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #e2e8f0', zIndex: 5 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+            <button className="admin-menu-btn" onClick={() => setIsMobileMenuOpen(true)}>
+              <Menu size={28} color="var(--navy)" />
+            </button>
+            <h1 className="admin-page-title" style={{ color: 'var(--navy)', fontSize: '1.8rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
+              {activeTab === 'dashboard' ? 'Overview' : activeTab}
+            </h1>
+          </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
             <div style={{ textAlign: 'right' }}>
               <div style={{ fontWeight: '700', color: 'var(--navy)', fontSize: '0.95rem' }}>{user.displayName}</div>
