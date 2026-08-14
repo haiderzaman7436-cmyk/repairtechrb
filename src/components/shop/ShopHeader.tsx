@@ -48,20 +48,23 @@ export default function ShopHeader() {
           </Link>
           
           <form onSubmit={handleSearch} className="shop-search">
-            <select className="shop-search-category" style={{ padding: '0 1rem', border: 'none', background: 'transparent', outline: 'none', color: 'var(--gray-dark)', fontWeight: 'bold', cursor: 'pointer', appearance: 'none' }}>
+            <select id="search-category" name="category" aria-label="Search Category" className="shop-search-category" style={{ padding: '0 1rem', border: 'none', background: 'transparent', outline: 'none', color: 'var(--gray-dark)', fontWeight: 'bold', cursor: 'pointer', appearance: 'none' }}>
               <option value="all">All Categories</option>
               <option value="laptops">Laptops</option>
               <option value="parts">Parts & Upgrades</option>
               <option value="mac">Apple Mac</option>
             </select>
             <input 
+              id="search-input"
+              name="q"
+              aria-label="Search products"
               type="text" 
               placeholder="Search for products, brands, categories..." 
               className="shop-search-input" 
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
-            <button type="submit" className="shop-search-btn" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <button type="submit" aria-label="Submit search" className="shop-search-btn" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <Search size={18} />
             </button>
           </form>
@@ -122,12 +125,15 @@ export default function ShopHeader() {
           <div className="mobile-menu-search">
             <form onSubmit={handleSearch} style={{ display: 'flex', width: '100%' }}>
               <input 
+                id="mobile-search-input"
+                name="mobile-q"
+                aria-label="Search products mobile"
                 type="text" 
                 placeholder="Search..." 
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
-              <button type="submit"><Search size={18} /></button>
+              <button type="submit" aria-label="Submit search"><Search size={18} /></button>
             </form>
           </div>
 
