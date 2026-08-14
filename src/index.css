@@ -3462,6 +3462,9 @@ h4 {
 @media (max-width: 900px) {
   .hide-on-mobile { display: none !important; }
   .mobile-menu-btn { display: flex; }
+  .shop-logo-img { height: 50px !important; min-height: 50px !important; }
+  .logo-text span { font-size: 1.4rem !important; }
+  .shop-logo { gap: 0.5rem !important; }
   .shop-search { display: none !important; }
   .shop-header-inner { justify-content: space-between; }
 }

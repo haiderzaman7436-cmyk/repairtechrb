@@ -76,7 +76,7 @@ export default function ShopHeader() {
             </a>
             
             {user ? (
-              <div className="shop-action-item user-menu-container">
+              <div className="shop-action-item user-menu-container hide-on-mobile">
                 <span className="shop-action-icon"><User size={22} /></span>
                 <div>
                   <div className="shop-action-val">Hi, {user.displayName}</div>
