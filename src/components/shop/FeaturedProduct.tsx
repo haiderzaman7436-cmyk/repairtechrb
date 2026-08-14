@@ -22,8 +22,7 @@ export default function FeaturedProduct() {
           </p>
           
           <div className="shop-featured-price-row" style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', marginBottom: '2rem' }}>
-            <div className="shop-featured-price" style={{ color: 'var(--navy)', fontSize: '2.5rem', fontWeight: '900' }}>R 6,374.15</div>
-            <div className="shop-featured-price-old" style={{ color: 'var(--gray)', textDecoration: 'line-through', fontSize: '1.2rem', fontWeight: 'bold' }}>R 6,999.00</div>
+            <div className="shop-featured-price" style={{ color: 'var(--navy)', fontSize: '2.5rem', fontWeight: '900' }}>Contact for price</div>
             <div className="shop-featured-save" style={{ background: 'var(--gray-light)', color: 'var(--navy)', padding: '0.3rem 0.8rem', borderRadius: '4px', fontSize: '0.85rem', fontWeight: '900', border: '1px solid var(--navy)' }}>SAVE 10%</div>
           </div>
 

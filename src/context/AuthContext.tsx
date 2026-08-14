@@ -1,4 +1,13 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { auth, db } from '../lib/firebase';
+import {
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged,
+  signInAnonymously
+} from 'firebase/auth';
+import { doc, getDoc, setDoc } from 'firebase/firestore';
 
 type User = {
   uid: string;
@@ -11,7 +20,7 @@ interface AuthContextType {
   user: User;
   login: (email: string, pass: string) => Promise<void>;
   register: (email: string, pass: string, name: string) => Promise<void>;
-  logout: () => void;
+  logout: () => Promise<void>;
   loading: boolean;
 }
 
@@ -22,42 +31,69 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulated Firebase Auth persistence
-    const savedUser = localStorage.getItem('repairtech_user');
-    if (savedUser) {
-      setUser(JSON.parse(savedUser));
-    }
-    setLoading(false);
+    const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
+      if (firebaseUser) {
+        try {
+          const userDocRef = doc(db, 'users', firebaseUser.uid);
+          const userDoc = await getDoc(userDocRef);
+          const userData = userDoc.data();
+
+          const isAdmin = firebaseUser.email === 'admin@repairtechrb.co.za';
+
+          setUser({
+            uid: firebaseUser.uid,
+            email: firebaseUser.email || '',
+            displayName: userData?.displayName || firebaseUser.email?.split('@')[0] || '',
+            isAdmin: isAdmin
+          });
+        } catch (error) {
+          console.error('Error fetching user data:', error);
+          const isAdmin = firebaseUser.email === 'admin@repairtech.co.za';
+
+          setUser({
+            uid: firebaseUser.uid,
+            email: firebaseUser.email || '',
+            displayName: firebaseUser.email?.split('@')[0] || '',
+            isAdmin: isAdmin
+          });
+        }
+      } else {
+        try {
+          await signInAnonymously(auth);
+        } catch (error) {
+          console.error("Anonymous auth failed:", error);
+          setUser(null);
+          setLoading(false);
+        }
+        return; // loading will be set to false when the anonymous login triggers onAuthStateChanged again
+      }
+      setLoading(false);
+    });
+
+    return () => unsubscribe();
   }, []);
 
-  const login = async (email: string, _pass: string) => {
-    // Simulated login delay
-    await new Promise(r => setTimeout(r, 1000));
-    
-    // Mock admin logic
-    const isMockAdmin = email === 'admin@repairtech.co.za';
-    
-    const mockUser = { 
-      uid: Math.random().toString(36).substr(2, 9), 
-      email, 
-      displayName: email.split('@')[0],
-      isAdmin: isMockAdmin 
-    };
-    
-    setUser(mockUser);
-    localStorage.setItem('repairtech_user', JSON.stringify(mockUser));
+  const login = async (email: string, pass: string) => {
+    await signInWithEmailAndPassword(auth, email, pass);
+    // onAuthStateChanged will handle setting the user state
   };
 
-  const register = async (email: string, _pass: string, name: string) => {
-    await new Promise(r => setTimeout(r, 1000));
-    const mockUser = { uid: Math.random().toString(36).substr(2, 9), email, displayName: name };
-    setUser(mockUser);
-    localStorage.setItem('repairtech_user', JSON.stringify(mockUser));
+  const register = async (email: string, pass: string, name: string) => {
+    const userCredential = await createUserWithEmailAndPassword(auth, email, pass);
+    const firebaseUser = userCredential.user;
+
+    // Create the user document in Firestore
+    await setDoc(doc(db, 'users', firebaseUser.uid), {
+      email,
+      displayName: name,
+      isAdmin: false, // By default, new users are not admins
+      createdAt: new Date().toISOString()
+    });
+    // onAuthStateChanged will handle setting the user state
   };
 
-  const logout = () => {
-    setUser(null);
-    localStorage.removeItem('repairtech_user');
+  const logout = async () => {
+    await signOut(auth);
   };
 
   return (
@@ -68,3 +104,4 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 }
 
 export const useAuth = () => useContext(AuthContext);
+

@@ -5,28 +5,31 @@ export default function ShopHero() {
 
   const slides = [
     {
-      tag: 'LAPTOP REPLACEMENT SCREEN',
-      title: 'Replacements Hinges, Casings & Covers',
+      id: 1,
+      imgSrc: '/images/banner_casing.jpg',
+      tag: 'PREMIUM REPLACEMENT PARTS',
+      title: 'LAPTOP CASINGS',
       desc: 'Replacement hinges, palm rests, bezels and bottom covers for all major laptop brands. If your laptop hinges broke, let us fix them for you.',
       btnText: 'SHOP LAPTOP COVERS',
       imgLabel: 'Laptop replacement covers',
-      imgSrc: 'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=1600&q=80',
     },
     {
-      tag: 'MACBOOK REPAIRS',
-      title: 'Premium Apple Mac Parts & Service',
+      id: 2,
+      imgSrc: '/images/banner_macbook.jpg',
+      tag: 'EXPERT APPLE REPAIR',
+      title: 'MACBOOK PARTS',
       desc: 'Get your MacBook running like new with our high-quality replacement parts. From retina screens to batteries, we have it all.',
       btnText: 'SHOP MAC PARTS',
       imgLabel: 'MacBook repairs',
-      imgSrc: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1600&q=80',
     },
     {
+      id: 3,
+      imgSrc: '/images/banner_upgrades.jpg',
       tag: 'UPGRADE YOUR SPEED',
       title: 'High-Performance SSDs & RAM',
       desc: 'Dramatically increase your computer\'s performance with our top-tier solid state drives and memory modules.',
       btnText: 'SHOP UPGRADES',
       imgLabel: 'Performance Upgrades',
-      imgSrc: 'https://images.unsplash.com/photo-1597673030062-8a3915bc8210?auto=format&fit=crop&w=1600&q=80',
     },
     {
       tag: 'REFURBISHED LAPTOPS',

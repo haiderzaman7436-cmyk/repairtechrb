@@ -13,12 +13,12 @@ interface CategoryProductCardProps {
 }
 
 export default function CategoryProductCard(props: CategoryProductCardProps) {
-  const { id = Math.floor(Math.random() * 10000), inStock, isUsed, image, category, title, price } = props;
+  const { id = Math.floor(Math.random() * 10000), inStock, isUsed, image, category, title } = props;
   const navigate = useNavigate();
   const { addToCart } = useCart();
 
-  const waMessage = encodeURIComponent(`Hi, I'm interested in the ${title} priced at ${price}.`);
-  const waLink = `https://wa.me/27685011885?text=${waMessage}`;
+  const waMessage = encodeURIComponent(`Hi, I'm interested in the ${title}. Can I get a price for this?`);
+  const waLink = `https://wa.me/27621172653?text=${waMessage}`;
 
   const handleCardClick = () => {
     navigate(`/product/${id}`, { state: { product: props } });
@@ -53,7 +53,7 @@ export default function CategoryProductCard(props: CategoryProductCardProps) {
       <div className="cat-product-info">
         <div className="cat-product-category">{category}</div>
         <h3 className="cat-product-title">{title}</h3>
-        <div className="cat-product-price">{price}</div>
+        <div className="cat-product-price">Contact for price</div>
         
         <div className="cat-product-actions">
           <button className="btn-modern btn-add-cart" onClick={handleAddToCart}>ADD TO CART</button>

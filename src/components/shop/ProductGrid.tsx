@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 interface Product {
   tag: string;
@@ -17,6 +18,7 @@ interface ProductGridProps {
 }
 
 export default function ProductGrid({ title, subtitle, tabs, products }: ProductGridProps) {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState(tabs[0]);
 
   return (
@@ -30,7 +32,13 @@ export default function ProductGrid({ title, subtitle, tabs, products }: Product
             <button 
               key={idx} 
               className={`shop-tab ${activeTab === tab ? 'active' : ''}`}
-              onClick={() => setActiveTab(tab)}
+              onClick={() => {
+                setActiveTab(tab);
+                if (tab === 'LAPTOPS') navigate('/shop/used-laptops');
+                if (tab === 'DESKTOPS') navigate('/shop/gaming-computers');
+                if (tab === 'MONITORS') navigate('/shop/used-laptops');
+                if (tab === 'SERVERS') navigate('/shop/used-laptops');
+              }}
             >
               {tab}
             </button>
@@ -60,7 +68,9 @@ export default function ProductGrid({ title, subtitle, tabs, products }: Product
         </div>
 
         <div className="shop-view-all-box">
-          <button className="btn btn-navy shop-view-all">VIEW ALL FULL {activeTab}</button>
+          <button className="btn btn-navy shop-view-all" onClick={() => navigate(activeTab === 'DESKTOPS' ? '/shop/gaming-computers' : '/shop/used-laptops')}>
+            VIEW ALL FULL {activeTab}
+          </button>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { ChevronDown, Search, Phone, User, ShoppingCart, Menu, X } from 'lucide-react';
+import { Search, Phone, User, ShoppingCart, Menu, X } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { useCart } from '../../context/CartContext';
 
@@ -9,7 +9,7 @@ export default function ShopHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
   const { user, logout } = useAuth();
-  const { totalItems, totalPrice } = useCart();
+  const { totalItems } = useCart();
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -30,10 +30,16 @@ export default function ShopHeader() {
               alt="Repair Tech Logo" 
               className="shop-logo-img"
               style={{ 
-                height: '80px', 
+                height: '75px',
+                minHeight: '75px',
+                width: 'auto',
+                flexShrink: 0,
                 objectFit: 'contain',
-                mixBlendMode: 'multiply'
+                mixBlendMode: 'multiply',
+                transition: 'transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)'
               }} 
+              onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.08)'}
+              onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
             />
             <div className="logo-text" style={{ display: 'flex', flexDirection: 'column', lineHeight: '1.05' }}>
               <span style={{ fontSize: '1.8rem', fontWeight: '900', color: 'var(--navy)', letterSpacing: '1px', fontFamily: 'var(--font-sans)' }}>REPAIR</span>
@@ -42,9 +48,12 @@ export default function ShopHeader() {
           </Link>
           
           <form onSubmit={handleSearch} className="shop-search">
-            <div className="shop-search-category" style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-              All Categories <ChevronDown size={14} />
-            </div>
+            <select className="shop-search-category" style={{ padding: '0 1rem', border: 'none', background: 'transparent', outline: 'none', color: 'var(--gray-dark)', fontWeight: 'bold', cursor: 'pointer', appearance: 'none' }}>
+              <option value="all">All Categories</option>
+              <option value="laptops">Laptops</option>
+              <option value="parts">Parts & Upgrades</option>
+              <option value="mac">Apple Mac</option>
+            </select>
             <input 
               type="text" 
               placeholder="Search for products, brands, categories..." 
@@ -58,11 +67,11 @@ export default function ShopHeader() {
           </form>
           
           <div className="shop-actions">
-            <a href="tel:+27685011885" className="shop-action-item hide-on-mobile">
+            <a href="tel:+27621172653" className="shop-action-item hide-on-mobile">
               <span className="shop-action-icon"><Phone size={20} /></span>
               <div>
                 <div className="shop-action-label">Call Us</div>
-                <div className="shop-action-val">068 501 1885</div>
+                <div className="shop-action-val">062 117 2653</div>
               </div>
             </a>
             
@@ -90,8 +99,8 @@ export default function ShopHeader() {
                 {totalItems > 0 && <span className="cart-badge">{totalItems}</span>}
               </span>
               <div className="hide-on-mobile">
-                <div className="shop-action-val">R {totalPrice.toFixed(2)}</div>
-                <div className="shop-action-label">{totalItems} Cart</div>
+                <div className="shop-action-val">Request Quote</div>
+                <div className="shop-action-label">{totalItems} Items</div>
               </div>
             </Link>
 
@@ -141,7 +150,7 @@ export default function ShopHeader() {
             ) : (
               <Link to="/login" onClick={() => setIsMobileMenuOpen(false)} style={{ display: 'block', padding: '1rem', fontWeight: 'bold' }}>Login / Register</Link>
             )}
-            <a href="tel:+27685011885" style={{ display: 'block', padding: '1rem', fontWeight: 'bold', borderTop: '1px solid #eee' }}>Call Us: 068 501 1885</a>
+            <a href="tel:+27621172653" style={{ display: 'block', padding: '1rem', fontWeight: 'bold', borderTop: '1px solid #eee' }}>Call Us: 062 117 2653</a>
           </div>
         </div>
       </div>

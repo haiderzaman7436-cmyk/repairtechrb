@@ -5,24 +5,24 @@ import ProductGrid from '../components/shop/ProductGrid';
 
 export default function Shop() {
   const laptopParts = [
-    { name: 'Laptop Memory (RAM)', desc: 'DDR3, DDR4, DDR5 sodimm', image: 'https://images.unsplash.com/photo-1562976540-1502c2145186?auto=format&fit=crop&w=600&q=80' },
-    { name: 'Solid State Drives', desc: 'SATA, NVMe PCIe Gen3, Gen4', image: 'https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=600&q=80' },
-    { name: 'Laptop Batteries', desc: 'OEM replacement batteries', image: 'https://images.unsplash.com/photo-1601524909162-ae8725290836?auto=format&fit=crop&w=600&q=80' },
-    { name: 'Touch Screen & Assemblies', desc: 'LCD, LED, OLED Panels', image: 'https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=600&q=80' }
+    { name: 'Laptop Memory (RAM)', desc: 'DDR3, DDR4, DDR5 sodimm', image: '/images/prod_laptop_ram.jpg' },
+    { name: 'Solid State Drives', desc: 'SATA, NVMe PCIe Gen3, Gen4', image: '/images/prod_laptop_ssd.jpg' },
+    { name: 'Laptop Batteries', desc: 'OEM replacement batteries', image: '/images/prod_laptop_battery.jpg' },
+    { name: 'Touch Screen & Assemblies', desc: 'LCD, LED, OLED Panels', image: '/images/prod_laptop_screen.jpg' }
   ];
 
   const macParts = [
-    { name: 'MacBook Screens', desc: 'Retina LCD / LED panels', image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80' },
-    { name: 'MacBook Batteries', desc: 'High capacity replacements', image: 'https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=600&q=80' },
-    { name: 'MacBook Keyboards', desc: 'Replacement top cases', image: 'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=600&q=80' },
-    { name: 'MacBook Chargers', desc: 'MagSafe and USB-C', image: 'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=600&q=80' }
+    { name: 'MacBook Screens', desc: 'Retina LCD / LED panels', image: '/images/prod_macbook_screen.jpg' },
+    { name: 'MacBook Batteries', desc: 'High capacity replacements', image: '/images/prod_macbook_battery.jpg' },
+    { name: 'MacBook Keyboards', desc: 'Replacement top cases', image: '/images/prod_macbook_keyboard.jpg' },
+    { name: 'MacBook Chargers', desc: 'MagSafe and USB-C', image: '/images/prod_macbook_charger.jpg' }
   ];
 
   const refurbishedLaptops = [
-    { tag: 'LOCAL STOCK', isUsed: true, category: 'Refurbished Laptop', title: 'HP ProBook 450 G7 15.6" Touchscreen 10th Gen Core i5...', price: 'R 6,499.00', image: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=600&q=80' , priceNum: 6499.0},
-    { tag: 'LOCAL STOCK', isUsed: true, category: 'Refurbished Laptop', title: 'Dell Latitude 3410 14" 10th Gen Core i5 10210U 16GB RAM...', price: 'R 5,100.00', image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=600&q=80' , priceNum: 5100.0},
-    { tag: 'LOCAL STOCK', isUsed: true, category: 'Refurbished Laptop', title: 'Lenovo ThinkPad X390 13.3" 8th Gen Core i5 8365U 16GB RAM...', price: 'R 4,644.00', image: 'https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=600&q=80' , priceNum: 4644.0},
-    { tag: 'LOCAL STOCK', isUsed: true, category: 'Refurbished Laptop', title: 'Dell Latitude E5470 14" 6th Gen Core i5 6300U 8GB RAM...', price: 'R 3,595.00', image: 'https://images.unsplash.com/photo-1542393545-10f5cde2c810?auto=format&fit=crop&w=600&q=80' , priceNum: 3595.0}
+    { tag: 'LOCAL STOCK', isUsed: true, category: 'Refurbished Laptop', title: 'HP ProBook 450 G7 15.6" Touchscreen 10th Gen Core i5...', price: 'Contact for price', image: '/images/prod_refurb_hp.jpg', priceNum: 6499.0 },
+    { tag: 'LOCAL STOCK', isUsed: true, category: 'Refurbished Laptop', title: 'Dell Latitude 3410 14" 10th Gen Core i5 10210U 16GB RAM...', price: 'Contact for price', image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=600&q=80', priceNum: 5100.0 },
+    { tag: 'LOCAL STOCK', isUsed: true, category: 'Refurbished Laptop', title: 'Lenovo ThinkPad X390 13.3" 8th Gen Core i5 8365U 16GB RAM...', price: 'Contact for price', image: 'https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=600&q=80', priceNum: 4644.0 },
+    { tag: 'LOCAL STOCK', isUsed: true, category: 'Refurbished Laptop', title: 'Dell Latitude E5470 14" 6th Gen Core i5 6300U 8GB RAM...', price: 'Contact for price', image: 'https://images.unsplash.com/photo-1542393545-10f5cde2c810?auto=format&fit=crop&w=600&q=80', priceNum: 3595.0 }
   ];
 
   return (

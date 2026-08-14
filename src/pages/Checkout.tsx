@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext';
+import { db } from '../lib/firebase';
+import { collection, addDoc } from 'firebase/firestore';
 
 export default function Checkout() {
   const { items, totalPrice, clearCart } = useCart();
@@ -29,27 +31,30 @@ export default function Checkout() {
     e.preventDefault();
     setLoading(true);
     
-    // Simulate API call to save order to Firebase/Admin DB
-    await new Promise(r => setTimeout(r, 1500));
-    
-    const newOrder = {
-      id: Math.random().toString(36).substr(2, 9),
-      date: new Date().toISOString(),
-      customer: formData,
-      items: items,
-      total: totalPrice,
-      status: 'Pending'
-    };
-    
-    // Save to local storage for Admin Dashboard to read
-    const existingOrders = JSON.parse(localStorage.getItem('repairtech_orders') || '[]');
-    localStorage.setItem('repairtech_orders', JSON.stringify([newOrder, ...existingOrders]));
-    
-    clearCart();
-    
-    // Redirect to WhatsApp for payment/confirmation
-    const text = `Hi, I just placed an order (ID: ${newOrder.id}) for R${totalPrice.toFixed(2)}. Please advise on payment details.`;
-    window.location.href = `https://wa.me/27685011885?text=${encodeURIComponent(text)}`;
+    // Save order to Firebase Firestore
+    try {
+      const orderData = {
+        date: new Date().toISOString(),
+        customer: formData,
+        userId: user?.uid || null,
+        items: items,
+        total: totalPrice,
+        status: 'Pending'
+      };
+      
+      const docRef = await addDoc(collection(db, 'orders'), orderData);
+      const orderId = docRef.id;
+      
+      clearCart();
+      
+      // Redirect to WhatsApp for quote/confirmation
+      const text = `Hi, I just placed a quote request (ID: ${orderId}). Can you provide a final price?`;
+      window.location.href = `https://wa.me/27621172653?text=${encodeURIComponent(text)}`;
+    } catch (error) {
+      console.error("Error adding document: ", error);
+      alert("Failed to process order. Please try again or contact support.");
+      setLoading(false);
+    }
   };
 
   return (
@@ -89,10 +94,10 @@ export default function Checkout() {
 
             <div style={{ marginTop: '2rem', borderTop: '1px solid #eee', paddingTop: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <div style={{ fontSize: '1.2rem', color: 'var(--navy)' }}>
-                Total to pay: <span style={{ fontWeight: 'bold' }}>R {totalPrice.toFixed(2)}</span>
+                Total to pay: <span style={{ fontWeight: 'bold' }}>Contact for price</span>
               </div>
               <button type="submit" disabled={loading} className="btn-primary" style={{ padding: '1rem 2rem', borderRadius: '4px', border: 'none', fontSize: '1.1rem', cursor: 'pointer', fontWeight: 'bold' }}>
-                {loading ? 'Processing...' : 'Place Order & Pay via WhatsApp'}
+                {loading ? 'Processing...' : 'Request Quote via WhatsApp'}
               </button>
             </div>
           </form>

@@ -3,7 +3,7 @@ import { useCart } from '../context/CartContext';
 import { Trash2, Plus, Minus, ArrowRight } from 'lucide-react';
 
 export default function Cart() {
-  const { items, removeFromCart, updateQuantity, totalPrice } = useCart();
+  const { items, removeFromCart, updateQuantity } = useCart();
   const navigate = useNavigate();
 
   return (
@@ -27,7 +27,7 @@ export default function Cart() {
                   <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                     <div>
                       <h4 style={{ color: 'var(--navy)', fontSize: '1.1rem', marginBottom: '0.25rem' }}>{item.title}</h4>
-                      <div style={{ color: 'var(--lime)', fontWeight: 'bold', fontSize: '1.1rem' }}>R {item.priceNum.toFixed(2)}</div>
+                      <div style={{ color: 'var(--lime)', fontWeight: 'bold', fontSize: '1.1rem' }}>Contact for price</div>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '1rem' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', background: 'var(--gray-light)', borderRadius: '4px', padding: '0.25rem' }}>
@@ -49,18 +49,18 @@ export default function Cart() {
               <h3 style={{ color: 'var(--navy)', marginBottom: '1.5rem', borderBottom: '1px solid #eee', paddingBottom: '1rem' }}>Order Summary</h3>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem', color: 'var(--gray-dark)' }}>
                 <span>Subtotal</span>
-                <span>R {totalPrice.toFixed(2)}</span>
+                <span>Contact for price</span>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1.5rem', color: 'var(--gray-dark)' }}>
                 <span>Shipping</span>
-                <span>Calculated at checkout</span>
+                <span>Calculated on quote</span>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '2rem', borderTop: '1px solid #eee', paddingTop: '1rem', fontSize: '1.2rem', fontWeight: 'bold', color: 'var(--navy)' }}>
                 <span>Total</span>
-                <span>R {totalPrice.toFixed(2)}</span>
+                <span>Contact for price</span>
               </div>
               <button onClick={() => navigate('/checkout')} className="btn-primary" style={{ width: '100%', padding: '1rem', borderRadius: '4px', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '8px', border: 'none', fontSize: '1.1rem', cursor: 'pointer' }}>
-                Proceed to Checkout <ArrowRight size={20} />
+                Request Quote <ArrowRight size={20} />
               </button>
             </div>
           </div>

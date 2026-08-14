@@ -11,11 +11,7 @@ export default function ShopNav() {
     { label: 'USED/REFURBS', to: '/shop', dropdown: ['Gaming', 'Laptops', 'Desktops', 'Monitors', 'Servers', 'Components'] },
     { label: 'GADGETS', to: '/shop', dropdown: ['Screen', 'Batteries', 'Back Covers', 'Charging Port', 'Accessories'] },
     { label: 'NETWORK', to: '/shop', dropdown: ['Routers', 'Switches', 'Access Points', 'Server Parts', 'Transceivers (SFP)'] },
-    { label: 'REPAIRS', to: '/shop', dropdown: ['Book a Repair', 'Laptop Repair', 'MacBook Repair', 'Screen Replacement', 'Phone Repair', 'Data Recovery', 'SSD & RAM Upgrades'] },
-    { label: 'ABOUT US', to: '/about' },
-    { label: 'CONTACT', to: '/contact' },
-    { label: 'ACCOUNT', to: '/account' },
-    { label: 'CHECKOUT', to: '/checkout' }
+    { label: 'REPAIRS', to: '/shop', dropdown: ['Book a Repair', 'Laptop Repair', 'MacBook Repair', 'Screen Replacement', 'Phone Repair', 'Data Recovery', 'SSD & RAM Upgrades'] }
   ];
 
   const handleLinkClick = (e: React.MouseEvent, idx: number, hasDropdown: boolean) => {

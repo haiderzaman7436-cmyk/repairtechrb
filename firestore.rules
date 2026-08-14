@@ -1,0 +1,26 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+  
+    // Helper function to check if the user is the specific secure admin
+    function isAdmin() {
+      return request.auth != null && request.auth.token.email == 'admin@repairtech.co.za';
+    }
+
+    match /users/{userId} {
+      // Users can read/write their own profile data. Admins can read/write all users.
+      allow read, write: if request.auth != null && (request.auth.uid == userId || isAdmin());
+    }
+
+    match /orders/{orderId} {
+      // Users can create orders. They can read their own orders. Admins can read/write all orders.
+      allow create: if request.auth != null && request.resource.data.userId == request.auth.uid;
+      allow read: if request.auth != null && (resource.data.userId == request.auth.uid || isAdmin());
+      allow update, delete: if isAdmin();
+    }
+    
+    match /carts/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+  }
+}

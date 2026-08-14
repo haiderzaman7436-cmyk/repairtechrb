@@ -7,11 +7,11 @@ export default function Footer() {
           <h2 style={{ color: 'var(--navy)', fontSize: 'clamp(1.8rem,3.5vw,2.6rem)', marginBottom: '2rem' }}>Professional workshop in Rosebank</h2>
           <div className="workspace-grid">
             <div className="workspace-img">
-              <img src="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=1200&q=80" alt="Repair Tech shop front at The Median building" loading="lazy" className="workspace-gallery-img" />
+              <img src="/images/banner_casing.jpg" alt="Repair Tech shop front at The Median building" loading="lazy" className="workspace-gallery-img" />
               <div className="label" style={{ marginTop: '0.75rem', fontWeight: 'bold', color: 'var(--navy)' }}>The Median building, Rosebank, 50 Bath Avenue</div>
             </div>
             <div className="workspace-img">
-              <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1200&q=80" alt="Repair Tech professional repair workshop" loading="lazy" className="workspace-gallery-img" />
+              <img src="/images/banner_macbook.jpg" alt="Repair Tech professional repair workshop" loading="lazy" className="workspace-gallery-img" />
               <div className="label" style={{ marginTop: '0.75rem', fontWeight: 'bold', color: 'var(--navy)' }}>Professional Repair Workshop</div>
             </div>
           </div>
@@ -57,9 +57,9 @@ export default function Footer() {
           <div><h4>Legal</h4><a href="/repair-policy/">Repair Policy</a><a href="/returns/">Return Policy</a><a href="/privacy/">Privacy Policy</a><a href="/payments/">Payment Policy</a><a href="/shipping/">Shipping Policy</a><a href="/warranty/">Warranty Policy</a></div>
           <div>
             <h4>Contact</h4>
-            <a href="tel:+27685011885">Telephone: +27 68 501 1885</a>
-            <a href="https://wa.me/27685011885">WhatsApp: +27 68 501 1885</a>
-            <a href="mailto:info@asetos.co.za">Email: info@asetos.co.za</a>
+            <a href="tel:+27621172653">Telephone: +27 62 117 2653</a>
+            <a href="https://wa.me/27621172653">WhatsApp: +27 62 117 2653</a>
+            <a href="mailto:info@repairtechrb.co.za">Email: info@repairtechrb.co.za</a>
             <span style={{ fontSize: '0.85rem', display: 'block', marginTop: '0.5rem' }}>The Median building<br />50 Bath Avenue<br />Rosebank, Johannesburg, South Africa</span>
           </div>
         </div>

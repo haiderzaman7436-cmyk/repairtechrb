@@ -56,8 +56,8 @@ export default function ProductDetail() {
 
   const specs = guessSpecs(product.title, product.category);
   const sku = `UAP-${product.id}-${new Date().getFullYear()}-ASSY`;
-  const waMessage = encodeURIComponent(`Hi, I'm interested in the ${product.title} (SKU: ${sku}) priced at ${product.price}.`);
-  const waLink = `https://wa.me/27685011885?text=${waMessage}`;
+  const waMessage = encodeURIComponent(`Hi, I'm interested in the ${product.title} (SKU: ${sku}). Can I get a price for this?`);
+  const waLink = `https://wa.me/27621172653?text=${waMessage}`;
 
   const handleAddToCart = () => {
     addToCart(product, qty);
@@ -106,7 +106,7 @@ export default function ProductDetail() {
               <span>Brand: <strong>RepairTech</strong></span>
             </div>
 
-            <div className="pdp-price">{product.price}</div>
+            <div className="pdp-price">Contact for price</div>
             <div className="pdp-delivery-hint">Free collection from Rosebank</div>
 
             <div className="pdp-stock-box">
@@ -136,9 +136,7 @@ export default function ProductDetail() {
               ENQUIRE ON WHATSAPP
             </a>
 
-            <div className="pdp-payment-promo">
-              Or pay from <strong>R{Math.floor(product.priceNum / 12)}.00/month</strong> with <strong>Mobicred</strong>. Select Mobicred at checkout.
-            </div>
+
 
             <div className="pdp-returns-box">
               <strong>Returns (Online orders only):</strong> 7 days from delivery to inspect and confirm the item matches its description. Must be returned in the condition supplied, with all packaging and accessories, not set up or used as a working device. Refunds processed within 30 days. <a href="#">Read our Ts & Cs for more details.</a>
@@ -192,7 +190,7 @@ export default function ProductDetail() {
                     <strong>Condition:</strong> {product.isUsed ? 'A pre-owned (second hand) part in perfect condition, tested and backed by our warranty.' : 'A brand new replacement part, tested and backed by our warranty.'}
                   </div>
                   <div className="pdp-info-block">
-                    <strong>Please note:</strong> The price is for the part only and excludes fitting; professional installation is available at our Rosebank branch. Please confirm compatibility with your device before ordering, or call or WhatsApp us on 068 501 1885 for help.
+                    <strong>Please note:</strong> The price is for the part only and excludes fitting; professional installation is available at our Rosebank branch. Please confirm compatibility with your device before ordering, or call or WhatsApp us on 062 117 2653 for help.
                   </div>
                 </div>
               </div>

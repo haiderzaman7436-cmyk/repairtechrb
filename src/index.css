@@ -1779,11 +1779,11 @@ h4 {
   }
   
   .shop-logo img {
-    height: 35px !important;
+    height: 55px !important;
   }
 
   .shop-logo span {
-    font-size: 1.1rem !important;
+    font-size: 1.4rem !important;
   }
   
   .shop-action-label, .shop-action-val {
@@ -3355,6 +3355,23 @@ h4 {
   .pdp-thumbnail { width: 60px; height: 60px; }
   .pdp-gallery { padding: 0.5rem; }
   .product-detail-page { overflow-x: hidden; width: 100vw; max-width: 100%; box-sizing: border-box; }
+  .pdp-tag-used {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+    top: 0.5rem;
+    left: 0.5rem;
+  }
+  .pdp-stock-box {
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+  }
+  .pdp-stock-title {
+    font-size: 0.95rem;
+  }
+  .pdp-stock-text {
+    font-size: 0.8rem;
+  }
 }
 
 /* Mobile Hamburger Menu CSS */
