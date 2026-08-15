@@ -73,7 +73,9 @@ export default function Footer() {
             <span style={{ fontSize: '0.85rem', display: 'block', marginTop: '0.5rem' }}>The Median building<br />50 Bath Avenue<br />Rosebank, Johannesburg, South Africa</span>
           </div>
         </div>
-        <div className="footer-bottom">&copy; 2026 Repair Tech. All rights reserved.</div>
+        <div className="footer-bottom">
+          &copy; {new Date().getFullYear()} Repair Tech. All Rights Reserved - Developed By <a href="#" style={{ color: 'var(--lime)', textDecoration: 'none', fontWeight: 'bold' }}>FixGoSolutions</a>
+        </div>
       </footer>
     </>
   );
