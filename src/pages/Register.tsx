@@ -36,6 +36,7 @@ export default function Register() {
     setLoading(true);
     setError('');
     try {
+      await register(email, password, name, phone);
       // Navigation is handled by the useEffect above
     } catch (err: any) {
       console.error(err);
@@ -48,6 +49,7 @@ export default function Register() {
     setLoading(true);
     setError('');
     try {
+      await loginWithGoogle();
       // Navigation is handled by the useEffect above
     } catch (err: any) {
       console.error(err);

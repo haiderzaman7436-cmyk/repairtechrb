@@ -45,6 +45,7 @@ export default function Login() {
     setError('');
     setResetMessage('');
     try {
+      await loginWithGoogle();
       // Navigation is handled by the useEffect above
     } catch (err: any) {
       console.error(err);
