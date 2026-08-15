@@ -26,10 +26,25 @@ export function getAuthErrorMessage(error: any): string {
     case 'auth/internal-error':
       return 'An internal error occurred. Please try again later.';
       
+    // Google / Provider Errors
+    case 'auth/popup-closed-by-user':
+      return 'The sign-in popup was closed before completing. Please try again.';
+    case 'auth/popup-blocked':
+      return 'The sign-in popup was blocked by your browser. Please allow popups for this site.';
+    case 'auth/cancelled-popup-request':
+      return 'Multiple sign-in requests were made. Please try again.';
+    case 'auth/operation-not-allowed':
+      return 'This sign-in method is not enabled. Please contact support.';
+      
     // Fallback
     default:
-      if (error?.message && !error.message.includes('Firebase')) {
-        return error.message;
+      if (error?.message) {
+        if (error.message.toLowerCase().includes('database') || error.message.toLowerCase().includes('indexeddb') || error.message.toLowerCase().includes('closing')) {
+          return 'Local storage/database error. If you are in incognito mode or using a strict privacy browser, try normal mode.';
+        }
+        if (!error.message.includes('Firebase')) {
+          return error.message;
+        }
       }
       return 'An unexpected error occurred. Please try again.';
   }
