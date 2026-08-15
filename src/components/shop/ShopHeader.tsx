@@ -48,7 +48,7 @@ export default function ShopHeader() {
           </Link>
           
           <form onSubmit={handleSearch} className="shop-search">
-            <select id="search-category" name="category" aria-label="Search Category" className="shop-search-category" style={{ padding: '0 1rem', border: 'none', background: 'transparent', outline: 'none', color: 'var(--gray-dark)', fontWeight: 'bold', cursor: 'pointer', appearance: 'none' }}>
+            <select id="search-category" name="category" aria-label="Search Category" className="shop-search-category" style={{ padding: '0 1rem', border: 'none', background: '#fff', outline: 'none', color: '#000', fontWeight: 'bold', cursor: 'pointer', appearance: 'none' }}>
               <option value="all">All Categories</option>
               <option value="laptops">Laptops</option>
               <option value="parts">Parts & Upgrades</option>

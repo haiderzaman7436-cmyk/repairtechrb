@@ -18,9 +18,9 @@ export default function Cart() {
             <Link to="/shop" className="btn-primary" style={{ padding: '0.75rem 1.5rem', borderRadius: '4px', textDecoration: 'none' }}>Continue Shopping</Link>
           </div>
         ) : (
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 350px', gap: '2rem', alignItems: 'start' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem', alignItems: 'flex-start' }}>
             {/* Cart Items */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', flex: '1 1 500px' }}>
               {items.map(item => (
                 <div key={item.id} style={{ display: 'flex', gap: '1.5rem', background: 'var(--white)', padding: '1.5rem', borderRadius: '12px', boxShadow: 'var(--shadow-sm)' }}>
                   <img src={item.image} alt={item.title} style={{ width: '100px', height: '100px', objectFit: 'cover', borderRadius: '8px' }} />
@@ -45,7 +45,7 @@ export default function Cart() {
             </div>
 
             {/* Cart Summary */}
-            <div style={{ background: 'var(--white)', padding: '2rem', borderRadius: '12px', boxShadow: 'var(--shadow-sm)' }}>
+            <div style={{ background: 'var(--white)', padding: '2rem', borderRadius: '12px', boxShadow: 'var(--shadow-sm)', flex: '1 1 300px', maxWidth: '100%' }}>
               <h3 style={{ color: 'var(--navy)', marginBottom: '1.5rem', borderBottom: '1px solid #eee', paddingBottom: '1rem' }}>Order Summary</h3>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem', color: 'var(--gray-dark)' }}>
                 <span>Subtotal</span>

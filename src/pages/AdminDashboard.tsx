@@ -322,7 +322,8 @@ export default function AdminDashboard() {
                         View All Orders <ArrowRight size={16} />
                       </button>
                     </div>
-                    <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                    <div style={{ overflowX: 'auto' }}>
+                    <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: '600px' }}>
                       <thead>
                         <tr style={{ background: 'rgba(0, 11, 41, 0.02)', color: 'var(--gray-dark)', textAlign: 'left', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '1px' }}>
                           <th style={{ padding: '1.2rem 2rem', fontWeight: '700' }}>Order ID</th>
@@ -359,6 +360,7 @@ export default function AdminDashboard() {
                         )}
                       </tbody>
                     </table>
+                    </div>
                   </div>
                 </div>
               )}
@@ -366,7 +368,8 @@ export default function AdminDashboard() {
               {/* ORDERS TAB */}
               {activeTab === 'orders' && (
                 <div style={{ maxWidth: '1200px', margin: '0 auto', background: 'var(--white)', borderRadius: '16px', boxShadow: '0 10px 25px rgba(0, 11, 41, 0.05)', border: '1px solid rgba(0, 11, 41, 0.05)', overflow: 'hidden' }}>
-                  <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                  <div style={{ overflowX: 'auto' }}>
+                  <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: '800px' }}>
                     <thead>
                       <tr style={{ background: 'rgba(0, 11, 41, 0.02)', color: 'var(--gray-dark)', textAlign: 'left', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '1px' }}>
                         <th style={{ padding: '1.5rem 2rem', fontWeight: '700' }}>Order Details</th>
@@ -447,9 +450,9 @@ export default function AdminDashboard() {
                             {isExpanded && (
                               <tr style={{ borderBottom: '1px solid rgba(0, 11, 41, 0.1)', background: 'rgba(0, 11, 41, 0.02)' }}>
                                 <td colSpan={5} style={{ padding: '0 2rem 2.5rem 2rem' }}>
-                                  <div style={{ background: 'var(--white)', border: '1px solid rgba(0, 11, 41, 0.1)', borderRadius: '12px', padding: '2rem', display: 'flex', gap: '3rem', boxShadow: '0 4px 15px rgba(0,0,0,0.03)' }}>
+                                  <div style={{ background: 'var(--white)', border: '1px solid rgba(0, 11, 41, 0.1)', borderRadius: '12px', padding: '2rem', display: 'flex', flexWrap: 'wrap', gap: '3rem', boxShadow: '0 4px 15px rgba(0,0,0,0.03)' }}>
                                     
-                                    <div style={{ flex: 1 }}>
+                                    <div style={{ flex: '1 1 300px' }}>
                                       <h4 style={{ color: 'var(--navy)', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '10px', fontSize: '1.1rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
                                         <Package size={20} color="var(--lime)" /> Items Ordered
                                       </h4>
@@ -466,7 +469,7 @@ export default function AdminDashboard() {
                                       </div>
                                     </div>
 
-                                    <div style={{ width: '350px' }}>
+                                    <div style={{ flex: '1 1 300px' }}>
                                       <h4 style={{ color: 'var(--navy)', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '10px', fontSize: '1.1rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
                                         <MapPin size={20} color="var(--lime)" /> Shipping Details
                                       </h4>
@@ -493,13 +496,15 @@ export default function AdminDashboard() {
                       )}
                     </tbody>
                   </table>
+                  </div>
                 </div>
               )}
 
               {/* CUSTOMERS TAB */}
               {activeTab === 'customers' && (
                 <div style={{ maxWidth: '1200px', margin: '0 auto', background: 'var(--white)', borderRadius: '16px', boxShadow: '0 10px 25px rgba(0, 11, 41, 0.05)', border: '1px solid rgba(0, 11, 41, 0.05)', overflow: 'hidden' }}>
-                  <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                  <div style={{ overflowX: 'auto' }}>
+                  <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: '600px' }}>
                     <thead>
                       <tr style={{ background: 'rgba(0, 11, 41, 0.02)', color: 'var(--gray-dark)', textAlign: 'left', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '1px' }}>
                         <th style={{ padding: '1.5rem 2rem', fontWeight: '700' }}>Customer Name</th>
@@ -541,6 +546,7 @@ export default function AdminDashboard() {
                       )}
                     </tbody>
                   </table>
+                  </div>
                 </div>
               )}
 
