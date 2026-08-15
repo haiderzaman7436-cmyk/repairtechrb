@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { getAuthErrorMessage } from '../utils/authErrors';
@@ -14,10 +14,18 @@ export default function Register() {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const { register, loginWithGoogle } = useAuth();
+  const { user, loading: authLoading, register, loginWithGoogle } = useAuth();
   const navigate = useNavigate();
 
-  // Removed auto-redirect useEffect to prevent unwanted redirects
+  useEffect(() => {
+    if (!authLoading && user) {
+      if (user.isAdmin) {
+        navigate('/admin');
+      } else {
+        navigate('/shop');
+      }
+    }
+  }, [user, authLoading, navigate]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -28,8 +36,7 @@ export default function Register() {
     setLoading(true);
     setError('');
     try {
-      await register(email, password, name, phone);
-      navigate('/shop');
+      // Navigation is handled by the useEffect above
     } catch (err: any) {
       console.error(err);
       setError(getAuthErrorMessage(err));
@@ -41,8 +48,7 @@ export default function Register() {
     setLoading(true);
     setError('');
     try {
-      await loginWithGoogle();
-      navigate('/shop');
+      // Navigation is handled by the useEffect above
     } catch (err: any) {
       console.error(err);
       setError(getAuthErrorMessage(err));

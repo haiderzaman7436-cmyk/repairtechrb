@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { getAuthErrorMessage } from '../utils/authErrors';
@@ -12,10 +12,18 @@ export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const [resetMessage, setResetMessage] = useState('');
   const [resetLoading, setResetLoading] = useState(false);
-  const { login, loginWithGoogle, resetPassword } = useAuth();
+  const { user, loading: authLoading, login, loginWithGoogle, resetPassword } = useAuth();
   const navigate = useNavigate();
 
-  // Removed auto-redirect useEffect to prevent unwanted redirects
+  useEffect(() => {
+    if (!authLoading && user) {
+      if (user.isAdmin) {
+        navigate('/admin');
+      } else {
+        navigate('/shop');
+      }
+    }
+  }, [user, authLoading, navigate]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,11 +32,7 @@ export default function Login() {
     setResetMessage('');
     try {
       await login(email, password);
-      if (email === 'admin@repairtechrb.co.za' || email === 'admin@repairtech.co.za') {
-        navigate('/admin');
-      } else {
-        navigate('/shop');
-      }
+      // Navigation is handled by the useEffect above
     } catch (err: any) {
       console.error(err);
       setError(getAuthErrorMessage(err));
@@ -41,8 +45,7 @@ export default function Login() {
     setError('');
     setResetMessage('');
     try {
-      await loginWithGoogle();
-      navigate('/shop');
+      // Navigation is handled by the useEffect above
     } catch (err: any) {
       console.error(err);
       setError(getAuthErrorMessage(err));
