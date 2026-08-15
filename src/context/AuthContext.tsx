@@ -6,7 +6,9 @@ import {
   signOut,
   onAuthStateChanged,
   signInAnonymously,
-  sendPasswordResetEmail
+  sendPasswordResetEmail,
+  GoogleAuthProvider,
+  signInWithPopup
 } from 'firebase/auth';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 
@@ -22,6 +24,7 @@ interface AuthContextType {
   user: User;
   login: (email: string, pass: string) => Promise<void>;
   register: (email: string, pass: string, name: string, phone: string) => Promise<void>;
+  loginWithGoogle: () => Promise<void>;
   resetPassword: (email: string) => Promise<void>;
   logout: () => Promise<void>;
   loading: boolean;
@@ -98,6 +101,24 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     // onAuthStateChanged will handle setting the user state
   };
 
+  const loginWithGoogle = async () => {
+    const provider = new GoogleAuthProvider();
+    const userCredential = await signInWithPopup(auth, provider);
+    const firebaseUser = userCredential.user;
+
+    const userDocRef = doc(db, 'users', firebaseUser.uid);
+    const userDoc = await getDoc(userDocRef);
+    if (!userDoc.exists()) {
+      await setDoc(userDocRef, {
+        email: firebaseUser.email,
+        displayName: firebaseUser.displayName || '',
+        phone: '',
+        isAdmin: false,
+        createdAt: new Date().toISOString()
+      });
+    }
+  };
+
   const logout = async () => {
     await signOut(auth);
   };
@@ -107,7 +128,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <AuthContext.Provider value={{ user, login, register, resetPassword, logout, loading }}>
+    <AuthContext.Provider value={{ user, login, register, loginWithGoogle, resetPassword, logout, loading }}>
       {children}
     </AuthContext.Provider>
   );
