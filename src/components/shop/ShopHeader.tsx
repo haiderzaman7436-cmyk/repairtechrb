@@ -78,7 +78,7 @@ export default function ShopHeader() {
               </div>
             </a>
             
-            {user ? (
+            {user && !user.isAnonymous ? (
               <div className="shop-action-item user-menu-container hide-on-mobile">
                 <span className="shop-action-icon"><User size={22} /></span>
                 <div>
@@ -147,7 +147,7 @@ export default function ShopHeader() {
           </div>
 
           <div className="mobile-menu-footer">
-            {user ? (
+            {user && !user.isAnonymous ? (
               <>
                 <div style={{ padding: '1rem', fontWeight: 'bold' }}>Hi, {user.displayName}</div>
                 {user.isAdmin && <Link to="/admin" onClick={() => setIsMobileMenuOpen(false)} style={{ padding: '1rem', display: 'block', color: 'var(--lime)' }}>Admin Dashboard</Link>}

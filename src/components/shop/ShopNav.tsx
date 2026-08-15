@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Truck, Star, MessageCircle, ShieldCheck } from 'lucide-react';
 
 export default function ShopNav() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const navRef = useRef<HTMLDivElement>(null);
 
   const links = [
     { label: 'LAPTOP PARTS', to: '/shop', dropdown: ['Memory', 'Screens', 'Chargers', 'Batteries', 'Keyboards', 'Storage'] },
@@ -15,24 +16,35 @@ export default function ShopNav() {
   ];
 
   const handleLinkClick = (e: React.MouseEvent, idx: number, hasDropdown: boolean) => {
-    if (hasDropdown && window.innerWidth <= 1024) {
+    if (hasDropdown) {
       e.preventDefault();
       setHoveredIndex(hoveredIndex === idx ? null : idx);
-      return;
+    } else {
+      setHoveredIndex(null);
     }
-    setHoveredIndex(null);
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setHoveredIndex(null);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <>
-      <nav className="shop-nav">
+      <nav className="shop-nav" ref={navRef}>
         <div className="container shop-nav-inner">
           {links.map((link, idx) => (
             <div 
               key={idx} 
               className={`shop-nav-item ${link.dropdown ? 'has-dropdown' : ''}`}
-              onMouseEnter={() => { if (window.innerWidth > 1024) setHoveredIndex(idx); }}
-              onMouseLeave={() => { if (window.innerWidth > 1024) setHoveredIndex(null); }}
             >
               <Link 
                 onClick={(e) => handleLinkClick(e, idx, !!link.dropdown)} 
@@ -53,11 +65,27 @@ export default function ShopNav() {
                         link.label === 'MACBOOK PARTS' && sub === 'Batteries' ? '/shop/macbook-parts/batteries' :
                         link.label === 'MACBOOK PARTS' && sub === 'Chargers' ? '/shop/macbook-parts/chargers' :
                         link.label === 'MACBOOK PARTS' && sub === 'Keyboards' ? '/shop/macbook-parts/keyboards' :
+                        link.label === 'MACBOOK PARTS' && sub === 'Mac RAM/SSD' ? '/shop/macbook-parts/ram-ssd' :
                         link.label === 'LAPTOP PARTS' && sub === 'Screens' ? '/shop/laptop-parts/screens' :
                         link.label === 'LAPTOP PARTS' && sub === 'Batteries' ? '/shop/laptop-parts/batteries' :
                         link.label === 'LAPTOP PARTS' && sub === 'Chargers' ? '/shop/laptop-parts/chargers' :
                         link.label === 'LAPTOP PARTS' && sub === 'Keyboards' ? '/shop/laptop-parts/keyboards' :
                         link.label === 'USED/REFURBS' && sub === 'Laptops' ? '/shop/used-laptops' :
+                        link.label === 'USED/REFURBS' && sub === 'Desktops' ? '/shop/desktops' :
+                        link.label === 'USED/REFURBS' && sub === 'Monitors' ? '/shop/monitors' :
+                        link.label === 'USED/REFURBS' && sub === 'Servers' ? '/shop/servers' :
+                        link.label === 'USED/REFURBS' && sub === 'Components' ? '/shop/components' :
+                        link.label === 'GADGETS' && sub === 'Screen' ? '/shop/gadgets/screens' :
+                        link.label === 'GADGETS' && sub === 'Batteries' ? '/shop/gadgets/batteries' :
+                        link.label === 'GADGETS' && sub === 'Back Covers' ? '/shop/gadgets/covers' :
+                        link.label === 'GADGETS' && sub === 'Charging Port' ? '/shop/gadgets/ports' :
+                        link.label === 'GADGETS' && sub === 'Accessories' ? '/shop/gadgets/accessories' :
+                        link.label === 'NETWORK' && sub === 'Routers' ? '/shop/network/routers' :
+                        link.label === 'NETWORK' && sub === 'Switches' ? '/shop/network/switches' :
+                        link.label === 'NETWORK' && sub === 'Access Points' ? '/shop/network/access-points' :
+                        link.label === 'NETWORK' && sub === 'Server Parts' ? '/shop/network/server-parts' :
+                        link.label === 'NETWORK' && sub === 'Transceivers (SFP)' ? '/shop/network/transceivers' :
+                        link.label === 'REPAIRS' ? `/shop/repairs?service=${encodeURIComponent(sub)}` :
                         sub === 'Gaming' ? '/shop/gaming-computers' :
                         sub === 'Memory' ? '/shop/laptop-parts/memory' : 
                         sub === 'Storage (HDD/SSD)' ? '/shop/laptop-parts/storage' : 

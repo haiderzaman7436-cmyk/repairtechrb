@@ -11,8 +11,24 @@ import ShopMacBookScreens from './pages/ShopMacBookScreens';
 import ShopMacBookBatteries from './pages/ShopMacBookBatteries';
 import ShopMacBookChargers from './pages/ShopMacBookChargers';
 import ShopMacBookKeyboards from './pages/ShopMacBookKeyboards';
+import ShopMacBookRamSsd from './pages/ShopMacBookRamSsd';
 import ShopGaming from './pages/ShopGaming';
 import ShopUsedLaptops from './pages/ShopUsedLaptops';
+import ShopDesktops from './pages/ShopDesktops';
+import ShopMonitors from './pages/ShopMonitors';
+import ShopServers from './pages/ShopServers';
+import ShopComponents from './pages/ShopComponents';
+import ShopGadgetScreens from './pages/ShopGadgetScreens';
+import ShopGadgetBatteries from './pages/ShopGadgetBatteries';
+import ShopGadgetCovers from './pages/ShopGadgetCovers';
+import ShopGadgetPorts from './pages/ShopGadgetPorts';
+import ShopGadgetAccessories from './pages/ShopGadgetAccessories';
+import ShopNetworkAccessPoints from './pages/ShopNetworkAccessPoints';
+import ShopNetworkRouters from './pages/ShopNetworkRouters';
+import ShopNetworkSwitches from './pages/ShopNetworkSwitches';
+import ShopNetworkServerParts from './pages/ShopNetworkServerParts';
+import ShopNetworkTransceivers from './pages/ShopNetworkTransceivers';
+import Repairs from './pages/Repairs';
 import ProductDetail from './pages/ProductDetail';
 import Search from './pages/Search';
 import Login from './pages/Login';
@@ -57,7 +73,6 @@ function App() {
           <Route path="/laptopparts/storage" element={<Navigate to="/shop/laptop-parts/storage" replace />} />
           <Route path="/shop/laptopparts/storage" element={<Navigate to="/shop/laptop-parts/storage" replace />} />
           <Route path="/shop/macbook-parts/screens" element={<ShopMacBookScreens />} />
-          <Route path="/shop/macbook-parts/screens" element={<ShopMacBookScreens />} />
           <Route path="/macbookparts/screens" element={<Navigate to="/shop/macbook-parts/screens" replace />} />
           <Route path="/shop/macbook-parts/batteries" element={<ShopMacBookBatteries />} />
           <Route path="/macbookparts/batteries" element={<Navigate to="/shop/macbook-parts/batteries" replace />} />
@@ -65,10 +80,30 @@ function App() {
           <Route path="/macbookparts/chargers" element={<Navigate to="/shop/macbook-parts/chargers" replace />} />
           <Route path="/shop/macbook-parts/keyboards" element={<ShopMacBookKeyboards />} />
           <Route path="/macbookparts/keyboards" element={<Navigate to="/shop/macbook-parts/keyboards" replace />} />
+          <Route path="/shop/macbook-parts/ram-ssd" element={<ShopMacBookRamSsd />} />
           <Route path="/shop/gaming-computers" element={<ShopGaming />} />
           <Route path="/gaming-computers" element={<Navigate to="/shop/gaming-computers" replace />} />
           <Route path="/shop/used-laptops" element={<ShopUsedLaptops />} />
           <Route path="/used-laptops" element={<Navigate to="/shop/used-laptops" replace />} />
+          <Route path="/shop/desktops" element={<ShopDesktops />} />
+          <Route path="/desktops" element={<Navigate to="/shop/desktops" replace />} />
+          <Route path="/shop/monitors" element={<ShopMonitors />} />
+          <Route path="/monitors" element={<Navigate to="/shop/monitors" replace />} />
+          <Route path="/shop/servers" element={<ShopServers />} />
+          <Route path="/servers" element={<Navigate to="/shop/servers" replace />} />
+          <Route path="/shop/components" element={<ShopComponents />} />
+          <Route path="/components" element={<Navigate to="/shop/components" replace />} />
+          <Route path="/shop/gadgets/screens" element={<ShopGadgetScreens />} />
+          <Route path="/shop/gadgets/batteries" element={<ShopGadgetBatteries />} />
+          <Route path="/shop/gadgets/covers" element={<ShopGadgetCovers />} />
+          <Route path="/shop/gadgets/ports" element={<ShopGadgetPorts />} />
+          <Route path="/shop/gadgets/accessories" element={<ShopGadgetAccessories />} />
+          <Route path="/shop/network/access-points" element={<ShopNetworkAccessPoints />} />
+          <Route path="/shop/network/routers" element={<ShopNetworkRouters />} />
+          <Route path="/shop/network/switches" element={<ShopNetworkSwitches />} />
+          <Route path="/shop/network/server-parts" element={<ShopNetworkServerParts />} />
+          <Route path="/shop/network/transceivers" element={<ShopNetworkTransceivers />} />
+          <Route path="/shop/repairs" element={<Repairs />} />
         </Route>
       </Routes>
 

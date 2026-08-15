@@ -1,26 +1,38 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { ShieldCheck, Lock, Mail, User, ArrowRight, Loader2, AlertCircle } from 'lucide-react';
+import { getAuthErrorMessage } from '../utils/authErrors';
+import { ShieldCheck, Lock, Mail, User, ArrowRight, Loader2, AlertCircle, Phone, Eye, EyeOff } from 'lucide-react';
 
 export default function Register() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const { register } = useAuth();
   const navigate = useNavigate();
 
+  // Removed auto-redirect useEffect to prevent unwanted redirects
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (password !== confirmPassword) {
+      setError('Passwords do not match.');
+      return;
+    }
     setLoading(true);
     setError('');
     try {
-      await register(email, password, name);
+      await register(email, password, name, phone);
       navigate('/shop');
     } catch (err: any) {
-      setError(err.message || 'Failed to create an account.');
+      console.error(err);
+      setError(getAuthErrorMessage(err));
       setLoading(false);
     }
   };
@@ -188,19 +200,19 @@ export default function Register() {
           </div>
           
           <div>
-            <label htmlFor="register-password" style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.85rem', fontWeight: '600', color: 'var(--navy)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Password</label>
+            <label htmlFor="register-phone" style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.85rem', fontWeight: '600', color: 'var(--navy)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Phone Number</label>
             <div style={{ position: 'relative' }}>
               <div style={{ position: 'absolute', left: '1rem', top: '50%', transform: 'translateY(-50%)', color: 'var(--gray)' }}>
-                <Lock size={18} />
+                <Phone size={18} />
               </div>
               <input 
-                id="register-password"
-                name="password"
-                type="password" 
+                id="register-phone"
+                name="phone"
+                type="tel" 
                 required 
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="••••••••"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                placeholder="062 117 2653"
                 style={{ 
                   width: '100%', 
                   padding: '1rem 1rem 1rem 3rem', 
@@ -223,6 +235,128 @@ export default function Register() {
                   (e.target.previousElementSibling as HTMLElement).style.color = 'var(--gray)';
                 }}
               />
+            </div>
+          </div>
+          
+          <div>
+            <label htmlFor="register-password" style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.85rem', fontWeight: '600', color: 'var(--navy)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Password</label>
+            <div style={{ position: 'relative' }}>
+              <div style={{ position: 'absolute', left: '1rem', top: '50%', transform: 'translateY(-50%)', color: 'var(--gray)' }}>
+                <Lock size={18} />
+              </div>
+              <input 
+                id="register-password"
+                name="password"
+                type={showPassword ? "text" : "password"} 
+                required 
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="••••••••"
+                style={{ 
+                  width: '100%', 
+                  padding: '1rem 3rem 1rem 3rem', 
+                  background: 'var(--gray-light)',
+                  border: '1px solid #e2e8f0', 
+                  borderRadius: '12px', 
+                  fontSize: '0.95rem',
+                  color: 'var(--navy)',
+                  transition: 'all 0.2s ease',
+                  outline: 'none'
+                }}
+                onFocus={(e) => {
+                  e.target.style.borderColor = 'var(--lime)';
+                  e.target.style.boxShadow = '0 0 0 3px rgba(14, 165, 233, 0.1)';
+                  (e.target.previousElementSibling as HTMLElement).style.color = 'var(--lime)';
+                }}
+                onBlur={(e) => {
+                  e.target.style.borderColor = '#e2e8f0';
+                  e.target.style.boxShadow = 'none';
+                  (e.target.previousElementSibling as HTMLElement).style.color = 'var(--gray)';
+                }}
+              />
+              <button 
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                style={{ 
+                  position: 'absolute', 
+                  right: '1rem', 
+                  top: '50%', 
+                  transform: 'translateY(-50%)', 
+                  color: 'var(--gray)',
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                  padding: '4px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}
+                onMouseOver={(e) => e.currentTarget.style.color = 'var(--lime)'}
+                onMouseOut={(e) => e.currentTarget.style.color = 'var(--gray)'}
+              >
+                {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+              </button>
+            </div>
+          </div>
+          
+          <div>
+            <label htmlFor="register-confirm-password" style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.85rem', fontWeight: '600', color: 'var(--navy)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Confirm Password</label>
+            <div style={{ position: 'relative' }}>
+              <div style={{ position: 'absolute', left: '1rem', top: '50%', transform: 'translateY(-50%)', color: 'var(--gray)' }}>
+                <Lock size={18} />
+              </div>
+              <input 
+                id="register-confirm-password"
+                name="confirmPassword"
+                type={showConfirmPassword ? "text" : "password"} 
+                required 
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                placeholder="••••••••"
+                style={{ 
+                  width: '100%', 
+                  padding: '1rem 3rem 1rem 3rem', 
+                  background: 'var(--gray-light)',
+                  border: '1px solid #e2e8f0', 
+                  borderRadius: '12px', 
+                  fontSize: '0.95rem',
+                  color: 'var(--navy)',
+                  transition: 'all 0.2s ease',
+                  outline: 'none'
+                }}
+                onFocus={(e) => {
+                  e.target.style.borderColor = 'var(--lime)';
+                  e.target.style.boxShadow = '0 0 0 3px rgba(14, 165, 233, 0.1)';
+                  (e.target.previousElementSibling as HTMLElement).style.color = 'var(--lime)';
+                }}
+                onBlur={(e) => {
+                  e.target.style.borderColor = '#e2e8f0';
+                  e.target.style.boxShadow = 'none';
+                  (e.target.previousElementSibling as HTMLElement).style.color = 'var(--gray)';
+                }}
+              />
+              <button 
+                type="button"
+                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                style={{ 
+                  position: 'absolute', 
+                  right: '1rem', 
+                  top: '50%', 
+                  transform: 'translateY(-50%)', 
+                  color: 'var(--gray)',
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                  padding: '4px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}
+                onMouseOver={(e) => e.currentTarget.style.color = 'var(--lime)'}
+                onMouseOut={(e) => e.currentTarget.style.color = 'var(--gray)'}
+              >
+                {showConfirmPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+              </button>
             </div>
           </div>
 

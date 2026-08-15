@@ -1,36 +1,57 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { Mail, Lock, ArrowRight, Loader2, AlertCircle } from 'lucide-react';
+import { getAuthErrorMessage } from '../utils/authErrors';
+import { Mail, Lock, ArrowRight, Loader2, AlertCircle, Eye, EyeOff } from 'lucide-react';
 
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const { user, login } = useAuth();
+  const [showPassword, setShowPassword] = useState(false);
+  const [resetMessage, setResetMessage] = useState('');
+  const [resetLoading, setResetLoading] = useState(false);
+  const { login, resetPassword } = useAuth();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (user && !user.uid.startsWith('anon_')) {
-      if (user.isAdmin) {
-        navigate('/admin');
-      } else {
-        navigate('/shop');
-      }
-    }
-  }, [user, navigate]);
+  // Removed auto-redirect useEffect to prevent unwanted redirects
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setError('');
+    setResetMessage('');
     try {
       await login(email, password);
+      if (email === 'admin@repairtechrb.co.za' || email === 'admin@repairtech.co.za') {
+        navigate('/admin');
+      } else {
+        navigate('/shop');
+      }
     } catch (err: any) {
       console.error(err);
-      setError(err.message || 'Failed to log in. Please check your credentials.');
+      setError(getAuthErrorMessage(err));
       setLoading(false);
+    }
+  };
+
+  const handleResetPassword = async () => {
+    if (!email) {
+      setError('Please enter your email address first.');
+      return;
+    }
+    setResetLoading(true);
+    setError('');
+    setResetMessage('');
+    try {
+      await resetPassword(email);
+      setResetMessage('Password reset email sent! Check your inbox.');
+    } catch (err: any) {
+      console.error(err);
+      setError(getAuthErrorMessage(err));
+    } finally {
+      setResetLoading(false);
     }
   };
 
@@ -117,6 +138,24 @@ export default function Login() {
           </div>
         )}
 
+        {resetMessage && (
+          <div style={{ 
+            background: '#dcfce7', 
+            border: '1px solid #bbf7d0',
+            color: '#15803d', 
+            padding: '1rem', 
+            borderRadius: '12px', 
+            marginBottom: '1.5rem', 
+            fontSize: '0.85rem',
+            display: 'flex',
+            alignItems: 'flex-start',
+            gap: '0.5rem'
+          }}>
+            <AlertCircle size={16} style={{ marginTop: '2px', flexShrink: 0 }} />
+            <span>{resetMessage}</span>
+          </div>
+        )}
+
         <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
           <div>
             <label htmlFor="login-email" style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.85rem', fontWeight: '600', color: 'var(--navy)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Email</label>
@@ -158,7 +197,26 @@ export default function Login() {
           </div>
           
           <div>
-            <label htmlFor="login-password" style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.85rem', fontWeight: '600', color: 'var(--navy)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Password</label>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
+              <label htmlFor="login-password" style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', color: 'var(--navy)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Password</label>
+              <button 
+                type="button" 
+                onClick={handleResetPassword}
+                disabled={resetLoading}
+                style={{ 
+                  background: 'none', 
+                  border: 'none', 
+                  color: 'var(--lime)', 
+                  fontSize: '0.8rem', 
+                  fontWeight: '600', 
+                  cursor: 'pointer',
+                  padding: 0,
+                  opacity: resetLoading ? 0.7 : 1
+                }}
+              >
+                {resetLoading ? 'Sending...' : 'Forgot Password?'}
+              </button>
+            </div>
             <div style={{ position: 'relative' }}>
               <div style={{ position: 'absolute', left: '1rem', top: '50%', transform: 'translateY(-50%)', color: 'var(--gray)' }}>
                 <Lock size={18} />
@@ -166,14 +224,14 @@ export default function Login() {
               <input 
                 id="login-password"
                 name="password"
-                type="password" 
+                type={showPassword ? "text" : "password"} 
                 required 
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="••••••••"
                 style={{ 
                   width: '100%', 
-                  padding: '1rem 1rem 1rem 3rem', 
+                  padding: '1rem 3rem 1rem 3rem', 
                   background: 'var(--gray-light)',
                   border: '1px solid #e2e8f0', 
                   borderRadius: '12px', 
@@ -193,6 +251,28 @@ export default function Login() {
                   (e.target.previousElementSibling as HTMLElement).style.color = 'var(--gray)';
                 }}
               />
+              <button 
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                style={{ 
+                  position: 'absolute', 
+                  right: '1rem', 
+                  top: '50%', 
+                  transform: 'translateY(-50%)', 
+                  color: 'var(--gray)',
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                  padding: '4px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}
+                onMouseOver={(e) => e.currentTarget.style.color = 'var(--lime)'}
+                onMouseOut={(e) => e.currentTarget.style.color = 'var(--gray)'}
+              >
+                {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+              </button>
             </div>
           </div>
 

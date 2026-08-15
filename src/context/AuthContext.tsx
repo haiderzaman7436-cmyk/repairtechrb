@@ -5,7 +5,8 @@ import {
   createUserWithEmailAndPassword,
   signOut,
   onAuthStateChanged,
-  signInAnonymously
+  signInAnonymously,
+  sendPasswordResetEmail
 } from 'firebase/auth';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 
@@ -14,12 +15,14 @@ type User = {
   email: string;
   displayName: string;
   isAdmin?: boolean;
+  isAnonymous?: boolean;
 } | null;
 
 interface AuthContextType {
   user: User;
   login: (email: string, pass: string) => Promise<void>;
-  register: (email: string, pass: string, name: string) => Promise<void>;
+  register: (email: string, pass: string, name: string, phone: string) => Promise<void>;
+  resetPassword: (email: string) => Promise<void>;
   logout: () => Promise<void>;
   loading: boolean;
 }
@@ -44,7 +47,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
             uid: firebaseUser.uid,
             email: firebaseUser.email || '',
             displayName: userData?.displayName || firebaseUser.email?.split('@')[0] || '',
-            isAdmin: isAdmin
+            isAdmin: isAdmin,
+            isAnonymous: firebaseUser.isAnonymous
           });
         } catch (error) {
           console.error('Error fetching user data:', error);
@@ -54,7 +58,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
             uid: firebaseUser.uid,
             email: firebaseUser.email || '',
             displayName: firebaseUser.email?.split('@')[0] || '',
-            isAdmin: isAdmin
+            isAdmin: isAdmin,
+            isAnonymous: firebaseUser.isAnonymous
           });
         }
       } else {
@@ -78,7 +83,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     // onAuthStateChanged will handle setting the user state
   };
 
-  const register = async (email: string, pass: string, name: string) => {
+  const register = async (email: string, pass: string, name: string, phone: string) => {
     const userCredential = await createUserWithEmailAndPassword(auth, email, pass);
     const firebaseUser = userCredential.user;
 
@@ -86,6 +91,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     await setDoc(doc(db, 'users', firebaseUser.uid), {
       email,
       displayName: name,
+      phone,
       isAdmin: false, // By default, new users are not admins
       createdAt: new Date().toISOString()
     });
@@ -96,8 +102,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     await signOut(auth);
   };
 
+  const resetPassword = async (email: string) => {
+    await sendPasswordResetEmail(auth, email);
+  };
+
   return (
-    <AuthContext.Provider value={{ user, login, register, logout, loading }}>
+    <AuthContext.Provider value={{ user, login, register, resetPassword, logout, loading }}>
       {children}
     </AuthContext.Provider>
   );

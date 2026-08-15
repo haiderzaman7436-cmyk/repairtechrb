@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Footer() {
   return (
     <>
@@ -36,25 +38,33 @@ export default function Footer() {
           </div>
           <div>
             <h4>Repairs</h4>
-            <a href="/phone-repair/">Phone Repair</a>
-            <a href="/laptop-repair/">Laptop Repair</a>
-            <a href="/data-recovery/">Data Recovery</a>
-            <a href="/macbook-repair/">MacBook Repair</a>
-            <a href="/screen-replacement/">Screen Replacement</a>
-            <a href="/ssd-ram-upgrade/">SSD &amp; RAM Upgrades</a>
+            <Link to="/shop/repairs?service=Phone%20Repair">Phone Repair</Link>
+            <Link to="/shop/repairs?service=Laptop%20Repair">Laptop Repair</Link>
+            <Link to="/shop/repairs?service=Data%20Recovery">Data Recovery</Link>
+            <Link to="/shop/repairs?service=MacBook%20Repair">MacBook Repair</Link>
+            <Link to="/shop/repairs?service=Screen%20Replacement">Screen Replacement</Link>
+            <Link to="/shop/repairs?service=SSD%20%26%20RAM%20Upgrades">SSD &amp; RAM Upgrades</Link>
           </div>
           <div>
             <h4>Pages</h4>
-            <a href="https://shop.asetos.co.za/">Shop</a>
-            <a href="/about/">About Us</a>
-            <a href="/our-work/">Our Work</a>
-            <a href="/book-in/">Book In Device</a>
-            <a href="/quotes/">Get Quotes</a>
-            <a href="/repair-status/">Repair Status</a>
-            <a href="/recycle/">E-Waste Recycling</a>
-            <a href="/contact/">Contact &amp; Directions</a>
+            <Link to="/shop">Shop</Link>
+            <Link to="/">About Us</Link>
+            <Link to="/">Our Work</Link>
+            <Link to="/shop/repairs">Book In Device</Link>
+            <Link to="/shop/repairs">Get Quotes</Link>
+            <Link to="/shop/repairs">Repair Status</Link>
+            <Link to="/">E-Waste Recycling</Link>
+            <Link to="/">Contact &amp; Directions</Link>
           </div>
-          <div><h4>Legal</h4><a href="/repair-policy/">Repair Policy</a><a href="/returns/">Return Policy</a><a href="/privacy/">Privacy Policy</a><a href="/payments/">Payment Policy</a><a href="/shipping/">Shipping Policy</a><a href="/warranty/">Warranty Policy</a></div>
+          <div>
+            <h4>Legal</h4>
+            <Link to="/">Repair Policy</Link>
+            <Link to="/">Return Policy</Link>
+            <Link to="/">Privacy Policy</Link>
+            <Link to="/">Payment Policy</Link>
+            <Link to="/">Shipping Policy</Link>
+            <Link to="/">Warranty Policy</Link>
+          </div>
           <div>
             <h4>Contact</h4>
             <a href="tel:+27621172653">Telephone: +27 62 117 2653</a>
