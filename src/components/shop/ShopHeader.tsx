@@ -137,13 +137,46 @@ export default function ShopHeader() {
             </form>
           </div>
 
-          <div className="mobile-menu-links">
-            <Link to="/shop" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
-            <Link to="/shop/laptop-parts/screens" onClick={() => setIsMobileMenuOpen(false)}>Laptop Screens</Link>
-            <Link to="/shop/laptop-parts/batteries" onClick={() => setIsMobileMenuOpen(false)}>Laptop Batteries</Link>
-            <Link to="/shop/laptop-parts/chargers" onClick={() => setIsMobileMenuOpen(false)}>Laptop Chargers</Link>
-            <Link to="/shop/used-laptops" onClick={() => setIsMobileMenuOpen(false)}>Refurbished Laptops</Link>
-            <Link to="/shop/gaming-computers" onClick={() => setIsMobileMenuOpen(false)}>Gaming Computers</Link>
+          <div className="mobile-menu-links" style={{ padding: '1rem', display: 'flex', flexDirection: 'column', gap: '1.5rem', overflowY: 'auto' }}>
+            <div>
+              <h4 style={{ color: 'var(--gray)', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '0.8rem' }}>Laptop Parts</h4>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.8rem' }}>
+                <Link to="/shop/laptop-parts/screens" onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: '0.95rem' }}>Screens</Link>
+                <Link to="/shop/laptop-parts/batteries" onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: '0.95rem' }}>Batteries</Link>
+                <Link to="/shop/laptop-parts/chargers" onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: '0.95rem' }}>Chargers</Link>
+                <Link to="/shop/laptop-parts/memory" onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: '0.95rem' }}>Memory (RAM)</Link>
+                <Link to="/shop/laptop-parts/keyboards" onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: '0.95rem' }}>Keyboards</Link>
+                <Link to="/shop/laptop-parts/storage" onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: '0.95rem' }}>Storage</Link>
+              </div>
+            </div>
+            
+            <div>
+              <h4 style={{ color: 'var(--gray)', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '0.8rem' }}>MacBook Parts</h4>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.8rem' }}>
+                <Link to="/shop/macbook-parts/screens" onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: '0.95rem' }}>Screens</Link>
+                <Link to="/shop/macbook-parts/batteries" onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: '0.95rem' }}>Batteries</Link>
+                <Link to="/shop/macbook-parts/chargers" onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: '0.95rem' }}>Chargers</Link>
+                <Link to="/shop/macbook-parts/keyboards" onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: '0.95rem' }}>Keyboards</Link>
+              </div>
+            </div>
+
+            <div>
+              <h4 style={{ color: 'var(--gray)', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '0.8rem' }}>Computers</h4>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.8rem' }}>
+                <Link to="/shop/used-laptops" onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: '0.95rem' }}>Refurb Laptops</Link>
+                <Link to="/shop/desktops" onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: '0.95rem' }}>Desktops</Link>
+                <Link to="/shop/gaming-computers" onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: '0.95rem' }}>Gaming PCs</Link>
+                <Link to="/shop/monitors" onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: '0.95rem' }}>Monitors</Link>
+              </div>
+            </div>
+            
+            <div>
+              <h4 style={{ color: 'var(--gray)', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '0.8rem' }}>Services</h4>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.8rem' }}>
+                <Link to="/shop/repairs" onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: '0.95rem', fontWeight: 'bold', color: 'var(--navy)' }}>Book a Repair</Link>
+                <Link to="/cart" onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: '0.95rem' }}>View Quote</Link>
+              </div>
+            </div>
           </div>
 
           <div className="mobile-menu-footer">
