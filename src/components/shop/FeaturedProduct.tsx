@@ -1,4 +1,45 @@
+import { useState, useEffect } from 'react';
+
 export default function FeaturedProduct() {
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 3,
+    minutes: 9,
+    seconds: 57
+  });
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(prev => {
+        let { days, hours, minutes, seconds } = prev;
+        
+        if (days === 0 && hours === 0 && minutes === 0 && seconds === 0) {
+          return prev;
+        }
+        
+        if (seconds > 0) {
+          seconds--;
+        } else {
+          seconds = 59;
+          if (minutes > 0) {
+            minutes--;
+          } else {
+            minutes = 59;
+            if (hours > 0) {
+              hours--;
+            } else {
+              hours = 23;
+              if (days > 0) days--;
+            }
+          }
+        }
+        return { days, hours, minutes, seconds };
+      });
+    }, 1000);
+    
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="shop-featured-banner">
       <div className="container shop-featured-inner">
@@ -27,10 +68,10 @@ export default function FeaturedProduct() {
           </div>
 
           <div className="shop-countdown" style={{ display: 'flex', gap: '1rem', marginBottom: '2.5rem' }}>
-            <div className="countdown-box" style={{ background: 'var(--gray-light)', padding: '1rem', borderRadius: '8px', textAlign: 'center', minWidth: '70px', color: 'var(--navy)', border: '1px solid #eaeaea' }}><span style={{ fontSize: '1.5rem', fontWeight: 'bold', display: 'block' }}>00</span><div style={{ fontSize: '0.75rem', fontWeight: 'bold' }}>DAYS</div></div>
-            <div className="countdown-box" style={{ background: 'var(--gray-light)', padding: '1rem', borderRadius: '8px', textAlign: 'center', minWidth: '70px', color: 'var(--navy)', border: '1px solid #eaeaea' }}><span style={{ fontSize: '1.5rem', fontWeight: 'bold', display: 'block' }}>03</span><div style={{ fontSize: '0.75rem', fontWeight: 'bold' }}>HRS</div></div>
-            <div className="countdown-box" style={{ background: 'var(--gray-light)', padding: '1rem', borderRadius: '8px', textAlign: 'center', minWidth: '70px', color: 'var(--navy)', border: '1px solid #eaeaea' }}><span style={{ fontSize: '1.5rem', fontWeight: 'bold', display: 'block' }}>09</span><div style={{ fontSize: '0.75rem', fontWeight: 'bold' }}>MINS</div></div>
-            <div className="countdown-box" style={{ background: 'var(--gray-light)', padding: '1rem', borderRadius: '8px', textAlign: 'center', minWidth: '70px', color: 'var(--navy)', border: '1px solid #eaeaea' }}><span style={{ fontSize: '1.5rem', fontWeight: 'bold', display: 'block' }}>57</span><div style={{ fontSize: '0.75rem', fontWeight: 'bold' }}>SECS</div></div>
+            <div className="countdown-box" style={{ background: 'var(--gray-light)', padding: '1rem', borderRadius: '8px', textAlign: 'center', minWidth: '70px', color: 'var(--navy)', border: '1px solid #eaeaea' }}><span style={{ fontSize: '1.5rem', fontWeight: 'bold', display: 'block' }}>{String(timeLeft.days).padStart(2, '0')}</span><div style={{ fontSize: '0.75rem', fontWeight: 'bold' }}>DAYS</div></div>
+            <div className="countdown-box" style={{ background: 'var(--gray-light)', padding: '1rem', borderRadius: '8px', textAlign: 'center', minWidth: '70px', color: 'var(--navy)', border: '1px solid #eaeaea' }}><span style={{ fontSize: '1.5rem', fontWeight: 'bold', display: 'block' }}>{String(timeLeft.hours).padStart(2, '0')}</span><div style={{ fontSize: '0.75rem', fontWeight: 'bold' }}>HRS</div></div>
+            <div className="countdown-box" style={{ background: 'var(--gray-light)', padding: '1rem', borderRadius: '8px', textAlign: 'center', minWidth: '70px', color: 'var(--navy)', border: '1px solid #eaeaea' }}><span style={{ fontSize: '1.5rem', fontWeight: 'bold', display: 'block' }}>{String(timeLeft.minutes).padStart(2, '0')}</span><div style={{ fontSize: '0.75rem', fontWeight: 'bold' }}>MINS</div></div>
+            <div className="countdown-box" style={{ background: 'var(--gray-light)', padding: '1rem', borderRadius: '8px', textAlign: 'center', minWidth: '70px', color: 'var(--navy)', border: '1px solid #eaeaea' }}><span style={{ fontSize: '1.5rem', fontWeight: 'bold', display: 'block' }}>{String(timeLeft.seconds).padStart(2, '0')}</span><div style={{ fontSize: '0.75rem', fontWeight: 'bold' }}>SECS</div></div>
           </div>
 
           <div className="shop-featured-actions" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
