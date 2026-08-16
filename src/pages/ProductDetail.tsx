@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Check, Info, ShieldCheck } from 'lucide-react';
 import { useCart } from '../context/CartContext';
+import SEO from '../components/SEO';
 
 export default function ProductDetail() {
   const location = useLocation();
@@ -66,6 +67,11 @@ export default function ProductDetail() {
 
   return (
     <div className="product-detail-page">
+      <SEO 
+        title={`${product.title} - ${product.category}`}
+        description={`Buy the ${product.title} from RepairTech Rosebank. High quality replacement part, fully tested with warranty.`}
+        image={product.image.split('?')[0]}
+      />
       <div className="container">
         
         {/* Breadcrumb */}

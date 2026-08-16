@@ -2,6 +2,9 @@ import ShopHero from '../components/shop/ShopHero';
 import CategoryGrid from '../components/shop/CategoryGrid';
 import FeaturedProduct from '../components/shop/FeaturedProduct';
 import ProductGrid from '../components/shop/ProductGrid';
+import Reviews from '../components/shop/Reviews';
+import StoreLocation from '../components/shop/StoreLocation';
+import SEO from '../components/SEO';
 
 export default function Shop() {
   const laptopParts = [
@@ -27,6 +30,10 @@ export default function Shop() {
 
   return (
     <div className="shop-page">
+      <SEO 
+        title="Shop Laptops, Phones & Accessories" 
+        description="Buy high-quality refurbished laptops, MacBook parts, and mobile accessories in Rosebank, Johannesburg. Warranties included." 
+      />
       <ShopHero />
       
       <div className="container shop-promo-grid" style={{ margin: '2rem auto 4rem' }}>
@@ -62,6 +69,9 @@ export default function Shop() {
         tabs={['LAPTOPS', 'DESKTOPS', 'MONITORS', 'SERVERS']} 
         products={refurbishedLaptops} 
       />
+
+      <Reviews />
+      <StoreLocation />
 
     </div>
   );

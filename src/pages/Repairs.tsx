@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Wrench, Phone, MapPin, Clock, ShieldCheck, ArrowRight, CheckCircle2 } from 'lucide-react';
+import SEO from '../components/SEO';
 
 export default function Repairs() {
   const location = useLocation();
@@ -36,6 +37,10 @@ export default function Repairs() {
 
   return (
     <div className="repairs-page">
+      <SEO 
+        title="Laptop & Phone Repairs" 
+        description="Expert laptop, MacBook, and phone repair services in Rosebank, Johannesburg. Same-day screen replacements and data recovery." 
+      />
       {/* Hero Section */}
       <div className="repairs-hero" style={{
         background: 'linear-gradient(135deg, var(--navy) 0%, #1a365d 100%)',
