@@ -11,11 +11,11 @@ export default function StoreLocation() {
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: '2rem', background: 'var(--white)', borderRadius: '24px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.08)' }}>
           
-          <div style={{ padding: 'clamp(1.5rem, 5vw, 3rem) clamp(1.25rem, 5vw, 2.5rem)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <div className="store-info-col" style={{ padding: 'clamp(1.5rem, 5vw, 3rem) clamp(1.25rem, 5vw, 2.5rem)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <h3 style={{ color: 'var(--navy)', fontSize: '1.5rem', marginBottom: '2rem', fontWeight: 700 }}>RepairTech Rosebank</h3>
             
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-              <div style={{ display: 'flex', gap: '1rem' }}>
+              <div className="contact-item" style={{ display: 'flex', gap: '1rem' }}>
                 <div style={{ color: 'var(--lime)', marginTop: '2px' }}><MapPin size={24} /></div>
                 <div>
                   <h4 style={{ color: 'var(--navy)', fontSize: '1rem', margin: '0 0 0.25rem' }}>Address</h4>
@@ -23,7 +23,7 @@ export default function StoreLocation() {
                 </div>
               </div>
               
-              <div style={{ display: 'flex', gap: '1rem' }}>
+              <div className="contact-item" style={{ display: 'flex', gap: '1rem' }}>
                 <div style={{ color: 'var(--lime)', marginTop: '2px' }}><Phone size={24} /></div>
                 <div>
                   <h4 style={{ color: 'var(--navy)', fontSize: '1rem', margin: '0 0 0.25rem' }}>Contact</h4>
@@ -31,7 +31,7 @@ export default function StoreLocation() {
                 </div>
               </div>
 
-              <div style={{ display: 'flex', gap: '1rem' }}>
+              <div className="contact-item" style={{ display: 'flex', gap: '1rem' }}>
                 <div style={{ color: 'var(--lime)', marginTop: '2px' }}><Mail size={24} /></div>
                 <div>
                   <h4 style={{ color: 'var(--navy)', fontSize: '1rem', margin: '0 0 0.25rem' }}>Email</h4>
@@ -39,7 +39,7 @@ export default function StoreLocation() {
                 </div>
               </div>
               
-              <div style={{ display: 'flex', gap: '1rem' }}>
+              <div className="contact-item" style={{ display: 'flex', gap: '1rem' }}>
                 <div style={{ color: 'var(--lime)', marginTop: '2px' }}><Clock size={24} /></div>
                 <div>
                   <h4 style={{ color: 'var(--navy)', fontSize: '1rem', margin: '0 0 0.25rem' }}>Business Hours</h4>
@@ -75,7 +75,7 @@ export default function StoreLocation() {
             </div>
           </div>
           
-          <div style={{ minHeight: 'clamp(250px, 60vw, 400px)', width: '100%', position: 'relative' }}>
+          <div style={{ minHeight: 'clamp(350px, 80vw, 500px)', width: '100%', position: 'relative' }}>
             <iframe 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.821915668615!2d28.0416972!3d-26.1457811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c9535e5d381%3A0xc484b39707248e3d!2sThe%20Median%20Rosebank!5e0!3m2!1sen!2sza!4v1700000000000!5m2!1sen!2sza" 
               width="100%" 

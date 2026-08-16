@@ -54,7 +54,7 @@ export default function Reviews() {
               flexDirection: 'column',
               justifyContent: 'space-between'
             }}>
-              <div>
+              <div className="review-card-content" style={{ display: 'flex', flexDirection: 'column' }}>
                 <div style={{ display: 'flex', gap: '4px', marginBottom: '1.25rem' }}>
                   {[...Array(review.rating)].map((_, j) => (
                     <Star key={j} size={20} fill="#FBBC05" color="#FBBC05" />
@@ -64,7 +64,7 @@ export default function Reviews() {
                   "{review.text}"
                 </p>
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+              <div className="review-author" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                 <div style={{ 
                   width: '44px', 
                   height: '44px', 

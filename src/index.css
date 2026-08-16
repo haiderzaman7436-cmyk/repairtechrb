@@ -3534,3 +3534,26 @@ h4 {
     font-size: 1.2rem !important;
   }
 }
+
+/* MOBILE OVERRIDES */
+@media (max-width: 768px) {
+  .store-info-col {
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .contact-item {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 0.5rem !important;
+  }
+  .review-card-content {
+    text-align: center !important;
+    align-items: center !important;
+  }
+  .review-author {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+}
