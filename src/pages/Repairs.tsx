@@ -102,8 +102,11 @@ export default function Repairs() {
             ) : (
               <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                 <div>
-                  <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.85rem', fontWeight: '700', color: 'var(--navy)', textTransform: 'uppercase' }}>Service Required</label>
+                  <label htmlFor="repair-service" style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.85rem', fontWeight: '700', color: 'var(--navy)', textTransform: 'uppercase' }}>Service Required</label>
                   <select 
+                    id="repair-service"
+                    name="service"
+                    autoComplete="off"
                     value={selectedService}
                     onChange={(e) => setSelectedService(e.target.value)}
                     style={{ width: '100%', padding: '1rem', borderRadius: '12px', border: '1px solid #e2e8f0', background: 'var(--gray-light)', fontSize: '1rem', color: 'var(--navy)', outline: 'none' }}
@@ -114,23 +117,23 @@ export default function Repairs() {
                 
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                   <div>
-                    <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.85rem', fontWeight: '700', color: 'var(--navy)', textTransform: 'uppercase' }}>Full Name</label>
-                    <input type="text" required placeholder="John Doe" style={{ width: '100%', padding: '1rem', borderRadius: '12px', border: '1px solid #e2e8f0', background: 'var(--gray-light)', fontSize: '0.95rem', outline: 'none' }} />
+                    <label htmlFor="repair-name" style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.85rem', fontWeight: '700', color: 'var(--navy)', textTransform: 'uppercase' }}>Full Name</label>
+                    <input id="repair-name" name="name" autoComplete="name" type="text" required placeholder="John Doe" style={{ width: '100%', padding: '1rem', borderRadius: '12px', border: '1px solid #e2e8f0', background: 'var(--gray-light)', fontSize: '0.95rem', outline: 'none' }} />
                   </div>
                   <div>
-                    <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.85rem', fontWeight: '700', color: 'var(--navy)', textTransform: 'uppercase' }}>Phone Number</label>
-                    <input type="tel" required placeholder="062 117 2653" style={{ width: '100%', padding: '1rem', borderRadius: '12px', border: '1px solid #e2e8f0', background: 'var(--gray-light)', fontSize: '0.95rem', outline: 'none' }} />
+                    <label htmlFor="repair-phone" style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.85rem', fontWeight: '700', color: 'var(--navy)', textTransform: 'uppercase' }}>Phone Number</label>
+                    <input id="repair-phone" name="phone" autoComplete="tel" type="tel" required placeholder="062 117 2653" style={{ width: '100%', padding: '1rem', borderRadius: '12px', border: '1px solid #e2e8f0', background: 'var(--gray-light)', fontSize: '0.95rem', outline: 'none' }} />
                   </div>
                 </div>
 
                 <div>
-                  <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.85rem', fontWeight: '700', color: 'var(--navy)', textTransform: 'uppercase' }}>Device Model</label>
-                  <input type="text" required placeholder="e.g. MacBook Pro M1 2020, iPhone 13" style={{ width: '100%', padding: '1rem', borderRadius: '12px', border: '1px solid #e2e8f0', background: 'var(--gray-light)', fontSize: '0.95rem', outline: 'none' }} />
+                  <label htmlFor="repair-device" style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.85rem', fontWeight: '700', color: 'var(--navy)', textTransform: 'uppercase' }}>Device Model</label>
+                  <input id="repair-device" name="device" autoComplete="off" type="text" required placeholder="e.g. MacBook Pro M1 2020, iPhone 13" style={{ width: '100%', padding: '1rem', borderRadius: '12px', border: '1px solid #e2e8f0', background: 'var(--gray-light)', fontSize: '0.95rem', outline: 'none' }} />
                 </div>
 
                 <div>
-                  <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.85rem', fontWeight: '700', color: 'var(--navy)', textTransform: 'uppercase' }}>Describe the Issue</label>
-                  <textarea required placeholder="Please describe what's wrong with your device..." rows={4} style={{ width: '100%', padding: '1rem', borderRadius: '12px', border: '1px solid #e2e8f0', background: 'var(--gray-light)', fontSize: '0.95rem', outline: 'none', resize: 'vertical' }}></textarea>
+                  <label htmlFor="repair-issue" style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.85rem', fontWeight: '700', color: 'var(--navy)', textTransform: 'uppercase' }}>Describe the Issue</label>
+                  <textarea id="repair-issue" name="issue" autoComplete="off" required placeholder="Please describe what's wrong with your device..." rows={4} style={{ width: '100%', padding: '1rem', borderRadius: '12px', border: '1px solid #e2e8f0', background: 'var(--gray-light)', fontSize: '0.95rem', outline: 'none', resize: 'vertical' }}></textarea>
                 </div>
 
                 <button type="submit" style={{

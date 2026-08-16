@@ -18,7 +18,7 @@ export default function Register() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!authLoading && user) {
+    if (!authLoading && user && !user.isAnonymous) {
       if (user.isAdmin) {
         navigate('/admin');
       } else {
@@ -151,6 +151,7 @@ export default function Register() {
               <input 
                 id="register-name"
                 name="name"
+                autoComplete="name"
                 type="text" 
                 required 
                 value={name}
@@ -190,6 +191,7 @@ export default function Register() {
               <input 
                 id="register-email"
                 name="email"
+                autoComplete="email"
                 type="email" 
                 required 
                 value={email}
@@ -229,6 +231,7 @@ export default function Register() {
               <input 
                 id="register-phone"
                 name="phone"
+                autoComplete="tel"
                 type="tel" 
                 required 
                 value={phone}
@@ -268,6 +271,7 @@ export default function Register() {
               <input 
                 id="register-password"
                 name="password"
+                autoComplete="new-password"
                 type={showPassword ? "text" : "password"} 
                 required 
                 value={password}
@@ -329,6 +333,7 @@ export default function Register() {
               <input 
                 id="register-confirm-password"
                 name="confirmPassword"
+                autoComplete="new-password"
                 type={showConfirmPassword ? "text" : "password"} 
                 required 
                 value={confirmPassword}

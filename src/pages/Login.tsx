@@ -16,7 +16,7 @@ export default function Login() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!authLoading && user) {
+    if (!authLoading && user && !user.isAnonymous) {
       if (user.isAdmin) {
         navigate('/admin');
       } else {
@@ -184,6 +184,7 @@ export default function Login() {
               <input 
                 id="login-email"
                 name="email"
+                autoComplete="email"
                 type="email" 
                 required 
                 value={email}
@@ -242,6 +243,7 @@ export default function Login() {
               <input 
                 id="login-password"
                 name="password"
+                autoComplete="current-password"
                 type={showPassword ? "text" : "password"} 
                 required 
                 value={password}
