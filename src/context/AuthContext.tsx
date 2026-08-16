@@ -55,7 +55,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           });
         } catch (error) {
           console.error('Error fetching user data:', error);
-          const isAdmin = firebaseUser.email === 'admin@repairtech.co.za';
+          const isAdmin = firebaseUser.email === 'admin@repairtechrb.co.za';
 
           setUser({
             uid: firebaseUser.uid,
