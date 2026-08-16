@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export type FiltersState = {
   availability: string[];
   condition: string[];
@@ -116,13 +118,13 @@ export default function ShopSidebar({
       <div className="sidebar-promo sidebar-promo-dark">
         <h5>Can't find what you need?</h5>
         <p>Drop us a WhatsApp and we will find it for you, give you a price and let you know when you can have it.</p>
-        <button className="btn btn-lime">REQUEST A QUOTE</button>
+        <a href="https://wa.me/27621172653?text=Hi%2C%20I%20am%20looking%20for%20a%20specific%20part" target="_blank" rel="noopener noreferrer" className="btn btn-lime" style={{ display: 'block', textAlign: 'center', textDecoration: 'none' }}>REQUEST A QUOTE</a>
       </div>
 
       <div className="sidebar-promo sidebar-promo-light">
         <h5>Want us to check why?</h5>
         <p>Whatever your laptop issue is, bring it in and let's get it sorted.</p>
-        <button className="btn btn-lime">BOOK A REPAIR</button>
+        <Link to="/shop/repairs" className="btn btn-lime" style={{ display: 'block', textAlign: 'center', textDecoration: 'none' }}>BOOK A REPAIR</Link>
       </div>
     </aside>
   );
