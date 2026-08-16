@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Flame } from 'lucide-react';
 
 export default function FeaturedProduct() {
   const [timeLeft, setTimeLeft] = useState({
@@ -55,8 +56,25 @@ export default function FeaturedProduct() {
           </div>
         </div>
 
-        <div className="shop-featured-content">
-          <div className="shop-featured-tag" style={{ background: 'var(--navy)', color: 'var(--white)', padding: '0.3rem 0.8rem', display: 'inline-block', fontWeight: '900', fontSize: '0.85rem', marginBottom: '1.5rem', borderRadius: '4px', letterSpacing: '1px' }}>LIMITED OFFER</div>
+        <div className="shop-featured-content" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+          <div className="shop-featured-tag" style={{ 
+            background: 'var(--lime)', 
+            color: 'var(--navy)', 
+            padding: '0.4rem 1.2rem', 
+            display: 'inline-flex', 
+            alignItems: 'center',
+            gap: '0.5rem',
+            fontWeight: '900', 
+            fontSize: '0.9rem', 
+            marginBottom: '1.5rem', 
+            borderRadius: '100px', 
+            letterSpacing: '1px',
+            boxShadow: '0 4px 15px rgba(14, 165, 233, 0.25)',
+            alignSelf: 'flex-start'
+          }}>
+            <Flame size={18} strokeWidth={3} fill="var(--navy)" />
+            LIMITED OFFER
+          </div>
           <h2 className="shop-featured-title" style={{ color: 'var(--navy)', fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', lineHeight: '1.2', marginBottom: '1.5rem', fontWeight: '900' }}>Dell Latitude 5420 11th Gen Core i5 - 1145G7 512GB SSD 16GB RAM Win 11 Pro Laptop (Used On Special)</h2>
           <p className="shop-featured-desc" style={{ color: 'var(--gray-dark)', fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '2rem' }}>
             The Dell Latitude 5420 is a powerful, reliable laptop featuring an 11th Gen Core i5, 16GB RAM and a fast 512GB SSD. Built for productivity, seamless multitasking and Thunderbolt 4.
