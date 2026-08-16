@@ -43,7 +43,7 @@ export default function StoreLocation() {
                 <div style={{ color: 'var(--lime)', marginTop: '2px' }}><Clock size={24} /></div>
                 <div>
                   <h4 style={{ color: 'var(--navy)', fontSize: '1rem', margin: '0 0 0.25rem' }}>Business Hours</h4>
-                  <p style={{ color: 'var(--gray-dark)', margin: 0, lineHeight: 1.5 }}>Monday - Friday: 9:00 AM - 5:00 PM<br/>Saturday: 9:00 AM - 1:00 PM<br/>Sunday: Closed</p>
+                  <p style={{ color: 'var(--gray-dark)', margin: 0, lineHeight: 1.5 }}>Monday - Friday: 9:00 AM - 9:00 PM<br/>Saturday - Sunday: 9:00 AM - 8:00 PM</p>
                 </div>
               </div>
             </div>
