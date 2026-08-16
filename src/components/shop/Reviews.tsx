@@ -42,7 +42,7 @@ export default function Reviews() {
           <p style={{ color: 'var(--gray-dark)', fontSize: '1.1rem', marginTop: '1rem', maxWidth: '600px', margin: '1rem auto 0' }}>Don't just take our word for it. See what our customers in Rosebank have to say about our repair services.</p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '2rem' }}>
+        <div className="mobile-stack-grid">
           {reviews.map((review, i) => (
             <div key={i} style={{ 
               background: 'var(--white)', 

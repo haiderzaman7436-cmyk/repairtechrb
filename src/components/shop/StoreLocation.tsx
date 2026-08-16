@@ -9,7 +9,7 @@ export default function StoreLocation() {
           <p style={{ color: 'var(--gray-dark)', fontSize: '1.1rem', marginTop: '1rem', maxWidth: '600px', margin: '1rem auto 0' }}>Located in the heart of Rosebank, Johannesburg. Drop in for a quick diagnostic or same-day repair.</p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: '2rem', background: 'var(--white)', borderRadius: '24px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.08)' }}>
+        <div className="mobile-stack-grid" style={{ background: 'var(--white)', borderRadius: '24px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.08)' }}>
           
           <div className="store-info-col" style={{ padding: 'clamp(1.5rem, 5vw, 3rem) clamp(1.25rem, 5vw, 2.5rem)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <h3 style={{ color: 'var(--navy)', fontSize: '1.5rem', marginBottom: '2rem', fontWeight: 700 }}>RepairTech Rosebank</h3>
