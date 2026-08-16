@@ -1,44 +1,46 @@
+import { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import ShopLayout from './layouts/ShopLayout';
-import Shop from './pages/Shop';
-import ShopScreens from './pages/ShopScreens';
-import ShopChargers from './pages/ShopChargers';
-import ShopMemory from './pages/ShopMemory';
-import ShopBatteries from './pages/ShopBatteries';
-import ShopKeyboards from './pages/ShopKeyboards';
-import ShopStorage from './pages/ShopStorage';
-import ShopMacBookScreens from './pages/ShopMacBookScreens';
-import ShopMacBookBatteries from './pages/ShopMacBookBatteries';
-import ShopMacBookChargers from './pages/ShopMacBookChargers';
-import ShopMacBookKeyboards from './pages/ShopMacBookKeyboards';
-import ShopMacBookRamSsd from './pages/ShopMacBookRamSsd';
-import ShopGaming from './pages/ShopGaming';
-import ShopUsedLaptops from './pages/ShopUsedLaptops';
-import ShopDesktops from './pages/ShopDesktops';
-import ShopMonitors from './pages/ShopMonitors';
-import ShopServers from './pages/ShopServers';
-import ShopComponents from './pages/ShopComponents';
-import ShopGadgetScreens from './pages/ShopGadgetScreens';
-import ShopGadgetBatteries from './pages/ShopGadgetBatteries';
-import ShopGadgetCovers from './pages/ShopGadgetCovers';
-import ShopGadgetPorts from './pages/ShopGadgetPorts';
-import ShopGadgetAccessories from './pages/ShopGadgetAccessories';
-import ShopNetworkAccessPoints from './pages/ShopNetworkAccessPoints';
-import ShopNetworkRouters from './pages/ShopNetworkRouters';
-import ShopNetworkSwitches from './pages/ShopNetworkSwitches';
-import ShopNetworkServerParts from './pages/ShopNetworkServerParts';
-import ShopNetworkTransceivers from './pages/ShopNetworkTransceivers';
-import Repairs from './pages/Repairs';
-import ProductDetail from './pages/ProductDetail';
-import Search from './pages/Search';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import Cart from './pages/Cart';
-import Checkout from './pages/Checkout';
-import AdminDashboard from './pages/AdminDashboard';
+const Shop = lazy(() => import('./pages/Shop'));
+const ShopScreens = lazy(() => import('./pages/ShopScreens'));
+const ShopChargers = lazy(() => import('./pages/ShopChargers'));
+const ShopMemory = lazy(() => import('./pages/ShopMemory'));
+const ShopBatteries = lazy(() => import('./pages/ShopBatteries'));
+const ShopKeyboards = lazy(() => import('./pages/ShopKeyboards'));
+const ShopStorage = lazy(() => import('./pages/ShopStorage'));
+const ShopMacBookScreens = lazy(() => import('./pages/ShopMacBookScreens'));
+const ShopMacBookBatteries = lazy(() => import('./pages/ShopMacBookBatteries'));
+const ShopMacBookChargers = lazy(() => import('./pages/ShopMacBookChargers'));
+const ShopMacBookKeyboards = lazy(() => import('./pages/ShopMacBookKeyboards'));
+const ShopMacBookRamSsd = lazy(() => import('./pages/ShopMacBookRamSsd'));
+const ShopGaming = lazy(() => import('./pages/ShopGaming'));
+const ShopUsedLaptops = lazy(() => import('./pages/ShopUsedLaptops'));
+const ShopDesktops = lazy(() => import('./pages/ShopDesktops'));
+const ShopMonitors = lazy(() => import('./pages/ShopMonitors'));
+const ShopServers = lazy(() => import('./pages/ShopServers'));
+const ShopComponents = lazy(() => import('./pages/ShopComponents'));
+const ShopGadgetScreens = lazy(() => import('./pages/ShopGadgetScreens'));
+const ShopGadgetBatteries = lazy(() => import('./pages/ShopGadgetBatteries'));
+const ShopGadgetCovers = lazy(() => import('./pages/ShopGadgetCovers'));
+const ShopGadgetPorts = lazy(() => import('./pages/ShopGadgetPorts'));
+const ShopGadgetAccessories = lazy(() => import('./pages/ShopGadgetAccessories'));
+const ShopNetworkAccessPoints = lazy(() => import('./pages/ShopNetworkAccessPoints'));
+const ShopNetworkRouters = lazy(() => import('./pages/ShopNetworkRouters'));
+const ShopNetworkSwitches = lazy(() => import('./pages/ShopNetworkSwitches'));
+const ShopNetworkServerParts = lazy(() => import('./pages/ShopNetworkServerParts'));
+const ShopNetworkTransceivers = lazy(() => import('./pages/ShopNetworkTransceivers'));
+const Repairs = lazy(() => import('./pages/Repairs'));
+const ProductDetail = lazy(() => import('./pages/ProductDetail'));
+const Search = lazy(() => import('./pages/Search'));
+const Login = lazy(() => import('./pages/Login'));
+const Register = lazy(() => import('./pages/Register'));
+const Cart = lazy(() => import('./pages/Cart'));
+const Checkout = lazy(() => import('./pages/Checkout'));
+const AdminDashboard = lazy(() => import('./pages/AdminDashboard'));
 function App() {
   return (
     <Router>
+      <Suspense fallback={<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', background: 'var(--gray-light)', color: 'var(--navy)', fontSize: '1.5rem', fontWeight: 'bold' }}>Loading...</div>}>
       <Routes>
         {/* Redirect root to shop */}
         <Route path="/" element={<Navigate to="/shop" replace />} />
@@ -106,6 +108,7 @@ function App() {
           <Route path="/shop/repairs" element={<Repairs />} />
         </Route>
       </Routes>
+      </Suspense>
 
       {/* WhatsApp Floating Button */}
       <a href="https://wa.me/27621172653?text=Hi%2C%20I%20need%20help%20with%20my%20device" className="wa-float" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
