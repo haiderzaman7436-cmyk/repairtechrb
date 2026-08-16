@@ -2,16 +2,16 @@ import { MapPin, Phone, Clock, Mail } from 'lucide-react';
 
 export default function StoreLocation() {
   return (
-    <section style={{ padding: '5rem 2rem', background: 'var(--gray-light)' }}>
+    <section style={{ padding: 'clamp(3rem, 5vw, 5rem) clamp(1rem, 4vw, 2rem)', background: 'var(--gray-light)' }}>
       <div className="container section-center">
         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
           <h2 style={{ color: 'var(--navy)', fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontFamily: 'var(--font-serif)', fontWeight: 800 }}>Visit Our Repair Center</h2>
           <p style={{ color: 'var(--gray-dark)', fontSize: '1.1rem', marginTop: '1rem', maxWidth: '600px', margin: '1rem auto 0' }}>Located in the heart of Rosebank, Johannesburg. Drop in for a quick diagnostic or same-day repair.</p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem', background: 'var(--white)', borderRadius: '24px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.08)' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: '2rem', background: 'var(--white)', borderRadius: '24px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.08)' }}>
           
-          <div style={{ padding: '3rem 2.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <div style={{ padding: 'clamp(1.5rem, 5vw, 3rem) clamp(1.25rem, 5vw, 2.5rem)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <h3 style={{ color: 'var(--navy)', fontSize: '1.5rem', marginBottom: '2rem', fontWeight: 700 }}>RepairTech Rosebank</h3>
             
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
@@ -75,7 +75,7 @@ export default function StoreLocation() {
             </div>
           </div>
           
-          <div style={{ minHeight: '400px', width: '100%', position: 'relative' }}>
+          <div style={{ minHeight: 'clamp(250px, 60vw, 400px)', width: '100%', position: 'relative' }}>
             <iframe 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.821915668615!2d28.0416972!3d-26.1457811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c9535e5d381%3A0xc484b39707248e3d!2sThe%20Median%20Rosebank!5e0!3m2!1sen!2sza!4v1700000000000!5m2!1sen!2sza" 
               width="100%" 

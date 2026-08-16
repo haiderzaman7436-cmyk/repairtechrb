@@ -26,7 +26,7 @@ export default function Reviews() {
   ];
 
   return (
-    <section style={{ padding: '5rem 2rem', background: 'var(--white)' }}>
+    <section style={{ padding: 'clamp(3rem, 5vw, 5rem) clamp(1rem, 4vw, 2rem)', background: 'var(--white)' }}>
       <div className="container section-center">
         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#f8fafc', padding: '0.5rem 1rem', borderRadius: '100px', marginBottom: '1rem' }}>
@@ -42,11 +42,11 @@ export default function Reviews() {
           <p style={{ color: 'var(--gray-dark)', fontSize: '1.1rem', marginTop: '1rem', maxWidth: '600px', margin: '1rem auto 0' }}>Don't just take our word for it. See what our customers in Rosebank have to say about our repair services.</p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '2rem' }}>
           {reviews.map((review, i) => (
             <div key={i} style={{ 
               background: 'var(--white)', 
-              padding: '2rem', 
+              padding: 'clamp(1.5rem, 5vw, 2rem)', 
               borderRadius: '16px', 
               boxShadow: '0 10px 40px rgba(0,0,0,0.06)',
               border: '1px solid #f1f5f9',
