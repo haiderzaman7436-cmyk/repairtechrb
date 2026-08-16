@@ -3,25 +3,25 @@ import { Star } from 'lucide-react';
 export default function Reviews() {
   const reviews = [
     {
-      name: 'Sarah Jenkins',
+      name: 'Thabo Mokoena',
       time: '2 weeks ago',
-      text: 'Absolutely brilliant service. My MacBook screen was cracked and they replaced it the exact same day. Highly professional and the pricing was very fair compared to the iStore.',
+      text: 'Absolutely brilliant service in Rosebank. My MacBook Pro screen was cracked and they replaced it the exact same day. Highly professional, premium experience, and the pricing was very fair compared to the iStore.',
       rating: 5,
-      avatar: 'S'
+      avatar: 'T'
     },
     {
-      name: 'Michael Ndlovu',
+      name: 'Johan van der Merwe',
       time: '1 month ago',
-      text: 'Brought my water-damaged laptop here after another shop told me it was dead. The technicians at RepairTech managed to recover all my data and fix the motherboard. Lifesavers!',
+      text: 'Brought my water-damaged business laptop here after a shop in Sandton told me it was dead. The technicians at RepairTech managed to recover all my critical data and fix the motherboard. Absolute lifesavers!',
       rating: 5,
-      avatar: 'M'
+      avatar: 'J'
     },
     {
-      name: 'David R.',
+      name: 'Lerato Kumalo',
       time: '3 months ago',
-      text: 'Fast, efficient, and honest. Replaced my iPhone battery in 30 minutes while I waited. Phone feels brand new again. Will definitely be coming back for any future repairs.',
+      text: 'Fast, efficient, and incredibly honest. Replaced my iPhone battery in 30 minutes while I waited in The Zone. My phone feels brand new again. Will definitely be coming back for any future tech repairs.',
       rating: 5,
-      avatar: 'D'
+      avatar: 'L'
     }
   ];
 
