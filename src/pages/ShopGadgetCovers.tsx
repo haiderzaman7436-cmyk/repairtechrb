@@ -9,7 +9,7 @@ const initialProducts: any[] = [
     "title": "iPhone 8 Plus Back Cover (Black) (OEM)",
     "price": "R1128.00",
     "priceNum": 1128.0,
-    "image": "",
+    "image": "/images/gadget-covers/AS053711.webp",
     "category": "Gadget Covers",
     "isUsed": false,
     "inStock": true
