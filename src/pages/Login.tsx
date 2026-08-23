@@ -119,7 +119,7 @@ export default function Login() {
         zIndex: 1
       }}>
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
-          <img src="/images/logo (3).png" alt="Repair Tech Logo" style={{ height: '60px' }} />
+          <img src="/logos/logo.png" alt="Repair Tech Logo" style={{ height: '140px' }} />
         </div>
         
         <h2 style={{ 

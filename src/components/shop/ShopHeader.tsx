@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Search, Phone, User, ShoppingCart, Menu, X } from 'lucide-react';
+import { Search, Phone, User, ShoppingCart, Menu, X, MapPin, Clock } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { useCart } from '../../context/CartContext';
 
@@ -21,34 +21,48 @@ export default function ShopHeader() {
 
   return (
     <div className="shop-header-wrapper">
+      {/* Top Bar - Location & Hours */}
+      <div className="top-bar hide-on-mobile" style={{ background: 'var(--navy-dark)', color: '#ffffff', padding: '8px 2rem', fontSize: '0.85rem', fontWeight: '500' }}>
+        <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', gap: '24px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <MapPin size={16} color="#ffffff" />
+            <span>The Median building, 50 Bath Avenue, Rosebank, Johannesburg, 2196, South Africa</span>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', borderLeft: '1px solid rgba(255,255,255,0.4)', paddingLeft: '24px' }}>
+            <Clock size={16} color="#ffffff" />
+            <span>Mon-Fri 09:00 AM - 09:00 PM | Sat-Sun 09:00 AM - 08:00 PM</span>
+          </div>
+        </div>
+      </div>
+
       {/* Main Header */}
-      <div className="shop-main-header">
+      <div className="shop-main-header" style={{ background: '#ffffff' }}>
         <div className="container shop-header-inner">
-          <Link to="/shop" className="shop-logo" style={{ display: 'flex', alignItems: 'center', gap: '1.2rem', textDecoration: 'none' }}>
+          <Link to="/" className="shop-logo" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', gap: '12px' }}>
             <img 
-              src="/images/logo%20(3).png" 
-              alt="Repair Tech Logo" 
+              src="/logos/logo.png" 
+              alt="Repair Tech Logo Icon" 
               className="shop-logo-img"
               style={{ 
-                height: '75px',
-                minHeight: '75px',
+                height: '70px',
+                minHeight: '70px',
                 width: 'auto',
                 flexShrink: 0,
-                objectFit: 'contain',
-                mixBlendMode: 'multiply',
-                transition: 'transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)'
+                objectFit: 'contain'
               }} 
-              onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.08)'}
-              onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
             />
-            <div className="logo-text" style={{ display: 'flex', flexDirection: 'column', lineHeight: '1.05' }}>
-              <span style={{ fontSize: '1.8rem', fontWeight: '900', color: 'var(--navy)', letterSpacing: '1px', fontFamily: 'var(--font-sans)' }}>REPAIR</span>
-              <span style={{ fontSize: '1.8rem', fontWeight: '900', color: 'var(--navy)', letterSpacing: '1px', fontFamily: 'var(--font-sans)' }}>TECH</span>
+            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+              <span style={{ fontFamily: 'var(--font-sans)', fontSize: '1.6rem', fontWeight: 900, color: 'var(--navy-dark)', lineHeight: 1, letterSpacing: '-0.5px', textTransform: 'uppercase' }}>
+                Repair Tech
+              </span>
+              <span style={{ fontSize: '0.65rem', color: 'var(--gray-dark)', fontWeight: 700, letterSpacing: '1px', marginTop: '4px', textTransform: 'uppercase', display: 'none' }}>
+                Cell Phone & Computer Repairs
+              </span>
             </div>
           </Link>
           
           <form onSubmit={handleSearch} className="shop-search">
-            <select id="search-category" name="category" aria-label="Search Category" className="shop-search-category" style={{ padding: '0 1rem', border: 'none', background: '#fff', outline: 'none', color: '#000', fontWeight: 'bold', cursor: 'pointer', appearance: 'none' }}>
+            <select id="search-category" name="category" aria-label="Search Category" className="shop-search-category" style={{ padding: '0 1rem', border: 'none', borderRight: '1px solid #e2e8f0', background: '#f8f9fa', outline: 'none', color: '#0f172a', fontWeight: '600', cursor: 'pointer' }}>
               <option value="all">All Categories</option>
               <option value="laptops">Laptops</option>
               <option value="parts">Parts & Upgrades</option>
