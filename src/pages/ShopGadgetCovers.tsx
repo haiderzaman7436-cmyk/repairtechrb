@@ -19,7 +19,7 @@ const initialProducts: any[] = [
     "title": "iPhone XR Back Cover (Black) (OEM)",
     "price": "R1128.00",
     "priceNum": 1128.0,
-    "image": "/images/gadget-covers/AS056177.png",
+    "image": "/images/gadget-covers/AS056177.webp",
     "category": "Gadget Covers",
     "isUsed": false,
     "inStock": true
@@ -29,7 +29,7 @@ const initialProducts: any[] = [
     "title": "iPhone XR Back Cover (Black) (OEM)",
     "price": "R2464.00",
     "priceNum": 2464.0,
-    "image": "/images/gadget-covers/AS077503.png",
+    "image": "/images/gadget-covers/AS077503.webp",
     "category": "Gadget Covers",
     "isUsed": false,
     "inStock": true
@@ -39,7 +39,7 @@ const initialProducts: any[] = [
     "title": "iPhone XS Max Back Cover (White) (OEM)",
     "price": "R2996.00",
     "priceNum": 2996.0,
-    "image": "/images/gadget-covers/AS052405.png",
+    "image": "/images/gadget-covers/AS052405.webp",
     "category": "Gadget Covers",
     "isUsed": false,
     "inStock": true
@@ -49,7 +49,7 @@ const initialProducts: any[] = [
     "title": "iPhone XS Back Cover (Black) (OEM)",
     "price": "R1860.00",
     "priceNum": 1860.0,
-    "image": "/images/gadget-covers/AS051890.png",
+    "image": "/images/gadget-covers/AS051890.webp",
     "category": "Gadget Covers",
     "isUsed": false,
     "inStock": true
@@ -59,7 +59,7 @@ const initialProducts: any[] = [
     "title": "iPhone 7 Plus Back Cover (White) (OEM)",
     "price": "R1128.00",
     "priceNum": 1128.0,
-    "image": "/images/gadget-covers/AS071010_3af65f08-5818-4c02-a477-97d635efd1c3.png",
+    "image": "/images/gadget-covers/AS071010_3af65f08-5818-4c02-a477-97d635efd1c3.webp",
     "category": "Gadget Covers",
     "isUsed": false,
     "inStock": true
@@ -69,7 +69,7 @@ const initialProducts: any[] = [
     "title": "iPhone 7 Plus Back Cover (Black) (OEM)",
     "price": "R1128.00",
     "priceNum": 1128.0,
-    "image": "/images/gadget-covers/AS071011_e1fa6861-5940-4f45-9dcb-d7076406a0aa.png",
+    "image": "/images/gadget-covers/AS071011_e1fa6861-5940-4f45-9dcb-d7076406a0aa.webp",
     "category": "Gadget Covers",
     "isUsed": false,
     "inStock": true
@@ -79,7 +79,7 @@ const initialProducts: any[] = [
     "title": "iPhone 8 Back Cover (Black) (OEM)",
     "price": "R1128.00",
     "priceNum": 1128.0,
-    "image": "/images/gadget-covers/AS053710.png",
+    "image": "/images/gadget-covers/AS053710.webp",
     "category": "Gadget Covers",
     "isUsed": false,
     "inStock": true
@@ -89,7 +89,7 @@ const initialProducts: any[] = [
     "title": "iPhone 16e Back Cover (White) (OEM)",
     "price": "R1128.00",
     "priceNum": 1128.0,
-    "image": "/images/gadget-covers/AS161982_41d726ce-eb07-4f47-9af9-2d85f86db57a.png",
+    "image": "/images/gadget-covers/AS161982_41d726ce-eb07-4f47-9af9-2d85f86db57a.webp",
     "category": "Gadget Covers",
     "isUsed": false,
     "inStock": true
@@ -99,7 +99,7 @@ const initialProducts: any[] = [
     "title": "iPhone 16e Back Cover (White) (OEM)",
     "price": "R1596.00",
     "priceNum": 1596.0,
-    "image": "/images/gadget-covers/AS165594.png",
+    "image": "/images/gadget-covers/AS165594.webp",
     "category": "Gadget Covers",
     "isUsed": false,
     "inStock": true
@@ -109,7 +109,7 @@ const initialProducts: any[] = [
     "title": "iPhone 6 LCD Screen and Digitizer - White (Premium Aftermarket)",
     "price": "R575.00",
     "priceNum": 575.0,
-    "image": "/images/gadget-covers/iphone6-W_f04eb2c9-0422-4d4f-a080-3bba73164415.png",
+    "image": "/images/gadget-covers/iphone6-W_f04eb2c9-0422-4d4f-a080-3bba73164415.webp",
     "category": "Gadget Covers",
     "isUsed": false,
     "inStock": true
@@ -119,7 +119,7 @@ const initialProducts: any[] = [
     "title": "iPhone 6 LCD Screen and Digitizer - Black (Premium Aftermarket)",
     "price": "R575.00",
     "priceNum": 575.0,
-    "image": "/images/gadget-covers/iphone6.png",
+    "image": "/images/gadget-covers/iphone6.webp",
     "category": "Gadget Covers",
     "isUsed": false,
     "inStock": true
@@ -129,7 +129,7 @@ const initialProducts: any[] = [
     "title": "iPhone 16e Back Cover (Black) (OEM)",
     "price": "R1424.00",
     "priceNum": 1424.0,
-    "image": "/images/gadget-covers/AS165593.png",
+    "image": "/images/gadget-covers/AS165593.webp",
     "category": "Gadget Covers",
     "isUsed": false,
     "inStock": true
@@ -139,7 +139,7 @@ const initialProducts: any[] = [
     "title": "iPhone 16 Pro Max Back Cover (White Titanium) (OEM)",
     "price": "R1128.00",
     "priceNum": 1128.0,
-    "image": "/images/gadget-covers/AS154836_b524fe6d-3315-4380-baf3-27819db0c265.png",
+    "image": "/images/gadget-covers/AS154836_b524fe6d-3315-4380-baf3-27819db0c265.webp",
     "category": "Gadget Covers",
     "isUsed": false,
     "inStock": true
@@ -149,7 +149,7 @@ const initialProducts: any[] = [
     "title": "iPhone 16e Back Cover (Black) (OEM)",
     "price": "R1128.00",
     "priceNum": 1128.0,
-    "image": "/images/gadget-covers/AS161981.png",
+    "image": "/images/gadget-covers/AS161981.webp",
     "category": "Gadget Covers",
     "isUsed": false,
     "inStock": true
@@ -159,7 +159,7 @@ const initialProducts: any[] = [
     "title": "iPhone 16 Pro Max Back Cover (White Titanium) (OEM)",
     "price": "R1706.00",
     "priceNum": 1706.0,
-    "image": "/images/gadget-covers/AS161567.png",
+    "image": "/images/gadget-covers/AS161567.webp",
     "category": "Gadget Covers",
     "isUsed": false,
     "inStock": true
@@ -169,7 +169,7 @@ const initialProducts: any[] = [
     "title": "iPhone 16 Pro Max Back Cover (Natural Titanium) (OEM)",
     "price": "R1128.00",
     "priceNum": 1128.0,
-    "image": "/images/gadget-covers/AS155668_b755f3f4-7bb2-4a55-bce3-562240ad712f.png",
+    "image": "/images/gadget-covers/AS155668_b755f3f4-7bb2-4a55-bce3-562240ad712f.webp",
     "category": "Gadget Covers",
     "isUsed": false,
     "inStock": true
@@ -179,7 +179,7 @@ const initialProducts: any[] = [
     "title": "iPhone 16 Pro Max Back Cover (Natural Titanium) (OEM)",
     "price": "R1706.00",
     "priceNum": 1706.0,
-    "image": "/images/gadget-covers/AS161568_ee34d72a-1290-4539-b207-94abc84fb456.png",
+    "image": "/images/gadget-covers/AS161568_ee34d72a-1290-4539-b207-94abc84fb456.webp",
     "category": "Gadget Covers",
     "isUsed": false,
     "inStock": true
@@ -189,7 +189,7 @@ const initialProducts: any[] = [
     "title": "iPhone 16 Pro Max Back Cover (Natural Titanium) (OEM)",
     "price": "R1532.00",
     "priceNum": 1532.0,
-    "image": "/images/gadget-covers/AS160005.png",
+    "image": "/images/gadget-covers/AS160005.webp",
     "category": "Gadget Covers",
     "isUsed": false,
     "inStock": true
@@ -199,7 +199,7 @@ const initialProducts: any[] = [
     "title": "iPhone 16 Pro Max Back Cover (Desert Titanium) (OEM)",
     "price": "R1128.00",
     "priceNum": 1128.0,
-    "image": "/images/gadget-covers/AS155669_5bdc2b86-3ab8-4489-8c10-929f2a8efcf8.png",
+    "image": "/images/gadget-covers/AS155669_5bdc2b86-3ab8-4489-8c10-929f2a8efcf8.webp",
     "category": "Gadget Covers",
     "isUsed": false,
     "inStock": true
@@ -209,7 +209,7 @@ const initialProducts: any[] = [
     "title": "iPhone 16 Pro Max Back Cover (Desert Titanium) (OEM)",
     "price": "R1532.00",
     "priceNum": 1532.0,
-    "image": "/images/gadget-covers/AS160002_a4aaefa1-cb04-44ab-b427-7e56722d7ff6.png",
+    "image": "/images/gadget-covers/AS160002_a4aaefa1-cb04-44ab-b427-7e56722d7ff6.webp",
     "category": "Gadget Covers",
     "isUsed": false,
     "inStock": true
@@ -219,7 +219,7 @@ const initialProducts: any[] = [
     "title": "iPhone 16 Pro Max Back Cover (Black Titanium) (OEM)",
     "price": "R1128.00",
     "priceNum": 1128.0,
-    "image": "/images/gadget-covers/AS155667.png",
+    "image": "/images/gadget-covers/AS155667.webp",
     "category": "Gadget Covers",
     "isUsed": false,
     "inStock": true
@@ -229,7 +229,7 @@ const initialProducts: any[] = [
     "title": "iPhone 16 Pro Max Back Cover (Black Titanium) (OEM)",
     "price": "R1706.00",
     "priceNum": 1706.0,
-    "image": "/images/gadget-covers/AS161566_ba5148a1-1cd2-4378-8380-4602de9de5e5.png",
+    "image": "/images/gadget-covers/AS161566_ba5148a1-1cd2-4378-8380-4602de9de5e5.webp",
     "category": "Gadget Covers",
     "isUsed": false,
     "inStock": true
@@ -239,7 +239,7 @@ const initialProducts: any[] = [
     "title": "iPhone 16 Pro Max Back Cover (Black Titanium) (OEM)",
     "price": "R1578.00",
     "priceNum": 1578.0,
-    "image": "/images/gadget-covers/AS160004.png",
+    "image": "/images/gadget-covers/AS160004.webp",
     "category": "Gadget Covers",
     "isUsed": false,
     "inStock": true
