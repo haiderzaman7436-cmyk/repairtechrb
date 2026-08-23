@@ -4,16 +4,16 @@ import CategoryProductCard from '../components/shop/CategoryProductCard';
 import Pagination from '../components/shop/Pagination';
 
 const initialProducts = [
-  { id: 1, inStock: true, isUsed: false, category: 'MACBOOK CHARGER', title: 'Apple USB-C Charge Cable (2m)...', price: 'R 370.00', priceNum: 370, image: '/images/charger_3.png?v=2' },
-  { id: 2, inStock: true, isUsed: false, category: 'MACBOOK CHARGER', title: '45W MagSafe 2 Apple MacBook Air Generic Laptop Charger/ AC Adapter...', price: 'R 690.00', priceNum: 690, image: '/images/charger_3.png?v=2' },
-  { id: 3, inStock: true, isUsed: false, category: 'MACBOOK CHARGER', title: '45W MagSafe 1 Apple MacBook Air Generic Laptop Charger/ AC Adapter...', price: 'R 690.00', priceNum: 690, image: '/images/charger_3.png?v=2' },
-  { id: 4, inStock: true, isUsed: false, category: 'MACBOOK CHARGER', title: '60W MagSafe 1 Apple MacBook Pro Generic Laptop Charger/ AC Adapter...', price: 'R 782.00', priceNum: 782, image: '/images/charger_3.png?v=2' },
-  { id: 5, inStock: true, isUsed: false, category: 'MACBOOK CHARGER', title: '60W MagSafe 2 Apple MacBook Pro Generic Laptop Charger/ AC Adapter...', price: 'R 782.00', priceNum: 782, image: '/images/charger_3.png?v=2' },
-  { id: 6, inStock: true, isUsed: false, category: 'MACBOOK CHARGER', title: '85W MagSafe 1 Apple MacBook Pro Generic Laptop Charger/ AC Adapter...', price: 'R 805.00', priceNum: 805, image: '/images/charger_3.png?v=2' },
-  { id: 7, inStock: true, isUsed: false, category: 'MACBOOK CHARGER', title: '30W USB Type C Apple MacBook Pro Generic Laptop Charger/ AC Adapter...', price: 'R 636.00', priceNum: 636, image: '/images/charger_3.png?v=2' },
-  { id: 8, inStock: true, isUsed: false, category: 'MACBOOK CHARGER', title: '85W MagSafe 2 Apple MacBook Pro Generic Laptop Charger/ AC Adapter...', price: 'R 820.00', priceNum: 820, image: '/images/charger_3.png?v=2' },
-  { id: 9, inStock: true, isUsed: false, category: 'MACBOOK CHARGER', title: '61W USB Type C Apple MacBook Pro Generic Laptop Charger/ AC Adapter...', price: 'R 680.00', priceNum: 680, image: '/images/charger_3.png?v=2' },
-  { id: 10, inStock: true, isUsed: false, category: 'MACBOOK CHARGER', title: '87W USB Type C Apple MacBook Pro Generic Laptop Charger/ AC Adapter...', price: 'R 920.00', priceNum: 920, image: '/images/charger_3.png?v=2' }
+  { id: 1, inStock: true, isUsed: false, category: 'MACBOOK CHARGER', title: 'Apple USB-C Charge Cable (2m)...', price: 'R 370.00', priceNum: 370, image: '/images/macbook-parts-chargers/1.webp' },
+  { id: 2, inStock: true, isUsed: false, category: 'MACBOOK CHARGER', title: '45W MagSafe 2 Apple MacBook Air Generic Laptop Charger/ AC Adapter...', price: 'R 690.00', priceNum: 690, image: '/images/macbook-parts-chargers/2.webp' },
+  { id: 3, inStock: true, isUsed: false, category: 'MACBOOK CHARGER', title: '45W MagSafe 1 Apple MacBook Air Generic Laptop Charger/ AC Adapter...', price: 'R 690.00', priceNum: 690, image: '/images/macbook-parts-chargers/3.webp' },
+  { id: 4, inStock: true, isUsed: false, category: 'MACBOOK CHARGER', title: '60W MagSafe 1 Apple MacBook Pro Generic Laptop Charger/ AC Adapter...', price: 'R 782.00', priceNum: 782, image: '/images/macbook-parts-chargers/4.webp' },
+  { id: 5, inStock: true, isUsed: false, category: 'MACBOOK CHARGER', title: '60W MagSafe 2 Apple MacBook Pro Generic Laptop Charger/ AC Adapter...', price: 'R 782.00', priceNum: 782, image: '/images/macbook-parts-chargers/5.webp' },
+  { id: 6, inStock: true, isUsed: false, category: 'MACBOOK CHARGER', title: '85W MagSafe 1 Apple MacBook Pro Generic Laptop Charger/ AC Adapter...', price: 'R 805.00', priceNum: 805, image: '/images/macbook-parts-chargers/6.webp' },
+  { id: 7, inStock: true, isUsed: false, category: 'MACBOOK CHARGER', title: '30W USB Type C Apple MacBook Pro Generic Laptop Charger/ AC Adapter...', price: 'R 636.00', priceNum: 636, image: '/images/macbook-parts-chargers/7.webp' },
+  { id: 8, inStock: true, isUsed: false, category: 'MACBOOK CHARGER', title: '85W MagSafe 2 Apple MacBook Pro Generic Laptop Charger/ AC Adapter...', price: 'R 820.00', priceNum: 820, image: '/images/macbook-parts-chargers/8.webp' },
+  { id: 9, inStock: true, isUsed: false, category: 'MACBOOK CHARGER', title: '61W USB Type C Apple MacBook Pro Generic Laptop Charger/ AC Adapter...', price: 'R 680.00', priceNum: 680, image: '/images/macbook-parts-chargers/9.webp' },
+  { id: 10, inStock: true, isUsed: false, category: 'MACBOOK CHARGER', title: '87W USB Type C Apple MacBook Pro Generic Laptop Charger/ AC Adapter...', price: 'R 920.00', priceNum: 920, image: '/images/macbook-parts-chargers/10.webp' }
 ];
 
 const ITEMS_PER_PAGE = 12;

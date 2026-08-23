@@ -7,7 +7,7 @@ export const allProducts = [
     "title": "A1245 Apple MacBook Air 13\" Replacement Battery. Fits A1245 A1237",
     "price": "R 966.00",
     "priceNum": 966,
-    "image": "/images/laptop-parts-batteries/1.webp"
+    "image": "/images/macbook-parts-chargers/1.webp"
   },
   {
     "id": 2,
@@ -17,7 +17,7 @@ export const allProducts = [
     "title": "A1278 Macbook Pro 13\" Replacement Battery for  A1322 A1278 2009 2010 2011 2012",
     "price": "R 1850.00",
     "priceNum": 1850,
-    "image": "/images/laptop-parts-batteries/2.webp"
+    "image": "/images/macbook-parts-chargers/2.webp"
   },
   {
     "id": 3,
@@ -27,7 +27,7 @@ export const allProducts = [
     "title": "A1331 Apple MacBook Pro 13\" Unibody Replacement Battery. Fits MacBook Pro 15\" 17\" A1331, A1342, A1322",
     "price": "R 1150.00",
     "priceNum": 1150,
-    "image": "/images/laptop-parts-batteries/3.webp"
+    "image": "/images/macbook-parts-chargers/3.webp"
   },
   {
     "id": 4,
@@ -37,7 +37,7 @@ export const allProducts = [
     "title": "A1382 Apple MacBook Pro 15\" Unibody Replacement Battery. Fits A1286 Early 2011, A1286 Late 2011, A1286 Mid 2012",
     "price": "R 2587.50",
     "priceNum": 2587.5,
-    "image": "/images/laptop-parts-batteries/4.webp"
+    "image": "/images/macbook-parts-chargers/4.webp"
   },
   {
     "id": 5,
@@ -47,7 +47,7 @@ export const allProducts = [
     "title": "A1398 Apple MacBook Pro Retina 15\" Replacement Battery. Fits A1398, A1417, A1494 (Late 2013 mid 2014, Mid 2015)",
     "price": "R 2300.00",
     "priceNum": 2300,
-    "image": "/images/laptop-parts-batteries/5.webp"
+    "image": "/images/macbook-parts-chargers/5.webp"
   },
   {
     "id": 6,
@@ -57,7 +57,7 @@ export const allProducts = [
     "title": "A1406 Apple MacBook Air 11\" Replacement Battery. Fits A1406 A1370 (Mid 2011)",
     "price": "R 1518.00",
     "priceNum": 1518,
-    "image": "/images/laptop-parts-batteries/6.webp"
+    "image": "/images/macbook-parts-chargers/6.webp"
   },
   {
     "id": 7,
@@ -67,7 +67,7 @@ export const allProducts = [
     "title": "A1437 Apple MacBook Pro Retina 13\" Replacement Battery. Fits A1437 A1425 (2012 - 2013)",
     "price": "R 1702.00",
     "priceNum": 1702,
-    "image": "/images/laptop-parts-batteries/7.webp"
+    "image": "/images/macbook-parts-chargers/7.webp"
   },
   {
     "id": 8,
@@ -77,7 +77,7 @@ export const allProducts = [
     "title": "A1466 Apple MacBook Air 13\" Replacement Battery. Fits A1377, A1496, A1466 (Mid 2012,Mid 2013, Early 2014 Version) A1369 (Mid 2010, Mid 2011 version)",
     "price": "R 2300.00",
     "priceNum": 2300,
-    "image": "/images/laptop-parts-batteries/8.webp"
+    "image": "/images/macbook-parts-chargers/8.webp"
   },
   {
     "id": 9,
@@ -87,7 +87,7 @@ export const allProducts = [
     "title": "A1502 Apple MacBook Pro 13\" Retina Replacement Battery (Early 2015) MF839LL/A,  A1582",
     "price": "R 3450.00",
     "priceNum": 3450,
-    "image": "/images/laptop-parts-batteries/9.webp"
+    "image": "/images/macbook-parts-chargers/9.webp"
   },
   {
     "id": 10,
@@ -97,7 +97,7 @@ export const allProducts = [
     "title": "A1534 Apple MacBook Pro Retina 12\" Replacement Battery. Fits A1527 A1534 (Early 2015)",
     "price": "R 2645.00",
     "priceNum": 2645,
-    "image": "/images/laptop-parts-batteries/10.webp"
+    "image": "/images/macbook-parts-chargers/10.webp"
   },
   {
     "id": 11,
