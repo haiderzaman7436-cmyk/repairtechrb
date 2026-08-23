@@ -3918,5 +3918,45 @@ export const allProducts = [
     "category": "Used Laptops",
     "isUsed": true,
     "inStock": true
+  },
+  {
+    "id": 201,
+    "inStock": true,
+    "isUsed": true,
+    "category": "MONITORS",
+    "title": "Dell P2419H 24-inch 1080p IPS Monitor",
+    "price": "R 1,500.00",
+    "priceNum": 1500,
+    "image": "/images/monitors/1.webp"
+  },
+  {
+    "id": 202,
+    "inStock": true,
+    "isUsed": true,
+    "category": "MONITORS",
+    "title": "HP E243 23.8-inch FHD IPS Monitor",
+    "price": "R 1,600.00",
+    "priceNum": 1600,
+    "image": "/images/monitors/2.webp"
+  },
+  {
+    "id": 203,
+    "inStock": true,
+    "isUsed": true,
+    "category": "MONITORS",
+    "title": "Lenovo ThinkVision T24i-10 24\" Monitor",
+    "price": "R 1,450.00",
+    "priceNum": 1450,
+    "image": "/images/monitors/3.webp"
+  },
+  {
+    "id": 204,
+    "inStock": true,
+    "isUsed": true,
+    "category": "MONITORS",
+    "title": "Samsung 27-inch Curved FHD Monitor",
+    "price": "R 2,200.00",
+    "priceNum": 2200,
+    "image": "/images/monitors/4.webp"
   }
 ];
