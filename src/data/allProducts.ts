@@ -2644,7 +2644,7 @@ export const allProducts = [
     "title": "IPD Trackpad Keyboard Flex Cables - MacBook Retina 12\" A1534 Early 2015 2016 2017",
     "price": "R690.00",
     "priceNum": 690,
-    "image": "/images/macbook-parts-keyboards/1_Trackpad-Keyboard-Cable-MacBook-12inch-Retina-A1534-Early-2015.webp?v=4",
+    "image": "/images/macbook-parts-keyboards/1.webp",
     "category": "MacBook Keyboards",
     "isUsed": false,
     "inStock": true
@@ -2654,7 +2654,7 @@ export const allProducts = [
     "title": "Macbook Pro Retina 13 inch Model A1502 | Year 2013 - 2014 Laptop Replacement Keyboard - UK/US Layout",
     "price": "R1150.00",
     "priceNum": 1150,
-    "image": "/images/macbook-parts-keyboards/2_a1502LaptopReplacementkeyboard.webp?v=4",
+    "image": "/images/macbook-parts-keyboards/2.webp",
     "category": "MacBook Keyboards",
     "isUsed": false,
     "inStock": true
@@ -2664,7 +2664,7 @@ export const allProducts = [
     "title": "Macbook Pro 13.3 inch Model A1278 | Year 2009 2010 2011 2012 Laptop Replacement Keyboard - US/UK Layout",
     "price": "R1805.00",
     "priceNum": 1805,
-    "image": "/images/macbook-parts-keyboards/3_KB-APA1278-BNF-3.webp?v=4",
+    "image": "/images/macbook-parts-keyboards/3.webp",
     "category": "MacBook Keyboards",
     "isUsed": false,
     "inStock": true
@@ -2674,7 +2674,7 @@ export const allProducts = [
     "title": "MacBook Retina 12.6\" A1534 Keyboard (Premium)",
     "price": "R2831.00",
     "priceNum": 2831,
-    "image": "/images/macbook-parts-keyboards/4_AS069027.webp?v=4",
+    "image": "/images/macbook-parts-keyboards/4.webp",
     "category": "MacBook Keyboards",
     "isUsed": false,
     "inStock": true
@@ -2684,7 +2684,7 @@ export const allProducts = [
     "title": "MacBook Retina 12.6\" A1534 Keyboard (Premium)",
     "price": "R3395.00",
     "priceNum": 3395,
-    "image": "/images/macbook-parts-keyboards/5_AS150477_c2209621-6bb5-40f1-a38b-e46614b92d52.webp?v=4",
+    "image": "/images/macbook-parts-keyboards/5.webp",
     "category": "MacBook Keyboards",
     "isUsed": false,
     "inStock": true
@@ -2694,7 +2694,7 @@ export const allProducts = [
     "title": "Macbook Air 13.3\" A1466 Keyboard (Premium)",
     "price": "R1330.00",
     "priceNum": 1330,
-    "image": "/images/macbook-parts-keyboards/6_AS066418_0d1fead3-8aba-43e5-876a-eed33c63328e.webp?v=4",
+    "image": "/images/macbook-parts-keyboards/6.webp",
     "category": "MacBook Keyboards",
     "isUsed": false,
     "inStock": true
@@ -2704,7 +2704,7 @@ export const allProducts = [
     "title": "Macbook Air 11.6\" A1370 Keyboard (Premium)",
     "price": "R1330.00",
     "priceNum": 1330,
-    "image": "/images/macbook-parts-keyboards/7_AS007419.webp?v=4",
+    "image": "/images/macbook-parts-keyboards/7.webp",
     "category": "MacBook Keyboards",
     "isUsed": false,
     "inStock": true
@@ -2714,7 +2714,7 @@ export const allProducts = [
     "title": "MacBook Air 13.3\" A2179 Keyboard (Premium)",
     "price": "R1330.00",
     "priceNum": 1330,
-    "image": "/images/macbook-parts-keyboards/8_AS075966.webp?v=4",
+    "image": "/images/macbook-parts-keyboards/8.webp",
     "category": "MacBook Keyboards",
     "isUsed": false,
     "inStock": true
@@ -2724,7 +2724,7 @@ export const allProducts = [
     "title": "Macbook Air 13.3\" M1 A2337 Keyboard (Premium)",
     "price": "R1330.00",
     "priceNum": 1330,
-    "image": "/images/macbook-parts-keyboards/9_AS068838.webp?v=4",
+    "image": "/images/macbook-parts-keyboards/9.webp",
     "category": "MacBook Keyboards",
     "isUsed": false,
     "inStock": true
@@ -2734,7 +2734,7 @@ export const allProducts = [
     "title": "Macbook Air 13.3\" M1 A2337 Keyboard (Premium)",
     "price": "R1330.00",
     "priceNum": 1330,
-    "image": "/images/macbook-parts-keyboards/10_AS102408_f0ab916a-a129-4edb-8428-f23c74f42eb9.webp?v=4",
+    "image": "/images/macbook-parts-keyboards/10.webp",
     "category": "MacBook Keyboards",
     "isUsed": false,
     "inStock": true
@@ -2744,7 +2744,7 @@ export const allProducts = [
     "title": "Macbook Air 13.3\" M1 A2337 Keyboard (Premium)",
     "price": "R1330.00",
     "priceNum": 1330,
-    "image": "/images/macbook-parts-keyboards/11_AS139985_8a20aa43-4bfa-41cd-b4d0-d3830f1fc7a3.webp?v=4",
+    "image": "/images/macbook-parts-keyboards/11.webp",
     "category": "MacBook Keyboards",
     "isUsed": false,
     "inStock": true
@@ -2754,7 +2754,7 @@ export const allProducts = [
     "title": "Macbook Air 13.3\" M2 A2681 Keyboard (Premium)",
     "price": "R1330.00",
     "priceNum": 1330,
-    "image": "/images/macbook-parts-keyboards/12_AS123551.webp?v=4",
+    "image": "/images/macbook-parts-keyboards/12.webp",
     "category": "MacBook Keyboards",
     "isUsed": false,
     "inStock": true
@@ -2764,7 +2764,7 @@ export const allProducts = [
     "title": "Macbook Retina Pro 13.3\" A1502 Keyboard (Premium)",
     "price": "R1330.00",
     "priceNum": 1330,
-    "image": "/images/macbook-parts-keyboards/13_AS003512.webp?v=4",
+    "image": "/images/macbook-parts-keyboards/13.webp",
     "category": "MacBook Keyboards",
     "isUsed": false,
     "inStock": true
@@ -2774,7 +2774,7 @@ export const allProducts = [
     "title": "MacBook Pro 13.3\" A1706 Keyboard (Premium)",
     "price": "R2453.00",
     "priceNum": 2453,
-    "image": "/images/macbook-parts-keyboards/14_AS031531.webp?v=4",
+    "image": "/images/macbook-parts-keyboards/14.webp",
     "category": "MacBook Keyboards",
     "isUsed": false,
     "inStock": true
@@ -2784,7 +2784,7 @@ export const allProducts = [
     "title": "MacBook Pro 15.4\" A1707 Keyboard (Premium)",
     "price": "R2266.00",
     "priceNum": 2266,
-    "image": "/images/macbook-parts-keyboards/15_AS003517_ecf30d2c-6257-4207-a659-92d184272361.webp?v=4",
+    "image": "/images/macbook-parts-keyboards/15.webp",
     "category": "MacBook Keyboards",
     "isUsed": false,
     "inStock": true
@@ -2794,7 +2794,7 @@ export const allProducts = [
     "title": "MacBook Pro 15.4\" A1707 Keyboard (Premium)",
     "price": "R4672.00",
     "priceNum": 4672,
-    "image": "/images/macbook-parts-keyboards/16_AS138016_f704851b-cc4e-4595-9703-fa616ab1ba0d.webp?v=4",
+    "image": "/images/macbook-parts-keyboards/16.webp",
     "category": "MacBook Keyboards",
     "isUsed": false,
     "inStock": true
@@ -2804,7 +2804,7 @@ export const allProducts = [
     "title": "MacBook Pro 13.3\" A1708 Keyboard (Premium)",
     "price": "R1607.00",
     "priceNum": 1607,
-    "image": "/images/macbook-parts-keyboards/17_AS003518.webp?v=4",
+    "image": "/images/macbook-parts-keyboards/17.webp",
     "category": "MacBook Keyboards",
     "isUsed": false,
     "inStock": true
@@ -2814,7 +2814,7 @@ export const allProducts = [
     "title": "MacBook Pro 13.3\" A1708 Keyboard (Premium)",
     "price": "R2007.00",
     "priceNum": 2007,
-    "image": "/images/macbook-parts-keyboards/18_AS039088.webp?v=4",
+    "image": "/images/macbook-parts-keyboards/18.webp",
     "category": "MacBook Keyboards",
     "isUsed": false,
     "inStock": true
@@ -2824,7 +2824,7 @@ export const allProducts = [
     "title": "MacBook Pro 13.3\" M1 A2338 Keyboard (Premium)",
     "price": "R1330.00",
     "priceNum": 1330,
-    "image": "/images/macbook-parts-keyboards/19_AS069075.webp?v=4",
+    "image": "/images/macbook-parts-keyboards/19.webp",
     "category": "MacBook Keyboards",
     "isUsed": false,
     "inStock": true
@@ -2834,7 +2834,7 @@ export const allProducts = [
     "title": "MacBook Pro 13.3\" M1 A2338 Keyboard (Premium)",
     "price": "R1330.00",
     "priceNum": 1330,
-    "image": "/images/macbook-parts-keyboards/20_AS075963.webp?v=4",
+    "image": "/images/macbook-parts-keyboards/20.webp",
     "category": "MacBook Keyboards",
     "isUsed": false,
     "inStock": true
@@ -2844,7 +2844,7 @@ export const allProducts = [
     "title": "MacBook Pro 13.3\" M1 A2338 Keyboard (Premium)",
     "price": "R1330.00",
     "priceNum": 1330,
-    "image": "/images/macbook-parts-keyboards/21_AS102407_7c6cd5d0-002e-469c-876f-79b5c831c5e0.webp?v=4",
+    "image": "/images/macbook-parts-keyboards/21.webp",
     "category": "MacBook Keyboards",
     "isUsed": false,
     "inStock": true
@@ -2854,7 +2854,7 @@ export const allProducts = [
     "title": "MacBook Pro 14\" 2021 A2442 Keyboard (Premium)",
     "price": "R1330.00",
     "priceNum": 1330,
-    "image": "/images/macbook-parts-keyboards/22_AS093526.webp?v=4",
+    "image": "/images/macbook-parts-keyboards/22.webp",
     "category": "MacBook Keyboards",
     "isUsed": false,
     "inStock": true
@@ -2864,7 +2864,7 @@ export const allProducts = [
     "title": "MacBook Pro 13\" M2 A2338 Keyboard (Premium)",
     "price": "R7569.00",
     "priceNum": 7569,
-    "image": "/images/macbook-parts-keyboards/23_AS166733_55a23ffe-0f0d-4dcb-8dea-5807f0af26b9.webp?v=4",
+    "image": "/images/macbook-parts-keyboards/23.webp",
     "category": "MacBook Keyboards",
     "isUsed": false,
     "inStock": true
@@ -2874,7 +2874,7 @@ export const allProducts = [
     "title": "MacBook Pro M3 Max 16\" A2991 Keyboard (Premium)",
     "price": "R1330.00",
     "priceNum": 1330,
-    "image": "/images/macbook-parts-keyboards/24_AS147317.webp?v=4",
+    "image": "/images/macbook-parts-keyboards/24.webp",
     "category": "MacBook Keyboards",
     "isUsed": false,
     "inStock": true
@@ -2884,7 +2884,7 @@ export const allProducts = [
     "title": "A1707 TopCase (Space Grey) for Apple MacBook Pro 15 inch retina Touch Bar A1707 Late 2016 to Mid 2017 (Used)",
     "price": "R2300.00",
     "priceNum": 2300,
-    "image": "/images/macbook-parts-keyboards/25_SpacegrayA1707TopcasewithKBandtouchbarMacBookProRetina15Palmrest.webp?v=4",
+    "image": "/images/macbook-parts-keyboards/25.webp",
     "category": "MacBook Keyboards",
     "isUsed": true,
     "inStock": true
@@ -2894,7 +2894,7 @@ export const allProducts = [
     "title": "Apple MacBook Pro Top Case With Battery A2141 16\" 2019 Space Gray (Used - Second Hand)",
     "price": "R4999.00",
     "priceNum": 4999,
-    "image": "/images/macbook-parts-keyboards/26_AppleMacBookProTopCaseWithBatteryA2141162019SpaceGrey.webp?v=4",
+    "image": "/images/macbook-parts-keyboards/26.webp",
     "category": "MacBook Keyboards",
     "isUsed": true,
     "inStock": true
@@ -2904,7 +2904,7 @@ export const allProducts = [
     "title": "MacBook  Pro 15 inch Model A1286 |  Laptop Replacement Keyboard - UK/US Layout",
     "price": "R1495.00",
     "priceNum": 1495,
-    "image": "/images/macbook-parts-keyboards/27_MacbookPro15inchA1286-2.webp?v=4",
+    "image": "/images/macbook-parts-keyboards/27.webp",
     "category": "MacBook Keyboards",
     "isUsed": false,
     "inStock": true
@@ -2914,7 +2914,7 @@ export const allProducts = [
     "title": "MacBook  Pro Retina 15 inch Model A1398 |  Laptop Replacement Keyboard - UK/US Layout",
     "price": "R1495.00",
     "priceNum": 1495,
-    "image": "/images/macbook-parts-keyboards/28_MacBookProRetina15InchModelA1398.webp?v=4",
+    "image": "/images/macbook-parts-keyboards/28.webp",
     "category": "MacBook Keyboards",
     "isUsed": false,
     "inStock": true
@@ -2924,7 +2924,7 @@ export const allProducts = [
     "title": "Macbook Pro Retina 13 inch Model A1425 | Year 2012 2013 Laptop Replacement Keyboard - UK/US Layout",
     "price": "R1495.00",
     "priceNum": 1495,
-    "image": "/images/macbook-parts-keyboards/29_US-Layout-Laptop-Replacement-Keyboard-for-Apple-MacBook-Pro-Retina-13-inch-A1425-2012-2013-Laptops-shop.asetos.co.za_6c9718f7-e0ed-4b84-83b0-c4b21a6bdfdf.webp?v=4",
+    "image": "/images/macbook-parts-keyboards/29.webp",
     "category": "MacBook Keyboards",
     "isUsed": false,
     "inStock": true
@@ -2934,7 +2934,7 @@ export const allProducts = [
     "title": "MacBook  Pro 17 inch Model A1297 |  Laptop Replacement Keyboard - UK/US Layout",
     "price": "R1495.00",
     "priceNum": 1495,
-    "image": "/images/macbook-parts-keyboards/30_MacBookPro17inchUnibodyModelA1297-shop.asetos.co.za.webp?v=4",
+    "image": "/images/macbook-parts-keyboards/30.webp",
     "category": "MacBook Keyboards",
     "isUsed": false,
     "inStock": true
