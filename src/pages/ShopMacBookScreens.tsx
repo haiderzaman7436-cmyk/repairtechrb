@@ -10,7 +10,7 @@ const initialProducts = [
     "title": "13\" MacBook Air Replacement Display Screen Assembly | A1466 Year MID 2013 - MID 2017  (used)",
     "price": "R3999.00",
     "priceNum": 3999,
-    "image": "/images/macbook-parts-screens/1_MID-2017-EMC2925-A1466-Complete-LCD-Screen-For-Apple-Macbook-Air-13-inch-LCD-Display-Assembly.jpg_q50.jpg?v=4",
+    "image": "/images/macbook-parts-screens/1.webp",
     "category": "MacBook Screens",
     "isUsed": true,
     "inStock": true
@@ -20,7 +20,7 @@ const initialProducts = [
     "title": "16 inch MacBook Pro  Space Grey Replacement Display Screen Assembly | A2141 Late 2019  (Used)",
     "price": "R7999.00",
     "priceNum": 7999,
-    "image": "/images/macbook-parts-screens/2_16inchMacBookProSpaceGreyReplacementDisplayScreen2.jpg?v=4",
+    "image": "/images/macbook-parts-screens/2.webp",
     "category": "MacBook Screens",
     "isUsed": true,
     "inStock": true
@@ -30,7 +30,7 @@ const initialProducts = [
     "title": "13\" MacBook Pro Retina  Replacement Display Screen Assembly | A1425 Year Late 2012 - Early 2013  (used)",
     "price": "R4999.00",
     "priceNum": 4999,
-    "image": "/images/macbook-parts-screens/3_A1425macbookproretinascreen.jpg?v=4",
+    "image": "/images/macbook-parts-screens/3.webp",
     "category": "MacBook Screens",
     "isUsed": true,
     "inStock": true
@@ -40,7 +40,7 @@ const initialProducts = [
     "title": "13\" MacBook Pro Retina Replacement Display Screen Assembly | A1502 Year Late 2013 - Mid 2014  (used)",
     "price": "R4999.00",
     "priceNum": 4999,
-    "image": "/images/macbook-parts-screens/4_A1502-late-2013mid-2014.jpg?v=4",
+    "image": "/images/macbook-parts-screens/4.webp",
     "category": "MacBook Screens",
     "isUsed": true,
     "inStock": true
@@ -50,7 +50,7 @@ const initialProducts = [
     "title": "Macbook Air 13.3\" A1369 Screen Assembly (Premium)",
     "price": "R4982.00",
     "priceNum": 4982,
-    "image": "/images/macbook-parts-screens/5_AS052182.png?v=4",
+    "image": "/images/macbook-parts-screens/5.webp",
     "category": "MacBook Screens",
     "isUsed": false,
     "inStock": true
@@ -60,7 +60,7 @@ const initialProducts = [
     "title": "Macbook Air 13.3\" M2 A2681 Screen Assembly (Premium)",
     "price": "R5979.00",
     "priceNum": 5979,
-    "image": "/images/macbook-parts-screens/6_AS117046.png?v=4",
+    "image": "/images/macbook-parts-screens/6.webp",
     "category": "MacBook Screens",
     "isUsed": false,
     "inStock": true
@@ -70,7 +70,7 @@ const initialProducts = [
     "title": "Macbook Air 15.3\" M2 A2941 Screen Assembly (Premium)",
     "price": "R5979.00",
     "priceNum": 5979,
-    "image": "/images/macbook-parts-screens/7_AS135196_13b07984-a273-4cd0-b449-1218e2f1dc2d.png?v=4",
+    "image": "/images/macbook-parts-screens/7.webp",
     "category": "MacBook Screens",
     "isUsed": false,
     "inStock": true
@@ -80,7 +80,7 @@ const initialProducts = [
     "title": "Macbook Air 15.3\" M2 A2941 Screen Assembly (OEM)",
     "price": "R5979.00",
     "priceNum": 5979,
-    "image": "/images/macbook-parts-screens/8_AS161771.png?v=4",
+    "image": "/images/macbook-parts-screens/8.webp",
     "category": "MacBook Screens",
     "isUsed": false,
     "inStock": true
@@ -90,7 +90,7 @@ const initialProducts = [
     "title": "Macbook Retina Pro 13.3\" A1502 Screen Assembly (OEM)",
     "price": "R5690.00",
     "priceNum": 5690,
-    "image": "/images/macbook-parts-screens/9_AS163854.png?v=4",
+    "image": "/images/macbook-parts-screens/9.webp",
     "category": "MacBook Screens",
     "isUsed": false,
     "inStock": true
@@ -100,7 +100,7 @@ const initialProducts = [
     "title": "A1502 13 inch MacBook Pro Silver Replacement Display Screen Assembly | Early 2015 Model  (Used)",
     "price": "R3999.00",
     "priceNum": 3999,
-    "image": "/images/macbook-parts-screens/10_A150213inchMacBookProSilverReplacementDisplayScreenAssembly.jpg?v=4",
+    "image": "/images/macbook-parts-screens/10.webp",
     "category": "MacBook Screens",
     "isUsed": true,
     "inStock": true
@@ -110,7 +110,7 @@ const initialProducts = [
     "title": "A2338 13 inch MacBook Pro Space Grey Replacement Display Screen Assembly | 2020 Model  (Used)",
     "price": "R6999.00",
     "priceNum": 6999,
-    "image": "/images/macbook-parts-screens/11_A233813inchMacBookProSpaceGreyReplacementDisplayScreenAssembly.jpg?v=4",
+    "image": "/images/macbook-parts-screens/11.webp",
     "category": "MacBook Screens",
     "isUsed": true,
     "inStock": true
@@ -120,7 +120,7 @@ const initialProducts = [
     "title": "A2337 13 inch MacBook Air Space Grey Replacement Display Screen Assembly | 2020 Model  (Used)",
     "price": "R5999.00",
     "priceNum": 5999,
-    "image": "/images/macbook-parts-screens/12_13inchMacBookAirSpaceGreyReplacementDisplayScreenAssemblyA2337.webp?v=4",
+    "image": "/images/macbook-parts-screens/12.webp",
     "category": "MacBook Screens",
     "isUsed": true,
     "inStock": true
@@ -130,7 +130,7 @@ const initialProducts = [
     "title": "15 inch MacBook Pro  Silver Replacement Display Screen Assembly | A1398 Mid 2012  (Used)",
     "price": "R2999.00",
     "priceNum": 2999,
-    "image": "/images/macbook-parts-screens/13_A1502-late-2013mid-2014.png?v=4",
+    "image": "/images/macbook-parts-screens/13.webp",
     "category": "MacBook Screens",
     "isUsed": true,
     "inStock": true
@@ -140,7 +140,7 @@ const initialProducts = [
     "title": "15\" MacBook Pro Retina Touch Replacement Display Screen Assembly | A1990 Late 2018 - 2019  (Resolution = 2880*1800)",
     "price": "R12900.00",
     "priceNum": 12900,
-    "image": "/images/macbook-parts-screens/14_MacBookPro15inchRetinaTouchFullReplacementDisplayScreenAssemblyA1707Late2016-2017_0425df2f-06f3-49fb-a269-35c73ed5b65d.png?v=4",
+    "image": "/images/macbook-parts-screens/14.webp",
     "category": "MacBook Screens",
     "isUsed": false,
     "inStock": true
@@ -150,7 +150,7 @@ const initialProducts = [
     "title": "15\" MacBook Pro Retina Touch Replacement Display Screen Assembly | A1707 Late 2016 - 2017  (used)",
     "price": "R4999.00",
     "priceNum": 4999,
-    "image": "/images/macbook-parts-screens/15_MacBookPro15inchRetinaTouchFullReplacementDisplayScreenAssemblyA1707Late2016-2017.png?v=4",
+    "image": "/images/macbook-parts-screens/15.webp",
     "category": "MacBook Screens",
     "isUsed": true,
     "inStock": true
@@ -160,7 +160,7 @@ const initialProducts = [
     "title": "15\" MacBook Pro Retina  Replacement Display Screen Assembly | A1398 Mid 2012 - Early 2013  (used)",
     "price": "R4999.00",
     "priceNum": 4999,
-    "image": "/images/macbook-parts-screens/16_AppleMacBookPro15inchRetinaReplacementFullDisplayScreenAssemblyA1398Late2013-Mid2014_3bb5cbfc-e821-4bc6-aa9c-536c130711d1.jpg?v=4",
+    "image": "/images/macbook-parts-screens/16.webp",
     "category": "MacBook Screens",
     "isUsed": true,
     "inStock": true
@@ -170,7 +170,7 @@ const initialProducts = [
     "title": "15\" MacBook Pro  Retina Replacement Display Screen Assembly | A1398 Late 2013 - Mid 2014  (used)",
     "price": "R5999.00",
     "priceNum": 5999,
-    "image": "/images/macbook-parts-screens/17_AppleMacBookPro15inchRetinaReplacementFullDisplayScreenAssemblyA1398Late2013-Mid2014.jpg?v=4",
+    "image": "/images/macbook-parts-screens/17.webp",
     "category": "MacBook Screens",
     "isUsed": true,
     "inStock": true
@@ -180,7 +180,7 @@ const initialProducts = [
     "title": "13\" MacBook Pro Retina Touch Bar  Replacement Display Screen Assembly | A1706 Late 2016 - 2017  (used)",
     "price": "R4999.00",
     "priceNum": 4999,
-    "image": "/images/macbook-parts-screens/18_MacBookPro13inchRetinaTouchBarA1706Late2016.png?v=4",
+    "image": "/images/macbook-parts-screens/18.webp",
     "category": "MacBook Screens",
     "isUsed": true,
     "inStock": true
@@ -190,7 +190,7 @@ const initialProducts = [
     "title": "15\" MacBook Pro Retina  Replacement Display Screen Assembly | A1398 Mid 2015  (used)",
     "price": "R6999.00",
     "priceNum": 6999,
-    "image": "/images/macbook-parts-screens/19_Mid-2015-EMC2909-EMC2910-A1398-LCD-Display-Assembly-For-Macbook-Pro-Retina-15-inch-Full-LCD.jpg?v=4",
+    "image": "/images/macbook-parts-screens/19.webp",
     "category": "MacBook Screens",
     "isUsed": true,
     "inStock": true
@@ -200,7 +200,7 @@ const initialProducts = [
     "title": "11\" MacBook Air Replacement Display Screen Assembly | A1465 Year Early 2013 - MID 2015  (used)",
     "price": "R3999.00",
     "priceNum": 3999,
-    "image": "/images/macbook-parts-screens/20_Early-2015-EMC2924-A1465-Complete-LCD-Display-For-Apple-Macbook-Air-11-inch-LCD-Screen-Display.jpg?v=4",
+    "image": "/images/macbook-parts-screens/20.webp",
     "category": "MacBook Screens",
     "isUsed": true,
     "inStock": true
