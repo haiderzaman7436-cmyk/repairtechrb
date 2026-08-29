@@ -70,12 +70,12 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       if (existing) {
         newItems = prev.map(i => i.id === product.id ? { ...i, quantity: i.quantity + quantity } : i);
       } else {
-        newItems = [...prev, { 
-          id: product.id, 
-          title: product.title, 
-          priceNum: product.priceNum, 
+        newItems = [...prev, {
+          id: product.id,
+          title: product.title,
+          priceNum: product.priceNum,
           image: product.image,
-          quantity 
+          quantity
         }];
       }
       saveCart(newItems);

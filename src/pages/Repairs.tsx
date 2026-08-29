@@ -17,12 +17,19 @@ export default function Repairs() {
     }
   }, [location]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Simulate form submission
-    setTimeout(() => {
-      setSubmitted(true);
-    }, 800);
+    
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get('name');
+    const phone = formData.get('phone');
+    const device = formData.get('device');
+    const issue = formData.get('issue');
+
+    const message = `*New Repair Request*%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Service:* ${selectedService}%0A*Device Model:* ${device}%0A*Issue:* ${issue}`;
+    
+    const waUrl = `https://wa.me/27621172653?text=${message}`;
+    window.open(waUrl, '_blank');
   };
 
   const services = [
@@ -61,8 +68,8 @@ export default function Repairs() {
             <Wrench size={18} color="var(--lime)" />
             <span style={{ fontSize: '0.85rem', fontWeight: 'bold', letterSpacing: '1px' }}>EXPERT REPAIR SERVICES</span>
           </div>
-          <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: '900', marginBottom: '1rem', fontFamily: 'var(--font-sans)', lineHeight: '1.1' }}>
-            Fast, Reliable & <span style={{ color: 'var(--lime)' }}>Professional</span>
+          <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: '900', marginBottom: '1rem', fontFamily: 'var(--font-sans)', lineHeight: '1.1', color: 'var(--white)' }}>
+            Fast, Reliable & <span style={{ color: '#38bdf8' }}>Professional</span>
           </h1>
           <p style={{ fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto', color: 'var(--gray-light)', opacity: 0.9 }}>
             From shattered screens to data recovery, our certified technicians in Rosebank are ready to bring your device back to life.
@@ -171,8 +178,8 @@ export default function Repairs() {
                   <ShieldCheck size={28} />
                 </div>
                 <div>
-                  <h4 style={{ fontSize: '1.1rem', fontWeight: '700', marginBottom: '0.25rem', color: 'var(--navy)' }}>6-Month Warranty</h4>
-                  <p style={{ color: 'var(--gray-dark)', fontSize: '0.95rem', lineHeight: '1.5' }}>We stand by our work. All replacement parts and repair labor come with a comprehensive 6-month warranty.</p>
+                  <h4 style={{ fontSize: '1.1rem', fontWeight: '700', marginBottom: '0.25rem', color: 'var(--navy)' }}>Trusted Professionals</h4>
+                  <p style={{ color: 'var(--gray-dark)', fontSize: '0.95rem', lineHeight: '1.5' }}>Our certified technicians have years of experience repairing a wide range of devices with precision and care.</p>
                 </div>
               </div>
 

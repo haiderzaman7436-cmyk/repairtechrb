@@ -19,7 +19,7 @@ export default function StoreLocation() {
                 <div style={{ color: 'var(--lime)', marginTop: '2px' }}><MapPin size={24} /></div>
                 <div>
                   <h4 style={{ color: 'var(--navy)', fontSize: '1rem', margin: '0 0 0.25rem' }}>Address</h4>
-                  <p style={{ color: 'var(--gray-dark)', margin: 0, lineHeight: 1.5 }}>The Median building<br/>50 Bath Avenue<br/>Rosebank, Johannesburg, 2196</p>
+                  <p style={{ color: 'var(--gray-dark)', margin: 0, lineHeight: 1.5 }}>The Median building<br/>50 Bath Avenue<br/>Rosebank, Johannesburg, 2196<br/>South Africa</p>
                 </div>
               </div>
               
@@ -43,7 +43,7 @@ export default function StoreLocation() {
                 <div style={{ color: 'var(--lime)', marginTop: '2px' }}><Clock size={24} /></div>
                 <div>
                   <h4 style={{ color: 'var(--navy)', fontSize: '1rem', margin: '0 0 0.25rem' }}>Business Hours</h4>
-                  <p style={{ color: 'var(--gray-dark)', margin: 0, lineHeight: 1.5 }}>Monday - Friday: 9:00 AM - 9:00 PM<br/>Saturday - Sunday: 9:00 AM - 8:00 PM</p>
+                  <p style={{ color: 'var(--gray-dark)', margin: 0, lineHeight: 1.5 }}>Mon - Fri: 09:00 AM - 09:00 PM<br/>Sat - Sun: 09:00 AM - 08:00 PM</p>
                 </div>
               </div>
             </div>

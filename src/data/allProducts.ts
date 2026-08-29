@@ -1,4 +1,4 @@
-export const allProducts = [
+﻿export const allProducts = [
   {
     "id": 1,
     "inStock": true,
@@ -964,7 +964,7 @@ export const allProducts = [
     "inStock": true,
     "isUsed": false,
     "category": "LAPTOP CHARGER",
-    "title": "40W Microsoft Surface RT 10.6″ Generic AC Adapter Magnetic 5PIN-TIP Laptop Charger",
+    "title": "40W Microsoft Surface RT 10.6â€³ Generic AC Adapter Magnetic 5PIN-TIP Laptop Charger",
     "price": "R 575.00",
     "priceNum": 575,
     "image": "/images/laptop-parts-chargers/21.webp"
@@ -1194,7 +1194,7 @@ export const allProducts = [
     "inStock": true,
     "isUsed": false,
     "category": "LAPTOP CHARGER",
-    "title": "65W Dell Generic AC Adapter / Laptop Charger | 19.5V, 3.34A (7.4mm×5.0mm)",
+    "title": "65W Dell Generic AC Adapter / Laptop Charger | 19.5V, 3.34A (7.4mmÃ—5.0mm)",
     "price": "R 460.00",
     "priceNum": 460,
     "image": "/images/laptop-parts-chargers/44.webp"
@@ -1751,7 +1751,7 @@ export const allProducts = [
   },
   {
     "id": 10211034235128,
-    "title": "Asus TUF Gaming B860M-Plus Wi-Fi M-ATX Motherboard – Intel LGA1851, DDR5, PCIe 5.0. Wi-Fi 7 (New)",
+    "title": "Asus TUF Gaming B860M-Plus Wi-Fi M-ATX Motherboard â€“ Intel LGA1851, DDR5, PCIe 5.0. Wi-Fi 7 (New)",
     "price": "R6189.00",
     "priceNum": 6189,
     "image": "/images/gaming-computers/29_TUFGAMINGB860M-PLUSWIFI-wr-07.webp?v=4",
@@ -1974,7 +1974,7 @@ export const allProducts = [
     "inStock": true,
     "isUsed": false,
     "category": "LAPTOP KEYBOARD",
-    "title": "Samsung NP300 (15.6″) NP300E5C-A01US Laptop Replacement Keyboard - US Layout",
+    "title": "Samsung NP300 (15.6â€³) NP300E5C-A01US Laptop Replacement Keyboard - US Layout",
     "price": "R 620.00",
     "priceNum": 620,
     "image": "/images/laptop-parts-keyboards/21.webp"
@@ -3224,7 +3224,7 @@ export const allProducts = [
     "inStock": true,
     "isUsed": false,
     "category": "LAPTOP MEMORY",
-    "title": "Kingston 16GB RAM DDR4 2666MHz Single Rank SODIMM Laptop Memory Module – KCP426SD8/16",
+    "title": "Kingston 16GB RAM DDR4 2666MHz Single Rank SODIMM Laptop Memory Module â€“ KCP426SD8/16",
     "price": "R 2300.00",
     "priceNum": 2300,
     "image": "/images/laptop-parts-memory/9_kINGSTON16GB.webp?v=2"
@@ -3574,7 +3574,7 @@ export const allProducts = [
     "inStock": true,
     "isUsed": false,
     "category": "LAPTOP STORAGE",
-    "title": "ORICO 2.5′ to 3.5′ HDD|SSD Adapter Black",
+    "title": "ORICO 2.5â€² to 3.5â€² HDD|SSD Adapter Black",
     "price": "R 350.00",
     "priceNum": 350,
     "image": "/images/laptop-parts-storage/1_1125SS-BK-250x250.webp?v=2"
@@ -3621,7 +3621,7 @@ export const allProducts = [
   },
   {
     "id": 10253490520312,
-    "title": "HP EliteBook 820 G3 12.5 Inch Touchscreen Business Laptop – i5 6300U – 8GB DDR4 – 256GB SATA SSD – Win10Pro (Used)",
+    "title": "HP EliteBook 820 G3 12.5 Inch Touchscreen Business Laptop â€“ i5 6300U â€“ 8GB DDR4 â€“ 256GB SATA SSD â€“ Win10Pro (Used)",
     "price": "R4130.00",
     "priceNum": 4130,
     "image": "/images/used-laptops/1_820.webp?v=4",
@@ -3631,7 +3631,7 @@ export const allProducts = [
   },
   {
     "id": 10237926605048,
-    "title": "Lenovo ThinkPad 13 2nd Gen 13.3 Inch Office Laptop – i7 7500U – 16GB DDR4 – 256GB NVMe – Win11Pro (Used)",
+    "title": "Lenovo ThinkPad 13 2nd Gen 13.3 Inch Office Laptop â€“ i7 7500U â€“ 16GB DDR4 â€“ 256GB NVMe â€“ Win11Pro (Used)",
     "price": "R5015.00",
     "priceNum": 5015,
     "image": "/images/used-laptops/2_thinkpad13-2ndgen-clean.webp?v=4",
@@ -3651,7 +3651,7 @@ export const allProducts = [
   },
   {
     "id": 10254993883384,
-    "title": "Lenovo ThinkPad T470 14 Inch Office Laptop – i7 7600U – 16GB DDR4 – 256GB NVMe – Win10Pro (Used)",
+    "title": "Lenovo ThinkPad T470 14 Inch Office Laptop â€“ i7 7600U â€“ 16GB DDR4 â€“ 256GB NVMe â€“ Win10Pro (Used)",
     "price": "R5900.00",
     "priceNum": 5900,
     "image": "/images/used-laptops/4_f47e85fa-b5b9-4ca1-b3a9-a63d15252acb.87ab15c2a2612152b0def1f816a4b032.webp?v=4",
@@ -3671,7 +3671,7 @@ export const allProducts = [
   },
   {
     "id": 10237921263864,
-    "title": "Dell Latitude 5400 14 Inch Business Laptop – i5 8265U – 8GB DDR4 – 500GB NVMe – Win11Pro (Used)",
+    "title": "Dell Latitude 5400 14 Inch Business Laptop â€“ i5 8265U â€“ 8GB DDR4 â€“ 500GB NVMe â€“ Win11Pro (Used)",
     "price": "R6195.00",
     "priceNum": 6195,
     "image": "/images/used-laptops/6_5400_1.4_49b5dfbf-8b3c-424a-8e78-02591c83f87a.webp?v=4",
@@ -3681,7 +3681,7 @@ export const allProducts = [
   },
   {
     "id": 10237929226488,
-    "title": "Lenovo ThinkPad X390 13.3 Inch Business Laptop – Intel Core i5-8265U – 8GB DDR4 – 256GB SATA – Win11Pro (Refurbished)",
+    "title": "Lenovo ThinkPad X390 13.3 Inch Business Laptop â€“ Intel Core i5-8265U â€“ 8GB DDR4 â€“ 256GB SATA â€“ Win11Pro (Refurbished)",
     "price": "R6490.00",
     "priceNum": 6490,
     "image": "/images/used-laptops/7_XX390.webp?v=4",
@@ -3751,7 +3751,7 @@ export const allProducts = [
   },
   {
     "id": 10237927391480,
-    "title": "Dell Latitude 7300 13.3 Inch Business Laptop –  i7-8665U – 8GB DDR4 – 256GB NVMe SSD – Win11Pro (Used)",
+    "title": "Dell Latitude 7300 13.3 Inch Business Laptop â€“  i7-8665U â€“ 8GB DDR4 â€“ 256GB NVMe SSD â€“ Win11Pro (Used)",
     "price": "R7552.00",
     "priceNum": 7552,
     "image": "/images/used-laptops/14_7300_9471ce74-5c7f-4ae8-8fb3-fd56c1774700.webp?v=4",
@@ -4468,5 +4468,1035 @@ export const allProducts = [
     "price": "R 0.00",
     "priceNum": 0,
     "image": "/images/servers/51.webp"
+  },
+  {
+    "id": 1787566365056,
+    "title": "360° Privacy Anti-Glare Full Screen Tempered Glass Screen Protector for iPhone 16 Pro Max Black",
+    "price": "R287.00",
+    "priceNum": 287,
+    "image": "/image/iphone_screen_1787566365056.jpg",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365057,
+    "title": "360° Privacy Anti-Glare Full Screen Tempered Glass Screen Protector for iPhone 16 Pro/17 Black",
+    "price": "R294.00",
+    "priceNum": 294,
+    "image": "/image/iphone_screen_1787566365057.jpg",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365058,
+    "title": "360° Privacy Anti-Glare Full Screen Tempered Glass Screen Protector for iPhone 16 Plus Black",
+    "price": "R299.00",
+    "priceNum": 299,
+    "image": "/image/iphone_screen_1787566365058.jpg",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365059,
+    "title": "Privacy Anti-Glare Fingerprint Unlock Available Full Screen Tempered Glass Screen Protector for Samsung Galaxy S25 Ultra Black",
+    "price": "R299.00",
+    "priceNum": 299,
+    "image": "/image/iphone_screen_1787566365059.jpg",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365060,
+    "title": "iPhone 6 LCD Screen and Digitizer - Black (Premium Aftermarket)",
+    "price": "R575.00",
+    "priceNum": 575,
+    "image": "/image/iphone_screen_1787566365060.jpg",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365061,
+    "title": "iPhone 6 LCD Screen and Digitizer - White (Premium Aftermarket)",
+    "price": "R575.00",
+    "priceNum": 575,
+    "image": "/image/iphone_screen_1787566365061.jpg",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365062,
+    "title": "iPhone 6 Plus LCD Screen and Digitizer - Black (Premium Aftermarket)",
+    "price": "R690.00",
+    "priceNum": 690,
+    "image": "/image/iphone_screen_1787566365062.jpg",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365063,
+    "title": "iPhone 6 Plus LCD Screen and Digitizer - White(Premium Aftermarket)",
+    "price": "R690.00",
+    "priceNum": 690,
+    "image": "/image/iphone_screen_1787566365063.jpg",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365064,
+    "title": "iPhone 7 LCD Screen and Digitizer - Black (Aftermarket)",
+    "price": "R690.00",
+    "priceNum": 690,
+    "image": "/image/iphone_screen_1787566365064.jpg",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365065,
+    "title": "iPhone 7 LCD Screen and Digitizer - White (Premium Aftermarket)",
+    "price": "R690.00",
+    "priceNum": 690,
+    "image": "/image/iphone_screen_1787566365065.jpg",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365066,
+    "title": "iPhone 7 Plus LCD Screen and Digitizer - Black (Premium Aftermarket)",
+    "price": "R690.00",
+    "priceNum": 690,
+    "image": "/image/iphone_screen_1787566365066.jpg",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365067,
+    "title": "iPhone 7 Plus LCD Screen and Digitizer - White (Premium Aftermarket)",
+    "price": "R690.00",
+    "priceNum": 690,
+    "image": "/image/iphone_screen_1787566365067.jpg",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365068,
+    "title": "iPhone 8 / SE (2020) LCD Screen and Digitizer (Premium Aftermarket)",
+    "price": "R690.00",
+    "priceNum": 690,
+    "image": "/image/iphone_screen_1787566365068.jpg",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365069,
+    "title": "iPhone 8 / SE (2020) LCD Screen and Digitizer - Black (Premium Aftermarket)",
+    "price": "R690.00",
+    "priceNum": 690,
+    "image": "/image/iphone_screen_1787566365069.jpg",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365070,
+    "title": "iPhone 8 Plus LCD Screen Assembly (Premium)",
+    "price": "R844.00",
+    "priceNum": 844,
+    "image": "/image/iphone_screen_1787566365070.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365071,
+    "title": "iPhone 14 OLED Screen Assembly (OEM)",
+    "price": "R982.00",
+    "priceNum": 982,
+    "image": "/image/iphone_screen_1787566365071.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365072,
+    "title": "iPhone XS Max LCD (Incell) Screen Assembly (Premium)",
+    "price": "R1060.00",
+    "priceNum": 1060,
+    "image": "/image/iphone_screen_1787566365072.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365073,
+    "title": "iPhone 15 Plus OLED Screen Assembly (OEM)",
+    "price": "R1088.00",
+    "priceNum": 1088,
+    "image": "/image/iphone_screen_1787566365073.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365074,
+    "title": "iPhone 14 Pro Max OLED Screen Assembly (OEM)",
+    "price": "R1098.00",
+    "priceNum": 1098,
+    "image": "/image/iphone_screen_1787566365074.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365075,
+    "title": "iPhone 14 Pro OLED Screen Assembly (OEM)",
+    "price": "R1098.00",
+    "priceNum": 1098,
+    "image": "/image/iphone_screen_1787566365075.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365076,
+    "title": "iPhone 14 Plus OLED Screen Assembly (OEM)",
+    "price": "R1196.00",
+    "priceNum": 1196,
+    "image": "/image/iphone_screen_1787566365076.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365077,
+    "title": "iPhone XS LCD (Incell) Screen Assembly (Premium)",
+    "price": "R1292.00",
+    "priceNum": 1292,
+    "image": "/image/iphone_screen_1787566365077.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365078,
+    "title": "iPhone 7 LCD Screen Assembly (OEM)",
+    "price": "R1350.00",
+    "priceNum": 1350,
+    "image": "/image/iphone_screen_1787566365078.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365079,
+    "title": "iPhone XS Max LCD (Incell) Screen Assembly (Premium)",
+    "price": "R1388.00",
+    "priceNum": 1388,
+    "image": "/image/iphone_screen_1787566365079.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365080,
+    "title": "iPhone 8 LCD (Incell) Screen Assembly (Premium)",
+    "price": "R1606.00",
+    "priceNum": 1606,
+    "image": "/image/iphone_screen_1787566365080.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365081,
+    "title": "iPhone 8 LCD (Incell) Screen Assembly (Premium)",
+    "price": "R1606.00",
+    "priceNum": 1606,
+    "image": "/image/iphone_screen_1787566365081.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365082,
+    "title": "iPhone 8 LCD Screen Assembly (Premium)",
+    "price": "R1606.00",
+    "priceNum": 1606,
+    "image": "/image/iphone_screen_1787566365082.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365083,
+    "title": "iPhone 8 LCD Screen Assembly (Premium)",
+    "price": "R1606.00",
+    "priceNum": 1606,
+    "image": "/image/iphone_screen_1787566365083.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365084,
+    "title": "iPhone 8 LCD Screen Assembly (Refurbished)",
+    "price": "R1606.00",
+    "priceNum": 1606,
+    "image": "/image/iphone_screen_1787566365084.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365085,
+    "title": "iPhone 15 Pro LCD (Incell) Screen Assembly (Premium)",
+    "price": "R1680.00",
+    "priceNum": 1680,
+    "image": "/image/iphone_screen_1787566365085.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365086,
+    "title": "iPhone XS Max LCD (Incell) Screen Assembly (Premium)",
+    "price": "R1718.00",
+    "priceNum": 1718,
+    "image": "/image/iphone_screen_1787566365086.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365087,
+    "title": "iPhone 14 Pro LCD (Incell) Screen Assembly (Premium)",
+    "price": "R1780.00",
+    "priceNum": 1780,
+    "image": "/image/iphone_screen_1787566365087.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365088,
+    "title": "iPhone 15 Pro LCD (Incell) Screen Assembly (Premium)",
+    "price": "R1798.00",
+    "priceNum": 1798,
+    "image": "/image/iphone_screen_1787566365088.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365089,
+    "title": "iPhone 6s LCD Screen and Digitizer - Black (Premium Aftermarket)",
+    "price": "R1799.00",
+    "priceNum": 1799,
+    "image": "/image/iphone_screen_1787566365089.jpg",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365090,
+    "title": "iPhone 14 LCD (Incell) Screen Assembly (Premium)",
+    "price": "R1818.00",
+    "priceNum": 1818,
+    "image": "/image/iphone_screen_1787566365090.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365091,
+    "title": "iPhone 11 Pro OLED Screen Assembly (Premium)",
+    "price": "R1840.00",
+    "priceNum": 1840,
+    "image": "/image/iphone_screen_1787566365091.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365092,
+    "title": "iPhone 14 LCD (Incell) Screen Assembly (Premium)",
+    "price": "R1876.00",
+    "priceNum": 1876,
+    "image": "/image/iphone_screen_1787566365092.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365093,
+    "title": "iPhone 14 Pro Max LCD (Incell) Screen Assembly (Premium)",
+    "price": "R1876.00",
+    "priceNum": 1876,
+    "image": "/image/iphone_screen_1787566365093.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365094,
+    "title": "iPhone 14 Plus LCD (Incell) Screen Assembly (Premium)",
+    "price": "R1914.00",
+    "priceNum": 1914,
+    "image": "/image/iphone_screen_1787566365094.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365095,
+    "title": "iPhone 16e LCD (Incell) Screen Assembly (Premium)",
+    "price": "R1932.00",
+    "priceNum": 1932,
+    "image": "/image/iphone_screen_1787566365095.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365096,
+    "title": "iPhone 6s LCD Screen and Digitizer - White (Premium Aftermarket)",
+    "price": "R1949.00",
+    "priceNum": 1949,
+    "image": "/image/iphone_screen_1787566365096.jpg",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365097,
+    "title": "iPhone 15 LCD (Incell) Screen Assembly (Premium)",
+    "price": "R1984.00",
+    "priceNum": 1984,
+    "image": "/image/iphone_screen_1787566365097.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365098,
+    "title": "iPhone 15 Plus LCD (Incell) Screen Assembly (Premium)",
+    "price": "R1984.00",
+    "priceNum": 1984,
+    "image": "/image/iphone_screen_1787566365098.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365099,
+    "title": "iPhone 14 Plus LCD (Incell) Screen Assembly (Premium)",
+    "price": "R2042.00",
+    "priceNum": 2042,
+    "image": "/image/iphone_screen_1787566365099.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365100,
+    "title": "iPhone 13 OLED Screen Assembly (Premium)",
+    "price": "R2160.00",
+    "priceNum": 2160,
+    "image": "/image/iphone_screen_1787566365100.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365101,
+    "title": "iPhone 12 Mini LCD (Incell) Screen Assembly (Premium)",
+    "price": "R2172.00",
+    "priceNum": 2172,
+    "image": "/image/iphone_screen_1787566365101.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365102,
+    "title": "iPhone 15 Pro LCD (Incell) Screen Assembly (Premium)",
+    "price": "R2192.00",
+    "priceNum": 2192,
+    "image": "/image/iphone_screen_1787566365102.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365103,
+    "title": "iPhone 14 Pro LCD (Incell) Screen Assembly (Premium)",
+    "price": "R2230.00",
+    "priceNum": 2230,
+    "image": "/image/iphone_screen_1787566365103.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365104,
+    "title": "iPhone 15 LCD (Incell) Screen Assembly (Premium)",
+    "price": "R2230.00",
+    "priceNum": 2230,
+    "image": "/image/iphone_screen_1787566365104.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365105,
+    "title": "iPhone XR LCD (Incell) Screen Assembly (Premium)",
+    "price": "R2268.00",
+    "priceNum": 2268,
+    "image": "/image/iphone_screen_1787566365105.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365106,
+    "title": "iPhone XR LCD (Incell) Screen Assembly (Premium)",
+    "price": "R2268.00",
+    "priceNum": 2268,
+    "image": "/image/iphone_screen_1787566365106.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365107,
+    "title": "iPhone XR LCD (Incell) Screen Assembly (Premium)",
+    "price": "R2268.00",
+    "priceNum": 2268,
+    "image": "/image/iphone_screen_1787566365107.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365108,
+    "title": "iPhone XR LCD Screen Assembly (OEM)",
+    "price": "R2268.00",
+    "priceNum": 2268,
+    "image": "/image/iphone_screen_1787566365108.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365109,
+    "title": "iPhone XR LCD Screen Assembly (Refurbished)",
+    "price": "R2268.00",
+    "priceNum": 2268,
+    "image": "/image/iphone_screen_1787566365109.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365110,
+    "title": "iPhone 12 Mini LCD (Incell) Screen Assembly (Premium)",
+    "price": "R2422.00",
+    "priceNum": 2422,
+    "image": "/image/iphone_screen_1787566365110.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365111,
+    "title": "iPhone 14 Pro Max LCD (Incell) Screen Assembly (Premium)",
+    "price": "R2538.00",
+    "priceNum": 2538,
+    "image": "/image/iphone_screen_1787566365111.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365112,
+    "title": "iPhone 15 Pro Max LCD (Incell) Screen Assembly (Premium)",
+    "price": "R2538.00",
+    "priceNum": 2538,
+    "image": "/image/iphone_screen_1787566365112.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365113,
+    "title": "iPhone 16 Plus LCD (Incell) Screen Assembly (Premium)",
+    "price": "R2614.00",
+    "priceNum": 2614,
+    "image": "/image/iphone_screen_1787566365113.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365114,
+    "title": "iPhone 16 LCD (Incell) Screen Assembly (Premium)",
+    "price": "R2634.00",
+    "priceNum": 2634,
+    "image": "/image/iphone_screen_1787566365114.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365115,
+    "title": "iPhone 16 Plus LCD (Incell) Screen Assembly (Premium)",
+    "price": "R2710.00",
+    "priceNum": 2710,
+    "image": "/image/iphone_screen_1787566365115.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365116,
+    "title": "iPhone 16 Pro Max LCD (Incell) Screen Assembly (Premium)",
+    "price": "R2710.00",
+    "priceNum": 2710,
+    "image": "/image/iphone_screen_1787566365116.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365117,
+    "title": "iPhone 11 LCD (Incell) Screen Assembly (Premium)",
+    "price": "R2760.00",
+    "priceNum": 2760,
+    "image": "/image/iphone_screen_1787566365117.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365118,
+    "title": "iPhone 11 LCD (Incell) Screen Assembly (Premium)",
+    "price": "R2760.00",
+    "priceNum": 2760,
+    "image": "/image/iphone_screen_1787566365118.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365119,
+    "title": "iPhone 11 LCD (Incell) Screen Assembly (Premium)",
+    "price": "R2760.00",
+    "priceNum": 2760,
+    "image": "/image/iphone_screen_1787566365119.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365120,
+    "title": "iPhone 11 LCD (Incell) Screen Assembly (Premium)",
+    "price": "R2760.00",
+    "priceNum": 2760,
+    "image": "/image/iphone_screen_1787566365120.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365121,
+    "title": "iPhone 11 LCD (Incell) Screen Assembly (Premium)",
+    "price": "R2760.00",
+    "priceNum": 2760,
+    "image": "/image/iphone_screen_1787566365121.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365122,
+    "title": "iPhone 11 LCD Screen Assembly (OEM)",
+    "price": "R2760.00",
+    "priceNum": 2760,
+    "image": "/image/iphone_screen_1787566365122.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365123,
+    "title": "iPhone 11 LCD Screen Assembly (Premium)",
+    "price": "R2760.00",
+    "priceNum": 2760,
+    "image": "/image/iphone_screen_1787566365123.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365124,
+    "title": "iPhone 11 LCD Screen Assembly (Refurbished)",
+    "price": "R2760.00",
+    "priceNum": 2760,
+    "image": "/image/iphone_screen_1787566365124.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365125,
+    "title": "iPhone X LCD Screen and Digitizer (Premium Aftermarket)",
+    "price": "R2800.00",
+    "priceNum": 2800,
+    "image": "/image/iphone_screen_1787566365125.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365126,
+    "title": "iPhone 15 Pro Max LCD (Incell) Screen Assembly (Premium)",
+    "price": "R2806.00",
+    "priceNum": 2806,
+    "image": "/image/iphone_screen_1787566365126.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365127,
+    "title": "iPhone 11 LCD Screen Assembly (Premium)",
+    "price": "R3190.00",
+    "priceNum": 3190,
+    "image": "/image/iphone_screen_1787566365127.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365128,
+    "title": "iPhone 8 Plus LCD Screen Assembly (Refurbished)",
+    "price": "R3284.00",
+    "priceNum": 3284,
+    "image": "/image/iphone_screen_1787566365128.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365129,
+    "title": "iPhone 8 Plus LCD Screen Assembly (Refurbished)",
+    "price": "R3284.00",
+    "priceNum": 3284,
+    "image": "/image/iphone_screen_1787566365129.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365130,
+    "title": "iPhone XS OLED Screen Assembly (OEM)",
+    "price": "R3284.00",
+    "priceNum": 3284,
+    "image": "/image/iphone_screen_1787566365130.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365131,
+    "title": "iPhone 11 Pro LCD (Incell) Screen Assembly (Premium)",
+    "price": "R3418.00",
+    "priceNum": 3418,
+    "image": "/image/iphone_screen_1787566365131.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365132,
+    "title": "iPhone 11 Pro LCD (Incell) Screen Assembly (Premium)",
+    "price": "R3418.00",
+    "priceNum": 3418,
+    "image": "/image/iphone_screen_1787566365132.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365133,
+    "title": "iPhone 11 Pro Max LCD (Incell) Screen Assembly (Premium)",
+    "price": "R3526.00",
+    "priceNum": 3526,
+    "image": "/image/iphone_screen_1787566365133.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365134,
+    "title": "iPhone 11 Pro Max LCD (Incell) Screen Assembly (Premium)",
+    "price": "R3526.00",
+    "priceNum": 3526,
+    "image": "/image/iphone_screen_1787566365134.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365135,
+    "title": "iPhone X LCD (Incell) Screen Assembly (Premium)",
+    "price": "R3570.00",
+    "priceNum": 3570,
+    "image": "/image/iphone_screen_1787566365135.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365136,
+    "title": "iPhone X LCD (Incell) Screen Assembly (Premium)",
+    "price": "R3570.00",
+    "priceNum": 3570,
+    "image": "/image/iphone_screen_1787566365136.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365137,
+    "title": "iPhone X LCD (Incell) Screen Assembly (Premium)",
+    "price": "R3570.00",
+    "priceNum": 3570,
+    "image": "/image/iphone_screen_1787566365137.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365138,
+    "title": "iPhone XS Max OLED Screen Assembly (OEM)",
+    "price": "R3898.00",
+    "priceNum": 3898,
+    "image": "/image/iphone_screen_1787566365138.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365139,
+    "title": "iPhone X OLED Screen Assembly (OEM)",
+    "price": "R3960.00",
+    "priceNum": 3960,
+    "image": "/image/iphone_screen_1787566365139.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365140,
+    "title": "iPhone 16 Pro Max LCD (Incell) Screen Assembly (Premium)",
+    "price": "R3990.00",
+    "priceNum": 3990,
+    "image": "/image/iphone_screen_1787566365140.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365141,
+    "title": "iPhone 12 Pro Max OLED Screen Assembly (OEM)",
+    "price": "R4806.00",
+    "priceNum": 4806,
+    "image": "/image/iphone_screen_1787566365141.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365142,
+    "title": "iPhone 12 LCD (Incell) Screen Assembly (Premium)",
+    "price": "R5040.00",
+    "priceNum": 5040,
+    "image": "/image/iphone_screen_1787566365142.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365143,
+    "title": "iPhone 12 LCD (Incell) Screen Assembly (Premium)",
+    "price": "R5040.00",
+    "priceNum": 5040,
+    "image": "/image/iphone_screen_1787566365143.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365144,
+    "title": "iPhone 12 LCD (Incell) Screen Assembly (Premium)",
+    "price": "R5040.00",
+    "priceNum": 5040,
+    "image": "/image/iphone_screen_1787566365144.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365145,
+    "title": "iPhone 13 Mini LCD (Incell) Screen Assembly (Premium)",
+    "price": "R5270.00",
+    "priceNum": 5270,
+    "image": "/image/iphone_screen_1787566365145.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365146,
+    "title": "iPhone 13 Mini LCD (Incell) Screen Assembly (Premium)",
+    "price": "R5270.00",
+    "priceNum": 5270,
+    "image": "/image/iphone_screen_1787566365146.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365147,
+    "title": "iPhone 13 Mini LCD (Incell) Screen Assembly (Premium)",
+    "price": "R5270.00",
+    "priceNum": 5270,
+    "image": "/image/iphone_screen_1787566365147.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365148,
+    "title": "iPhone 13 LCD (Incell) Screen Assembly (Premium)",
+    "price": "R6120.00",
+    "priceNum": 6120,
+    "image": "/image/iphone_screen_1787566365148.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365149,
+    "title": "iPhone 13 LCD (Incell) Screen Assembly (Premium)",
+    "price": "R6120.00",
+    "priceNum": 6120,
+    "image": "/image/iphone_screen_1787566365149.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365150,
+    "title": "iPhone 13 Pro LCD (Incell) Screen Assembly (Premium)",
+    "price": "R6502.00",
+    "priceNum": 6502,
+    "image": "/image/iphone_screen_1787566365150.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365151,
+    "title": "iPhone 13 Pro LCD (Incell) Screen Assembly (Premium)",
+    "price": "R6502.00",
+    "priceNum": 6502,
+    "image": "/image/iphone_screen_1787566365151.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365152,
+    "title": "iPhone 13 Pro LCD (Incell) Screen Assembly (Premium)",
+    "price": "R6502.00",
+    "priceNum": 6502,
+    "image": "/image/iphone_screen_1787566365152.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365153,
+    "title": "iPhone 12 Pro Max LCD (Incell) Screen Assembly (Premium)",
+    "price": "R6518.00",
+    "priceNum": 6518,
+    "image": "/image/iphone_screen_1787566365153.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365154,
+    "title": "iPhone 12 Pro Max LCD (Incell) Screen Assembly (Premium)",
+    "price": "R6518.00",
+    "priceNum": 6518,
+    "image": "/image/iphone_screen_1787566365154.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365155,
+    "title": "iPhone 12 Pro Max LCD (Incell) Screen Assembly (Premium)",
+    "price": "R6518.00",
+    "priceNum": 6518,
+    "image": "/image/iphone_screen_1787566365155.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365156,
+    "title": "iPhone 13 Pro Max LCD (Incell) Screen Assembly (Premium)",
+    "price": "R6926.00",
+    "priceNum": 6926,
+    "image": "/image/iphone_screen_1787566365156.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365157,
+    "title": "iPhone 13 Pro Max LCD (Incell) Screen Assembly (Premium)",
+    "price": "R6926.00",
+    "priceNum": 6926,
+    "image": "/image/iphone_screen_1787566365157.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
+  },
+  {
+    "id": 1787566365158,
+    "title": "iPhone 13 Pro Max LCD (Incell) Screen Assembly (Premium)",
+    "price": "R6926.00",
+    "priceNum": 6926,
+    "image": "/image/iphone_screen_1787566365158.png",
+    "category": "Phones/Screens",
+    "isUsed": false,
+    "inStock": true
   }
 ];

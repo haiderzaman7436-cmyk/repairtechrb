@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export type FiltersState = {
@@ -24,6 +25,7 @@ export default function ShopSidebar({
   onPriceChange, 
   onApplyPrice 
 }: ShopSidebarProps) {
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   const renderCheckbox = (category: keyof FiltersState, label: string) => {
     const isChecked = filters[category].includes(label);
@@ -43,8 +45,16 @@ export default function ShopSidebar({
   const hasActiveFilters = Object.values(filters).some(arr => arr.length > 0) || priceRange.min !== '' || priceRange.max !== '';
 
   return (
-    <aside className="shop-sidebar">
-      {hasActiveFilters && (
+    <aside className="shop-sidebar-container">
+      <button 
+        className="mobile-filter-toggle d-md-none" 
+        onClick={() => setIsMobileOpen(!isMobileOpen)}
+      >
+        {isMobileOpen ? 'Hide Filters' : 'Show Filters'}
+      </button>
+
+      <div className={`shop-sidebar ${isMobileOpen ? 'open' : ''}`}>
+        {hasActiveFilters && (
         <div style={{ marginBottom: '1.5rem' }}>
           <button 
             onClick={onClearAll}
@@ -125,6 +135,7 @@ export default function ShopSidebar({
         <h5>Want us to check why?</h5>
         <p>Whatever your laptop issue is, bring it in and let's get it sorted.</p>
         <Link to="/shop/repairs" className="btn btn-lime" style={{ display: 'block', textAlign: 'center', textDecoration: 'none' }}>BOOK A REPAIR</Link>
+      </div>
       </div>
     </aside>
   );

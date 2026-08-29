@@ -53,7 +53,7 @@ export default function ProductGrid({ title, subtitle, tabs, products }: Product
                 {product.isUsed && <span className="shop-tag-used">USED</span>}
               </div>
               <div className="shop-product-img-box" style={{ height: '220px', overflow: 'hidden', marginBottom: '1rem', borderRadius: '8px' }}>
-                <img src={product.image} alt={product.title} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src={product.image} alt={product.title} loading="lazy" width="800" height="800" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div className="shop-product-category">{product.category}</div>
               <h3 className="shop-product-title">{product.title}</h3>

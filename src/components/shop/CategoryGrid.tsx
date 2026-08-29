@@ -37,7 +37,7 @@ export default function CategoryGrid({ title, subtitle, items }: CategoryGridPro
           {items.map((item, idx) => (
             <Link to={getSlug(item.name, isMacParts)} className="shop-category-card" key={idx} style={{ textDecoration: 'none' }}>
               <div className="shop-category-img-box" style={{ height: '200px', overflow: 'hidden', borderRadius: '8px' }}>
-                <img src={item.image} alt={item.name} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src={item.image} alt={item.name} loading="lazy" width="800" height="533" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <h3 className="shop-category-name">{item.name}</h3>
               <p className="shop-category-desc">{item.desc}</p>

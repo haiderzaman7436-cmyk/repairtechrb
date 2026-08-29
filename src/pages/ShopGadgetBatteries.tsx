@@ -9,7 +9,7 @@ const initialProducts: any[] = [
     "title": "iPhone XS Replacement Battery (Premium)",
     "price": "R954.00",
     "priceNum": 954.0,
-    "image": "/images/gadget-batteries/AS080898_d5a6e522-5b80-465b-ac25-f1be28e8d278.png",
+    "image": "/images/gadget-batteries/AS080898_d5a6e522-5b80-465b-ac25-f1be28e8d278.webp",
     "category": "Gadget Batteries",
     "isUsed": false,
     "inStock": true
@@ -19,7 +19,7 @@ const initialProducts: any[] = [
     "title": "iPhone X Replacement Battery (OEM)",
     "price": "R1060.00",
     "priceNum": 1060.0,
-    "image": "/images/gadget-batteries/AS127750_ac80a96f-8021-48a2-b23d-a52d022e0643.png",
+    "image": "/images/gadget-batteries/AS127750_ac80a96f-8021-48a2-b23d-a52d022e0643.webp",
     "category": "Gadget Batteries",
     "isUsed": false,
     "inStock": true
@@ -29,7 +29,7 @@ const initialProducts: any[] = [
     "title": "iPhone 16e Replacement Battery (Premium)",
     "price": "R3537.00",
     "priceNum": 3537.0,
-    "image": "/images/gadget-batteries/AS161965_61efa6f9-a20f-4fc0-a984-a4abe317aa84.png",
+    "image": "/images/gadget-batteries/AS161965_61efa6f9-a20f-4fc0-a984-a4abe317aa84.webp",
     "category": "Gadget Batteries",
     "isUsed": false,
     "inStock": true
@@ -39,7 +39,7 @@ const initialProducts: any[] = [
     "title": "iPhone SE 2022 Replacement Battery (OEM)",
     "price": "R1060.00",
     "priceNum": 1060.0,
-    "image": "/images/gadget-batteries/AS111136_040023da-f9ea-4547-a54c-f681f17efa64.png",
+    "image": "/images/gadget-batteries/AS111136_040023da-f9ea-4547-a54c-f681f17efa64.webp",
     "category": "Gadget Batteries",
     "isUsed": false,
     "inStock": true
@@ -49,7 +49,7 @@ const initialProducts: any[] = [
     "title": "iPhone SE 2020 Replacement Battery (OEM)",
     "price": "R1060.00",
     "priceNum": 1060.0,
-    "image": "/images/gadget-batteries/AS067692.png",
+    "image": "/images/gadget-batteries/AS067692.webp",
     "category": "Gadget Batteries",
     "isUsed": false,
     "inStock": true
@@ -59,7 +59,7 @@ const initialProducts: any[] = [
     "title": "iPhone 8 Replacement Battery (Premium)",
     "price": "R650.00",
     "priceNum": 650.0,
-    "image": "/images/gadget-batteries/AS005505.png",
+    "image": "/images/gadget-batteries/AS005505.webp",
     "category": "Gadget Batteries",
     "isUsed": false,
     "inStock": true
@@ -69,7 +69,7 @@ const initialProducts: any[] = [
     "title": "iPhone 8 Replacement Battery (OEM)",
     "price": "R722.00",
     "priceNum": 722.0,
-    "image": "/images/gadget-batteries/AS005392_72e66742-784b-41d6-83e7-862b0eedad87.png",
+    "image": "/images/gadget-batteries/AS005392_72e66742-784b-41d6-83e7-862b0eedad87.webp",
     "category": "Gadget Batteries",
     "isUsed": false,
     "inStock": true
@@ -79,7 +79,7 @@ const initialProducts: any[] = [
     "title": "iPhone SE 2020 Replacement Battery (OEM)",
     "price": "R1060.00",
     "priceNum": 1060.0,
-    "image": "/images/gadget-batteries/AS127736.png",
+    "image": "/images/gadget-batteries/AS127736.webp",
     "category": "Gadget Batteries",
     "isUsed": false,
     "inStock": true
@@ -89,7 +89,7 @@ const initialProducts: any[] = [
     "title": "iPhone 8 Plus Li-Ion Replacement Battery 2691mAh",
     "price": "R450.00",
     "priceNum": 450.0,
-    "image": "/images/gadget-batteries/iPhone8PlusLi-IonReplacementBattery2691mAh.png",
+    "image": "/images/gadget-batteries/iPhone8PlusLi-IonReplacementBattery2691mAh.webp",
     "category": "Gadget Batteries",
     "isUsed": false,
     "inStock": true
@@ -99,7 +99,7 @@ const initialProducts: any[] = [
     "title": "iPhone 8 Replacement Battery (OEM)",
     "price": "R722.00",
     "priceNum": 722.0,
-    "image": "/images/gadget-batteries/AS127753.png",
+    "image": "/images/gadget-batteries/AS127753.webp",
     "category": "Gadget Batteries",
     "isUsed": false,
     "inStock": true
@@ -109,7 +109,7 @@ const initialProducts: any[] = [
     "title": "iPhone 8 Plus Replacement Battery (OEM)",
     "price": "R1060.00",
     "priceNum": 1060.0,
-    "image": "/images/gadget-batteries/AS005391.png",
+    "image": "/images/gadget-batteries/AS005391.webp",
     "category": "Gadget Batteries",
     "isUsed": false,
     "inStock": true
@@ -119,7 +119,7 @@ const initialProducts: any[] = [
     "title": "iPhone 8 Plus Back Cover (Black) (OEM)",
     "price": "R1128.00",
     "priceNum": 1128.0,
-    "image": "/images/gadget-batteries/AS053711.png",
+    "image": "/images/gadget-batteries/AS053711.webp",
     "category": "Gadget Batteries",
     "isUsed": false,
     "inStock": true
@@ -129,7 +129,7 @@ const initialProducts: any[] = [
     "title": "iPhone 8 Back Cover (Black) (OEM)",
     "price": "R1128.00",
     "priceNum": 1128.0,
-    "image": "/images/gadget-batteries/AS053710.png",
+    "image": "/images/gadget-batteries/AS053710.webp",
     "category": "Gadget Batteries",
     "isUsed": false,
     "inStock": true
@@ -139,7 +139,7 @@ const initialProducts: any[] = [
     "title": "iPhone 7 Replacement Battery (OEM)",
     "price": "R722.00",
     "priceNum": 722.0,
-    "image": "/images/gadget-batteries/AS005394.png",
+    "image": "/images/gadget-batteries/AS005394.webp",
     "category": "Gadget Batteries",
     "isUsed": false,
     "inStock": true
@@ -149,7 +149,7 @@ const initialProducts: any[] = [
     "title": "iPhone 6S Replacement Battery (OEM)",
     "price": "R1060.00",
     "priceNum": 1060.0,
-    "image": "/images/gadget-batteries/AS005396.png",
+    "image": "/images/gadget-batteries/AS005396.webp",
     "category": "Gadget Batteries",
     "isUsed": false,
     "inStock": true
@@ -159,7 +159,7 @@ const initialProducts: any[] = [
     "title": "iPhone 6S Replacement Battery (OEM)",
     "price": "R1060.00",
     "priceNum": 1060.0,
-    "image": "/images/gadget-batteries/AS127759.png",
+    "image": "/images/gadget-batteries/AS127759.webp",
     "category": "Gadget Batteries",
     "isUsed": false,
     "inStock": true
@@ -169,7 +169,7 @@ const initialProducts: any[] = [
     "title": "iPhone 6s Plus Li-Ion Replacement Battery 2750mAh",
     "price": "R299.00",
     "priceNum": 299.0,
-    "image": "/images/gadget-batteries/iPhone6sPlusLi-IonReplacementBattery2750mAh-2.png",
+    "image": "/images/gadget-batteries/iPhone6sPlusLi-IonReplacementBattery2750mAh-2.webp",
     "category": "Gadget Batteries",
     "isUsed": false,
     "inStock": true
@@ -179,7 +179,7 @@ const initialProducts: any[] = [
     "title": "iPhone 16 Replacement Battery (Premium)",
     "price": "R2122.00",
     "priceNum": 2122.0,
-    "image": "/images/gadget-batteries/AS165697_86ee2ff9-d9e6-4826-801f-09a726d0fc45.png",
+    "image": "/images/gadget-batteries/AS165697_86ee2ff9-d9e6-4826-801f-09a726d0fc45.webp",
     "category": "Gadget Batteries",
     "isUsed": false,
     "inStock": true
@@ -189,7 +189,7 @@ const initialProducts: any[] = [
     "title": "iPhone 16 Pro Replacement Battery (OEM)",
     "price": "R1060.00",
     "priceNum": 1060.0,
-    "image": "/images/gadget-batteries/AS152692.png",
+    "image": "/images/gadget-batteries/AS152692.webp",
     "category": "Gadget Batteries",
     "isUsed": false,
     "inStock": true
@@ -199,7 +199,7 @@ const initialProducts: any[] = [
     "title": "iPhone 16 Plus Replacement Battery (OEM)",
     "price": "R1060.00",
     "priceNum": 1060.0,
-    "image": "/images/gadget-batteries/AS152694.png",
+    "image": "/images/gadget-batteries/AS152694.webp",
     "category": "Gadget Batteries",
     "isUsed": false,
     "inStock": true
@@ -209,7 +209,7 @@ const initialProducts: any[] = [
     "title": "iPhone 16 Pro Max Replacement Battery (OEM)",
     "price": "R1156.00",
     "priceNum": 1156.0,
-    "image": "/images/gadget-batteries/AS152690.png",
+    "image": "/images/gadget-batteries/AS152690.webp",
     "category": "Gadget Batteries",
     "isUsed": false,
     "inStock": true
@@ -219,7 +219,7 @@ const initialProducts: any[] = [
     "title": "iPhone 16 Plus Replacement Battery (Premium)",
     "price": "R3006.00",
     "priceNum": 3006.0,
-    "image": "/images/gadget-batteries/AS165698_527ea45f-012f-42b3-9b2b-bd5bfb0f5410.png",
+    "image": "/images/gadget-batteries/AS165698_527ea45f-012f-42b3-9b2b-bd5bfb0f5410.webp",
     "category": "Gadget Batteries",
     "isUsed": false,
     "inStock": true
@@ -229,7 +229,7 @@ const initialProducts: any[] = [
     "title": "iPhone 15 Replacement Battery (OEM)",
     "price": "R1060.00",
     "priceNum": 1060.0,
-    "image": "/images/gadget-batteries/AS139199_55a3d2e5-90c3-4d39-92db-b3aa2832731e.png",
+    "image": "/images/gadget-batteries/AS139199_55a3d2e5-90c3-4d39-92db-b3aa2832731e.webp",
     "category": "Gadget Batteries",
     "isUsed": false,
     "inStock": true
@@ -239,7 +239,7 @@ const initialProducts: any[] = [
     "title": "iPhone 15 Pro Replacement Battery (Premium)",
     "price": "R2212.00",
     "priceNum": 2212.0,
-    "image": "/images/gadget-batteries/AS133391.png",
+    "image": "/images/gadget-batteries/AS133391.webp",
     "category": "Gadget Batteries",
     "isUsed": false,
     "inStock": true

@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getAnalytics } from 'firebase/analytics';
+
 import { getFirestore } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
 import { getStorage } from 'firebase/storage';
@@ -18,10 +18,29 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// Initialize Firebase services (conditionally initialize analytics for SSR compatibility)
-export const analytics = typeof window !== 'undefined' ? getAnalytics(app) : null;
+// Initialize Firebase services
 export const db = getFirestore(app);
 export const auth = getAuth(app);
 export const storage = getStorage(app);
+
+// Defer analytics initialization to improve First Contentful Paint (FCP)
+export let analytics: any = null;
+if (typeof window !== 'undefined') {
+  const initAnalytics = async () => {
+    try {
+      const { getAnalytics } = await import('firebase/analytics');
+      analytics = getAnalytics(app);
+    } catch (e) {
+      console.error('Failed to load analytics', e);
+    }
+  };
+
+  // Wait for the browser to be idle before loading analytics
+  if ('requestIdleCallback' in window) {
+    (window as any).requestIdleCallback(initAnalytics);
+  } else {
+    setTimeout(initAnalytics, 3000); // Fallback delay
+  }
+}
 
 export default app;

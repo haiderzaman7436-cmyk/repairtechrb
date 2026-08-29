@@ -39,18 +39,7 @@ export default function ShopHeader() {
       <div className="shop-main-header" style={{ background: '#ffffff' }}>
         <div className="container shop-header-inner">
           <Link to="/" className="shop-logo" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', gap: '12px' }}>
-            <img 
-              src="/logos/logo.png" 
-              alt="Repair Tech Logo Icon" 
-              className="shop-logo-img"
-              style={{ 
-                height: '70px',
-                minHeight: '70px',
-                width: 'auto',
-                flexShrink: 0,
-                objectFit: 'contain'
-              }} 
-            />
+            <img src="/logos/logo.png" alt="Repair Tech Logo" width="54" height="54" style={{ height: '54px', width: '54px', objectFit: 'contain', flexShrink: 0 }} />
             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
               <span style={{ fontFamily: 'var(--font-sans)', fontSize: '1.6rem', fontWeight: 900, color: 'var(--navy-dark)', lineHeight: 1, letterSpacing: '-0.5px', textTransform: 'uppercase' }}>
                 Repair Tech
@@ -110,7 +99,7 @@ export default function ShopHeader() {
               </Link>
             )}
 
-            <Link to="/cart" className="shop-action-item">
+            <Link to="/cart" className="shop-action-item" aria-label="View Cart">
               <span className="shop-action-icon" style={{ color: 'var(--lime)', position: 'relative' }}>
                 <ShoppingCart size={22} />
                 {totalItems > 0 && <span className="cart-badge">{totalItems}</span>}
@@ -121,7 +110,7 @@ export default function ShopHeader() {
               </div>
             </Link>
 
-            <button className="mobile-menu-btn" onClick={() => setIsMobileMenuOpen(true)}>
+            <button className="mobile-menu-btn" onClick={() => setIsMobileMenuOpen(true)} aria-label="Open Mobile Menu">
               <Menu size={28} color="var(--navy)" />
             </button>
           </div>

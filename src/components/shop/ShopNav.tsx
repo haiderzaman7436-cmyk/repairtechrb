@@ -10,7 +10,7 @@ export default function ShopNav() {
     { label: 'LAPTOP PARTS', to: '/shop', dropdown: ['Memory', 'Screens', 'Chargers', 'Batteries', 'Keyboards', 'Storage'] },
     { label: 'MACBOOK PARTS', to: '/shop', dropdown: ['Screens', 'Batteries', 'Chargers', 'Keyboards', 'Mac RAM/SSD'] },
     { label: 'USED/REFURBS', to: '/shop', dropdown: ['Gaming', 'Laptops', 'Desktops', 'Monitors', 'Servers', 'Components'] },
-    { label: 'GADGETS', to: '/shop', dropdown: ['Screen', 'Batteries', 'Back Covers', 'Charging Port', 'Accessories'] },
+    { label: 'PHONES', to: '/shop', dropdown: ['Screen', 'Batteries', 'Back Covers', 'Charging Port', 'Accessories'] },
     { label: 'NETWORK', to: '/shop', dropdown: ['Routers', 'Switches', 'Access Points', 'Server Parts', 'Transceivers (SFP)'] },
     { label: 'REPAIRS', to: '/shop', dropdown: ['Book a Repair', 'Laptop Repair', 'MacBook Repair', 'Screen Replacement', 'Phone Repair', 'Data Recovery', 'SSD & RAM Upgrades'] }
   ];
@@ -39,7 +39,7 @@ export default function ShopNav() {
 
   return (
     <>
-      <nav className="shop-nav" ref={navRef}>
+      <nav className="shop-nav hide-on-mobile" ref={navRef}>
         <div className="container shop-nav-inner">
           {links.map((link, idx) => (
             <div 
@@ -57,46 +57,50 @@ export default function ShopNav() {
               {link.dropdown && (
                 <div className={`shop-dropdown-menu ${hoveredIndex === idx ? 'is-open' : ''}`}>
                   <div className="shop-dropdown-border"></div>
-                  {link.dropdown.map((sub, subIdx) => (
-                    <Link 
-                      key={subIdx} 
-                      to={
-                        link.label === 'MACBOOK PARTS' && sub === 'Screens' ? '/shop/macbook-parts/screens' :
-                        link.label === 'MACBOOK PARTS' && sub === 'Batteries' ? '/shop/macbook-parts/batteries' :
-                        link.label === 'MACBOOK PARTS' && sub === 'Chargers' ? '/shop/macbook-parts/chargers' :
-                        link.label === 'MACBOOK PARTS' && sub === 'Keyboards' ? '/shop/macbook-parts/keyboards' :
-                        link.label === 'MACBOOK PARTS' && sub === 'Mac RAM/SSD' ? '/shop/macbook-parts/ram-ssd' :
-                        link.label === 'LAPTOP PARTS' && sub === 'Screens' ? '/shop/laptop-parts/screens' :
-                        link.label === 'LAPTOP PARTS' && sub === 'Batteries' ? '/shop/laptop-parts/batteries' :
-                        link.label === 'LAPTOP PARTS' && sub === 'Chargers' ? '/shop/laptop-parts/chargers' :
-                        link.label === 'LAPTOP PARTS' && sub === 'Keyboards' ? '/shop/laptop-parts/keyboards' :
-                        link.label === 'USED/REFURBS' && sub === 'Laptops' ? '/shop/used-laptops' :
-                        link.label === 'USED/REFURBS' && sub === 'Desktops' ? '/shop/desktops' :
-                        link.label === 'USED/REFURBS' && sub === 'Monitors' ? '/shop/monitors' :
-                        link.label === 'USED/REFURBS' && sub === 'Servers' ? '/shop/servers' :
-                        link.label === 'USED/REFURBS' && sub === 'Components' ? '/shop/components' :
-                        link.label === 'GADGETS' && sub === 'Screen' ? '/shop/gadgets/screens' :
-                        link.label === 'GADGETS' && sub === 'Batteries' ? '/shop/gadgets/batteries' :
-                        link.label === 'GADGETS' && sub === 'Back Covers' ? '/shop/gadgets/covers' :
-                        link.label === 'GADGETS' && sub === 'Charging Port' ? '/shop/gadgets/ports' :
-                        link.label === 'GADGETS' && sub === 'Accessories' ? '/shop/gadgets/accessories' :
-                        link.label === 'NETWORK' && sub === 'Routers' ? '/shop/network/routers' :
-                        link.label === 'NETWORK' && sub === 'Switches' ? '/shop/network/switches' :
-                        link.label === 'NETWORK' && sub === 'Access Points' ? '/shop/network/access-points' :
-                        link.label === 'NETWORK' && sub === 'Server Parts' ? '/shop/network/server-parts' :
-                        link.label === 'NETWORK' && sub === 'Transceivers (SFP)' ? '/shop/network/transceivers' :
-                        link.label === 'REPAIRS' ? `/shop/repairs?service=${encodeURIComponent(sub)}` :
-                        sub === 'Gaming' ? '/shop/gaming-computers' :
-                        sub === 'Memory' ? '/shop/laptop-parts/memory' : 
-                        sub === 'Storage (HDD/SSD)' ? '/shop/laptop-parts/storage' : 
-                        '/shop'
-                      } 
-                      className="shop-dropdown-item"
-                      onClick={() => setHoveredIndex(null)}
-                    >
-                      {sub}
-                    </Link>
-                  ))}
+                  <div style={{ display: 'flex', width: '100%', justifyContent: 'center' }}>
+                    <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+                      {link.dropdown.map((sub, subIdx) => (
+                        <Link 
+                          key={subIdx} 
+                          to={
+                            link.label === 'MACBOOK PARTS' && sub === 'Screens' ? '/shop/macbook-parts/screens' :
+                            link.label === 'MACBOOK PARTS' && sub === 'Batteries' ? '/shop/macbook-parts/batteries' :
+                            link.label === 'MACBOOK PARTS' && sub === 'Chargers' ? '/shop/macbook-parts/chargers' :
+                            link.label === 'MACBOOK PARTS' && sub === 'Keyboards' ? '/shop/macbook-parts/keyboards' :
+                            link.label === 'MACBOOK PARTS' && sub === 'Mac RAM/SSD' ? '/shop/macbook-parts/ram-ssd' :
+                            link.label === 'LAPTOP PARTS' && sub === 'Screens' ? '/shop/laptop-parts/screens' :
+                            link.label === 'LAPTOP PARTS' && sub === 'Batteries' ? '/shop/laptop-parts/batteries' :
+                            link.label === 'LAPTOP PARTS' && sub === 'Chargers' ? '/shop/laptop-parts/chargers' :
+                            link.label === 'LAPTOP PARTS' && sub === 'Keyboards' ? '/shop/laptop-parts/keyboards' :
+                            link.label === 'USED/REFURBS' && sub === 'Laptops' ? '/shop/used-laptops' :
+                            link.label === 'USED/REFURBS' && sub === 'Desktops' ? '/shop/desktops' :
+                            link.label === 'USED/REFURBS' && sub === 'Monitors' ? '/shop/monitors' :
+                            link.label === 'USED/REFURBS' && sub === 'Servers' ? '/shop/servers' :
+                            link.label === 'USED/REFURBS' && sub === 'Components' ? '/shop/components' :
+                            link.label === 'PHONES' && sub === 'Screen' ? '/shop/gadgets/screens' :
+                            link.label === 'PHONES' && sub === 'Batteries' ? '/shop/gadgets/batteries' :
+                            link.label === 'PHONES' && sub === 'Back Covers' ? '/shop/gadgets/covers' :
+                            link.label === 'PHONES' && sub === 'Charging Port' ? '/shop/gadgets/ports' :
+                            link.label === 'PHONES' && sub === 'Accessories' ? '/shop/gadgets/accessories' :
+                            link.label === 'NETWORK' && sub === 'Routers' ? '/shop/network/routers' :
+                            link.label === 'NETWORK' && sub === 'Switches' ? '/shop/network/switches' :
+                            link.label === 'NETWORK' && sub === 'Access Points' ? '/shop/network/access-points' :
+                            link.label === 'NETWORK' && sub === 'Server Parts' ? '/shop/network/server-parts' :
+                            link.label === 'NETWORK' && sub === 'Transceivers (SFP)' ? '/shop/network/transceivers' :
+                            link.label === 'REPAIRS' ? `/shop/repairs?service=${encodeURIComponent(sub)}` :
+                            sub === 'Gaming' ? '/shop/gaming-computers' :
+                            sub === 'Memory' ? '/shop/laptop-parts/memory' : 
+                            sub === 'Storage (HDD/SSD)' ? '/shop/laptop-parts/storage' : 
+                            '/shop'
+                          } 
+                          className="shop-dropdown-item"
+                          onClick={() => setHoveredIndex(null)}
+                        >
+                          {sub}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               )}
             </div>

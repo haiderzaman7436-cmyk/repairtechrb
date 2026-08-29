@@ -12,10 +12,10 @@ interface SEOProps {
 export default function SEO({ 
   title, 
   description, 
-  keywords = "laptop repair rosebank, computer repair johannesburg, phone repair, macbook screen replacement, asetos computers", 
+  keywords = "laptop repair rosebank, computer repair johannesburg, phone repair, macbook screen replacement, repair tech", 
   type = "website",
   url = "https://repairtechrb.co.za",
-  image = "https://repairtechrb.co.za/images/banner_casing.jpg"
+  image = "https://repairtechrb.co.za/images/banner_casing.webp"
 }: SEOProps) {
   
   const siteTitle = `${title} | RepairTech Rosebank`;

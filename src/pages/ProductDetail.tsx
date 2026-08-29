@@ -9,6 +9,7 @@ export default function ProductDetail() {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('description');
   const [qty, setQty] = useState(1);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const { addToCart } = useCart();
 
   const product = location.state?.product;
@@ -21,6 +22,12 @@ export default function ProductDetail() {
     }
     window.scrollTo(0, 0);
   }, [product, navigate]);
+
+  useEffect(() => {
+    if (product) {
+      setSelectedImage(product.image);
+    }
+  }, [product]);
 
   if (!product) return null;
 
@@ -84,22 +91,30 @@ export default function ProductDetail() {
           <div className="pdp-gallery">
             {product.isUsed && <span className="pdp-tag-used">USED</span>}
             <div className="pdp-main-image-container" style={{ position: 'relative' }}>
-              <div className="premium-badge">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                  <polyline points="9 12 11 14 15 10"/>
-                </svg>
-                VERIFIED PART
+              <img 
+                src={(selectedImage || product.image).split('?')[0] + '?v=2'} 
+                alt={product.title} 
+                className="pdp-main-image" 
+                fetchPriority="high" 
+                decoding="sync" 
+              />
+            </div>
+            
+            {/* Real Thumbnails - Only show if product has multiple images */}
+            {product.images && product.images.length > 1 && (
+              <div className="pdp-thumbnails">
+                {product.images.map((img: string, idx: number) => (
+                  <div 
+                    key={idx} 
+                    className={`pdp-thumbnail ${(selectedImage || product.image) === img ? 'active' : ''}`}
+                    onClick={() => setSelectedImage(img)}
+                    style={{ cursor: 'pointer' }}
+                  >
+                    <img src={img.split('?')[0] + '?v=2'} alt={`Thumb ${idx + 1}`} />
+                  </div>
+                ))}
               </div>
-              <img src={product.image.split('?')[0] + '?v=2'} alt={product.title} className="pdp-main-image" />
-            </div>
-            {/* Mock Thumbnails */}
-            <div className="pdp-thumbnails">
-              <div className="pdp-thumbnail active"><img src={product.image.split('?')[0] + '?v=2'} alt="Thumb 1" /></div>
-              <div className="pdp-thumbnail"><img src={product.image.split('?')[0] + '?v=2'} alt="Thumb 2" /></div>
-              <div className="pdp-thumbnail"><img src={product.image.split('?')[0] + '?v=2'} alt="Thumb 3" /></div>
-              <div className="pdp-thumbnail"><img src={product.image.split('?')[0] + '?v=2'} alt="Thumb 4" /></div>
-            </div>
+            )}
           </div>
 
           {/* Info Section */}
@@ -120,7 +135,7 @@ export default function ProductDetail() {
                 {product.inStock ? <><Check size={16} /> IN STOCK AT LOCAL SUPPLIER</> : <><Info size={16} /> OUT OF STOCK</>}
               </div>
               <p className="pdp-stock-text">
-                If ordered before 10AM, delivered in 1-2 business days (main centres) or 4-6 business days (regional areas or large items). Collection from Asetos available in 1-2 business days.
+                If ordered before 10AM, delivered in 1-2 business days (main centres) or 4-6 business days (regional areas or large items). Collection from RepairTech available in 1-2 business days.
               </p>
             </div>
 
@@ -190,7 +205,7 @@ export default function ProductDetail() {
 
                 <div className="pdp-info-blocks">
                   <div className="pdp-info-block">
-                    <strong>Delivery:</strong> In stock at our Rosebank branch (Shop G15, The Zone, Rosebank); collect same day or get nationwide courier delivery in 1 to 2 business days.
+                    <strong>Delivery:</strong> In stock at our Rosebank branch (The Median building, 50 Bath Avenue, Rosebank, Johannesburg, 2196, South Africa); collect same day or get nationwide courier delivery in 1 to 2 business days.
                   </div>
                   <div className="pdp-info-block">
                     <strong>Condition:</strong> {product.isUsed ? 'A pre-owned (second hand) part in perfect condition, tested and backed by our warranty.' : 'A brand new replacement part, tested and backed by our warranty.'}

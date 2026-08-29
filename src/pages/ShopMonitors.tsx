@@ -325,61 +325,55 @@ export default function ShopMonitors() {
   );
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 mb-8">
-        <h1 className="text-4xl font-bold tracking-tight text-gray-900">Used / Refurbished Monitors</h1>
-        <div className="flex items-center">
-          <select
-            value={sortBy}
-            onChange={(e) => setSortBy(e.target.value)}
-            className="rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-blue-500 focus:outline-none focus:ring-blue-500 sm:text-sm"
-          >
-            <option value="price-ascending">Price: Low to High</option>
-            <option value="price-descending">Price: High to Low</option>
-            <option value="title-ascending">Alphabetically: A-Z</option>
-            <option value="title-descending">Alphabetically: Z-A</option>
-          </select>
+    <div className="category-page">
+      <div className="container">
+        <div className="breadcrumb" style={{ margin: '2rem 0 1rem', fontSize: '0.8rem', color: 'var(--gray-dark)' }}>
+          Home &gt; Used / Refurbished Monitors
         </div>
-      </div>
+        
+        <div className="category-header">
+          <div style={{ display: 'flex', alignItems: 'baseline', gap: '1rem' }}>
+            <h1>Used / Refurbished Monitors</h1>
+            <span style={{ color: 'var(--gray-dark)', fontSize: '0.9rem' }}>{filteredProducts.length} products</span>
+          </div>
+          <div className="sort-box">
+            <select className="sort-select" value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
+              <option value="price-ascending">Price: Low to High</option>
+              <option value="price-descending">Price: High to Low</option>
+              <option value="alphabetical">Alphabetically, A-Z</option>
+              <option value="latest">Latest</option>
+            </select>
+          </div>
+        </div>
 
-      <div className="flex flex-col md:flex-row gap-8">
-        <div className="w-full md:w-64 flex-shrink-0">
+        <div className="category-layout">
           <ShopSidebar
             filters={filters}
             onFilterChange={handleFilterChange}
             onClearAll={handleClearAll}
-            priceInput={priceInput}
+            priceRange={priceInput}
             onPriceChange={handlePriceChange}
             onApplyPrice={handleApplyPrice}
           />
-        </div>
-        
-        <div className="flex-1">
-          {currentProducts.length === 0 ? (
-            <div className="text-center py-12">
-              <h3 className="text-lg font-medium text-gray-900">No products found</h3>
-              <p className="mt-2 text-sm text-gray-500">Try adjusting your filters to see more results.</p>
-              <button
-                onClick={handleClearAll}
-                className="mt-4 text-blue-600 hover:text-blue-500 font-medium"
-              >
-                Clear all filters
-              </button>
-            </div>
-          ) : (
-            <>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8">
-                {currentProducts.map(product => (
-                  <CategoryProductCard key={product.id} product={product} />
-                ))}
+          
+          <div className="category-main">
+            {currentProducts.length > 0 ? (
+              <>
+                <div className="cat-product-grid">
+                  {currentProducts.map(product => (
+                    <CategoryProductCard key={product.id} {...product} />
+                  ))}
+                </div>
+                <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
+              </>
+            ) : (
+              <div style={{ textAlign: 'center', padding: '4rem 0', color: 'var(--gray-dark)' }}>
+                <h3>No products found</h3>
+                <p>Try adjusting your filters or search criteria.</p>
+                <button className="btn btn-navy" onClick={handleClearAll} style={{ marginTop: '1rem' }}>Clear all filters</button>
               </div>
-              <Pagination
-                currentPage={currentPage}
-                totalPages={totalPages}
-                onPageChange={setCurrentPage}
-              />
-            </>
-          )}
+            )}
+          </div>
         </div>
       </div>
     </div>

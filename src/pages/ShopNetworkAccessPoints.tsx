@@ -9,7 +9,7 @@ const initialProducts: any[] = [
     "title": "Zyxel WAP3205 \u2014 Wireless Access Point (Used)",
     "price": "R950.00",
     "priceNum": 950.0,
-    "image": "/images/network-access-points/01_a0568657-c2e4-4e72-8baf-1fcedef37197.png",
+    "image": "/images/network-access-points/01_a0568657-c2e4-4e72-8baf-1fcedef37197.webp",
     "category": "Network Access Points",
     "isUsed": true,
     "inStock": true
@@ -19,7 +19,7 @@ const initialProducts: any[] = [
     "title": "TP-Link EAP783 BE19000 | Wi-Fi 7 Tri-Band | Dual 10G Ethernet | Ceiling-Mount Access Point (New)",
     "price": "R8260.00",
     "priceNum": 8260.0,
-    "image": "/images/network-access-points/01_9db8a579-5b55-4ab8-bce1-efef60760da9.png",
+    "image": "/images/network-access-points/01_9db8a579-5b55-4ab8-bce1-efef60760da9.webp",
     "category": "Network Access Points",
     "isUsed": false,
     "inStock": true
@@ -29,7 +29,7 @@ const initialProducts: any[] = [
     "title": "Samsung WEC8050 \u2014 Wireless LAN Access Point Controller (Used)",
     "price": "R1350.00",
     "priceNum": 1350.0,
-    "image": "/images/network-access-points/01_ec8e9660-425a-4982-986e-07f584d08077.png",
+    "image": "/images/network-access-points/01_ec8e9660-425a-4982-986e-07f584d08077.webp",
     "category": "Network Access Points",
     "isUsed": true,
     "inStock": true
@@ -39,7 +39,7 @@ const initialProducts: any[] = [
     "title": "Sophos AP 30 Rev 2 \u2014 Wireless Access Point (Used)",
     "price": "R1000.00",
     "priceNum": 1000.0,
-    "image": "/images/network-access-points/01_585c8bfb-cb9e-4656-80c4-c54564b96181.png",
+    "image": "/images/network-access-points/01_585c8bfb-cb9e-4656-80c4-c54564b96181.webp",
     "category": "Network Access Points",
     "isUsed": true,
     "inStock": true
@@ -49,7 +49,7 @@ const initialProducts: any[] = [
     "title": "Open-Mesh OM5P-AC \u2014 Dual-Band Cloud-Managed Access Point, No Adapter (Used)",
     "price": "R800.00",
     "priceNum": 800.0,
-    "image": "/images/network-access-points/01_3931016d-5a63-45fd-841d-719fd603419a.png",
+    "image": "/images/network-access-points/01_3931016d-5a63-45fd-841d-719fd603419a.webp",
     "category": "Network Access Points",
     "isUsed": true,
     "inStock": true
@@ -59,7 +59,7 @@ const initialProducts: any[] = [
     "title": "Open-Mesh MR900 \u2014 Wireless Access Point (Used)",
     "price": "R1000.00",
     "priceNum": 1000.0,
-    "image": "/images/network-access-points/01_c887e82a-8cc7-45f3-9b75-56bb269412c5.png",
+    "image": "/images/network-access-points/01_c887e82a-8cc7-45f3-9b75-56bb269412c5.webp",
     "category": "Network Access Points",
     "isUsed": true,
     "inStock": true
@@ -69,7 +69,7 @@ const initialProducts: any[] = [
     "title": "Open Mesh OM2P-HS \u2014 Wireless-N Access Point (Used)",
     "price": "R950.00",
     "priceNum": 950.0,
-    "image": "/images/network-access-points/om2.png",
+    "image": "/images/network-access-points/om2.webp",
     "category": "Network Access Points",
     "isUsed": true,
     "inStock": true
@@ -79,7 +79,7 @@ const initialProducts: any[] = [
     "title": "MikroTik hAP 2.4GHz 1.5dBi 5 Port Ethernet WiFi Router | RB951Ui-2nD",
     "price": "R1030.00",
     "priceNum": 1030.0,
-    "image": "/images/network-access-points/RB-HAP_2020-05-11_15-43-30_r0q0FVHLgl.png",
+    "image": "/images/network-access-points/RB-HAP_2020-05-11_15-43-30_r0q0FVHLgl.webp",
     "category": "Network Access Points",
     "isUsed": false,
     "inStock": true
@@ -89,7 +89,7 @@ const initialProducts: any[] = [
     "title": "Huawei AP8050TN-HD \u2014 Outdoor Wi-Fi 6 Access Point (Grade A+)",
     "price": "R7670.00",
     "priceNum": 7670.0,
-    "image": "/images/network-access-points/01_292c4b25-5a0a-4938-b223-97f2fb9a91be.png",
+    "image": "/images/network-access-points/01_292c4b25-5a0a-4938-b223-97f2fb9a91be.webp",
     "category": "Network Access Points",
     "isUsed": false,
     "inStock": true
@@ -99,7 +99,7 @@ const initialProducts: any[] = [
     "title": "Huawei AP8050DN \u2014 Wireless Access Point (Grade A+)",
     "price": "R5310.00",
     "priceNum": 5310.0,
-    "image": "/images/network-access-points/01_25bf8f6a-a21d-4ba9-8dcc-2e78157fb640.png",
+    "image": "/images/network-access-points/01_25bf8f6a-a21d-4ba9-8dcc-2e78157fb640.webp",
     "category": "Network Access Points",
     "isUsed": false,
     "inStock": true
@@ -109,7 +109,7 @@ const initialProducts: any[] = [
     "title": "Huawei AP8150DN \u2014 802.11ac Wave 2 Outdoor Access Point (Refurbished)",
     "price": "R7670.00",
     "priceNum": 7670.0,
-    "image": "/images/network-access-points/01_008accde-3f5b-40b4-a3df-8f6ece70124a.png",
+    "image": "/images/network-access-points/01_008accde-3f5b-40b4-a3df-8f6ece70124a.webp",
     "category": "Network Access Points",
     "isUsed": true,
     "inStock": true
@@ -119,7 +119,7 @@ const initialProducts: any[] = [
     "title": "Huawei AP7060DN \u2014 Wi-Fi 6 Indoor Access Point (Grade A+)",
     "price": "R4130.00",
     "priceNum": 4130.0,
-    "image": "/images/network-access-points/01_d82791d6-c816-41b4-be25-b78962104322.png",
+    "image": "/images/network-access-points/01_d82791d6-c816-41b4-be25-b78962104322.webp",
     "category": "Network Access Points",
     "isUsed": false,
     "inStock": true
@@ -129,7 +129,7 @@ const initialProducts: any[] = [
     "title": "Huawei AP6050DN \u2014 11ac Wave 2 Indoor 4x4 Dual-Band Access Point (New)",
     "price": "R1500.00",
     "priceNum": 1500.0,
-    "image": "/images/network-access-points/01_6abcfa39-db5b-4a10-9053-eb4033185a26.png",
+    "image": "/images/network-access-points/01_6abcfa39-db5b-4a10-9053-eb4033185a26.webp",
     "category": "Network Access Points",
     "isUsed": false,
     "inStock": true
@@ -139,7 +139,7 @@ const initialProducts: any[] = [
     "title": "Huawei AP6010DN-AGN \u2014 Wireless LAN Access Point (Grade A+)",
     "price": "R3500.00",
     "priceNum": 3500.0,
-    "image": "/images/network-access-points/01_934d2548-d867-4ae7-b9b7-53fe89d2c0e8.png",
+    "image": "/images/network-access-points/01_934d2548-d867-4ae7-b9b7-53fe89d2c0e8.webp",
     "category": "Network Access Points",
     "isUsed": false,
     "inStock": true
@@ -149,7 +149,7 @@ const initialProducts: any[] = [
     "title": "Huawei AP4050DN \u2014 Indoor Dual-Band Access Point (Grade A+)",
     "price": "R2000.00",
     "priceNum": 2000.0,
-    "image": "/images/network-access-points/01_fef8ecaf-46ea-4c08-9ea9-0b4040fa1e34.png",
+    "image": "/images/network-access-points/01_fef8ecaf-46ea-4c08-9ea9-0b4040fa1e34.webp",
     "category": "Network Access Points",
     "isUsed": false,
     "inStock": true
@@ -159,7 +159,7 @@ const initialProducts: any[] = [
     "title": "Huawei AD9431DN-24X \u2014 Central Access Point (Grade B)",
     "price": "R5900.00",
     "priceNum": 5900.0,
-    "image": "/images/network-access-points/ad9431dn-24x.png",
+    "image": "/images/network-access-points/ad9431dn-24x.webp",
     "category": "Network Access Points",
     "isUsed": false,
     "inStock": true
@@ -169,7 +169,7 @@ const initialProducts: any[] = [
     "title": "Huawei AirEngine 9700D-M \u2014 Wireless Access Controller (Refurbished)",
     "price": "R22550.00",
     "priceNum": 22550.0,
-    "image": "/images/network-access-points/01_21af7334-e354-4437-bfb2-11185533b7b7.png",
+    "image": "/images/network-access-points/01_21af7334-e354-4437-bfb2-11185533b7b7.webp",
     "category": "Network Access Points",
     "isUsed": true,
     "inStock": true
@@ -179,7 +179,7 @@ const initialProducts: any[] = [
     "title": "Huawei AP362E \u2014 AX3000 Wi-Fi 6 Dual-Radio Access Point (New)",
     "price": "R2000.00",
     "priceNum": 2000.0,
-    "image": "/images/network-access-points/01_ef1d892e-170f-4187-9b35-e7577a72ac94.png",
+    "image": "/images/network-access-points/01_ef1d892e-170f-4187-9b35-e7577a72ac94.webp",
     "category": "Network Access Points",
     "isUsed": false,
     "inStock": true
@@ -189,7 +189,7 @@ const initialProducts: any[] = [
     "title": "Huawei AirEngine 6760-X1E \u2014 Wi-Fi 6 Access Point (Grade B)",
     "price": "R10030.00",
     "priceNum": 10030.0,
-    "image": "/images/network-access-points/01_a1ad692e-4779-41ad-8ac0-8ba1e3f1bc62.png",
+    "image": "/images/network-access-points/01_a1ad692e-4779-41ad-8ac0-8ba1e3f1bc62.webp",
     "category": "Network Access Points",
     "isUsed": false,
     "inStock": true
@@ -199,7 +199,7 @@ const initialProducts: any[] = [
     "title": "Huawei AirEngine 5760-22WD \u2014 Wi-Fi 6 Wall Plate Access Point (Refurbished)",
     "price": "R4720.00",
     "priceNum": 4720.0,
-    "image": "/images/network-access-points/01_95cedd01-5cce-47b7-a5a1-2a41d989901f.png",
+    "image": "/images/network-access-points/01_95cedd01-5cce-47b7-a5a1-2a41d989901f.webp",
     "category": "Network Access Points",
     "isUsed": true,
     "inStock": true
@@ -209,7 +209,7 @@ const initialProducts: any[] = [
     "title": "HPE Aruba R2H22A AP-504 802.11ax 1.77 Gbit/s Wireless Access Point",
     "price": "R4600.00",
     "priceNum": 4600.0,
-    "image": "/images/network-access-points/ArubaAP.png",
+    "image": "/images/network-access-points/ArubaAP.webp",
     "category": "Network Access Points",
     "isUsed": false,
     "inStock": true
@@ -219,7 +219,7 @@ const initialProducts: any[] = [
     "title": "Dell Ruckus P300 | 802.11ac 5GHz | Outdoor Point-to-Point Bridge | IP67 (New)",
     "price": "R4130.00",
     "priceNum": 4130.0,
-    "image": "/images/network-access-points/01_9fd0543b-3564-4f8c-a601-a3e1136f3e6c.png",
+    "image": "/images/network-access-points/01_9fd0543b-3564-4f8c-a601-a3e1136f3e6c.webp",
     "category": "Network Access Points",
     "isUsed": false,
     "inStock": true
@@ -229,7 +229,7 @@ const initialProducts: any[] = [
     "title": "D-Link DWL-8610AP \u2014 AC1750 Dual-Band Access Point (Grade B)",
     "price": "R1150.00",
     "priceNum": 1150.0,
-    "image": "/images/network-access-points/01_0d8c00a6-6265-4b90-a99b-1a259458a284.png",
+    "image": "/images/network-access-points/01_0d8c00a6-6265-4b90-a99b-1a259458a284.webp",
     "category": "Network Access Points",
     "isUsed": false,
     "inStock": true
@@ -239,7 +239,7 @@ const initialProducts: any[] = [
     "title": "EnGenius EAP300 \u2014 N300 Indoor Wireless Access Point (Grade A+)",
     "price": "R1000.00",
     "priceNum": 1000.0,
-    "image": "/images/network-access-points/01_0b6435c7-ca4b-4131-831b-73d1f0c920e8.png",
+    "image": "/images/network-access-points/01_0b6435c7-ca4b-4131-831b-73d1f0c920e8.webp",
     "category": "Network Access Points",
     "isUsed": false,
     "inStock": true

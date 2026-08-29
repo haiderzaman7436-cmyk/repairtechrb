@@ -9,7 +9,7 @@ const initialProducts: any[] = [
     "title": "iPhone SE 2022 Charging Port Flex (Premium)",
     "price": "R934.00",
     "priceNum": 934.0,
-    "image": "/images/gadget-ports/AS119688_e4f37ff3-b407-4087-8aa9-a826af314f86.png",
+    "image": "/images/gadget-ports/AS119688_e4f37ff3-b407-4087-8aa9-a826af314f86.webp",
     "category": "Gadget Ports",
     "isUsed": false,
     "inStock": true
@@ -19,7 +19,7 @@ const initialProducts: any[] = [
     "title": "iPhone XS Max Charging Port Flex (Premium)",
     "price": "R934.00",
     "priceNum": 934.0,
-    "image": "/images/gadget-ports/AS007334.png",
+    "image": "/images/gadget-ports/AS007334.webp",
     "category": "Gadget Ports",
     "isUsed": false,
     "inStock": true
@@ -29,7 +29,7 @@ const initialProducts: any[] = [
     "title": "iPhone XS Charging Port Flex (Premium)",
     "price": "R934.00",
     "priceNum": 934.0,
-    "image": "/images/gadget-ports/AS007541.png",
+    "image": "/images/gadget-ports/AS007541.webp",
     "category": "Gadget Ports",
     "isUsed": false,
     "inStock": true
@@ -39,7 +39,7 @@ const initialProducts: any[] = [
     "title": "iPhone XR Charging Port Flex (Premium)",
     "price": "R934.00",
     "priceNum": 934.0,
-    "image": "/images/gadget-ports/AS007736.png",
+    "image": "/images/gadget-ports/AS007736.webp",
     "category": "Gadget Ports",
     "isUsed": false,
     "inStock": true
@@ -49,7 +49,7 @@ const initialProducts: any[] = [
     "title": "iPhone 8 Plus Charging Port Flex (OEM)",
     "price": "R934.00",
     "priceNum": 934.0,
-    "image": "/images/gadget-ports/AS069658.png",
+    "image": "/images/gadget-ports/AS069658.webp",
     "category": "Gadget Ports",
     "isUsed": false,
     "inStock": true
@@ -59,7 +59,7 @@ const initialProducts: any[] = [
     "title": "iPhone XS Charging Port Flex (OEM)",
     "price": "R934.00",
     "priceNum": 934.0,
-    "image": "/images/gadget-ports/AS069662_179f034f-dae2-44e2-a4ef-ea04ff14eabc.png",
+    "image": "/images/gadget-ports/AS069662_179f034f-dae2-44e2-a4ef-ea04ff14eabc.webp",
     "category": "Gadget Ports",
     "isUsed": false,
     "inStock": true
@@ -69,7 +69,7 @@ const initialProducts: any[] = [
     "title": "iPhone SE 2020 Charging Port Flex (OEM)",
     "price": "R934.00",
     "priceNum": 934.0,
-    "image": "/images/gadget-ports/AS105244.png",
+    "image": "/images/gadget-ports/AS105244.webp",
     "category": "Gadget Ports",
     "isUsed": false,
     "inStock": true
@@ -79,7 +79,7 @@ const initialProducts: any[] = [
     "title": "iPhone 8 Charging Port Flex (OEM)",
     "price": "R934.00",
     "priceNum": 934.0,
-    "image": "",
+    "image": "/images/gadget-ports/AS069655.webp",
     "category": "Gadget Ports",
     "isUsed": false,
     "inStock": true
@@ -89,7 +89,7 @@ const initialProducts: any[] = [
     "title": "iPhone 7 Charging Port Flex (OEM)",
     "price": "R934.00",
     "priceNum": 934.0,
-    "image": "",
+    "image": "/images/gadget-ports/AS069647.webp",
     "category": "Gadget Ports",
     "isUsed": false,
     "inStock": true
@@ -99,7 +99,7 @@ const initialProducts: any[] = [
     "title": "iPhone 8 Charging Port Flex (OEM)",
     "price": "R934.00",
     "priceNum": 934.0,
-    "image": "/images/gadget-ports/AS069654.png",
+    "image": "/images/gadget-ports/AS069654.webp",
     "category": "Gadget Ports",
     "isUsed": false,
     "inStock": true
@@ -109,7 +109,7 @@ const initialProducts: any[] = [
     "title": "iPhone 7 Charging Port Flex (OEM)",
     "price": "R934.00",
     "priceNum": 934.0,
-    "image": "/images/gadget-ports/AS069648.png",
+    "image": "/images/gadget-ports/AS069648.webp",
     "category": "Gadget Ports",
     "isUsed": false,
     "inStock": true
@@ -119,7 +119,7 @@ const initialProducts: any[] = [
     "title": "iPhone 8 Charging Port Flex (OEM)",
     "price": "R934.00",
     "priceNum": 934.0,
-    "image": "/images/gadget-ports/AS069656.png",
+    "image": "/images/gadget-ports/AS069656.webp",
     "category": "Gadget Ports",
     "isUsed": false,
     "inStock": true
@@ -129,7 +129,7 @@ const initialProducts: any[] = [
     "title": "iPhone 16 Pro Max Charging Port Flex (Used, Grade A)",
     "price": "R781.00",
     "priceNum": 781.0,
-    "image": "/images/gadget-ports/AS168194_5c4a8c16-bc37-46ca-84a2-bb639a7b8042.png",
+    "image": "/images/gadget-ports/AS168194_5c4a8c16-bc37-46ca-84a2-bb639a7b8042.webp",
     "category": "Gadget Ports",
     "isUsed": true,
     "inStock": true
@@ -139,7 +139,7 @@ const initialProducts: any[] = [
     "title": "iPhone 16e Charging Port Flex (Premium)",
     "price": "R1136.00",
     "priceNum": 1136.0,
-    "image": "/images/gadget-ports/AS161957_dd8d6e87-6968-4efd-a6b0-3a14dbc80bcf.png",
+    "image": "/images/gadget-ports/AS161957_dd8d6e87-6968-4efd-a6b0-3a14dbc80bcf.webp",
     "category": "Gadget Ports",
     "isUsed": false,
     "inStock": true
@@ -149,7 +149,7 @@ const initialProducts: any[] = [
     "title": "iPhone 16e Charging Port Flex (Premium)",
     "price": "R1392.00",
     "priceNum": 1392.0,
-    "image": "/images/gadget-ports/AS161956_40aa9bc2-8a28-45f3-b595-1ed939d3a008.png",
+    "image": "/images/gadget-ports/AS161956_40aa9bc2-8a28-45f3-b595-1ed939d3a008.webp",
     "category": "Gadget Ports",
     "isUsed": false,
     "inStock": true
@@ -159,7 +159,7 @@ const initialProducts: any[] = [
     "title": "iPhone 16 Pro Max Charging Port Flex (Premium)",
     "price": "R1136.00",
     "priceNum": 1136.0,
-    "image": "/images/gadget-ports/AS150871.png",
+    "image": "/images/gadget-ports/AS150871.webp",
     "category": "Gadget Ports",
     "isUsed": false,
     "inStock": true
@@ -169,7 +169,7 @@ const initialProducts: any[] = [
     "title": "iPhone 16 Pro Max Charging Port Flex (Premium)",
     "price": "R1200.00",
     "priceNum": 1200.0,
-    "image": "/images/gadget-ports/AS150870_099d3c4c-a285-44c3-8072-922901596b15.png",
+    "image": "/images/gadget-ports/AS150870_099d3c4c-a285-44c3-8072-922901596b15.webp",
     "category": "Gadget Ports",
     "isUsed": false,
     "inStock": true
@@ -179,7 +179,7 @@ const initialProducts: any[] = [
     "title": "iPhone 16 Pro Charging Port Flex (Premium)",
     "price": "R1082.00",
     "priceNum": 1082.0,
-    "image": "/images/gadget-ports/AS151678_d600ac06-ace5-4657-bf8b-c0415767168b.png",
+    "image": "/images/gadget-ports/AS151678_d600ac06-ace5-4657-bf8b-c0415767168b.webp",
     "category": "Gadget Ports",
     "isUsed": false,
     "inStock": true
@@ -189,7 +189,7 @@ const initialProducts: any[] = [
     "title": "iPhone 16 Pro Max Charging Port Flex (Premium)",
     "price": "R1040.00",
     "priceNum": 1040.0,
-    "image": "/images/gadget-ports/AS150872_b4aacf74-1ceb-425d-8e37-09de23778589.png",
+    "image": "/images/gadget-ports/AS150872_b4aacf74-1ceb-425d-8e37-09de23778589.webp",
     "category": "Gadget Ports",
     "isUsed": false,
     "inStock": true
@@ -199,7 +199,7 @@ const initialProducts: any[] = [
     "title": "iPhone 16 Plus Charging Port Flex (Premium)",
     "price": "R1328.00",
     "priceNum": 1328.0,
-    "image": "/images/gadget-ports/AS151708_3549b095-6579-4b76-9c25-949aafbe3409.png",
+    "image": "/images/gadget-ports/AS151708_3549b095-6579-4b76-9c25-949aafbe3409.webp",
     "category": "Gadget Ports",
     "isUsed": false,
     "inStock": true
@@ -209,7 +209,7 @@ const initialProducts: any[] = [
     "title": "iPhone 15 Pro Max Charging Port Flex (OEM)",
     "price": "R934.00",
     "priceNum": 934.0,
-    "image": "/images/gadget-ports/AS134748.png",
+    "image": "/images/gadget-ports/AS134748.webp",
     "category": "Gadget Ports",
     "isUsed": false,
     "inStock": true
@@ -219,7 +219,7 @@ const initialProducts: any[] = [
     "title": "iPhone 15 Pro Max Charging Port Flex (Premium)",
     "price": "R1456.00",
     "priceNum": 1456.0,
-    "image": "/images/gadget-ports/AS134601_8b3a1c97-7aca-457b-a297-3c513e2baf78.png",
+    "image": "/images/gadget-ports/AS134601_8b3a1c97-7aca-457b-a297-3c513e2baf78.webp",
     "category": "Gadget Ports",
     "isUsed": false,
     "inStock": true
@@ -229,7 +229,7 @@ const initialProducts: any[] = [
     "title": "iPhone 16 Charging Port Flex (Used, Grade A)",
     "price": "R717.00",
     "priceNum": 717.0,
-    "image": "/images/gadget-ports/AS168178.png",
+    "image": "/images/gadget-ports/AS168178.webp",
     "category": "Gadget Ports",
     "isUsed": true,
     "inStock": true
@@ -239,7 +239,7 @@ const initialProducts: any[] = [
     "title": "iPhone 15 Pro Max Charging Port Flex (OEM)",
     "price": "R934.00",
     "priceNum": 934.0,
-    "image": "/images/gadget-ports/AS134602.png",
+    "image": "/images/gadget-ports/AS134602.webp",
     "category": "Gadget Ports",
     "isUsed": false,
     "inStock": true

@@ -9,7 +9,7 @@ const initialProducts = [
     "title": "AMD Ryzen 7 9850X3D \u2014 Desktop CPU (New)",
     "price": "R11710.00",
     "priceNum": 11710.0,
-    "image": "/images/components/01_cd7de4ce-9090-477d-9181-d80a5a88f34d.jpg",
+    "image": "/images/components/01_cd7de4ce-9090-477d-9181-d80a5a88f34d.webp",
     "category": "Components",
     "isUsed": false,
     "inStock": true
@@ -19,7 +19,7 @@ const initialProducts = [
     "title": "AMD Ryzen 7 5700G \u2014 8-Core AM4 Desktop Processor (New)",
     "price": "R5375.00",
     "priceNum": 5375.0,
-    "image": "/images/components/01_451142fb-bff5-41a4-ab9e-b624f9796414.jpg",
+    "image": "/images/components/01_451142fb-bff5-41a4-ab9e-b624f9796414.webp",
     "category": "Components",
     "isUsed": false,
     "inStock": true
@@ -29,7 +29,7 @@ const initialProducts = [
     "title": "AMD Ryzen 7 8700G \u2014 AM5 8-Core Processor with Radeon 780M (New)",
     "price": "R6791.00",
     "priceNum": 6791.0,
-    "image": "/images/components/01_5edb7982-a7ab-40e7-ab40-b6d2e5468e76.jpg",
+    "image": "/images/components/01_5edb7982-a7ab-40e7-ab40-b6d2e5468e76.webp",
     "category": "Components",
     "isUsed": false,
     "inStock": true
@@ -39,7 +39,7 @@ const initialProducts = [
     "title": "AMD Ryzen 7 7800X3D \u2014 8-Core AM5 Processor (New)",
     "price": "R9493.00",
     "priceNum": 9493.0,
-    "image": "/images/components/01_e16a3acd-9aaf-4171-8d60-ba2a28272171.jpg",
+    "image": "/images/components/01_e16a3acd-9aaf-4171-8d60-ba2a28272171.webp",
     "category": "Components",
     "isUsed": false,
     "inStock": true
@@ -49,7 +49,7 @@ const initialProducts = [
     "title": "IBM System X 1TB 9ZM273-039 42D0781 7200RPM 6Gb/s SAS 3.5\" Hard Drive with Caddy (Pre-owned)",
     "price": "R950.00",
     "priceNum": 950.0,
-    "image": "/images/components/1tb_IBM.jpg",
+    "image": "/images/components/1tb_IBM.webp",
     "category": "Components",
     "isUsed": false,
     "inStock": true
@@ -59,7 +59,7 @@ const initialProducts = [
     "title": "AMD Ryzen 5 7400 | 6-Core | 3.3GHz | AM5 Socket \u2014 Processor (New)",
     "price": "R4077.00",
     "priceNum": 4077.0,
-    "image": "/images/components/01_fa323ec1-ab3b-4667-b31e-7701c14c06a6.jpg",
+    "image": "/images/components/01_fa323ec1-ab3b-4667-b31e-7701c14c06a6.webp",
     "category": "Components",
     "isUsed": false,
     "inStock": true
@@ -69,7 +69,7 @@ const initialProducts = [
     "title": "AMD Ryzen 5 9600X \u2014 6-Core AM5 Desktop CPU (New)",
     "price": "R5552.00",
     "priceNum": 5552.0,
-    "image": "/images/components/01_07b19565-80a0-4245-9c47-453c259eec17.jpg",
+    "image": "/images/components/01_07b19565-80a0-4245-9c47-453c259eec17.webp",
     "category": "Components",
     "isUsed": false,
     "inStock": true
@@ -79,7 +79,7 @@ const initialProducts = [
     "title": "AMD Ryzen 9 9900X3D \u2014 12-Core AM5 Processor (New)",
     "price": "R13468.00",
     "priceNum": 13468.0,
-    "image": "/images/components/01_b6cedc25-0e1f-4c95-855c-0b5f2dd5c611.jpg",
+    "image": "/images/components/01_b6cedc25-0e1f-4c95-855c-0b5f2dd5c611.webp",
     "category": "Components",
     "isUsed": false,
     "inStock": true
@@ -89,7 +89,7 @@ const initialProducts = [
     "title": "AMD Ryzen 7 8700F \u2014 8-Core AM5 Processor (New)",
     "price": "R6543.00",
     "priceNum": 6543.0,
-    "image": "/images/components/01_15792ce2-f3cc-4779-9462-895b6b52afad.jpg",
+    "image": "/images/components/01_15792ce2-f3cc-4779-9462-895b6b52afad.webp",
     "category": "Components",
     "isUsed": false,
     "inStock": true
@@ -99,7 +99,7 @@ const initialProducts = [
     "title": "AMD Ryzen 9 9950X3D2 Dual Edition | 16-Core | 4.3GHz | AM5 (New)",
     "price": "R21073.00",
     "priceNum": 21073.0,
-    "image": "/images/components/01_ebc5c0c1-0131-4f92-b86a-83aa8c1a9a25.jpg",
+    "image": "/images/components/01_ebc5c0c1-0131-4f92-b86a-83aa8c1a9a25.webp",
     "category": "Components",
     "isUsed": false,
     "inStock": true
@@ -109,7 +109,7 @@ const initialProducts = [
     "title": "AMD Ryzen 7 9700X \u2014 8-Core AM5 Processor (New)",
     "price": "R8018.00",
     "priceNum": 8018.0,
-    "image": "/images/components/01_6f3c3c53-78bf-411c-933f-627833841498.jpg",
+    "image": "/images/components/01_6f3c3c53-78bf-411c-933f-627833841498.webp",
     "category": "Components",
     "isUsed": false,
     "inStock": true
@@ -119,7 +119,7 @@ const initialProducts = [
     "title": "AMD Ryzen 9 9900X | 12-Core | 4.4GHz | AM5 (New)",
     "price": "R9623.00",
     "priceNum": 9623.0,
-    "image": "/images/components/01_3fd83e64-92d6-441d-b637-6c91ba7b400f.jpg",
+    "image": "/images/components/01_3fd83e64-92d6-441d-b637-6c91ba7b400f.webp",
     "category": "Components",
     "isUsed": false,
     "inStock": true
@@ -129,7 +129,7 @@ const initialProducts = [
     "title": "AMD Ryzen 9 9950X3D \u2014 Desktop Processor (New)",
     "price": "R16974.00",
     "priceNum": 16974.0,
-    "image": "/images/components/01_36f043dc-c02c-451c-b276-ff2c81c5f75c.jpg",
+    "image": "/images/components/01_36f043dc-c02c-451c-b276-ff2c81c5f75c.webp",
     "category": "Components",
     "isUsed": false,
     "inStock": true
@@ -139,7 +139,7 @@ const initialProducts = [
     "title": "AMD Ryzen 5 8600G | 6-Core / 12-Thread | 4.3GHz Base, up to 5.0GHz | AM5 | Radeon Graphics (New)",
     "price": "R4289.00",
     "priceNum": 4289.0,
-    "image": "/images/components/01_a39fd6f1-1c16-4b1f-b5c2-b17d249532fb.jpg",
+    "image": "/images/components/01_a39fd6f1-1c16-4b1f-b5c2-b17d249532fb.webp",
     "category": "Components",
     "isUsed": false,
     "inStock": true
@@ -149,7 +149,7 @@ const initialProducts = [
     "title": "AMD Ryzen 7 9800X3D \u2014 8-Core AM5 Processor (New)",
     "price": "R11346.00",
     "priceNum": 11346.0,
-    "image": "/images/components/01_0eec2e53-e015-4610-9e97-6ce02d61e793.jpg",
+    "image": "/images/components/01_0eec2e53-e015-4610-9e97-6ce02d61e793.webp",
     "category": "Components",
     "isUsed": false,
     "inStock": true
@@ -159,7 +159,7 @@ const initialProducts = [
     "title": "AMD Ryzen 5 8500G \u2014 6-Core AM5 Processor with Radeon Graphics (New)",
     "price": "R4726.00",
     "priceNum": 4726.0,
-    "image": "/images/components/01_7e14df24-4bff-423f-84b9-ff5cca73ced6.jpg",
+    "image": "/images/components/01_7e14df24-4bff-423f-84b9-ff5cca73ced6.webp",
     "category": "Components",
     "isUsed": false,
     "inStock": true
@@ -169,7 +169,7 @@ const initialProducts = [
     "title": "Intel\u00ae Xeon\u00ae Silver 4208 Processor (Pre-owned)",
     "price": "R4999.00",
     "priceNum": 4999.0,
-    "image": "/images/components/Xeon4208.jpg",
+    "image": "/images/components/Xeon4208.webp",
     "category": "Components",
     "isUsed": false,
     "inStock": true
@@ -179,7 +179,7 @@ const initialProducts = [
     "title": "Intel Core i7-14700 | 20 Cores | LGA1700 | 2.1GHz | DDR5 (New)",
     "price": "R9894.00",
     "priceNum": 9894.0,
-    "image": "/images/components/01_fece26a2-b4c6-42c8-9973-30c1a59e5d12.jpg",
+    "image": "/images/components/01_fece26a2-b4c6-42c8-9973-30c1a59e5d12.webp",
     "category": "Components",
     "isUsed": false,
     "inStock": true
@@ -189,7 +189,7 @@ const initialProducts = [
     "title": "AMD Ryzen 5 7600 \u2014 6-Core AM5 Processor (New)",
     "price": "R4938.00",
     "priceNum": 4938.0,
-    "image": "/images/components/01_1bf2b293-edb9-41b7-bd0a-dce6e776c2a3.jpg",
+    "image": "/images/components/01_1bf2b293-edb9-41b7-bd0a-dce6e776c2a3.webp",
     "category": "Components",
     "isUsed": false,
     "inStock": true
@@ -199,7 +199,7 @@ const initialProducts = [
     "title": "AMD Ryzen 5 8400F \u2014 6-Core AM5 Processor (New)",
     "price": "R3947.00",
     "priceNum": 3947.0,
-    "image": "/images/components/01_933948e2-2d1f-4926-92e9-65bf1822f212.jpg",
+    "image": "/images/components/01_933948e2-2d1f-4926-92e9-65bf1822f212.webp",
     "category": "Components",
     "isUsed": false,
     "inStock": true
@@ -209,7 +209,7 @@ const initialProducts = [
     "title": "AMD Ryzen 5 7500X3D \u2014 AM5 Processor (New)",
     "price": "R6166.00",
     "priceNum": 6166.0,
-    "image": "/images/components/01_16c84a79-07d6-4f49-9fa4-bb0b2cc622e5.jpg",
+    "image": "/images/components/01_16c84a79-07d6-4f49-9fa4-bb0b2cc622e5.webp",
     "category": "Components",
     "isUsed": false,
     "inStock": true
@@ -219,7 +219,7 @@ const initialProducts = [
     "title": "Used Intel Core I3-3220 - Processor Only (Used)",
     "price": "R700.00",
     "priceNum": 700.0,
-    "image": "/images/components/intel-core-i3-3220.jpg",
+    "image": "/images/components/intel-core-i3-3220.webp",
     "category": "Components",
     "isUsed": true,
     "inStock": true

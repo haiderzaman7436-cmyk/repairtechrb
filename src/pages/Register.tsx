@@ -102,8 +102,9 @@ export default function Register() {
         position: 'relative',
         zIndex: 1
       }}>
-        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
-          <img src="/logos/logo.png" alt="Repair Tech Logo" style={{ height: '140px' }} />
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '2rem' }}>
+          <img src="/logos/logo.png" alt="Repair Tech Logo" style={{ height: '80px', width: '80px', marginBottom: '1rem' }} />
+          <h1 style={{ color: 'var(--navy)', fontSize: '2.5rem', fontWeight: '900' }}>Repair Tech</h1>
         </div>
         
         <h2 style={{ 

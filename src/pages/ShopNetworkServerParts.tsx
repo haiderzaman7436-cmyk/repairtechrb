@@ -9,7 +9,7 @@ const initialProducts: any[] = [
     "title": "2GB PC2-5300F ECC Server Memory",
     "price": "R250.00",
     "priceNum": 250.0,
-    "image": "/images/network-server-parts/buffered-server-memory-500x500.png",
+    "image": "/images/network-server-parts/buffered-server-memory-500x500.webp",
     "category": "Network Server Parts",
     "isUsed": false,
     "inStock": true
@@ -19,7 +19,7 @@ const initialProducts: any[] = [
     "title": "8GB 4Rx8 PC3L-8500R-07-10-H0-D2 | M393B1K73CHD-YF8 Server Memory (Used)",
     "price": "R460.00",
     "priceNum": 460.0,
-    "image": "/images/network-server-parts/8gb_m393b1k73chd-yf8_samsung.png",
+    "image": "/images/network-server-parts/8gb_m393b1k73chd-yf8_samsung.webp",
     "category": "Network Server Parts",
     "isUsed": true,
     "inStock": true
@@ -29,7 +29,7 @@ const initialProducts: any[] = [
     "title": "SK Hynix 32GB Server RAM Kit \u2014 ECC Registered DDR3 Memory (Grade B)",
     "price": "R1700.00",
     "priceNum": 1700.0,
-    "image": "/images/network-server-parts/01_e3d42b6d-4c9d-4997-a5cf-a44e1b56be4f.png",
+    "image": "/images/network-server-parts/01_e3d42b6d-4c9d-4997-a5cf-a44e1b56be4f.webp",
     "category": "Network Server Parts",
     "isUsed": false,
     "inStock": true
@@ -39,7 +39,7 @@ const initialProducts: any[] = [
     "title": "Samsung 8GB 2Rx4 PC3-10600R DDR3 ECC Registered Server Memory \u2014 Server RAM (Grade B)",
     "price": "R1000.00",
     "priceNum": 1000.0,
-    "image": "/images/network-server-parts/01_5a3af7e1-5a3c-4dcc-b3de-522c3c0538a2.png",
+    "image": "/images/network-server-parts/01_5a3af7e1-5a3c-4dcc-b3de-522c3c0538a2.webp",
     "category": "Network Server Parts",
     "isUsed": false,
     "inStock": true
@@ -49,7 +49,7 @@ const initialProducts: any[] = [
     "title": "SK Hynix 32GB 2Rx4 PC4-2666V-RB2-11 DDR4 Registered ECC RAM Server Memory Module | HMA84GR7MFR4N-VK",
     "price": "R2850.00",
     "priceNum": 2850.0,
-    "image": "/images/network-server-parts/SKHynix32GB2Rx4PC4-2666V-RB2-11.png",
+    "image": "/images/network-server-parts/SKHynix32GB2Rx4PC4-2666V-RB2-11.webp",
     "category": "Network Server Parts",
     "isUsed": false,
     "inStock": true
@@ -59,7 +59,7 @@ const initialProducts: any[] = [
     "title": "1GB PC2-5300F ECC Server Memory",
     "price": "R171.00",
     "priceNum": 171.0,
-    "image": "/images/network-server-parts/Memory-RAM-PC2-5300F-555-11-PowerEdge-2950-500x500.png",
+    "image": "/images/network-server-parts/Memory-RAM-PC2-5300F-555-11-PowerEdge-2950-500x500.webp",
     "category": "Network Server Parts",
     "isUsed": false,
     "inStock": true
@@ -69,7 +69,7 @@ const initialProducts: any[] = [
     "title": "Intel Xeon Gold 6138 \u2014 Server CPU (Refurbished)",
     "price": "R3540.00",
     "priceNum": 3540.0,
-    "image": "/images/network-server-parts/01_9bfb6b2d-25d6-43d6-ac6d-269a94240fcf.png",
+    "image": "/images/network-server-parts/01_9bfb6b2d-25d6-43d6-ac6d-269a94240fcf.webp",
     "category": "Network Server Parts",
     "isUsed": true,
     "inStock": true
@@ -79,7 +79,7 @@ const initialProducts: any[] = [
     "title": "Avocent ACS 6048 \u2014 48-Port Console Server (Used)",
     "price": "R1750.00",
     "priceNum": 1750.0,
-    "image": "/images/network-server-parts/01_5c343706-924e-41ec-9440-88d394dcb8af.png",
+    "image": "/images/network-server-parts/01_5c343706-924e-41ec-9440-88d394dcb8af.webp",
     "category": "Network Server Parts",
     "isUsed": true,
     "inStock": true
@@ -89,7 +89,7 @@ const initialProducts: any[] = [
     "title": "Samsung 2GB DDR3 ECC \u2014 Server Memory Module (Refurbished)",
     "price": "R700.00",
     "priceNum": 700.0,
-    "image": "/images/network-server-parts/01_1d800d3c-0313-4976-a480-314cd4bd96a3.png",
+    "image": "/images/network-server-parts/01_1d800d3c-0313-4976-a480-314cd4bd96a3.webp",
     "category": "Network Server Parts",
     "isUsed": true,
     "inStock": true
@@ -99,7 +99,7 @@ const initialProducts: any[] = [
     "title": "Foxconn 042-004-593A05 \u2014 Server Rail Kit (Used)",
     "price": "R1200.00",
     "priceNum": 1200.0,
-    "image": "/images/network-server-parts/01_ba3376f2-33e8-47d2-bda5-8b2e5430729e.png",
+    "image": "/images/network-server-parts/01_ba3376f2-33e8-47d2-bda5-8b2e5430729e.webp",
     "category": "Network Server Parts",
     "isUsed": true,
     "inStock": true

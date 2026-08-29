@@ -35,6 +35,7 @@ type AppUser = {
   id: string;
   email: string;
   displayName: string;
+  phone?: string;
   isAdmin: boolean;
   createdAt: string;
 }
@@ -159,8 +160,8 @@ export default function AdminDashboard() {
             <X size={24} color="var(--navy)" />
           </button>
           <h2 style={{ color: 'var(--navy)', display: 'flex', alignItems: 'center', gap: '12px', fontSize: '1.5rem', fontWeight: '800', letterSpacing: '-0.5px' }}>
-            <img src="/images/logo%20(3).png" alt="Repair Tech Logo" style={{ height: '48px', transition: 'transform 0.3s ease' }} onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'} />
-            REPAIR TECH
+            <img src="/logos/logo.png" alt="Repair Tech Logo" style={{ height: '40px', width: '40px' }} />
+            Repair Tech
           </h2>
           <div style={{ color: 'var(--gray-dark)', fontSize: '0.8rem', fontWeight: '700', letterSpacing: '2px', marginTop: '4px', paddingLeft: '48px' }}>ADMIN PANEL</div>
         </div>
@@ -509,6 +510,7 @@ export default function AdminDashboard() {
                       <tr style={{ background: 'rgba(0, 11, 41, 0.02)', color: 'var(--gray-dark)', textAlign: 'left', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '1px' }}>
                         <th style={{ padding: '1.5rem 2rem', fontWeight: '700' }}>Customer Name</th>
                         <th style={{ padding: '1.5rem 2rem', fontWeight: '700' }}>Email Address</th>
+                        <th style={{ padding: '1.5rem 2rem', fontWeight: '700' }}>Phone</th>
                         <th style={{ padding: '1.5rem 2rem', fontWeight: '700' }}>Joined Date</th>
                         <th style={{ padding: '1.5rem 2rem', fontWeight: '700' }}>Role</th>
                       </tr>
@@ -525,6 +527,7 @@ export default function AdminDashboard() {
                             </div>
                           </td>
                           <td style={{ padding: '1.5rem 2rem', color: 'var(--gray-dark)', fontWeight: '500' }}>{customer.email}</td>
+                          <td style={{ padding: '1.5rem 2rem', color: 'var(--gray-dark)', fontWeight: '500' }}>{customer.phone || 'N/A'}</td>
                           <td style={{ padding: '1.5rem 2rem', color: 'var(--gray-dark)', fontWeight: '500' }}>
                             {customer.createdAt ? new Date(customer.createdAt).toLocaleDateString() : 'N/A'}
                           </td>
@@ -542,7 +545,7 @@ export default function AdminDashboard() {
                         </tr>
                       ))}
                       {customers.length === 0 && (
-                        <tr><td colSpan={4} style={{ padding: '4rem', textAlign: 'center', color: 'var(--gray-dark)', fontWeight: '600' }}>No customers found.</td></tr>
+                        <tr><td colSpan={5} style={{ padding: '4rem', textAlign: 'center', color: 'var(--gray-dark)', fontWeight: '600' }}>No customers found.</td></tr>
                       )}
                     </tbody>
                   </table>

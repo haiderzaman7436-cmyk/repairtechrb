@@ -9,7 +9,7 @@ const initialProducts: any[] = [
     "title": "TRENDnet TEW-691GR N450 Wireless Gigabit Router \u2014 Router (New)",
     "price": "R950.00",
     "priceNum": 950.0,
-    "image": "/images/network-routers/01_ddf79a7b-a62c-4d4b-8e20-868a3355ee32.png",
+    "image": "/images/network-routers/01_ddf79a7b-a62c-4d4b-8e20-868a3355ee32.webp",
     "category": "Network Routers",
     "isUsed": false,
     "inStock": true
@@ -19,7 +19,7 @@ const initialProducts: any[] = [
     "title": "ASUS AC3200 Tri-Band Gigabit WiFi Router (used)",
     "price": "R3000.00",
     "priceNum": 3000.0,
-    "image": "/images/network-routers/51mYNZDW8bL._AC_SL1001.png",
+    "image": "/images/network-routers/51mYNZDW8bL._AC_SL1001.webp",
     "category": "Network Routers",
     "isUsed": true,
     "inStock": true
@@ -29,7 +29,7 @@ const initialProducts: any[] = [
     "title": "Cisco 1840 Series Modular Router \u2014 Modular Router (Used)",
     "price": "R850.00",
     "priceNum": 850.0,
-    "image": "/images/network-routers/01_59184b66-7cfb-42c4-b3d4-2f59e5363df4.png",
+    "image": "/images/network-routers/01_59184b66-7cfb-42c4-b3d4-2f59e5363df4.webp",
     "category": "Network Routers",
     "isUsed": true,
     "inStock": true
@@ -39,7 +39,7 @@ const initialProducts: any[] = [
     "title": "ASUS RT-AC53 Wireless AC750 Dual Band WiFi Router (used)",
     "price": "R690.00",
     "priceNum": 690.0,
-    "image": "/images/network-routers/61yhTsjNDVL._SL1500.png",
+    "image": "/images/network-routers/61yhTsjNDVL._SL1500.webp",
     "category": "Network Routers",
     "isUsed": true,
     "inStock": true
@@ -49,7 +49,7 @@ const initialProducts: any[] = [
     "title": "Cisco 887G-K9 Integrated Services Router \u2014 Router (Used)",
     "price": "R1500.00",
     "priceNum": 1500.0,
-    "image": "/images/network-routers/01_3481e12f-1b4f-4c58-8211-017c8a10947e.png",
+    "image": "/images/network-routers/01_3481e12f-1b4f-4c58-8211-017c8a10947e.webp",
     "category": "Network Routers",
     "isUsed": true,
     "inStock": true
@@ -59,7 +59,7 @@ const initialProducts: any[] = [
     "title": "Cisco 1941 Integrated Services Router \u2014 Branch Router (Grade A+)",
     "price": "R2500.00",
     "priceNum": 2500.0,
-    "image": "/images/network-routers/01_2c6030dd-8c54-4b2d-a19a-283c189e4e02.png",
+    "image": "/images/network-routers/01_2c6030dd-8c54-4b2d-a19a-283c189e4e02.webp",
     "category": "Network Routers",
     "isUsed": false,
     "inStock": true
@@ -69,7 +69,7 @@ const initialProducts: any[] = [
     "title": "Huawei AR1220CE \u2014 Access Router (Refurbished)",
     "price": "R3125.00",
     "priceNum": 3125.0,
-    "image": "/images/network-routers/01_d6137198-683e-41b8-824a-2169dead9ca4.png",
+    "image": "/images/network-routers/01_d6137198-683e-41b8-824a-2169dead9ca4.webp",
     "category": "Network Routers",
     "isUsed": true,
     "inStock": true
@@ -79,7 +79,7 @@ const initialProducts: any[] = [
     "title": "Axesstel MV420R CDMA Fixed Wireless Modem Router \u2014 Modem Router (Used)",
     "price": "R900.00",
     "priceNum": 900.0,
-    "image": "/images/network-routers/01_3d669e0c-f6ee-4a00-889f-424bc47a9d12.png",
+    "image": "/images/network-routers/01_3d669e0c-f6ee-4a00-889f-424bc47a9d12.webp",
     "category": "Network Routers",
     "isUsed": true,
     "inStock": true
@@ -89,7 +89,7 @@ const initialProducts: any[] = [
     "title": "Cisco 1941/K9 Integrated Services Router with 1-Port Serial HWIC \u2014 Router (Grade B)",
     "price": "R2000.00",
     "priceNum": 2000.0,
-    "image": "/images/network-routers/01_8082e64f-052e-403d-8416-34273aa51e47.png",
+    "image": "/images/network-routers/01_8082e64f-052e-403d-8416-34273aa51e47.webp",
     "category": "Network Routers",
     "isUsed": false,
     "inStock": true
@@ -99,7 +99,7 @@ const initialProducts: any[] = [
     "title": "Cisco C881G+7-K9 881 Ethernet Security Router with 3G \u2014 Integrated Services Router (Refurbished)",
     "price": "R1500.00",
     "priceNum": 1500.0,
-    "image": "/images/network-routers/01_0e4197df-f531-4e8c-bfd0-8162bc53306a.png",
+    "image": "/images/network-routers/01_0e4197df-f531-4e8c-bfd0-8162bc53306a.webp",
     "category": "Network Routers",
     "isUsed": true,
     "inStock": true

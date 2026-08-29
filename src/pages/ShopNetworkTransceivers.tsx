@@ -9,7 +9,7 @@ const initialProducts: any[] = [
     "title": "Cisco ONS-SI-GE-SX 1000 Base SFP Transceiver Module",
     "price": "R999.00",
     "priceNum": 999.0,
-    "image": "/images/network-transceivers/CISCOONS-SI-GE-SX.png",
+    "image": "/images/network-transceivers/CISCOONS-SI-GE-SX.webp",
     "category": "Network Transceivers",
     "isUsed": false,
     "inStock": true
@@ -19,7 +19,7 @@ const initialProducts: any[] = [
     "title": "Cisco GLC-TE= 1000BASE-T SFP Transceiver Module 100m Copper RJ45 (Hologram)",
     "price": "R1610.00",
     "priceNum": 1610.0,
-    "image": "/images/network-transceivers/GLC-TE-1-800x800.png",
+    "image": "/images/network-transceivers/GLC-TE-1-800x800.webp",
     "category": "Network Transceivers",
     "isUsed": false,
     "inStock": true
@@ -29,7 +29,7 @@ const initialProducts: any[] = [
     "title": "Cisco QSFP-100G-SR4-S 100GB BASE-SR4 860nm MMF Optical QSFP Transceiver",
     "price": "R4600.00",
     "priceNum": 4600.0,
-    "image": "/images/network-transceivers/Cisco-QSFP-100G-SR4-S-Transceiver-1__34261.png",
+    "image": "/images/network-transceivers/Cisco-QSFP-100G-SR4-S-Transceiver-1__34261.webp",
     "category": "Network Transceivers",
     "isUsed": false,
     "inStock": true
@@ -39,7 +39,7 @@ const initialProducts: any[] = [
     "title": "Cisco ONS-SC+-10G-SR 10GB SFP+ SR Transceiver Module",
     "price": "R999.00",
     "priceNum": 999.0,
-    "image": "/images/network-transceivers/s-l1600_9.png",
+    "image": "/images/network-transceivers/s-l1600_9.webp",
     "category": "Network Transceivers",
     "isUsed": false,
     "inStock": true
@@ -49,7 +49,7 @@ const initialProducts: any[] = [
     "title": "Cisco SFP-10G-LR-S 10GBASE-LR SFP+ Transceiver Module with Hologram",
     "price": "R1610.00",
     "priceNum": 1610.0,
-    "image": "/images/network-transceivers/CiscoSFP-10G-LR-S10GBASE-LRSFP_TransceiverModulewithHologram3.png",
+    "image": "/images/network-transceivers/CiscoSFP-10G-LR-S10GBASE-LRSFP_TransceiverModulewithHologram3.webp",
     "category": "Network Transceivers",
     "isUsed": false,
     "inStock": true
@@ -59,7 +59,7 @@ const initialProducts: any[] = [
     "title": "Cisco XFP10GLR-192SR-L 10-2542-01 | 10GBaseLR/LW Transceiver Module with Hologram",
     "price": "R2500.00",
     "priceNum": 2500.0,
-    "image": "/images/network-transceivers/XFP10GLR-192SR-L_3.png",
+    "image": "/images/network-transceivers/XFP10GLR-192SR-L_3.webp",
     "category": "Network Transceivers",
     "isUsed": false,
     "inStock": true
@@ -69,7 +69,7 @@ const initialProducts: any[] = [
     "title": "HP AJ718A Compatible 8Gb Fibre Channel SW SFP+ Transceiver \u2014 Optical Transceiver (Refurbished)",
     "price": "R2200.00",
     "priceNum": 2200.0,
-    "image": "/images/network-transceivers/01_b21d0048-9d91-4e3d-bec6-ae0767896660.png",
+    "image": "/images/network-transceivers/01_b21d0048-9d91-4e3d-bec6-ae0767896660.webp",
     "category": "Network Transceivers",
     "isUsed": true,
     "inStock": true
@@ -79,7 +79,7 @@ const initialProducts: any[] = [
     "title": "HP AJ716B 8Gb Short-Wave Fibre Channel SFP+ Transceiver \u2014 Transceiver (Refurbished)",
     "price": "R1050.00",
     "priceNum": 1050.0,
-    "image": "/images/network-transceivers/01_90292cb6-a424-4181-9888-c0a6172f4c1e.png",
+    "image": "/images/network-transceivers/01_90292cb6-a424-4181-9888-c0a6172f4c1e.webp",
     "category": "Network Transceivers",
     "isUsed": true,
     "inStock": true
@@ -89,7 +89,7 @@ const initialProducts: any[] = [
     "title": "Cisco XFP10GLR-192SR-L 10-2542-01 | 10GBaseLR/LW Transceiver Module (Used)",
     "price": "R1150.00",
     "priceNum": 1150.0,
-    "image": "/images/network-transceivers/XFP10GLR-192SR-L.png",
+    "image": "/images/network-transceivers/XFP10GLR-192SR-L.webp",
     "category": "Network Transceivers",
     "isUsed": true,
     "inStock": true
@@ -99,7 +99,7 @@ const initialProducts: any[] = [
     "title": "Avaya FTLX8571D3BNL-N2 10GBASE-SR/SW 850nm SFP+ Optical Transceiver \u2014 Transceiver Module (Refurbished)",
     "price": "R1150.00",
     "priceNum": 1150.0,
-    "image": "/images/network-transceivers/16.1.png",
+    "image": "/images/network-transceivers/16.1.webp",
     "category": "Network Transceivers",
     "isUsed": true,
     "inStock": true

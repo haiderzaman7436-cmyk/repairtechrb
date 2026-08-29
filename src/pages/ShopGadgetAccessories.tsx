@@ -9,7 +9,7 @@ const initialProducts: any[] = [
     "title": "Privacy Anti-Glare Fingerprint Unlock Available Full Screen Tempered Glass Screen Protector for Samsung Galaxy S25 Ultra Black",
     "price": "R299.00",
     "priceNum": 299.0,
-    "image": "/images/gadget-accessories/AS167944A.png",
+    "image": "/images/gadget-accessories/AS167944A.webp",
     "category": "Gadget Accessories",
     "isUsed": false,
     "inStock": true
@@ -19,7 +19,7 @@ const initialProducts: any[] = [
     "title": "360\u00b0 Privacy Anti-Glare Full Screen Tempered Glass Screen Protector for iPhone 16 Plus Black",
     "price": "R299.00",
     "priceNum": 299.0,
-    "image": "/images/gadget-accessories/AS153378A.png",
+    "image": "/images/gadget-accessories/AS153378A.webp",
     "category": "Gadget Accessories",
     "isUsed": false,
     "inStock": true
@@ -29,7 +29,7 @@ const initialProducts: any[] = [
     "title": "Professional 10 Inch Selfie Ring Light with Phone Holder and Retractable Phone Holder",
     "price": "R1500.00",
     "priceNum": 1500.0,
-    "image": "/images/gadget-accessories/AS154378.png",
+    "image": "/images/gadget-accessories/AS154378.webp",
     "category": "Gadget Accessories",
     "isUsed": false,
     "inStock": true
@@ -39,7 +39,7 @@ const initialProducts: any[] = [
     "title": "Magnetic Matte Anti-drop TPU+PC+Magnets Case for Samsung Galaxy S25 Ultra Black",
     "price": "R345.00",
     "priceNum": 345.0,
-    "image": "/images/gadget-accessories/AS159379A.png",
+    "image": "/images/gadget-accessories/AS159379A.webp",
     "category": "Gadget Accessories",
     "isUsed": false,
     "inStock": true
@@ -49,7 +49,7 @@ const initialProducts: any[] = [
     "title": "10 Inch Selfie Ring Light with Phone Holder and Remote Control",
     "price": "R1610.00",
     "priceNum": 1610.0,
-    "image": "/images/gadget-accessories/AS1543792.png",
+    "image": "/images/gadget-accessories/AS1543792.webp",
     "category": "Gadget Accessories",
     "isUsed": false,
     "inStock": true
@@ -59,7 +59,7 @@ const initialProducts: any[] = [
     "title": "360\u00b0 Privacy Anti-Glare Full Screen Tempered Glass Screen Protector for iPhone 16 Pro/17 Black",
     "price": "R294.00",
     "priceNum": 294.0,
-    "image": "/images/gadget-accessories/AS153379A_2.png",
+    "image": "/images/gadget-accessories/AS153379A_2.webp",
     "category": "Gadget Accessories",
     "isUsed": false,
     "inStock": true
@@ -69,7 +69,7 @@ const initialProducts: any[] = [
     "title": "360\u00b0 Privacy Anti-Glare Full Screen Tempered Glass Screen Protector for iPhone 16 Pro Max Black",
     "price": "R287.00",
     "priceNum": 287.0,
-    "image": "/images/gadget-accessories/AS153380A_2.png",
+    "image": "/images/gadget-accessories/AS153380A_2.webp",
     "category": "Gadget Accessories",
     "isUsed": false,
     "inStock": true

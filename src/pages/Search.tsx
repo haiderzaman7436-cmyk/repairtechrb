@@ -12,17 +12,54 @@ export default function Search() {
   const [currentPage, setCurrentPage] = useState(1);
   const [sortBy, setSortBy] = useState('relevance');
 
-  const filteredProducts = useMemo(() => {
-    if (!query) return [];
-    const q = query.toLowerCase();
+  const { filteredProducts, searchScores } = useMemo(() => {
+    if (!query) return { filteredProducts: [], searchScores: new Map() };
+    const q = query.toLowerCase().trim();
+    const tokens = q.split(/\s+/).filter(Boolean);
     
     // Simple deduplication based on ID
     const uniqueProducts = Array.from(new Map(allProducts.map((p: any) => [p.id, p])).values());
 
-    return uniqueProducts.filter((product: any) => {
-      return product.title?.toLowerCase().includes(q) || 
-             product.category?.toLowerCase().includes(q);
+    const scores = new Map<string, number>();
+
+    const filtered = uniqueProducts.filter((product: any) => {
+      const title = (product.title || '').toLowerCase();
+      const category = (product.category || '').toLowerCase();
+
+      let score = 0;
+
+      // Exact match gets highest score
+      if (title.includes(q)) score += 100;
+      if (category.includes(q)) score += 50;
+
+      // Token matches
+      let matchedTokens = 0;
+      tokens.forEach(token => {
+        let tokenMatched = false;
+        if (title.includes(token)) {
+          score += 10;
+          tokenMatched = true;
+        }
+        if (category.includes(token)) {
+          score += 5;
+          tokenMatched = true;
+        }
+        if (tokenMatched) matchedTokens++;
+      });
+
+      // Require at least one token to match
+      if (score > 0 && matchedTokens > 0) {
+        // Boost score if ALL tokens matched
+        if (matchedTokens === tokens.length) {
+          score += 50;
+        }
+        scores.set(product.id, score);
+        return true;
+      }
+      return false;
     });
+
+    return { filteredProducts: filtered, searchScores: scores };
   }, [query]);
 
   const sortedProducts = useMemo(() => {
@@ -30,9 +67,13 @@ export default function Search() {
       if (sortBy === 'price-ascending') return a.priceNum - b.priceNum;
       if (sortBy === 'price-descending') return b.priceNum - a.priceNum;
       if (sortBy === 'alphabetical') return a.title.localeCompare(b.title);
-      return 0; // relevance (default order)
+      
+      // relevance (default order)
+      const scoreA = searchScores.get(a.id) || 0;
+      const scoreB = searchScores.get(b.id) || 0;
+      return scoreB - scoreA;
     });
-  }, [filteredProducts, sortBy]);
+  }, [filteredProducts, sortBy, searchScores]);
 
   const totalPages = Math.ceil(sortedProducts.length / ITEMS_PER_PAGE);
   const paginatedProducts = sortedProducts.slice(
